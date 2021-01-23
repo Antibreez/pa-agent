@@ -1,0 +1,123 @@
+//РАЗРЕШЕНИЯ
+// Меньше 1440
+@mixin desktop {
+  @media (max-width: $width-desktop-large - 1px) {
+    @content;
+  }
+}
+
+// Меньше 640
+@mixin tablet {
+  @media (max-width: $width-desktop - 1px) {
+    @content;
+  }
+}
+
+// Меньше 480
+@mixin mobile {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+
+// СБРОС СТИЛЕЙ
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-reset {
+  text-decoration: none;
+  color: inherit;
+}
+
+// ШРИФТЫ
+@mixin font-face($name, $filename, $weight) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/'+$filename+'.eot'); /* IE9 Compat Modes */
+    src: local(''),
+      url('../fonts/'+$filename+'.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/'+$filename+'.woff') format('woff'), /* Modern Browsers */
+      url('../fonts/'+$filename+'.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/'+$filename+'.svg#PlayfairDisplay') format('svg'); /* Legacy iOS */
+  }
+}
+
+// РЕТИНА
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+//ПЛАНВНЫЙ ХОВЕР
+@mixin transition($duration: 0.2s) {
+  transition: all $duration ease;
+}
+
+// ШРИФТЫ
+@mixin h48 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+@mixin h36 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+@mixin h32 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+@mixin h24 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+@mixin h20 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin h18 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin b16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin b14 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin b12 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin section-title {
+  @include h32;
+  color: $text-main;
+  margin: 0;
+}

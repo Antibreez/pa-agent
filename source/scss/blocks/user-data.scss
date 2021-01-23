@@ -1,0 +1,127 @@
+.user-data {
+  color: $text-main;
+  margin-bottom: 80px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__intro {
+    flex-grow: 1;
+    padding: 28px 40px;
+    max-width: 668px;
+    margin-right: 24px;
+    background-color: $bg;
+    border-radius: 5px;
+  }
+
+  &__greeting {
+    padding-bottom: 28px;
+    border-bottom: 1px solid $stroke;
+  }
+
+  &__hello {
+    @include h18;
+    margin: 0;
+    margin-bottom: 6px;
+  }
+
+  &__name {
+    @include h32;
+    margin: 0;
+  }
+
+  &__manager {
+    padding-top: 28px;
+  }
+
+  &__manager-title {
+    @include b14;
+    margin: 0;
+    margin-bottom: 2px;
+    color: $text-minor;
+  }
+
+  &__manager-name {
+    @include h18;
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  &__contacts {
+    display: flex;
+  }
+
+  &__tel,
+  &__mail {
+    @include link-reset;
+    @include b14;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__tel {
+    margin-right: 25px;
+  }
+
+  &__tel::before {
+    background-image: url("../img/phone.svg");
+  }
+
+  &__mail::before {
+    background-image: url("../img/mail.svg");
+  }
+
+  //==================
+
+  &__services,
+  &__calc {
+    flex-grow: 1;
+    padding: 28px 40px;
+    max-width: 322px;
+    background-color: $bg;
+    border-radius: 5px;
+    margin-right: 24px;
+  }
+
+  &__calc {
+    margin-right: 0;
+  }
+
+  &__title {
+    @include h18;
+    margin: 0;
+    margin-bottom: 14px;
+  }
+
+  &__subtitle {
+    @include b14;
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__amount {
+    @include h36;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 24px;
+    color: $text-minor;
+
+    &--active {
+      color: $primary;
+      margin-bottom: 14px;
+    }
+  }
+}

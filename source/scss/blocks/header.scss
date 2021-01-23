@@ -1,0 +1,83 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 18px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    min-width: 108px;
+    margin-right: 40px;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+
+  &__nav {
+    margin-right: 40px;
+  }
+
+  &__user {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-info {
+    margin-right: 10px;
+  }
+
+  &__user-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: $bg;
+    color: $text-minor;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__user-name {
+    @include b14;
+    margin: 0;
+    color: $text-main;
+  }
+
+  &__user-company {
+    @include b12;
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__user-btn {
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/arrow-down_light.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      cursor: pointer;
+      background-image: url("../img/arrow-down_default.svg");
+    }
+  }
+}

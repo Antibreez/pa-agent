@@ -1,0 +1,51 @@
+.last-contracts {
+  margin-bottom: 24px;
+
+  &__title-block {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    @include section-title;
+    margin-right: auto;
+  }
+
+  &__promo {
+    width: 100%;
+    margin-top: 24px;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__promo-left {
+    width: 50%;
+    padding: 52px 40px;
+    background-color: $bg;
+  }
+
+  &__promo-title {
+    @include section-title;
+    color: $text-main;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__promo-desc {
+    @include b16;
+    margin: 0;
+    margin-bottom: 20px;
+    color: $text-minor;
+  }
+
+  &__promo-right {
+    width: 50%;
+    min-height: 100%;
+    background-image: url("../img/contracts-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+

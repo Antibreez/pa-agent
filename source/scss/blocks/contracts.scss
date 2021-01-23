@@ -1,0 +1,288 @@
+.contracts {
+  padding: 34px 14px;
+  border-radius: 5px;
+  background-color: $bg;
+
+  &__link {
+    @include link-reset;
+    display: block;
+    padding: 20px 0;
+    border-top: 1px solid $stroke;
+
+    &:hover {
+      background-color: #fff;
+      border-top-color: transparent;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  &__header + tr .contracts__link {
+    border-top: none;
+  }
+
+  & col {
+    &:first-child {
+      width: 17%;
+    }
+
+    &:nth-child(2) {
+      width: 19%;
+    }
+
+    &:nth-child(3) {
+      width: 13%;
+    }
+
+    &:nth-child(4) {
+      width: 19%;
+    }
+
+    &:nth-child(5) {
+      width: 19%;
+    }
+
+    &:nth-child(6) {
+      width: 13%;
+    }
+  }
+}
+
+.contracts__table {
+  width: 100%;
+  border-collapse: collapse;
+
+  & th {
+    @include b12;
+    margin: 0;
+    padding-bottom: 6px;
+    text-align: left;
+    color: $text-minor;
+
+    &:first-child {
+      padding-left: 14px;
+    }
+
+    &:last-child {
+      text-align: right;
+      padding-right: 14px;
+    }
+  }
+}
+
+.contracts__table
+tr:not(:first-of-type):hover
++ tr .contracts__link {
+  border-top-color: transparent;
+}
+
+.contracts__inner-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contracts__data {
+  @include b14;
+
+  & td {
+    vertical-align: top;
+    text-align: left;
+
+    &:first-child {
+      padding-left: 14px;
+    }
+
+    &:last-child {
+      text-align: right;
+      padding-right: 14px;
+    }
+  }
+
+  & p {
+    margin: 0;
+    color: $text-minor;
+
+    &:first-child {
+      color: $text-main;
+    }
+  }
+}
+
+.contracts__status {
+  @include b14;
+  color: $text-minor;
+
+  & td {
+    width: 100%;
+  }
+
+  & p {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.contracts__status-container {
+  display: flex;
+  align-items: center;
+  padding-top: 23px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.contracts__status-type {
+  color: $text-main;
+  margin: 0;
+  margin-right: 24px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  &.processing::before {
+    background-color: #2858FF;
+  }
+
+  &.done::before {
+    background-color: #40DA90;
+  }
+
+  &.canceled::before {
+    background-color: #FC4242;
+  }
+
+  &.draft::before {
+    background-color: #D1D8E1;
+  }
+}
+
+.contracts__status-verification,
+.contracts__status-payment {
+  margin: 0;
+  margin-right: 24px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+  }
+
+  &.done::before {
+    background-image: url("../img/check.svg");
+  }
+
+  &.waiting::before {
+    background-image: url("../img/time.svg");
+  }
+}
+
+.contracts__status-detail {
+  margin: 0;
+  margin-left: auto;
+}
+
+.contracts__pagination-block {
+  margin-top: 24px;
+
+  & button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+button.contracts__show-more {
+  width: 100%;
+  padding: 32px 30px 31px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $text-main;
+  border: 2px solid $stroke;
+  border-radius: 5px;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    color: $primary;
+    border-color: $primary;
+    cursor: pointer;
+  }
+}
+
+.contracts__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.contracts__page-number {
+  @include b14;
+  color: $text-main;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  margin-right: 4px;
+
+  &.active {
+    background-color: $primary;
+    color: #fff;
+  }
+
+  &:not(.active):hover,
+  &:not(.active):focus {
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+.contracts__prev,
+.contracts__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:disabled):hover {
+    cursor: pointer;
+  }
+}
+
+.contracts__prev svg,
+.contracts__next svg {
+  fill: $text-main;
+  transition: all 0.3s;
+
+  &:hover {
+    fill: $primary;
+  }
+}
+
+.contracts__prev:disabled svg,
+.contracts__next:disabled svg {
+  fill: $stroke;
+}
+
+.contracts__prev:not(:disabled):hover svg,
+.contracts__prev:not(:disabled):focus svg,
+.contracts__next:not(:disabled):hover svg,
+.contracts__next:not(:disabled):focus svg {
+  fill: $primary;
+}
+
+.contracts__prev {
+  margin-right: 20px;
+  transform: rotate(180deg)
+}
+
+.contracts__next {
+  margin-left: 16px;
+}

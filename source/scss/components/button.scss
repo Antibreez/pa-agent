@@ -1,0 +1,100 @@
+.btn-primary,
+.btn-secondary {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  display: inline-block;
+  height: auto;
+  padding: 12px 16px 11px;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all .2s ease;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-hover;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $primary-hover;
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:disabled:hover {
+    background-color: $primary;
+    cursor: default;
+  }
+}
+
+.btn-secondary {
+  padding: 10px 16px 9px;
+  border: 2px solid $primary;
+  color: $text-main;
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $primary;
+    background-color: #fff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:disabled:hover {
+    color: $text-main;
+    cursor: default;
+  }
+}
+
+.btn-arrow {
+  @include link-reset;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $primary;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: all .2s ease;
+
+  &:hover {
+    color: $primary-hover;
+    cursor: pointer;
+  }
+}
+
+.btn-arrow svg {
+  margin-left: 4px;
+  fill: $primary;
+  transition: all .2s ease;
+}
+
+.btn-arrow:hover svg {
+  fill: $primary-hover;
+}

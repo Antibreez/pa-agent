@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+  <body>
+    <div class="wrapper">
+      <!--Меню-->
+      <h3>Меню</h3>
+    </div>
+
+    <div class="wrapper">
+      <!--Кнопки-->
+      <h3>Кнопки</h3>
+      <div>
+        <button class="btn-primary">btn-primary</button>
+        <button class="btn-primary" disabled>btn-primary</button>
+        <a class="btn-primary" href="#">btn-primary</a>
+      </div>
+      <div>
+        <button class="btn-secondary">btn-secondary</button>
+        <button class="btn-secondary" disabled>btn-secondary</button>
+        <a class="btn-secondary">btn-secondary</a>
+      </div>
+      <div>
+        <button class="btn-text">btn-text</button>
+        <button class="btn-text" disabled>btn-text</button>
+        <a class="btn-text">btn-text</a>
+      </div>
+      <div>
+        <button class="btn-menu">btn-menu</button>
+        <button class="btn-menu" disabled>btn-menu</button>
+        <a class="btn-menu">btn-menu</a>
+      </div>
+      <div style="padding: 15px;">
+        <button class="btn-icon">btn-icon</button>
+        <button class="btn-icon" disabled>btn-icon</button>
+        <a class="btn-icon">btn-icon</a>
+      </div>
+      <div style="padding: 15px;">
+        <button class="btn-icon-h">btn-icon-h</button>
+        <button class="btn-icon-h" disabled>btn-icon-h</button>
+        <a class="btn-icon-h">btn-icon-h</a>
+      </div>
+      <div style="padding: 15px;">
+        <button class="btn-arrow">
+          btn-arrow
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"/>
+          </svg>
+        </button>
+        <button class="btn-arrow" disabled>
+          btn-arrow
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"/>
+          </svg>
+        </button>
+        <a class="btn-arrow">
+          btn-arrow
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"/>
+          </svg>
+        </a>
+      </div>
+      <div>===========================</div>
+      <h3>Input</h3>
+      <div class="input-block" style="margin-bottom: 30px;">
+        <input class="input-text" type="text" placeholder="input-text">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon  js-invalid" type="text" placeholder="input-text  input-text--icon">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon" disabled>
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
+
+      <div>===========================</div>
+      <h3>Select</h3>
+    <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
+      <select name="options" class="select">
+        <option value="" disabled selected hidden>.select</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
+    <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
+      <select name="options" class="select js-invalid">
+        <option value="" disabled selected hidden>.select.js-invalid</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
+    <div class="input-block" style="width: 50%; margin: 0 auto;">
+      <select name="options" class="select" disabled>
+        <option value="" disabled selected hidden>.select:disabled</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
+
+    <div>===========================</div>
+      <h3>Search</h3>
+      <div class="search-block">
+        <div class="search-wrap">
+          <input class="search js-show-result" type="text" placeholder="Поиск">
+          <button class="search-close  js-show"></button>
+          <div class="search-result">
+            <div class="search-item">Daichi FTXB-C</div>
+            <div class="search-item">Daichi DA20EVQ1</div>
+            <div class="search-item">Daichi DA70DQ1-B</div>
+            <div class="search-item">Daichi DA70DQ1-B</div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p><strong>.js-show-result</strong> на <strong>input.search</strong> открывает окно с результатами поиска</p>
+      <p>на мобильном разрешении при фокусе в поле поиска блоку <strong>.search-block</strong> добавляется класс <strong>.js-focus</strong> чтобы поиск показывался на все окно, при окончании поиска класс <strong>.js-focus</strong> должен убираться</p>
+      <p><strong>.js-show</strong> на <strong>.search-close</strong> показывает крестик на поле поиска</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Модальное окно-->
+    <h3>Модальное окно</h3>
+      <button class="modal-button btn-primary">Открыть модальное окно</button>
+
+      <section class="modal">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+            <button class="modal__close"></button>
+            <h1 class="modal__title">Заголовок модалки</h1>
+            <p class="modal__desc">
+              Описательный текст, которого может не быть. Такой текст может занимать несколько строчек.
+            </p>
+            <div class="modal__content">
+              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
+              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
+              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
+            </div>
+            <div class="modal__btn-block">
+              <button class="modal__btn-item  btn-primary">Кнопка</button>
+              <button class="modal__btn-item  btn-secondary">Кнопка</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    (function() {
+      const $modal = document.querySelector('.modal');
+      const $button = document.querySelector('.modal-button');
+
+      if (!$modal) {
+        return;
+      }
+
+      const modal = new Modal($button, $modal);
+    })();
+
+    (function() {
+      $('.select').select2();
+    })();
+  </script>
+  </body>
+</html>

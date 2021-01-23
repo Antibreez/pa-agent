@@ -1,0 +1,150 @@
+.footer {
+  border-top: 1px solid $stroke;
+
+  &__top {
+    padding-top: 43px;
+    display: flex;
+    padding-bottom: 32px;
+  }
+
+  &__logo {
+    display: block;
+    margin-top: 5px;
+    width: 91px;
+    margin-right: 40px;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+
+  &__right {
+    flex-grow: 1;
+    max-width: 1050px;
+    margin-left: auto;
+  }
+
+  &__nav {
+    margin-bottom: 28px;
+  }
+
+  &__tel-block,
+  &__mail-block {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__tel-block {
+    margin-right: 25px;
+    &::before {
+      background-image: url("../img/phone.svg");
+    }
+  }
+
+  &__mail-block {
+    &::before {
+      background-image: url("../img/mail.svg");
+    }
+  }
+
+  &__tel,
+  &__mail {
+    @include link-reset;
+    @include b14;
+
+    color: $text-minor;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+
+  &__tel {
+    display: block;
+
+    &:first-child {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $stroke;
+  }
+
+  &__bottom-container {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &__copyright,
+  &__policy,
+  &__address {
+    @include link-reset;
+    @include b12;
+    margin: 0;
+
+    color: $text-minor;
+  }
+
+  &__copyright {
+    margin-right: auto;
+  }
+
+  &__policy {
+    margin-right: 72px;
+    margin-left: 35px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__address {
+    margin-right: auto;
+  }
+
+  &__social-block {
+    display: flex;
+  }
+
+  &__social {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__social svg {
+    fill: $text-minor;
+    transition: all 0.3s;
+  }
+
+  &__social:hover svg {
+    fill: #000;
+  }
+}
