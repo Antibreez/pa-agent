@@ -1,5 +1,6 @@
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-secondary-arrow-v {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -42,7 +43,8 @@
   }
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-secondary-arrow-v {
   padding: 10px 16px 9px;
   border: 2px solid $primary;
   color: $text-main;
@@ -55,9 +57,18 @@
     cursor: pointer;
   }
 
+  &:hover svg,
+  &:focus svg {
+    fill: $primary;
+  }
+
   &:active {
     color: $primary;
     background-color: #fff;
+  }
+
+  &:active svg {
+    fill: $primary;
   }
 
   &:disabled {
@@ -67,6 +78,24 @@
   &:disabled:hover {
     color: $text-main;
     cursor: default;
+  }
+}
+
+.btn-secondary-arrow-v {
+  padding-top: 7px;
+  padding-bottom: 5px;
+
+  & * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  & svg {
+    transform: rotate(90deg);
+  }
+
+  &.opened svg {
+    transform: rotate(270deg);
   }
 }
 

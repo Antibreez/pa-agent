@@ -1,0 +1,44 @@
+.file-load {
+  @include link-reset;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: $bg;
+  border-radius: 5px;
+
+  &__pdf-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    background-image: url("../img/pdf.svg");
+  }
+
+  &__name {
+    @include b14;
+    margin: 0;
+    color: $text-main;
+  }
+
+  &__size {
+    @include b12;
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__link {
+    @include link-reset;
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+
+    & svg {
+      fill: #94A0B1;
+      transition: all 0.3s;
+    }
+
+    &:hover svg {
+      fill: $primary;
+    }
+  }
+}

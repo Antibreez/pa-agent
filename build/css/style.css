@@ -3407,6 +3407,7 @@ main {
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding-top: 124px;
+  padding-bottom: 100px;
 }
 
 img {
@@ -3480,7 +3481,8 @@ a {
 }
 
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-secondary-arrow-v {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -3523,31 +3525,69 @@ a {
   cursor: default;
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-secondary-arrow-v {
   padding: 10px 16px 9px;
   border: 2px solid #2858FF;
   color: #1A1A1A;
   background-color: #fff;
 }
 
-.btn-secondary:hover, .btn-secondary:focus {
+.btn-secondary:hover, .btn-secondary:focus,
+.btn-secondary-arrow-v:hover,
+.btn-secondary-arrow-v:focus {
   color: #2858FF;
   background-color: #fff;
   cursor: pointer;
 }
 
-.btn-secondary:active {
+.btn-secondary:hover svg,
+.btn-secondary:focus svg,
+.btn-secondary-arrow-v:hover svg,
+.btn-secondary-arrow-v:focus svg {
+  fill: #2858FF;
+}
+
+.btn-secondary:active,
+.btn-secondary-arrow-v:active {
   color: #2858FF;
   background-color: #fff;
 }
 
-.btn-secondary:disabled {
+.btn-secondary:active svg,
+.btn-secondary-arrow-v:active svg {
+  fill: #2858FF;
+}
+
+.btn-secondary:disabled,
+.btn-secondary-arrow-v:disabled {
   opacity: 0.5;
 }
 
-.btn-secondary:disabled:hover {
+.btn-secondary:disabled:hover,
+.btn-secondary-arrow-v:disabled:hover {
   color: #1A1A1A;
   cursor: default;
+}
+
+.btn-secondary-arrow-v {
+  padding-top: 7px;
+  padding-bottom: 5px;
+}
+
+.btn-secondary-arrow-v * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-secondary-arrow-v svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.btn-secondary-arrow-v.opened svg {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .btn-arrow {
@@ -3654,6 +3694,62 @@ a {
 .select + .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow b {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.file-load {
+  text-decoration: none;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+  background-color: #F4F4F8;
+  border-radius: 5px;
+}
+
+.file-load__pdf-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  background-image: url("../img/pdf.svg");
+}
+
+.file-load__name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  color: #1A1A1A;
+}
+
+.file-load__size {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  color: #94A0B1;
+}
+
+.file-load__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+}
+
+.file-load__link svg {
+  fill: #94A0B1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.file-load__link:hover svg {
+  fill: #2858FF;
 }
 
 .nav__list {
@@ -4442,7 +4538,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 }
 
 .last-contracts {
-  margin-bottom: 24px;
+  margin-bottom: 80px;
 }
 
 .last-contracts__title-block {
@@ -4503,4 +4599,118 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   background-image: url("../img/contracts-bg.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.support__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #1A1A1A;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.support__item {
+  width: 100%;
+  min-height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+}
+
+.support__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.support__img-block {
+  width: 32%;
+  min-height: 100%;
+  background-size: cover;
+}
+
+.support__item--cloud .support__img-block {
+  background-image: url("../img/cloud-ac.jpg");
+}
+
+.support__item--my-comfort .support__img-block {
+  background-image: url("../img/my-comfort-bg.jpg");
+}
+
+.support__item--climat-online .support__img-block {
+  background-image: url("../img/climat-online-bg.jpg");
+}
+
+.support__item--mobile-control .support__img-block {
+  background-image: url("../img/mobile-control-bg.jpg");
+}
+
+.support__content {
+  width: 68%;
+  padding: 28px;
+  color: #1A1A1A;
+}
+
+.support__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.support__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  margin-bottom: 24px;
+  color: #94A0B1;
+}
+
+.support__benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.support__benefits-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  width: 200px;
+  margin-right: 15px;
+}
+
+.support__benefit-name {
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.support__benefit-desc {
+  margin: 0;
+  color: #94A0B1;
+}
+
+.support__contract {
+  margin-right: 10px;
+}
+
+.support__docs {
+  width: 100%;
+  padding: 24px 28px;
+  display: none;
+}
+
+.support__docs-list {
+  margin: 0;
+  padding: 0;
+}
+
+.support__docs-item:not(:last-of-type) {
+  margin-bottom: 20px;
 }
