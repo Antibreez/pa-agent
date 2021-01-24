@@ -70,13 +70,13 @@
 
   if (!items[0]) {
     return;
-  }
+  } // items.forEach((item) => {
+  //   item.addEventListener('focus', () =>{
+  //     item.parentNode.parentNode.classList.add('js-focus');
+  //   });
+  // });
 
-  items.forEach(function (item) {
-    item.addEventListener('focus', function () {
-      item.parentNode.parentNode.classList.add('js-focus');
-    });
-  });
+
   items.forEach(function (item) {
     item.addEventListener('blur', function () {
       if (item.value.split(' ').join('') === '') {
@@ -101,6 +101,24 @@
         search.classList.remove('js-inputed');
       }
     });
+  });
+})();
+
+(function () {
+  $('.select').select2();
+  $('.select').on('select2:select', function (e) {
+    $(this).addClass('picked');
+  });
+})();
+
+(function () {
+  $('#issue-date').datepicker();
+})();
+
+(function () {
+  $('.filters__btn').click(function () {
+    $(this).parent().next().slideToggle();
+    $(this).toggleClass('opened');
   });
 })();
 

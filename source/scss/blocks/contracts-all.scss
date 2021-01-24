@@ -1,0 +1,28 @@
+.contracts-all {
+  &__title-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @include section-title;
+    margin-right: auto;
+  }
+
+  &__search {
+    margin-bottom: 40px;
+  }
+
+  &__filters {
+    margin-bottom: 24px;
+  }
+
+  &__filters-form {
+    justify-content: space-between;
+  }
+
+  &__select {
+    width: 24%;
+  }
+}

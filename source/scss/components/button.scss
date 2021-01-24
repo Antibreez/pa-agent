@@ -99,7 +99,8 @@
   }
 }
 
-.btn-arrow {
+.btn-arrow,
+.btn-arrow-v {
   @include link-reset;
   font-weight: 500;
   font-size: 14px;
@@ -112,18 +113,29 @@
   background-color: transparent;
   transition: all .2s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $primary-hover;
     cursor: pointer;
   }
 }
 
-.btn-arrow svg {
+.btn-arrow svg,
+.btn-arrow-v svg {
   margin-left: 4px;
   fill: $primary;
   transition: all .2s ease;
 }
 
-.btn-arrow:hover svg {
+.btn-arrow-v svg {
+  transform: rotate(90deg);
+}
+
+.btn-arrow:hover svg,
+.btn-arrow-v:hover svg {
   fill: $primary-hover;
+}
+
+.btn-arrow-v.opened svg {
+  transform: rotate(270deg);
 }

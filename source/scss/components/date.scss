@@ -1,0 +1,52 @@
+.date-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-label {
+  @include b12;
+  margin-bottom: 9px;
+  color: $text-minor;
+}
+
+.date-input {
+  @include b14;
+  height: 56px;
+  padding-left: 20px;
+  padding-right: 44px;
+  border: 2px solid $bg;
+  border-radius: 5px;
+  color: $text-main;
+  transition: all 0.3s;
+
+  background-image: url("../img/calendar.svg");
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border-color: $stroke;
+    background-image: url("../img/calendar_hover.svg");
+  }
+
+  &::-webkit-input-placeholder {
+    color: $text-minor;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $text-minor;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: $text-minor;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $text-minor;
+    opacity: 1;
+  }
+}

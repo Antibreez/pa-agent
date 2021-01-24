@@ -33,6 +33,20 @@
   color: inherit;
 }
 
+@mixin btn-reset {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
 // ШРИФТЫ
 @mixin font-face($name, $filename, $weight) {
   @font-face {

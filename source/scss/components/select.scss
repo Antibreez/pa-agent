@@ -1,10 +1,11 @@
 .select2-container.select2 {
   width: 100%!important;
+  order: 2;
 }
 .select2-container {
   display: block;
   margin: 0 0 16px;
-  font-family: gotham_pro,Arial,Helvetica,Helvetica CY,Nimbus Sans L,sans-serif;
+  font-family: $font;
   font-size: 14px;
   font-size: .875rem;
   text-align: left;
@@ -34,15 +35,35 @@
 
 .select2-container .select2-selection--single {
   height: 56px;
-  border: 2px solid $stroke;
+  border: 2px solid $bg;
   border-radius: 6px;
   font-family: $font;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: $stroke;
+  }
+
+  &:hover .select2-selection__rendered,
+  &:focus .select2-selection__rendered {
+    color: $text-main;
+  }
+}
+
+.select.picked + .select2-container .select2-selection--single {
+  //border-color: $stroke;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   padding: 0 54px 0 20px;
   font-size: 14px;
   line-height: 54px;
+  color: $text-minor;
+  transition: color 0.3s;
+}
+
+.select.picked + .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: $text-main;
 }
 
@@ -51,7 +72,7 @@
   height: 54px;
 }
 
-.select+.select2-container .select2-selection--single .select2-selection__arrow b {
+.select + .select2-container .select2-selection--single .select2-selection__arrow b {
   border: 0;
   width: 24px;
   height: 24px;
@@ -59,10 +80,67 @@
   margin-left: 0;
   left: auto;
   right: 15px;
+  transition: all 0.3s;
+  background: url("../img/arrow-down_light.svg");
+}
+
+.select + .select2-container .select2-selection--single:hover .select2-selection__arrow b {
   background: url("../img/arrow-down_default.svg");
 }
 
 .select+.select2-container.select2-container--open .select2-selection--single .select2-selection__arrow b {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+
+.select2-search--dropdown {
+  padding: 0;
+}
+
+.select2-dropdown {
+  border: none !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.select2-results__option {
+  @include b14;
+  padding: 0;
+  color: $text-main;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: #fff;
+  color: $text-main;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #fff;
+  color: $primary;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+  padding: 24px;
+}
+
+
+.select-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-label {
+  @include b12;
+  margin-bottom: 9px;
+  color: $text-minor;
+  order: 1;
+}
+
+.select-note {
+  order: 3;
 }

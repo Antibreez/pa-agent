@@ -1,0 +1,25 @@
+.filters {
+  padding: 28px;
+  border: 1px solid $bg;
+  border-radius: 5px;
+
+  &__title-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__title {
+    @include section-title;
+    margin: 0;
+    margin-right: auto;
+    color: $text-main;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 24px;
+  }
+}

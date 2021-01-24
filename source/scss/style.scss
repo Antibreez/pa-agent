@@ -3,6 +3,7 @@
 @import "vendor/swiper.scss";
 @import "vendor/jquery.mCustomScrollbar.scss";
 @import "vendor/select2.scss";
+@import "vendor/jquery-ui.scss";
 
 // general
 @import "general/variables.scss";
@@ -13,13 +14,17 @@
 //components
 @import "components/button.scss";
 @import "components/select.scss";
+@import "components/search.scss";
+@import "components/date.scss";
 
 // blocks
 @import "blocks/file-load.scss";
 @import "blocks/nav.scss";
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
+@import "blocks/filters.scss";
 @import "blocks/user-data.scss";
 @import "blocks/contracts.scss";
 @import "blocks/last-contracts.scss";
 @import "blocks/support.scss";
+@import "blocks/contracts-all.scss";

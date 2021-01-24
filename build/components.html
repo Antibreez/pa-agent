@@ -95,7 +95,7 @@
 
       <div>===========================</div>
       <h3>Select</h3>
-    <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
+    <div class="select-block" style="width: 50%; margin: 0 auto 50px;">
       <select name="options" class="select">
         <option value="" disabled="" selected="" hidden="">.select</option>
         <option value="option1">Option 1</option>
@@ -103,8 +103,8 @@
         <option value="option3">Option 3</option>
         <option value="option4">Option 4</option>
       </select>
-      <label class="input-label">input-label</label>
-      <p class="input-note">input-note</p>
+      <label class="select-label">select-label</label>
+      <p class="select-note">select-note</p>
     </div>
     <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
       <select name="options" class="select js-invalid">
@@ -134,16 +134,44 @@
     </div>
 
     <div>===========================</div>
+      <h3>Date</h3>
+      <div class="date-block">
+        <label for="date-input-1" class="date-label">.date-input</label>
+        <input id="date-input-1" class="date-input">
+      </div>
+
+    <div>===========================</div>
       <h3>Search</h3>
       <div class="search-block">
         <div class="search-wrap">
-          <input class="search js-show-result" type="text" placeholder="Поиск">
-          <button class="search-close  js-show"></button>
+          <form class="search-form show-clear show-current show-result">
+            <input class="search" type="text" placeholder="Поиск">
+            <div class="search__current">
+              <div class="search__current-content">
+                <p class="search__current-value">Value</p>
+                <button type="button" class="search__current-clear"></button>
+              </div>
+            </div>
+          </form>
+          <button class="search-close"></button>
           <div class="search-result">
-            <div class="search-item">Daichi FTXB-C</div>
-            <div class="search-item">Daichi DA20EVQ1</div>
-            <div class="search-item">Daichi DA70DQ1-B</div>
-            <div class="search-item">Daichi DA70DQ1-B</div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Клиенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов <span class="matches">Иван</span> <span class="matches">Иван</span>ович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Петрович</div>
+              <div class="search-item"><span class="matches">Иван</span>ков Корнелий Зевс</div>
+              <div class="search-item"><span class="matches">Иван</span>досов Карим Гибкевич</div>
+            </div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Агенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов Кирилл Кириллович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+            </div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Агенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов Кирилл Кириллович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+            </div>
           </div>
         </div>
       </div>
@@ -231,7 +259,7 @@
     })();
 
     (function() {
-      $('.select').select2();
+      $('#date-input-1').datepicker();
     })();
   </script>
   </body>

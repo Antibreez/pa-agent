@@ -6,11 +6,11 @@
     return;
   }
 
-  items.forEach((item) => {
-    item.addEventListener('focus', () =>{
-      item.parentNode.parentNode.classList.add('js-focus');
-    });
-  });
+  // items.forEach((item) => {
+  //   item.addEventListener('focus', () =>{
+  //     item.parentNode.parentNode.classList.add('js-focus');
+  //   });
+  // });
 
   items.forEach((item) => {
     item.addEventListener('blur', () => {
