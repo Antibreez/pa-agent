@@ -16,10 +16,34 @@
     color: $text-main;
   }
 
+  &__btn {
+    & span:first-of-type {
+      display: none;
+    }
+
+    & span:nth-of-type(2) {
+      display: inline;
+    }
+  }
+
+  &__btn.opened {
+    & span:first-of-type {
+      display: inline;
+    }
+
+    & span:nth-of-type(2) {
+      display: none;
+    }
+  }
+
   &__form {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding-top: 24px;
+  }
+
+  &__form-wrapper {
+    display: none;
   }
 }

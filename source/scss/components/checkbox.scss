@@ -1,0 +1,32 @@
+.checkbox {
+  &__label {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__label div {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+    border-radius: 4px;
+    background-color: $bg;
+  }
+
+  &__input:checked + label > div {
+    background-color: $primary;
+    background-image: url("../img/check-white.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    @include b14;
+    color: $text-main;
+    margin: 0;
+  }
+}

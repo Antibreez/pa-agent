@@ -1,0 +1,53 @@
+.delivery-waiting {
+  &__wrapper {
+    padding: 28px;
+    border: 1px solid $bg;
+    border-radius: 5px;
+  }
+
+  &__title-block {
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__change {
+    & * {
+      vertical-align: middle;
+    }
+
+    & span {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-left: 14px;
+      background-image: url("../img/time.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__address {
+    margin: 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid $stroke;
+  }
+
+  &__details {
+    display: flex;
+    padding-top: 14px;
+    margin-bottom: 20px;
+  }
+
+  &__detail {
+    flex-grow: 1;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}

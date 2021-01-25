@@ -1,0 +1,10 @@
+.title-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.title-block__title {
+  @include section-title;
+  margin-right: auto;
+}

@@ -1,0 +1,26 @@
+.info-block {
+  @include b14;
+  padding: 28px 28px 18px;
+  background-color: $bg;
+  border-radius: 5px;
+
+  &__title {
+    @include h18;
+    margin: 0;
+    margin-bottom: 14px;
+    color: $text-main;
+  }
+
+  &__subtitle {
+    @include b14;
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__desc {
+    @include b14;
+    margin: 0;
+    color: $text-main;
+    margin-bottom: 10px;
+  }
+}

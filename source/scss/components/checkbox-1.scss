@@ -1,0 +1,47 @@
+.checkbox-1 {
+  position: relative;
+  padding: 15px;
+  border: 1px solid $bg;
+  border-radius: 5px;
+
+  &__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+    margin-bottom: 5px;
+    color: $text-minor;
+  }
+
+  &__desc {
+    @include b12;
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: $bg;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__input:checked + label {
+    background-color: $primary;
+    background-image: url("../img/check-white.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__input:checked + label + .checkbox-1__name {
+    color: $text-main;
+  }
+}

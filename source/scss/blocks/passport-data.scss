@@ -1,0 +1,44 @@
+.passport-data {
+  margin-bottom: 24px;
+
+  &__wrapper {
+    padding: 28px 28px 18px;
+    border: 1px solid $bg;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  &__column {
+    &:first-child {
+      width: 25%;
+    }
+
+    &:nth-child(2) {
+      width: 24%;
+      padding-top: 36px;
+    }
+
+    &:nth-child(3) {
+      width: 51%;
+    }
+  }
+
+  &__title-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  &__photo-title {
+    margin: 0;
+  }
+
+  &__change {
+    display: block;
+  }
+
+  &__load {
+    width: 100%;
+  }
+}

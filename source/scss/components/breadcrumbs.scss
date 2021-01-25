@@ -1,0 +1,33 @@
+.breadcrumbs {
+  margin-bottom: 40px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    @include b14;
+    color: $text-minor;
+
+    & span {
+      margin-left: 8px;
+      margin-right: 8px;
+      color: $stroke;
+    }
+  }
+
+  &__link {
+    @include link-reset;
+    transition: all 0.3s;
+  }
+
+  &__link[href] {
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+}

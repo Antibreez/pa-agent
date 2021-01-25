@@ -16,15 +16,24 @@
 @import "components/select.scss";
 @import "components/search.scss";
 @import "components/date.scss";
+@import "components/breadcrumbs.scss";
+@import "components/checkbox.scss";
+@import "components/checkbox-1.scss";
 
 // blocks
+@import "blocks/title-block.scss";
 @import "blocks/file-load.scss";
 @import "blocks/nav.scss";
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
 @import "blocks/filters.scss";
+@import "blocks/info-block.scss";
 @import "blocks/user-data.scss";
 @import "blocks/contracts.scss";
 @import "blocks/last-contracts.scss";
 @import "blocks/support.scss";
 @import "blocks/contracts-all.scss";
+@import "blocks/contract-info.scss";
+@import "blocks/payment-waiting.scss";
+@import "blocks/passport-data.scss";
+@import "blocks/delivery-waiting.scss";

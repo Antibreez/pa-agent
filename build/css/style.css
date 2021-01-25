@@ -6088,6 +6088,151 @@ input.search.js-inputed {
   opacity: 1;
 }
 
+.breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.breadcrumbs__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumbs__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #94A0B1;
+}
+
+.breadcrumbs__item span {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #D1D8E1;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.breadcrumbs__link[href]:hover, .breadcrumbs__link[href]:focus {
+  color: #2858FF;
+}
+
+.checkbox__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkbox__label:hover {
+  cursor: pointer;
+}
+
+.checkbox__label div {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 14px;
+  border-radius: 4px;
+  background-color: #F4F4F8;
+}
+
+.checkbox__input:checked + label > div {
+  background-color: #2858FF;
+  background-image: url("../img/check-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.checkbox-1 {
+  position: relative;
+  padding: 15px;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+}
+
+.checkbox-1__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  margin-bottom: 5px;
+  color: #94A0B1;
+}
+
+.checkbox-1__desc {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  color: #94A0B1;
+}
+
+.checkbox-1__label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #F4F4F8;
+}
+
+.checkbox-1__label:hover {
+  cursor: pointer;
+}
+
+.checkbox-1__input:checked + label {
+  background-color: #2858FF;
+  background-image: url("../img/check-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox-1__input:checked + label + .checkbox-1__name {
+  color: #1A1A1A;
+}
+
+.title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.title-block__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #1A1A1A;
+  margin: 0;
+  margin-right: auto;
+}
+
 .file-load {
   text-decoration: none;
   color: inherit;
@@ -6481,6 +6626,22 @@ input.search.js-inputed {
   color: #1A1A1A;
 }
 
+.filters__btn span:first-of-type {
+  display: none;
+}
+
+.filters__btn span:nth-of-type(2) {
+  display: inline;
+}
+
+.filters__btn.opened span:first-of-type {
+  display: inline;
+}
+
+.filters__btn.opened span:nth-of-type(2) {
+  display: none;
+}
+
 .filters__form {
   width: 100%;
   display: -webkit-box;
@@ -6489,6 +6650,45 @@ input.search.js-inputed {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 24px;
+}
+
+.filters__form-wrapper {
+  display: none;
+}
+
+.info-block {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 28px 28px 18px;
+  background-color: #F4F4F8;
+  border-radius: 5px;
+}
+
+.info-block__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 14px;
+  color: #1A1A1A;
+}
+
+.info-block__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  color: #94A0B1;
+}
+
+.info-block__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  color: #1A1A1A;
+  margin-bottom: 10px;
 }
 
 .user-data {
@@ -7181,4 +7381,241 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .contracts-all__select {
   width: 24%;
+}
+
+.contract-info {
+  margin-bottom: 24px;
+}
+
+.contract-info__btn:not(:last-child) {
+  margin-right: 16px;
+}
+
+.contract-info__blocks-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contract-info__block {
+  width: 32%;
+}
+
+.contract-info__status-value {
+  position: relative;
+  padding-left: 20px;
+}
+
+.contract-info__status-value::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: -1px;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.contract-info__status-value.processing::before {
+  background-color: #2858FF;
+}
+
+.contract-info__status-value.done::before {
+  background-color: #40DA90;
+}
+
+.contract-info__status-value.canceled::before {
+  background-color: #FC4242;
+}
+
+.contract-info__status-value.draft::before {
+  background-color: #D1D8E1;
+}
+
+.payment-waiting {
+  margin-bottom: 24px;
+}
+
+.payment-waiting__wrapper {
+  padding: 28px;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.payment-waiting__info-form {
+  width: 41%;
+  padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.payment-waiting__detail--sum {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.payment-waiting__detail--time {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.payment-waiting__new-link {
+  margin-top: auto;
+}
+
+.payment-waiting__send-form {
+  width: 59%;
+}
+
+.payment-waiting__send-form-wrapper {
+  padding-left: 32px;
+  border-left: 1px solid #D1D8E1;
+}
+
+.payment-waiting__logo {
+  text-align: right;
+  margin-bottom: 17px;
+}
+
+.payment-waiting__logo::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/time.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.payment-waiting__checkbox {
+  margin-bottom: 14px;
+}
+
+.passport-data {
+  margin-bottom: 24px;
+}
+
+.passport-data__wrapper {
+  padding: 28px 28px 18px;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.passport-data__column:first-child {
+  width: 25%;
+}
+
+.passport-data__column:nth-child(2) {
+  width: 24%;
+  padding-top: 36px;
+}
+
+.passport-data__column:nth-child(3) {
+  width: 51%;
+}
+
+.passport-data__title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.passport-data__photo-title {
+  margin: 0;
+}
+
+.passport-data__change {
+  display: block;
+}
+
+.passport-data__load {
+  width: 100%;
+}
+
+.delivery-waiting__wrapper {
+  padding: 28px;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+}
+
+.delivery-waiting__title-block {
+  margin-bottom: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delivery-waiting__title {
+  margin: 0;
+}
+
+.delivery-waiting__change * {
+  vertical-align: middle;
+}
+
+.delivery-waiting__change span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 14px;
+  background-image: url("../img/time.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.delivery-waiting__address {
+  margin: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #D1D8E1;
+}
+
+.delivery-waiting__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 14px;
+  margin-bottom: 20px;
+}
+
+.delivery-waiting__detail {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.delivery-waiting__detail:not(:last-child) {
+  margin-right: 15px;
 }
