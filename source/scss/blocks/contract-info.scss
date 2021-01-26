@@ -7,11 +7,61 @@
 
   &__blocks-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   &__block {
     width: 32%;
+  }
+
+  &__block--paid,
+  &__block--delivered {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__title-check {
+    display: flex;
+    align-items: center;
+
+    & span {
+      margin-right: auto;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/check.svg");
+    }
+  }
+
+  &__delivered-adress {
+    display: none;
+  }
+
+  div.contract-info__delivered-details {
+    margin-bottom: 0;
+  }
+
+  &__delivered-toggle {
+    @include btn-reset;
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+    background-image: url("../img/arrow-down_light.svg");
+
+    &.opened {
+      transform: rotate(180deg);
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-image: url("../img/arrow-down_default.svg");
+    }
   }
 
   &__status-value {

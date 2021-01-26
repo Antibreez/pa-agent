@@ -4,13 +4,12 @@
 
   &__container {
     display: flex;
+    justify-content: space-between;
   }
 
   &__intro {
-    flex-grow: 1;
     padding: 28px 40px;
-    max-width: 668px;
-    margin-right: 24px;
+    width: 49%;
     background-color: $bg;
     border-radius: 5px;
   }
@@ -88,16 +87,10 @@
 
   &__services,
   &__calc {
-    flex-grow: 1;
     padding: 28px 40px;
-    max-width: 322px;
+    width: 24%;
     background-color: $bg;
     border-radius: 5px;
-    margin-right: 24px;
-  }
-
-  &__calc {
-    margin-right: 0;
   }
 
   &__title {

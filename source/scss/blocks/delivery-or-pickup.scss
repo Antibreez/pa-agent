@@ -1,4 +1,6 @@
-.delivery-waiting {
+.delivery-or-pickup {
+  margin-bottom: 24px;
+
   &__wrapper {
     padding: 28px;
     border: 1px solid $bg;
@@ -35,13 +37,18 @@
   &__address {
     margin: 0;
     padding-bottom: 14px;
-    border-bottom: 1px solid $stroke;
+
+    &--pickup {
+      margin-bottom: 14px;
+      border-bottom: none;
+    }
   }
 
   &__details {
     display: flex;
     padding-top: 14px;
     margin-bottom: 20px;
+    border-top: 1px solid $stroke;
   }
 
   &__detail {
@@ -49,5 +56,18 @@
     &:not(:last-child) {
       margin-right: 15px;
     }
+  }
+
+  &__payment-link {
+    padding: 12px 12px 2px;
+    margin-bottom: 28px;
+    background-color: $bg;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__fill {
+    margin: 14px 0 10px;
   }
 }

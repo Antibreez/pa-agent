@@ -1,0 +1,16 @@
+.documents {
+  &__title {
+    @include section-title;
+    color: $text-main;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}

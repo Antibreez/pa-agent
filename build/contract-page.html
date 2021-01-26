@@ -101,6 +101,58 @@
             <p class="info-block__subtitle">Комиссия по договору</p>
             <p class="info-block__desc">11 250&nbsp;&nbsp;₽&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;ожидает выплаты </p>
           </div>
+
+          <!--Договор оплачен-->
+
+          <div class="contract-info__block  contract-info__block--paid  info-block">
+            <h2 class="contract-info__title-check  info-block__title">
+              <span>Оплачен   |  Оплата онлайн  |  85 998 ₽  |  01.01.2020
+            </span></h2>
+          </div>
+
+          <!--Доставлен/Получен-->
+
+          <div class="contract-info__block  contract-info__block--delivered  info-block">
+            <h2 class="contract-info__title-check  info-block__title">
+              <button class="contract-info__delivered-toggle"></button>
+              <span>Доставлен  |  20.12.2020 - 13:40
+            </span></h2>
+            <div class="contract-info__delivered-adress">
+              <p class="delivery-or-pickup__address  info-block__desc">
+                Москва, Лермонтовский проспект, 8к1
+              </p>
+              <div class="contract-info__delivered-details  delivery-or-pickup__details">
+                <div class="delivery-or-pickup__detail">
+                  <p class="info-block__subtitle">Подъезд</p>
+                  <p class="info-block__desc">1</p>
+                </div>
+                <div class="delivery-or-pickup__detail">
+                  <p class="info-block__subtitle">Кв / Офис</p>
+                  <p class="info-block__desc">172</p>
+                </div>
+                <div class="delivery-or-pickup__detail">
+                  <p class="info-block__subtitle">Домофон</p>
+                  <p class="info-block__desc">172#8766</p>
+                </div>
+                <div class="delivery-or-pickup__detail">
+                  <p class="info-block__subtitle">Этаж</p>
+                  <p class="info-block__desc">10</p>
+                </div>
+                <div class="delivery-or-pickup__detail">
+                  <p class="info-block__subtitle">Дата</p>
+                  <p class="info-block__desc">20.12.2020</p>
+                </div>
+                <div class="delivery-or-pickup__detail">
+                  <p class="info-block__subtitle">Время</p>
+                  <p class="info-block__desc">09:00 - 22:00</p>
+                </div>
+                <div class="delivery-or-pickup__detail">
+                  <p class="info-block__subtitle">Стоимость</p>
+                  <p class="info-block__desc">1 500  ₽</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -148,6 +200,108 @@
       </div>
     </section>
 
+    <!--Ожидается Доставка-->
+
+    <section class="delivery-or-pickup no-dat">
+      <div class="delivery-or-pickup__container  wrapper">
+        <div class="delivery-or-pickup__wrapper">
+            <div class="delivery-or-pickup__title-block">
+              <h2 class="delivery-or-pickup__title info-block__title">Ожидается доставка</h2>
+              <a href="#" class="delivery-or-pickup__change  btn-arrow">Изменить способ доставки<span></span></a>
+            </div>
+            <p class="delivery-or-pickup__address  info-block__desc">
+              Москва, Лермонтовский проспект, 8к1
+            </p>
+            <div class="delivery-or-pickup__details">
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Подъезд</p>
+                <p class="info-block__desc">1</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Кв / Офис</p>
+                <p class="info-block__desc">172</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Домофон</p>
+                <p class="info-block__desc">172#8766</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Этаж</p>
+                <p class="info-block__desc">10</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Дата</p>
+                <p class="info-block__desc">20.12.2020</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Время</p>
+                <p class="info-block__desc">09:00 - 22:00</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Стоимость</p>
+                <p class="info-block__desc">1 500  ₽</p>
+              </div>
+            </div>
+
+            <div class="delivery-or-pickup__payment-link">
+              <div>
+                <p class="info-block__subtitle">Ссылка на оплату доставки</p>
+                <p class="info-block__desc">https://daichi.ru/payment/5fe09526ec203/</p>
+              </div>
+              <form>
+                <button class="delivery-or-pickup__send btn-primary">Отправить клиенту</button>
+              </form>
+            </div>
+            <form>
+              <input class="checkbox__input visually-hidden" id="delivery-or-pickup__confirm-delivery" type="checkbox" name="deliver-confirm">
+              <label for="delivery-or-pickup__confirm-delivery" class="checkbox__label">
+                <div></div>
+                <p class="checkbox__text">Подтвердить факт доставки</p>
+              </label>
+            </form>
+        </div>
+      </div>
+    </section>
+
+    <!--Ожидается Самовывоз-->
+
+    <section class="delivery-or-pickup no-dat">
+      <div class="delivery-or-pickup__container  wrapper">
+        <div class="delivery-or-pickup__wrapper">
+            <div class="delivery-or-pickup__title-block">
+              <h2 class="delivery-or-pickup__title info-block__title">Ожидается самовывоз</h2>
+              <a href="#" class="delivery-or-pickup__change  btn-arrow">Изменить способ доставки<span></span></a>
+            </div>
+            <p class="delivery-or-pickup__address  delivery-or-pickup__address--pickup  info-block__desc">
+              ул. Челябинская д.23 к.1  | Ближ. метро Первомайская  |  с 12:00 до 17:00
+            </p>
+            <form>
+              <input class="checkbox__input visually-hidden" id="delivery-or-pickup__confirm-pickup" type="checkbox" name="deliver-confirm">
+              <label for="delivery-or-pickup__confirm-pickup" class="checkbox__label">
+                <div></div>
+                <p class="checkbox__text">Подтвердить факт отгрузки</p>
+              </label>
+            </form>
+        </div>
+      </div>
+    </section>
+
+    <!--Способ доставки не указан-->
+
+    <section class="delivery-or-pickup">
+      <div class="delivery-or-pickup__container  wrapper">
+        <div class="delivery-or-pickup__no-data info-block">
+          <h2 class="info-block__title">Укажите способ доставки</h2>
+          <p class="info-block__subtitle">Укажите адрес доставки или выберите адрес самовывоза</p>
+          <a href="#" class="delivery-or-pickup__fill btn-primary">
+            Указать способ доставки
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--Паспортные данные -->
+
     <section class="passport-data">
       <div class="passport-data__container  wrapper">
         <div class="passport-data__wrapper">
@@ -191,55 +345,308 @@
       </div>
     </section>
 
-    <section class="delivery-waiting">
-      <div class="delivery-waiting__container  wrapper">
-        <div class="delivery-waiting__wrapper">
-          <div class="delivery-waiting__title-block">
-            <h2 class="delivery-waiting__title info-block__title">Ожидается доставка по договору</h2>
-            <a href="#" class="delivery-waiting__change  btn-arrow">Изменить способ доставки<span></span></a>
-          </div>
-          <p class="delivery-waiting__address  info-block__desc">Москва, Лермонтовский проспект, 8к1</p>
-          <div class="delivery-waiting__details">
-            <div class="delivery-waiting__detail">
-              <p class="info-block__subtitle">Подъезд</p>
-              <p class="info-block__desc">1</p>
-            </div>
-            <div class="delivery-waiting__detail">
-              <p class="info-block__subtitle">Кв / Офис</p>
-              <p class="info-block__desc">172</p>
-            </div>
-            <div class="delivery-waiting__detail">
-              <p class="info-block__subtitle">Домофон</p>
-              <p class="info-block__desc">172#8766</p>
-            </div>
-            <div class="delivery-waiting__detail">
-              <p class="info-block__subtitle">Этаж</p>
-              <p class="info-block__desc">10</p>
-            </div>
-            <div class="delivery-waiting__detail">
-              <p class="info-block__subtitle">Дата</p>
-              <p class="info-block__desc">20.12.2020</p>
-            </div>
-            <div class="delivery-waiting__detail">
-              <p class="info-block__subtitle">Время</p>
-              <p class="info-block__desc">09:00 - 22:00</p>
-            </div>
-            <div class="delivery-waiting__detail">
-              <p class="info-block__subtitle">Стоимость</p>
-              <p class="info-block__desc">1 500  ₽</p>
-            </div>
-          </div>
-          <form>
-            <input class="checkbox__input visually-hidden" id="delivery-waiting__confirm" type="checkbox" name="deliver-confirm">
-            <label for="delivery-waiting__confirm" class="checkbox__label">
-              <div></div>
-              <p class="checkbox__text">Подтвердить факт доставки</p>
-            </label>
-          </form>
+    <!--Паспортные данные не указаны-->
+
+    <section class="passport-data">
+      <div class="passport-data__container  wrapper">
+        <div class="passport-data__no-data info-block">
+          <h2 class="info-block__title">Укажите паспортные данные</h2>
+          <p class="info-block__subtitle">Паспортные данные клиента необходимо указать перед верификацией договора</p>
+          <a href="#" class="passport-data__fill btn-primary">
+            Указать паспортные данные
+          </a>
         </div>
       </div>
     </section>
 
+    <section class="contract-services">
+      <div class="contract-services__container  wrapper">
+        <h2 class="contract-services__title">Услуги в договоре</h2>
+        <p class="contract-services__desc info-block__subtitle">
+          0/3 оплачено; 0/3 смонтировано; 0/3 доставлено; 0/3 подключено к облаку
+        </p>
+        <div class="contract-services__block">
+          <table class="contract-services__table">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <tr class="contract-services__header">
+              <th>Услуга</th>
+              <th>№ договора</th>
+              <th>Осталось</th>
+              <th>Клиент</th>
+              <th>Агент</th>
+              <th>Ближайший платёж</th>
+            </tr>
+            <!--СТРОКА ДОГОВОРА-->
+            <tr>
+              <td colspan="6">
+                <a href="#" class="contract-services__link">
+                  <table class="contract-services__inner-table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr class="contract-services__data">
+                      <td>
+                        <p>
+                          Облачный кондиционер
+                          Daikin FTXJ25MW/RXJ250M
+                        </p>
+                        <p>
+                          Не указан S/N
+                        </p>
+                      </td>
+                      <td>
+                        <p>DA2020-17</p>
+                      </td>
+                      <td>
+                        <p>-</p>
+                      </td>
+                      <td>
+                        <p>Иванов Иван Иванович</p>
+                        <p>ivanov@gmail.ru</p>
+                        <p>+7 (123) 456-78-90</p>
+                      </td>
+                      <td>
+                        <p>Александров Александр Александрович</p>
+                        <p>ООО МЭК</p>
+                      </td>
+                      <td>
+                        <p>8 999 ₽</p>
+                        <p>до 24.07.2021 </p>
+                      </td>
+                    </tr>
+                    <tr class="contract-services__status">
+                      <td colspan="6">
+                        <div class="contract-services__status-container">
+                          <p class="contract-services__status-type pending">В ожидании</p>
+                          <p class="contract-services__status-waiting">Ожидается оплата</p>
+                          <object>
+                            <a href="index.html" class="contract-services__delivery-type">
+                              Указать способ доставки
+                            </a>
+                          </object>
+                          <p class="contract-services__status-waiting">
+                            Ожидается монтаж
+                          </p>
+                          <p class="contract-services__status-waiting">
+                            Ожидается подключение к облаку
+                          </p>
+                          <p class="contract-services__status-waiting">
+                            Ожидается верификация
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+              </td>
+            </tr>
+            <!--СТРОКА ДОГОВОРА-->
+            <tr>
+              <td colspan="6">
+                <a href="#" class="contract-services__link">
+                  <table class="contract-services__inner-table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr class="contract-services__data">
+                      <td>
+                        <p>
+                          Облачный кондиционер
+                          Daikin FTXJ25MW/RXJ250M
+                        </p>
+                        <p>
+                          Не указан S/N
+                        </p>
+                      </td>
+                      <td>
+                        <p>DA2020-17</p>
+                      </td>
+                      <td>
+                        <p>-</p>
+                      </td>
+                      <td>
+                        <p>Иванов Иван Иванович</p>
+                        <p>ivanov@gmail.ru</p>
+                        <p>+7 (123) 456-78-90</p>
+                      </td>
+                      <td>
+                        <p>Александров Александр Александрович</p>
+                        <p>ООО МЭК</p>
+                      </td>
+                      <td>
+                        <p>8 999 ₽</p>
+                        <p>до 24.07.2021 </p>
+                      </td>
+                    </tr>
+                    <tr class="contract-services__status">
+                      <td colspan="6">
+                        <div class="contract-services__status-container">
+                          <p class="contract-services__status-type pending">В ожидании</p>
+                          <p class="contract-services__status-waiting">Ожидается оплата</p>
+                          <object>
+                            <a href="index.html" class="contract-services__delivery-type">
+                              Указать способ доставки
+                            </a>
+                          </object>
+                          <p class="contract-services__status-waiting">
+                            Ожидается монтаж
+                          </p>
+                          <p class="contract-services__status-waiting">
+                            Ожидается подключение к облаку
+                          </p>
+                          <p class="contract-services__status-waiting">
+                            Ожидается верификация
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+              </td>
+            </tr>
+            <!--СТРОКА ДОГОВОРА-->
+            <tr>
+              <td colspan="6">
+                <a href="#" class="contract-services__link">
+                  <table class="contract-services__inner-table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr class="contract-services__data">
+                      <td>
+                        <p>
+                          Облачный кондиционер
+                          Daikin FTXJ25MW/RXJ250M
+                        </p>
+                        <p>
+                          Не указан S/N
+                        </p>
+                      </td>
+                      <td>
+                        <p>DA2020-17</p>
+                      </td>
+                      <td>
+                        <p>-</p>
+                      </td>
+                      <td>
+                        <p>Иванов Иван Иванович</p>
+                        <p>ivanov@gmail.ru</p>
+                        <p>+7 (123) 456-78-90</p>
+                      </td>
+                      <td>
+                        <p>Александров Александр Александрович</p>
+                        <p>ООО МЭК</p>
+                      </td>
+                      <td>
+                        <p>8 999 ₽</p>
+                        <p>до 24.07.2021 </p>
+                      </td>
+                    </tr>
+                    <tr class="contract-services__status">
+                      <td colspan="6">
+                        <div class="contract-services__status-container">
+                          <p class="contract-services__status-type pending">В ожидании</p>
+                          <p class="contract-services__status-waiting">Ожидается оплата</p>
+                          <object>
+                            <a href="index.html" class="contract-services__delivery-type">
+                              Указать способ доставки
+                            </a>
+                          </object>
+                          <p class="contract-services__status-waiting">
+                            Ожидается монтаж
+                          </p>
+                          <p class="contract-services__status-waiting">
+                            Ожидается подключение к облаку
+                          </p>
+                          <p class="contract-services__status-waiting">
+                            Ожидается верификация
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="documents">
+      <div class="documents__container wrapper">
+        <h2 class="documents__title">Документы</h2>
+        <ul class="documents__list">
+          <li class="documents__item">
+            <div class="documents__docs-load  file-load">
+              <div class="file-load__pdf-logo"></div>
+              <div class="file-load__info">
+                <p class="file-load__name">Договор оферты.pdf</p>
+                <p class="file-load__size">PDF, 450 Кбайт</p>
+              </div>
+              <a href="#" class="file-load__link" download="">
+                <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.60601 11.2931C7.19036 10.9026 6.51646 10.9026 6.10081 11.2931C5.68515 11.6836 5.68515 12.3168 6.10081 12.7073L10.8904 17.2073C11.306 17.5978 11.9799 17.5978 12.3956 17.2073L17.1851 12.7073C17.6008 12.3168 17.6008 11.6836 17.1851 11.2931C16.7695 10.9026 16.0956 10.9026 15.6799 11.2931L12.7073 14.086V3.50024C12.7073 2.94795 12.2308 2.50024 11.643 2.50024C11.0552 2.50024 10.5787 2.94795 10.5787 3.50024V14.086L7.60601 11.2931Z"></path>
+                <path d="M3.12869 16.5002C3.12869 15.9479 2.65217 15.5002 2.06435 15.5002C1.47652 15.5002 1 15.9479 1 16.5002V21.5002C1 22.0525 1.47652 22.5002 2.06435 22.5002H21.2225C21.8103 22.5002 22.2868 22.0525 22.2868 21.5002V16.5002C22.2868 15.9479 21.8103 15.5002 21.2225 15.5002C20.6347 15.5002 20.1581 15.9479 20.1581 16.5002V20.5002H3.12869V16.5002Z"></path>
+                </svg>
+              </a>
+            </div>
+          </li>
+          <li class="documents__item">
+            <div class="documents__docs-load  file-load">
+              <div class="file-load__pdf-logo"></div>
+              <div class="file-load__info">
+                <p class="file-load__name">КП.pdf</p>
+                <p class="file-load__size">PDF, 450 Кбайт</p>
+              </div>
+              <a href="#" class="file-load__link" download="">
+                <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.60601 11.2931C7.19036 10.9026 6.51646 10.9026 6.10081 11.2931C5.68515 11.6836 5.68515 12.3168 6.10081 12.7073L10.8904 17.2073C11.306 17.5978 11.9799 17.5978 12.3956 17.2073L17.1851 12.7073C17.6008 12.3168 17.6008 11.6836 17.1851 11.2931C16.7695 10.9026 16.0956 10.9026 15.6799 11.2931L12.7073 14.086V3.50024C12.7073 2.94795 12.2308 2.50024 11.643 2.50024C11.0552 2.50024 10.5787 2.94795 10.5787 3.50024V14.086L7.60601 11.2931Z"></path>
+                <path d="M3.12869 16.5002C3.12869 15.9479 2.65217 15.5002 2.06435 15.5002C1.47652 15.5002 1 15.9479 1 16.5002V21.5002C1 22.0525 1.47652 22.5002 2.06435 22.5002H21.2225C21.8103 22.5002 22.2868 22.0525 22.2868 21.5002V16.5002C22.2868 15.9479 21.8103 15.5002 21.2225 15.5002C20.6347 15.5002 20.1581 15.9479 20.1581 16.5002V20.5002H3.12869V16.5002Z"></path>
+                </svg>
+              </a>
+            </div>
+          </li>
+          <li class="documents__item">
+            <div class="documents__docs-load  file-load">
+              <div class="file-load__pdf-logo"></div>
+              <div class="file-load__info">
+                <p class="file-load__name">КП.pdf</p>
+                <p class="file-load__size">PDF, 450 Кбайт</p>
+              </div>
+              <a href="#" class="file-load__link" download="">
+                <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.60601 11.2931C7.19036 10.9026 6.51646 10.9026 6.10081 11.2931C5.68515 11.6836 5.68515 12.3168 6.10081 12.7073L10.8904 17.2073C11.306 17.5978 11.9799 17.5978 12.3956 17.2073L17.1851 12.7073C17.6008 12.3168 17.6008 11.6836 17.1851 11.2931C16.7695 10.9026 16.0956 10.9026 15.6799 11.2931L12.7073 14.086V3.50024C12.7073 2.94795 12.2308 2.50024 11.643 2.50024C11.0552 2.50024 10.5787 2.94795 10.5787 3.50024V14.086L7.60601 11.2931Z"></path>
+                <path d="M3.12869 16.5002C3.12869 15.9479 2.65217 15.5002 2.06435 15.5002C1.47652 15.5002 1 15.9479 1 16.5002V21.5002C1 22.0525 1.47652 22.5002 2.06435 22.5002H21.2225C21.8103 22.5002 22.2868 22.0525 22.2868 21.5002V16.5002C22.2868 15.9479 21.8103 15.5002 21.2225 15.5002C20.6347 15.5002 20.1581 15.9479 20.1581 16.5002V20.5002H3.12869V16.5002Z"></path>
+                </svg>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
