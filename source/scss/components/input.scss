@@ -1,0 +1,66 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  @include b12;
+  margin-bottom: 9px;
+  color: $text-minor;
+  order: 1;
+}
+
+.input-text {
+  @include b14;
+  color: $text-main;
+  height: 56px;
+  padding: 0 20px;
+  border: none;
+  background-color: $bg;
+  border-radius: 5px;
+  order: 2;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus,
+  &.js-inputed {
+    background-color: #E6E6EF;
+  }
+
+  &.js-wrong {
+    border: 1px solid #FC4242;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $text-minor;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $text-minor;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: $text-minor;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $text-minor;
+    opacity: 1;
+  }
+}
+
+.input-note {
+  @include b12;
+  display: none;
+  margin: 0;
+  margin-top: 9px;
+  order: 3;
+}
+
+.input-text.js-wrong + label + .input-note {
+  display: block;
+  color: #FC4242;
+}

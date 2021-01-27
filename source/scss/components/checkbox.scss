@@ -15,6 +15,7 @@
     margin-right: 14px;
     border-radius: 4px;
     background-color: $bg;
+    transition: all 0.3s;
   }
 
   &__input:checked + label > div {
@@ -28,5 +29,10 @@
     @include b14;
     color: $text-main;
     margin: 0;
+  }
+
+  &__label:hover div,
+  &__label:focus div {
+    background-color: #e6e6ef;
   }
 }

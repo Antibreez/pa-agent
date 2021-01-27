@@ -1,6 +1,132 @@
 "use strict";
 
 (function () {
+  //const fileInput = document.querySelector('.input-file__input');
+  function makeFileLoad(fileDropArea) {
+    var fileInput = fileDropArea.querySelector('input'); // Сбрасываем стандартные события при перетаскивании файла
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
+      fileDropArea.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    ; // Добавляем стили при перетаскивании файла над нужной областью
+
+    ['dragenter', 'dragover'].forEach(function (eventName) {
+      fileDropArea.addEventListener(eventName, highlight, false);
+    });
+    ['dragleave', 'drop'].forEach(function (eventName) {
+      fileDropArea.addEventListener(eventName, unhighlight, false);
+    });
+
+    function highlight(e) {
+      fileDropArea.classList.add('highlight');
+    }
+
+    ;
+
+    function unhighlight(e) {
+      fileDropArea.classList.remove('highlight');
+    }
+
+    ; //
+
+    fileDropArea.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+      var dt = e.dataTransfer;
+      var files = dt.files;
+
+      if (fileInput.files && fileInput.files[0]) {
+        fileInput.value = '';
+
+        if (!/safari/i.test(navigator.userAgent)) {
+          fileInput.type = '';
+          fileInput.type = 'file';
+        }
+      }
+
+      fileInput.files = files;
+      onFileChange(); //handleFiles(files)
+    }
+
+    ;
+
+    var onFileChange = function onFileChange() {
+      readUrl(fileInput);
+    };
+
+    var readUrl = function readUrl(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader(); // reader.onloadstart = function (e) {
+        //   progress.classList.add('show');
+        // }
+        // reader.onprogress = function (e) {
+        //   console.log(Math.round(e.loaded / e.total * 100));
+        //   bar.style.width = Math.round(e.loaded / e.total * 100) + '%';
+        // }
+
+        reader.onload = function (e) {
+          //fileImg.setAttribute('src', e.target.result);
+          //text.textContent = input.files[0].name;
+          // !fileResult.classList.contains('show') && fileResult.classList.add('show');
+          fileDropArea.parentNode.classList.add('loaded');
+          fileDropArea.nextElementSibling.querySelector('.file-load__name').textContent = input.files[0].name; // progress.classList.remove('show');
+          // bar.style.width = 0;
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    };
+
+    fileInput.addEventListener('change', onFileChange);
+  }
+
+  window.makeFileLoad = makeFileLoad;
+})();
+
+(function () {
+  var deliveryTimeInputs = document.querySelectorAll('.delivery-or-pickup__modal-time');
+
+  if (!deliveryTimeInputs[0]) {
+    return;
+  }
+
+  var im = new Inputmask("99:99");
+  deliveryTimeInputs.forEach(function (item) {
+    im.mask(item);
+  });
+})();
+
+(function () {
+  var inputs = document.querySelectorAll('.input-text');
+
+  if (!inputs[0]) {
+    return;
+  }
+
+  inputs.forEach(function (input) {
+    input.addEventListener('blur', function () {
+      if (input.value.split(' ').join('') === '') {
+        input.value = '';
+      }
+
+      if (input.value !== '' && !input.classList.contains('js-inputed')) {
+        input.classList.add('js-inputed');
+      }
+
+      if (input.value === '' && input.classList.contains('js-inputed')) {
+        input.classList.remove('js-inputed');
+      }
+    });
+  });
+})();
+
+(function () {
   var vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
   var $body = document.querySelector('body');
@@ -112,9 +238,21 @@
 })();
 
 (function () {
+  var fileDropArea = document.querySelector('.input-file__label');
+  var deliveryBtns = document.querySelectorAll('.deliver-or-pickup__confirm-btn');
+  var modal = document.getElementById('delivery-or-pickup__modal');
+
+  if (!fileDropArea) {
+    return;
+  }
+
   $('.contract-info__delivered-toggle').click(function () {
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
+  });
+  makeFileLoad(fileDropArea);
+  deliveryBtns.forEach(function (btn) {
+    new Modal(btn, modal);
   });
 })();
 

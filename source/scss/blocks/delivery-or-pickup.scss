@@ -60,14 +60,41 @@
 
   &__payment-link {
     padding: 12px 12px 2px;
-    margin-bottom: 28px;
     background-color: $bg;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
   }
 
+  &__confirm {
+    margin-top: 28px;
+  }
+
   &__fill {
     margin: 14px 0 10px;
+  }
+
+  &__modal-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__modal-date-block {
+    margin-right: 15px;
+  }
+
+  &__modal-date-block,
+  &__modal-time-block {
+    margin-bottom: 28px;
+    flex-grow: 1;
+  }
+
+  &__modal-checkbox {
+    width: 100%;
+    margin-bottom: 28px;
+  }
+
+  &__modal-input-file {
+    width: 100%;
   }
 }

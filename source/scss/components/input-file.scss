@@ -1,0 +1,38 @@
+.input-file {
+  &__label {
+    @include b14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-minor;
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid $stroke;
+    background-color: #fff;
+    border-radius: 5px;
+    order: 2;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: $text-main;
+    }
+
+    &.highlight {
+      opacity: 0.5;
+    }
+  }
+}
+
+div.input-file__file-load {
+  display: none;
+}
+
+.input-file.loaded .input-file__label {
+  display: none;
+}
+
+.input-file.loaded div.input-file__file-load {
+  display: flex;
+}

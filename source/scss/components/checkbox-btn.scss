@@ -1,0 +1,30 @@
+.checkbox-btn {
+  @include btn-reset;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .checkbox-btn__checkbox {
+    background-color: #e6e6ef;
+  }
+
+  &__checkbox {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+    border-radius: 4px;
+    background-color: $bg;
+    transition: all 0.3s;
+  }
+
+  &__label {
+    @include b14;
+    color: $text-main;
+    margin: 0;
+  }
+}
