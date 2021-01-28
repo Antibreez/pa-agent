@@ -39,15 +39,16 @@
     padding-bottom: 14px;
 
     &--pickup {
-      margin-bottom: 14px;
+      //margin-bottom: 14px;
       border-bottom: none;
+      padding-bottom: 0;
     }
   }
 
   &__details {
     display: flex;
     padding-top: 14px;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
     border-top: 1px solid $stroke;
   }
 
@@ -64,6 +65,7 @@
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+    margin-top: 18px;
   }
 
   &__confirm {
@@ -98,3 +100,16 @@
     width: 100%;
   }
 }
+
+// div.delivery-or-pickup__file-load {
+//   display: none;
+// }
+
+// .delivery-or-pickup__modal-input-file.loaded .input-file__label {
+//   display: none;
+// }
+
+// .delivery-or-pickup__modal-input-file.loaded div.input-file__file-load {
+//   display: flex;
+// }
+

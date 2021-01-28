@@ -1,5 +1,6 @@
 (function() {
   //const fileInput = document.querySelector('.input-file__input');
+  const fileDropArea = document.querySelectorAll('.input-file__label');
 
   function makeFileLoad(fileDropArea) {
     const fileInput = fileDropArea.querySelector('input');
@@ -96,4 +97,12 @@
 
   window.makeFileLoad = makeFileLoad;
 
+
+  if (!fileDropArea[0]) {
+    return;
+  }
+
+  fileDropArea.forEach(function(item) {
+    makeFileLoad(item);
+  });
 })();

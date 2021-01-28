@@ -2,6 +2,8 @@
 
 (function () {
   //const fileInput = document.querySelector('.input-file__input');
+  var fileDropArea = document.querySelectorAll('.input-file__label');
+
   function makeFileLoad(fileDropArea) {
     var fileInput = fileDropArea.querySelector('input'); // Сбрасываем стандартные события при перетаскивании файла
 
@@ -87,6 +89,14 @@
   }
 
   window.makeFileLoad = makeFileLoad;
+
+  if (!fileDropArea[0]) {
+    return;
+  }
+
+  fileDropArea.forEach(function (item) {
+    makeFileLoad(item);
+  });
 })();
 
 (function () {
@@ -238,26 +248,58 @@
 })();
 
 (function () {
-  var fileDropArea = document.querySelector('.input-file__label');
-  var deliveryBtns = document.querySelectorAll('.deliver-or-pickup__confirm-btn');
-  var modal = document.getElementById('delivery-or-pickup__modal');
-
-  if (!fileDropArea) {
-    return;
-  }
-
   $('.contract-info__delivered-toggle').click(function () {
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
   });
-  makeFileLoad(fileDropArea);
-  deliveryBtns.forEach(function (btn) {
-    new Modal(btn, modal);
-  });
 })();
 
 (function () {
-  $('#issue-date').datepicker();
+  var contractsAll = document.querySelector('.contracts-all');
+
+  if (!contractsAll) {
+    return;
+  }
+
+  $('.date-input').datepicker();
+})();
+
+(function () {
+  var deliveryBtns = document.querySelectorAll('.deliver-or-pickup__confirm-btn');
+
+  if (!deliveryBtns[0]) {
+    return;
+  }
+
+  $('#delivery-date').datepicker();
+  var modal = document.getElementById('delivery-or-pickup__modal');
+  var close = modal.querySelector('.modal__close');
+  var fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
+  var fileInput = modal.querySelector('.input-file__input');
+  var dateInput = modal.querySelector('.delivery-or-pickup__modal-time');
+  var timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
+  var confirmCheckbox = modal.querySelector('.checkbox__input');
+  deliveryBtns.forEach(function (btn) {
+    new Modal(btn, modal);
+  });
+
+  var onCloseClick = function onCloseClick() {
+    if (fileInputBlock.classList.contains('loaded')) {
+      fileInputBlock.classList.remove('loaded');
+      dateInput.value = '';
+      timeInput.value = '';
+      confirmCheckbox.checked = false;
+      $('#delivery-date').datepicker('setDate', '');
+      fileInput.value = '';
+
+      if (!/safari/i.test(navigator.userAgent)) {
+        fileInput.type = '';
+        fileInput.type = 'file';
+      }
+    }
+  };
+
+  close.addEventListener('click', onCloseClick);
 })();
 
 (function () {
@@ -265,6 +307,42 @@
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
   });
+})();
+
+(function () {
+  var paymentConfirmBtns = document.querySelectorAll('.payment-waiting__confirm-btn');
+
+  if (!paymentConfirmBtns[0]) {
+    return;
+  }
+
+  $('#delivery-date').datepicker();
+  var modal = document.getElementById('payment-waiting__modal');
+  var close = modal.querySelector('.modal__close'); // const fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
+  // const fileInput = modal.querySelector('.input-file__input');
+  // const dateInput = modal.querySelector('.delivery-or-pickup__modal-time');
+  // const timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
+  // const confirmCheckbox = modal.querySelector('.checkbox__input');
+
+  paymentConfirmBtns.forEach(function (btn) {
+    new Modal(btn, modal);
+  });
+
+  var onCloseClick = function onCloseClick() {// if (fileInputBlock.classList.contains('loaded')) {
+    //   fileInputBlock.classList.remove('loaded');
+    //   dateInput.value = '';
+    //   timeInput.value = '';
+    //   confirmCheckbox.checked = false;
+    //   $('#delivery-date').datepicker('setDate', '');
+    //   fileInput.value = '';
+    //   if(!/safari/i.test(navigator.userAgent)){
+    //     fileInput.type = '';
+    //     fileInput.type = 'file';
+    //   }
+    // }
+  };
+
+  close.addEventListener('click', onCloseClick);
 })();
 
 (function () {

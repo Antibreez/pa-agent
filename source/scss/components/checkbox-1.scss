@@ -44,4 +44,31 @@
   &__input:checked + label + .checkbox-1__name {
     color: $text-main;
   }
+
+  &.sended {
+    border: none;
+    background-color: $bg;
+
+    & .checkbox-1__name {
+      color: $text-main;
+    }
+
+    & input,
+    & label {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/check.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
