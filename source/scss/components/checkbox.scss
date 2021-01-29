@@ -1,6 +1,8 @@
 .checkbox {
+  font-size: 0;
+
   &__label {
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     &:hover {
@@ -18,7 +20,7 @@
     transition: all 0.3s;
   }
 
-  &__input:checked + label > div {
+  &__input:checked + div {
     background-color: $primary;
     background-image: url("../img/check-white.svg");
     background-position: center;
@@ -31,8 +33,22 @@
     margin: 0;
   }
 
-  &__label:hover div,
-  &__label:focus div {
+  &__label:hover input:not(:checked) + div,
+  &__label:focus input:not(:checked) + div {
     background-color: #e6e6ef;
+  }
+
+  &--no-text div {
+    margin-right: 0;
+  }
+}
+
+.checkbox--border {
+  & .checkbox__label div {
+    border: 1px solid $stroke;
+  }
+
+  & .checkbox__input:checked + div {
+    border: none;
   }
 }

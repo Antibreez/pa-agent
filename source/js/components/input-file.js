@@ -1,5 +1,4 @@
 (function() {
-  //const fileInput = document.querySelector('.input-file__input');
   const fileDropArea = document.querySelectorAll('.input-file__label');
 
   function makeFileLoad(fileDropArea) {
@@ -52,8 +51,6 @@
 
       fileInput.files = files;
       onFileChange();
-
-      //handleFiles(files)
     };
 
     const onFileChange = () => {
@@ -64,28 +61,12 @@
       if (input.files && input.files[0]) {
         var reader = new FileReader();
 
-        // reader.onloadstart = function (e) {
-        //   progress.classList.add('show');
-        // }
-
-        // reader.onprogress = function (e) {
-        //   console.log(Math.round(e.loaded / e.total * 100));
-        //   bar.style.width = Math.round(e.loaded / e.total * 100) + '%';
-        // }
-
         reader.onload = function (e) {
-          //fileImg.setAttribute('src', e.target.result);
-          //text.textContent = input.files[0].name;
-          // !fileResult.classList.contains('show') && fileResult.classList.add('show');
           fileDropArea.parentNode.classList.add('loaded');
           fileDropArea
             .nextElementSibling
             .querySelector('.file-load__name')
             .textContent = input.files[0].name;
-          // progress.classList.remove('show');
-          // bar.style.width = 0;
-
-
         }
 
         reader.readAsDataURL(input.files[0]);

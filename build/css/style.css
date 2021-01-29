@@ -5403,8 +5403,7 @@ body {
           flex-direction: column;
 }
 
-body.popup {
-  max-height: 100vh;
+body.js__body-no-scroll {
   overflow: hidden;
 }
 
@@ -6127,10 +6126,14 @@ input.search.js-inputed {
   color: #2858FF;
 }
 
+.checkbox {
+  font-size: 0;
+}
+
 .checkbox__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6151,7 +6154,7 @@ input.search.js-inputed {
   transition: all 0.3s;
 }
 
-.checkbox__input:checked + label > div {
+.checkbox__input:checked + div {
   background-color: #2858FF;
   background-image: url("../img/check-white.svg");
   background-position: center;
@@ -6166,9 +6169,21 @@ input.search.js-inputed {
   margin: 0;
 }
 
-.checkbox__label:hover div,
-.checkbox__label:focus div {
+.checkbox__label:hover input:not(:checked) + div,
+.checkbox__label:focus input:not(:checked) + div {
   background-color: #e6e6ef;
+}
+
+.checkbox--no-text div {
+  margin-right: 0;
+}
+
+.checkbox--border .checkbox__label div {
+  border: 1px solid #D1D8E1;
+}
+
+.checkbox--border .checkbox__input:checked + div {
+  border: none;
 }
 
 .checkbox-1 {
@@ -7968,6 +7983,35 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   display: none;
 }
 
+.payment-waiting__modal-body {
+  max-width: 1152px;
+}
+
+.payment-waiting__modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.payment-waiting__modal-sender, .payment-waiting__modal-recipient, .payment-waiting__modal-sum {
+  width: 32%;
+  margin-bottom: 24px;
+}
+
+.payment-waiting__modal-date-block, .payment-waiting__modal-purpose {
+  width: 49%;
+  margin-bottom: 32px;
+}
+
+.payment-waiting__modal-transactions {
+  width: 100%;
+}
+
 .payment-waiting__checkbox.sended
 + .payment-waiting__checkbox.sended
 + button {
@@ -8506,4 +8550,123 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .documents__item:not(:last-child) {
   margin-bottom: 14px;
+}
+
+.transactions__title-block {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px;
+  color: #1A1A1A;
+}
+
+.transactions__title {
+  margin: 0;
+}
+
+.transactions__sum--current {
+  color: #2858FF;
+}
+
+.transactions__desc {
+  margin-bottom: 24px;
+}
+
+.transactions__table-block {
+  padding: 34px 28px 39px;
+  background-color: #F4F4F8;
+  border-radius: 5px;
+}
+
+.transactions__table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.transactions__table col:first-child {
+  width: 48px;
+}
+
+.transactions__table col:nth-child(2) {
+  width: calc(21% - 48px);
+}
+
+.transactions__table col:nth-child(3) {
+  width: 15%;
+}
+
+.transactions__table col:nth-child(4) {
+  width: 15%;
+}
+
+.transactions__table col:nth-child(5) {
+  width: 10%;
+}
+
+.transactions__table col:nth-child(6) {
+  width: 15%;
+}
+
+.transactions__table col:nth-child(7) {
+  width: 15%;
+}
+
+.transactions__table col:nth-child(8) {
+  width: 8%;
+}
+
+.transactions__table th,
+.transactions__table td {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #94A0B1;
+  text-align: left;
+  padding: 0;
+  padding-right: 24px;
+  padding-bottom: 26px;
+}
+
+.transactions__table th:first-child,
+.transactions__table td:first-child {
+  font-size: 0;
+  line-height: 0;
+}
+
+.transactions__table th:last-child,
+.transactions__table td:last-child {
+  text-align: right;
+}
+
+.transactions__table td {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  vertical-align: top;
+  color: #1A1A1A;
+  padding-bottom: 22px;
+}
+
+.transactions__table td span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.transactions__table td:last-child span {
+  white-space: nowrap;
+  color: #2858FF;
 }

@@ -79,6 +79,33 @@
   &__repeat {
     display: none;
   }
+
+  &__modal-body {
+    max-width: 1152px;
+  }
+
+  &__modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__modal-sender,
+  &__modal-recipient,
+  &__modal-sum {
+    width: 32%;
+    margin-bottom: 24px;
+  }
+
+  &__modal-date-block,
+  &__modal-purpose {
+    width: 49%;
+    margin-bottom: 32px;
+  }
+
+  &__modal-transactions {
+    width: 100%;
+  }
 }
 
 .payment-waiting__checkbox.sended

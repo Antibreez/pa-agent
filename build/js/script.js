@@ -1,7 +1,10 @@
 "use strict";
 
 (function () {
-  //const fileInput = document.querySelector('.input-file__input');
+  $('.date-input').datepicker();
+})();
+
+(function () {
   var fileDropArea = document.querySelectorAll('.input-file__label');
 
   function makeFileLoad(fileDropArea) {
@@ -53,7 +56,7 @@
       }
 
       fileInput.files = files;
-      onFileChange(); //handleFiles(files)
+      onFileChange();
     }
 
     ;
@@ -64,21 +67,11 @@
 
     var readUrl = function readUrl(input) {
       if (input.files && input.files[0]) {
-        var reader = new FileReader(); // reader.onloadstart = function (e) {
-        //   progress.classList.add('show');
-        // }
-        // reader.onprogress = function (e) {
-        //   console.log(Math.round(e.loaded / e.total * 100));
-        //   bar.style.width = Math.round(e.loaded / e.total * 100) + '%';
-        // }
+        var reader = new FileReader();
 
         reader.onload = function (e) {
-          //fileImg.setAttribute('src', e.target.result);
-          //text.textContent = input.files[0].name;
-          // !fileResult.classList.contains('show') && fileResult.classList.add('show');
           fileDropArea.parentNode.classList.add('loaded');
-          fileDropArea.nextElementSibling.querySelector('.file-load__name').textContent = input.files[0].name; // progress.classList.remove('show');
-          // bar.style.width = 0;
+          fileDropArea.nextElementSibling.querySelector('.file-load__name').textContent = input.files[0].name;
         };
 
         reader.readAsDataURL(input.files[0]);
@@ -316,33 +309,46 @@
     return;
   }
 
-  $('#delivery-date').datepicker();
+  $('#payment-date').datepicker();
   var modal = document.getElementById('payment-waiting__modal');
-  var close = modal.querySelector('.modal__close'); // const fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
-  // const fileInput = modal.querySelector('.input-file__input');
-  // const dateInput = modal.querySelector('.delivery-or-pickup__modal-time');
-  // const timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
-  // const confirmCheckbox = modal.querySelector('.checkbox__input');
+  var close = modal.querySelector('.modal__close');
+  var mainCheckbox = modal.querySelector('.transactions__check-all input');
+  var senderInput = modal.querySelector('.payment-waiting__modal-sender input');
+  var recipientInput = modal.querySelector('.payment-waiting__modal-recipient input');
+  var sumInput = modal.querySelector('.payment-waiting__modal-sum input');
+  var purposeInput = modal.querySelector('.payment-waiting__modal-purpose input');
+
+  var getAllCheckbox = function getAllCheckbox() {
+    return modal.querySelectorAll('.transactions__check input');
+  };
+
+  var onAllChange = function onAllChange() {
+    getAllCheckbox().forEach(function (item) {
+      if (mainCheckbox.checked) {
+        item.checked = true;
+      } else {
+        item.checked = false;
+      }
+    });
+  };
+
+  var onCloseClick = function onCloseClick() {
+    mainCheckbox.checked = false;
+    getAllCheckbox().forEach(function (item) {
+      item.checked = false;
+    });
+    $('#payment-date').datepicker('setDate', '');
+    senderInput.value = '';
+    recipientInput.value = '';
+    sumInput.value = '';
+    purposeInput.value = '';
+  };
 
   paymentConfirmBtns.forEach(function (btn) {
     new Modal(btn, modal);
   });
-
-  var onCloseClick = function onCloseClick() {// if (fileInputBlock.classList.contains('loaded')) {
-    //   fileInputBlock.classList.remove('loaded');
-    //   dateInput.value = '';
-    //   timeInput.value = '';
-    //   confirmCheckbox.checked = false;
-    //   $('#delivery-date').datepicker('setDate', '');
-    //   fileInput.value = '';
-    //   if(!/safari/i.test(navigator.userAgent)){
-    //     fileInput.type = '';
-    //     fileInput.type = 'file';
-    //   }
-    // }
-  };
-
   close.addEventListener('click', onCloseClick);
+  mainCheckbox.addEventListener('change', onAllChange);
 })();
 
 (function () {
