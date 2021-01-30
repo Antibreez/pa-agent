@@ -241,6 +241,17 @@
 })();
 
 (function () {
+  var cancellationBtn = document.querySelector('.contract-info__cancellation');
+
+  if (!cancellationBtn) {
+    return;
+  }
+
+  var modal = document.getElementById('cancellation__modal');
+  new Modal(cancellationBtn, modal);
+})();
+
+(function () {
   $('.contract-info__delivered-toggle').click(function () {
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
@@ -287,12 +298,15 @@
     return;
   }
 
-  $('#delivery-date').datepicker();
+  $('#delivery-date').datepicker().on('change', function (dateText) {
+    onFieldChange();
+  });
   var modal = document.getElementById('delivery-or-pickup__modal');
   var close = modal.querySelector('.modal__close');
+  var submit = modal.querySelector('.modal__submit');
   var fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
   var fileInput = modal.querySelector('.input-file__input');
-  var dateInput = modal.querySelector('.delivery-or-pickup__modal-time');
+  var dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
   var timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
   var confirmCheckbox = modal.querySelector('.checkbox__input');
   deliveryBtns.forEach(function (btn) {
@@ -303,6 +317,7 @@
     if (fileInputBlock.classList.contains('loaded')) {
       fileInputBlock.classList.remove('loaded');
       fileInput.value = '';
+      submit.setAttribute('disabled', '');
 
       if (!/safari/i.test(navigator.userAgent)) {
         fileInput.type = '';
@@ -316,7 +331,23 @@
     $('#delivery-date').datepicker('setDate', '');
   };
 
+  var onFieldChange = function onFieldChange(e) {
+    if (isFormFilled() && submit.hasAttribute('disabled')) {
+      submit.removeAttribute('disabled');
+    } else if (!isFormFilled() && !submit.hasAttribute('disabled')) {
+      submit.setAttribute('disabled', '');
+    }
+  };
+
+  var isFormFilled = function isFormFilled() {
+    return $('#delivery-date').datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true && fileInput.value !== '';
+  };
+
   close.addEventListener('click', onCloseClick);
+  dateInput.addEventListener('input', onFieldChange);
+  timeInput.addEventListener('input', onFieldChange);
+  fileInput.addEventListener('change', onFieldChange);
+  confirmCheckbox.addEventListener('change', onFieldChange);
 })();
 
 (function () {

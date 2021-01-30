@@ -69,9 +69,9 @@
       <div class="contract-info__container  wrapper">
         <div class="contract-info__title-block  title-block">
           <h1 class="contract-info__title  title-block__title">Договоры</h1>
-          <a href="#" class="contract-info__btn btn-secondary">Аннулировать договор</a>
+          <button class="contract-info__cancellation contract-info__btn btn-secondary">Аннулировать договор</button>
           <a href="#" class="contract-info__btn btn-secondary">Редактировать</a>
-          <button href="#" class="contract-info__verification  contract-info__btn btn-primary">Верифицировать договор</button>
+          <button class="contract-info__verification  contract-info__btn btn-primary">Верифицировать договор</button>
         </div>
         <div class="contract-info__blocks-wrapper">
           <div class="contract-info__block  info-block">
@@ -455,7 +455,7 @@
                           <p class="contract-services__status-type pending">В ожидании</p>
                           <p class="contract-services__status-waiting">Ожидается оплата</p>
                           <object>
-                            <a href="index.html" class="contract-services__delivery-type">
+                            <a href="#" class="contract-services__delivery-type">
                               Указать способ доставки
                             </a>
                           </object>
@@ -524,7 +524,7 @@
                           <p class="contract-services__status-type pending">В ожидании</p>
                           <p class="contract-services__status-waiting">Ожидается оплата</p>
                           <object>
-                            <a href="index.html" class="contract-services__delivery-type">
+                            <a href="#" class="contract-services__delivery-type">
                               Указать способ доставки
                             </a>
                           </object>
@@ -593,7 +593,7 @@
                           <p class="contract-services__status-type pending">В ожидании</p>
                           <p class="contract-services__status-waiting">Ожидается оплата</p>
                           <object>
-                            <a href="index.html" class="contract-services__delivery-type">
+                            <a href="#" class="contract-services__delivery-type">
                               Указать способ доставки
                             </a>
                           </object>
@@ -759,7 +759,7 @@
             <div class="delivery-or-pickup__modal-content  modal__content">
               <div class="delivery-or-pickup__modal-date-block  date-block">
                 <label for="delivery-date" class="date-label">Дата доставки</label>
-                <input id="delivery-date" class="date-input" placeholder="Не указана">
+                <input id="delivery-date" class="delivery-or-pickup__modal-date  date-input" placeholder="Не указана">
               </div>
               <div class="delivery-or-pickup__modal-time-block  input-block">
                 <input class="delivery-or-pickup__modal-time  input-text" type="text">
@@ -767,8 +767,8 @@
               </div>
 
               <div class="delivery-or-pickup__modal-checkbox  checkbox">
-                <input class="checkbox__input visually-hidden" id="delivery-or-pickup__modal-confirm" type="checkbox" name="deliver-confirm">
-                <label for="delivery-or-pickup__modal-confirm" class="checkbox__label">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden"  type="checkbox" name="deliver-confirm">
                   <div></div>
                   <p class="checkbox__text">Подтвердить факт доставки</p>
                 </label>
@@ -796,7 +796,7 @@
             </div>
             <div class="modal__btn-block">
               <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
-              <button type="submit" class="modal__btn-item  btn-primary">Подтвердить</button>
+              <button type="submit" class="modal__submit  modal__btn-item  btn-primary" disabled>Подтвердить</button>
             </div>
           </form>
         </div>
@@ -892,6 +892,26 @@
             <div class="modal__btn-block">
               <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
               <button type="submit" class="modal__save  modal__btn-item  btn-primary" disabled>Сохранить</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+
+  <!--Модальное окно aннулирования-->
+  <section id="cancellation__modal" class="modal">
+    <div class="modal__overlay">
+
+        <div class="modal__body">
+          <form>
+            <h1 class="modal__title">Вы точно хотите аннулировать договор?</h1>
+            <p class="modal__desc">
+              Если договор находится в статусе “В обработке”, то все работы по его оформлению будут приостановлены, он не будет заключен с клиентом.<br>
+              Если договор находится в статусе “Заключен”, то все подписки в рамках договора будут переведены в статус “заблокирована”.
+            </p>
+            <div class="modal__btn-block">
+              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+              <button type="submit" class="modal__save  modal__btn-item  btn-primary">Подтвердить</button>
             </div>
           </form>
         </div>
