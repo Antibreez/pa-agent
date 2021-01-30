@@ -28,3 +28,9 @@
     margin: 0;
   }
 }
+
+.checkbox-btn--border {
+  .checkbox-btn__checkbox {
+    border: 1px solid $stroke;
+  }
+}

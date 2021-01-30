@@ -6482,6 +6482,10 @@ input.search.js-inputed {
   margin: 0;
 }
 
+.checkbox-btn--border .checkbox-btn__checkbox {
+  border: 1px solid #D1D8E1;
+}
+
 .input-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8273,6 +8277,11 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   width: 16%;
 }
 
+.contract-services__delivery-confirm {
+  margin-top: 0;
+  margin-right: 24px;
+}
+
 .contract-services__table {
   width: 100%;
   border-collapse: collapse;
@@ -8372,6 +8381,9 @@ tr:not(:first-of-type):hover
 }
 
 .contract-services__status-type {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
   color: #444444;
   margin: 0;
   margin-right: 24px;
@@ -8381,6 +8393,10 @@ tr:not(:first-of-type):hover
 
 .contract-services__status-type.pending {
   background-color: #FEEDAE;
+}
+
+.contract-services__status-type.active {
+  background-color: #DDF9EC;
 }
 
 .contract-services__status-waiting {

@@ -59,6 +59,11 @@
       width: 16%;
     }
   }
+
+  &__delivery-confirm {
+    margin-top: 0;
+    margin-right: 24px;
+  }
 }
 
 .contract-services__table {
@@ -145,6 +150,7 @@ tr:not(:first-of-type):hover
 }
 
 .contract-services__status-type {
+  @include b12;
   color: #444444;
   margin: 0;
   margin-right: 24px;
@@ -153,6 +159,10 @@ tr:not(:first-of-type):hover
 
   &.pending {
     background-color: #FEEDAE;
+  }
+
+  &.active {
+    background-color: #DDF9EC;
   }
 }
 

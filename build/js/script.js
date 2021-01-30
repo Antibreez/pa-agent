@@ -248,6 +248,30 @@
 })();
 
 (function () {
+  var contractServices = document.querySelector('.contract-services');
+
+  if (!contractServices) {
+    return;
+  }
+
+  var links = document.querySelectorAll('.contract-services__link');
+  console.log(links);
+
+  var onLinkClick = function onLinkClick(e) {
+    var target = e.target;
+    console.log(target.classList.contains('chekcbox-btn__label'));
+
+    if (target.classList.contains('checkbox-btn__label') || target.classList.contains('checkbox-btn__checkbox') || target.classList.contains('deliver-or-pickup__confirm-btn') || target.classList.contains('contract-services__delivery-confirm')) {
+      e.preventDefault();
+    }
+  };
+
+  links.forEach(function (link) {
+    link.addEventListener('click', onLinkClick);
+  });
+})();
+
+(function () {
   var contractsAll = document.querySelector('.contracts-all');
 
   if (!contractsAll) {
