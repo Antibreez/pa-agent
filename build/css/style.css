@@ -6329,7 +6329,7 @@ input.search.js-inputed {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   color: #94A0B1;
 }
 
@@ -8685,4 +8685,8 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .transactions__table td:last-child span {
   white-space: nowrap;
   color: #2858FF;
+}
+
+.verification__modal-content {
+  margin-bottom: 28px;
 }

@@ -22,10 +22,6 @@
   const onCloseClick = function() {
     if (fileInputBlock.classList.contains('loaded')) {
       fileInputBlock.classList.remove('loaded');
-      dateInput.value = '';
-      timeInput.value = '';
-      confirmCheckbox.checked = false;
-      $('#delivery-date').datepicker('setDate', '');
 
       fileInput.value = '';
 
@@ -34,6 +30,11 @@
         fileInput.type = 'file';
       }
     }
+
+    dateInput.value = '';
+    timeInput.value = '';
+    confirmCheckbox.checked = false;
+    $('#delivery-date').datepicker('setDate', '');
   }
 
   close.addEventListener('click', onCloseClick);

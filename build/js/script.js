@@ -255,7 +255,6 @@
   }
 
   var links = document.querySelectorAll('.contract-services__link');
-  console.log(links);
 
   var onLinkClick = function onLinkClick(e) {
     var target = e.target;
@@ -303,10 +302,6 @@
   var onCloseClick = function onCloseClick() {
     if (fileInputBlock.classList.contains('loaded')) {
       fileInputBlock.classList.remove('loaded');
-      dateInput.value = '';
-      timeInput.value = '';
-      confirmCheckbox.checked = false;
-      $('#delivery-date').datepicker('setDate', '');
       fileInput.value = '';
 
       if (!/safari/i.test(navigator.userAgent)) {
@@ -314,6 +309,11 @@
         fileInput.type = 'file';
       }
     }
+
+    dateInput.value = '';
+    timeInput.value = '';
+    confirmCheckbox.checked = false;
+    $('#delivery-date').datepicker('setDate', '');
   };
 
   close.addEventListener('click', onCloseClick);
@@ -380,4 +380,41 @@
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
   });
+})();
+
+(function () {
+  var verificationBtn = document.querySelector('.contract-info__verification');
+
+  if (!verificationBtn) {
+    return;
+  }
+
+  var modal = document.getElementById('verification__modal');
+  var fileInputBlock = modal.querySelector('.verification__modal-input-file');
+  var fileInput = modal.querySelector('.input-file__input');
+  var close = modal.querySelector('.modal__close');
+  var saveBtn = document.querySelector('.modal__save');
+
+  var onCloseClick = function onCloseClick() {
+    if (fileInputBlock.classList.contains('loaded')) {
+      fileInputBlock.classList.remove('loaded');
+      fileInput.value = '';
+      saveBtn.setAttribute('disabled', '');
+
+      if (!/safari/i.test(navigator.userAgent)) {
+        fileInput.type = '';
+        fileInput.type = 'file';
+      }
+    }
+  };
+
+  var onInputChange = function onInputChange() {
+    if (fileInput.value !== '') {
+      saveBtn.removeAttribute('disabled');
+    }
+  };
+
+  new Modal(verificationBtn, modal);
+  close.addEventListener('click', onCloseClick);
+  fileInput.addEventListener('change', onInputChange);
 })();

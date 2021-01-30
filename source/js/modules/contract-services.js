@@ -6,7 +6,6 @@
   }
 
   const links = document.querySelectorAll('.contract-services__link');
-  console.log(links);
 
   const onLinkClick = function(e) {
     const target = e.target;
