@@ -1,0 +1,38 @@
+.process {
+  margin-bottom: 40px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__stage {
+    @include b16;
+    flex-grow: 1;
+    text-align: center;
+
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
+
+  &__stage-bar {
+    width: 100%;
+    height: 4px;
+    margin-bottom: 18px;
+    border-radius: 2px;
+    background-color: $bg;
+  }
+
+  &__stage-bar--active {
+    background-color: $primary;
+  }
+
+  &__stage-name {
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__stage-name--active {
+    color: $text-main;
+  }
+}

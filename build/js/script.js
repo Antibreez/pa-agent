@@ -234,7 +234,21 @@
 })();
 
 (function () {
-  $('.select').select2();
+  function formatOption(item) {
+    var value = item.text.split('splitter');
+
+    if (value.length > 1) {
+      var result = $('<span>' + value[0] + '</span><span>' + value[1] + '</span>');
+      return result;
+    } else {
+      return item.text;
+    }
+  }
+
+  $('.select').select2({
+    templateResult: formatOption,
+    templateSelection: formatOption
+  });
   $('.select').on('select2:select', function (e) {
     $(this).addClass('picked');
   });
@@ -249,6 +263,54 @@
 
   var modal = document.getElementById('cancellation__modal');
   new Modal(cancellationBtn, modal);
+})();
+
+(function () {
+  var dataBlock = document.querySelector('.contract-creation');
+
+  if (!dataBlock) {
+    return;
+  }
+
+  var radios = dataBlock.querySelectorAll('.radio__input');
+  var nextBtn = dataBlock.querySelector('.contract-payment__next');
+  var selected = 0;
+
+  function isRadioChecked() {
+    var isChecked = false;
+    radios.forEach(function (item) {
+      if (item.checked) {
+        isChecked = true;
+      }
+    });
+    return isChecked;
+  }
+
+  function checkData() {
+    if (selected >= 3 && isRadioChecked()) {
+      if (nextBtn.hasAttribute('disabled')) {
+        nextBtn.removeAttribute('disabled');
+      }
+    } else {
+      if (!nextBtn.hasAttribute('disabled')) {
+        nextBtn.setAttribute('disabled', '');
+      }
+    }
+  }
+
+  $('.contract-subject__agent').on('select2:select', function (e) {
+    selected += 1;
+    checkData();
+  });
+  $('.contract-subject__service').on('select2:select', function () {
+    selected += 1;
+    checkData();
+  });
+  radios.forEach(function (item) {
+    item.addEventListener('change', function () {
+      checkData();
+    });
+  });
 })();
 
 (function () {
@@ -303,6 +365,7 @@
   });
   var modal = document.getElementById('delivery-or-pickup__modal');
   var close = modal.querySelector('.modal__close');
+  var overlay = modal.querySelector('.modal__overlay');
   var submit = modal.querySelector('.modal__submit');
   var fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
   var fileInput = modal.querySelector('.input-file__input');
@@ -331,6 +394,12 @@
     $('#delivery-date').datepicker('setDate', '');
   };
 
+  var onOverlayClick = function onOverlayClick(e) {
+    if (e.target.classList.contains('modal__overlay')) {
+      onCloseClick();
+    }
+  };
+
   var onFieldChange = function onFieldChange(e) {
     if (isFormFilled() && submit.hasAttribute('disabled')) {
       submit.removeAttribute('disabled');
@@ -344,6 +413,7 @@
   };
 
   close.addEventListener('click', onCloseClick);
+  overlay.addEventListener('click', onOverlayClick);
   dateInput.addEventListener('input', onFieldChange);
   timeInput.addEventListener('input', onFieldChange);
   fileInput.addEventListener('change', onFieldChange);
@@ -367,6 +437,7 @@
   $('#payment-date').datepicker();
   var modal = document.getElementById('payment-waiting__modal');
   var close = modal.querySelector('.modal__close');
+  var overlay = modal.querySelector('.modal__overlay');
   var mainCheckbox = modal.querySelector('.transactions__check-all input');
   var senderInput = modal.querySelector('.payment-waiting__modal-sender input');
   var recipientInput = modal.querySelector('.payment-waiting__modal-recipient input');
@@ -399,10 +470,17 @@
     purposeInput.value = '';
   };
 
+  var onOverlayClick = function onOverlayClick(e) {
+    if (e.target.classList.contains('modal__overlay')) {
+      onCloseClick();
+    }
+  };
+
   paymentConfirmBtns.forEach(function (btn) {
     new Modal(btn, modal);
   });
   close.addEventListener('click', onCloseClick);
+  overlay.addEventListener('click', onOverlayClick);
   mainCheckbox.addEventListener('change', onAllChange);
 })();
 
@@ -424,6 +502,7 @@
   var fileInputBlock = modal.querySelector('.verification__modal-input-file');
   var fileInput = modal.querySelector('.input-file__input');
   var close = modal.querySelector('.modal__close');
+  var overlay = modal.querySelector('.modal__overlay');
   var saveBtn = document.querySelector('.modal__save');
 
   var onCloseClick = function onCloseClick() {
@@ -439,6 +518,12 @@
     }
   };
 
+  var onOverlayClick = function onOverlayClick(e) {
+    if (e.target.classList.contains('modal__overlay')) {
+      onCloseClick();
+    }
+  };
+
   var onInputChange = function onInputChange() {
     if (fileInput.value !== '') {
       saveBtn.removeAttribute('disabled');
@@ -447,5 +532,6 @@
 
   new Modal(verificationBtn, modal);
   close.addEventListener('click', onCloseClick);
+  overlay.addEventListener('click', onOverlayClick);
   fileInput.addEventListener('change', onInputChange);
 })();

@@ -1,0 +1,31 @@
+.contract-subject {
+  padding: 28px;
+  border: 1px solid $bg;
+  border-radius: 5px;
+
+  &__title {
+    @include h24;
+    margin: 0;
+    margin-bottom: 24px;
+    color: $text-main;
+  }
+
+  &__registration-block {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  &__registration-type {
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
+
+  &__agent {
+    margin-bottom: 14px;
+  }
+
+  &__agent span {
+    margin-left: auto;
+  }
+}

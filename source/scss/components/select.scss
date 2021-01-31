@@ -65,6 +65,14 @@
 
 .select.picked + .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: $text-main;
+
+  & span:first-child {
+    margin-right: 10px;
+  }
+
+  & span:last-child {
+    color: $text-minor;
+  }
 }
 
 .select2-container .select2-selection--single .select2-selection__arrow {
@@ -102,15 +110,26 @@
   border: none !important;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
+  padding: 24px 0;
 }
 
 .select2-results__option {
   @include b14;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
   color: $text-main;
 
   &:not(:last-child) {
     margin-bottom: 8px;
+  }
+
+  & span:first-child {
+    padding-right: 24px;
+  }
+
+  & span:last-child {
+    color: $text-minor;
   }
 }
 
@@ -125,7 +144,8 @@
 }
 
 .select2-container--default .select2-results>.select2-results__options {
-  padding: 24px;
+  max-height: 137px;
+  padding: 0 24px;
 }
 
 

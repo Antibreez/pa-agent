@@ -11,6 +11,7 @@
 
   const modal = document.getElementById('delivery-or-pickup__modal');
   const close = modal.querySelector('.modal__close');
+  const overlay = modal.querySelector('.modal__overlay');
   const submit = modal.querySelector('.modal__submit');
   const fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
   const fileInput = modal.querySelector('.input-file__input');
@@ -41,6 +42,12 @@
     $('#delivery-date').datepicker('setDate', '');
   }
 
+  const onOverlayClick = function(e) {
+    if (e.target.classList.contains('modal__overlay')) {
+      onCloseClick();
+    }
+  }
+
   const onFieldChange = function(e) {
     if (isFormFilled() && submit.hasAttribute('disabled')) {
       submit.removeAttribute('disabled');
@@ -57,6 +64,7 @@
   }
 
   close.addEventListener('click', onCloseClick);
+  overlay.addEventListener('click', onOverlayClick);
   dateInput.addEventListener('input', onFieldChange);
   timeInput.addEventListener('input', onFieldChange);
   fileInput.addEventListener('change', onFieldChange);

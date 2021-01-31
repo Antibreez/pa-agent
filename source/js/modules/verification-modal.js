@@ -9,6 +9,7 @@
   const fileInputBlock = modal.querySelector('.verification__modal-input-file');
   const fileInput = modal.querySelector('.input-file__input');
   const close = modal.querySelector('.modal__close');
+  const overlay = modal.querySelector('.modal__overlay');
   const saveBtn = document.querySelector('.modal__save');
 
   const onCloseClick = function() {
@@ -25,6 +26,12 @@
     }
   }
 
+  const onOverlayClick = function(e) {
+    if (e.target.classList.contains('modal__overlay')) {
+      onCloseClick();
+    }
+  }
+
   const onInputChange = function() {
     if (fileInput.value !== '') {
       saveBtn.removeAttribute('disabled');
@@ -33,5 +40,6 @@
 
   new Modal(verificationBtn, modal);
   close.addEventListener('click', onCloseClick);
+  overlay.addEventListener('click', onOverlayClick);
   fileInput.addEventListener('change', onInputChange);
 })();

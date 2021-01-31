@@ -1,0 +1,16 @@
+.contract-creation {
+  &__container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__details {
+    flex-grow: 1;
+    margin-right: 24px;
+  }
+
+  &__payment {
+    flex-grow: 1;
+    max-width: 24%;
+  }
+}

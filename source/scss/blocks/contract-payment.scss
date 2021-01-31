@@ -1,0 +1,45 @@
+.contract-payment {
+  padding: 28px;
+  border-radius: 5px;
+  background-color: $bg;
+
+  &__detail {
+    @include b12;
+    display: flex;
+    align-items: flex-start;
+
+    &:nth-of-type(1) {
+      margin-bottom: 5px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__detail-name {
+    color: $text-minor;
+  }
+
+  &__detail-dots {
+    margin: 12px 10px 0;
+    flex-grow: 1;
+    border-bottom: 2px dotted $stroke;
+  }
+
+  &__detail-price {
+    color: $text-main;
+  }
+
+  &__result {
+    @include h20;
+    color: $text-main;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+
+  &__next {
+    width: 100%;
+  }
+}
