@@ -1,0 +1,108 @@
+.schedule {
+  &__body {
+    max-width: 1152px;
+  }
+
+  &__modal-title {
+    @include h32;
+    margin-bottom: 24px;
+  }
+
+  &__modal-toggle {
+    @include b14;
+    padding: 19px 24px;
+    margin-bottom: 24px;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+  }
+
+  &__modal-label {
+    &:first-child {
+      margin-right: 32px;
+    }
+  }
+
+  &__modal-label input + span {
+    color: $text-minor;
+    transition: color 0.3s;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__modal-label input:checked + span {
+    color: $text-main;
+  }
+
+  &__modal-label input + span:hover {
+    color: $primary;
+  }
+
+  &__details {
+    margin-bottom: 24px;
+    display: none;
+  }
+
+  &__modal-toggle.first-tab + .schedule__details {
+    display: block;
+  }
+
+  &__modal-toggle.second-tab + .schedule__details + .schedule__details {
+    display: block;
+  }
+
+  &__details-title {
+    @include h20;
+    color: $text-main;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__table-block {
+    padding: 34px 28px;
+    background-color: $bg;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    & col:first-child {
+      width: 65%;
+    }
+
+    & col:nth-of-child(2) {
+      width: 16%;
+    }
+
+    & col:nth-of-child(3) {
+      width: 19%;
+    }
+
+    & tr:not(:last-of-type) td {
+      padding-bottom: 40px;
+    }
+
+    & th {
+      @include b12;
+      color: $text-minor;
+      padding-bottom: 27px;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    & td {
+      @include b14;
+      color: $text-main;
+      &:not(:last-child) {
+        padding-right: 24px;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

@@ -9230,3 +9230,121 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .contract-device__counter-value {
   padding: 0 10px;
 }
+
+.schedule__body {
+  max-width: 1152px;
+}
+
+.schedule__modal-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 24px;
+}
+
+.schedule__modal-toggle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 19px 24px;
+  margin-bottom: 24px;
+  border: 1px solid #D1D8E1;
+  border-radius: 5px;
+}
+
+.schedule__modal-label:first-child {
+  margin-right: 32px;
+}
+
+.schedule__modal-label input + span {
+  color: #94A0B1;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.schedule__modal-label input + span:hover {
+  cursor: pointer;
+}
+
+.schedule__modal-label input:checked + span {
+  color: #1A1A1A;
+}
+
+.schedule__modal-label input + span:hover {
+  color: #2858FF;
+}
+
+.schedule__details {
+  margin-bottom: 24px;
+  display: none;
+}
+
+.schedule__modal-toggle.first-tab + .schedule__details {
+  display: block;
+}
+
+.schedule__modal-toggle.second-tab + .schedule__details + .schedule__details {
+  display: block;
+}
+
+.schedule__details-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1A1A1A;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.schedule__table-block {
+  padding: 34px 28px;
+  background-color: #F4F4F8;
+}
+
+.schedule__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule__table col:first-child {
+  width: 65%;
+}
+
+.schedule__table col:nth-of-child(2) {
+  width: 16%;
+}
+
+.schedule__table col:nth-of-child(3) {
+  width: 19%;
+}
+
+.schedule__table tr:not(:last-of-type) td {
+  padding-bottom: 40px;
+}
+
+.schedule__table th {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #94A0B1;
+  padding-bottom: 27px;
+}
+
+.schedule__table th:last-child {
+  text-align: right;
+}
+
+.schedule__table td {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1A1A1A;
+}
+
+.schedule__table td:not(:last-child) {
+  padding-right: 24px;
+}
+
+.schedule__table td:last-child {
+  text-align: right;
+}

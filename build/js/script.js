@@ -502,6 +502,34 @@
 })();
 
 (function () {
+  var scheduleBtns = document.querySelectorAll('.contract-device__schedule');
+
+  if (!scheduleBtns[0]) {
+    return;
+  }
+
+  var modal = document.getElementById('schedule__modal');
+  var radios = document.querySelectorAll('.schedule__modal-toggle input');
+  var toggle = document.querySelector('.schedule__modal-toggle');
+  radios.forEach(function (item, id) {
+    item.addEventListener('change', function () {
+      if (id === 0) {
+        toggle.classList.remove('second-tab');
+        toggle.classList.add('first-tab');
+      }
+
+      if (id === 1) {
+        toggle.classList.remove('first-tab');
+        toggle.classList.add('second-tab');
+      }
+    });
+  });
+  scheduleBtns.forEach(function (item) {
+    new Modal(item, modal);
+  });
+})();
+
+(function () {
   $('.support__docs-btn').click(function () {
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
