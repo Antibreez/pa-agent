@@ -1,8 +1,19 @@
 .checkbox-1 {
   position: relative;
+  display: block;
   padding: 15px;
   border: 1px solid $bg;
   border-radius: 5px;
+  transition: border-color 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $stroke;
+  }
+
+  &:hover .checkbox-1__name {
+    color: $text-main;
+  }
 
   &__name {
     font-weight: 500;
@@ -11,6 +22,7 @@
     margin: 0;
     margin-bottom: 5px;
     color: $text-minor;
+    transition: color 0.3s;
   }
 
   &__desc {
@@ -28,20 +40,16 @@
     height: 24px;
     border-radius: 4px;
     background-color: $bg;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
-  &__input:checked + label {
+  &__input:checked + div {
     background-color: $primary;
     background-image: url("../img/check-white.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  &__input:checked + label + .checkbox-1__name {
+  &__input:checked + div + .checkbox-1__name {
     color: $text-main;
   }
 
@@ -49,12 +57,16 @@
     border: none;
     background-color: $bg;
 
+    &:hover {
+      cursor: default;
+    }
+
     & .checkbox-1__name {
       color: $text-main;
     }
 
     & input,
-    & label {
+    & .checkbox-1__label {
       display: none;
     }
 

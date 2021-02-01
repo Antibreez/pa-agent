@@ -1,6 +1,26 @@
 "use strict";
 
 (function () {
+  var checkbox2 = document.querySelectorAll('.checkbox-2__input');
+
+  if (!checkbox2[0]) {
+    return;
+  }
+
+  checkbox2.forEach(function (item) {
+    item.addEventListener('change', function (e) {
+      var target = e.target;
+
+      if (target.checked === true) {
+        target.parentNode.classList.add('checked');
+      } else {
+        target.parentNode.classList.remove('checked');
+      }
+    });
+  });
+})();
+
+(function () {
   $('.date-input').datepicker();
 })();
 
@@ -265,58 +285,55 @@
   new Modal(cancellationBtn, modal);
 })();
 
-(function () {
-  var dataBlock = document.querySelector('.contract-creation');
-
-  if (!dataBlock) {
-    return;
-  }
-
-  var radios = dataBlock.querySelectorAll('.radio__input');
-  var nextBtn = dataBlock.querySelector('.contract-payment__next');
-  var selected = 0;
-
-  function isRadioChecked() {
-    var isChecked = false;
-    radios.forEach(function (item) {
-      if (item.checked) {
-        isChecked = true;
-      }
-    });
-    return isChecked;
-  }
-
-  function checkData() {
-    if (selected >= 3 && isRadioChecked()) {
-      if (nextBtn.hasAttribute('disabled')) {
-        nextBtn.removeAttribute('disabled');
-      }
-    } else {
-      if (!nextBtn.hasAttribute('disabled')) {
-        nextBtn.setAttribute('disabled', '');
-      }
-    }
-  }
-
-  $('.contract-subject__agent').on('select2:select', function (e) {
-    selected += 1;
-    checkData();
-  });
-  $('.contract-subject__service').on('select2:select', function () {
-    selected += 1;
-    checkData();
-  });
-  radios.forEach(function (item) {
-    item.addEventListener('change', function () {
-      checkData();
-    });
-  });
+(function () {// const dataBlock = document.querySelector('.contract-creation');
+  // if (!dataBlock) {
+  //   return;
+  // }
+  // const radios = dataBlock.querySelectorAll('.radio__input');
+  // const nextBtn = dataBlock.querySelector('.contract-payment__next');
+  // let selected = 0;
+  // function isRadioChecked () {
+  //   let isChecked = false;
+  //   radios.forEach(function(item) {
+  //     if (item.checked) {
+  //       isChecked = true;
+  //     }
+  //   });
+  //   return isChecked;
+  // }
+  // function checkData () {
+  //   if (
+  //     selected >= 3
+  //     && isRadioChecked()
+  //   ) {
+  //     if (nextBtn.hasAttribute('disabled')) {
+  //       nextBtn.removeAttribute('disabled')
+  //     }
+  //   } else {
+  //     if (!nextBtn.hasAttribute('disabled')) {
+  //       nextBtn.setAttribute('disabled', '');
+  //     }
+  //   }
+  // }
+  // $('.contract-subject__agent').on('select2:select', function(e) {
+  //   selected += 1;
+  //   checkData();
+  // })
+  // $('.contract-subject__service').on('select2:select', function() {
+  //   selected +=1;
+  //   checkData();
+  // })
+  // radios.forEach(function(item) {
+  //   item.addEventListener('change', function() {
+  //     checkData();
+  //   })
+  // });
 })();
 
 (function () {
-  $('.contract-info__delivered-toggle').click(function () {
-    $(this).parent().next().slideToggle();
-    $(this).toggleClass('opened');
+  $('.delivery-or-pickup.done').click(function () {
+    $(this).find('.contract-info__delivered-adress').slideToggle();
+    $(this).find('.contract-info__delivered-toggle').toggleClass('opened');
   });
 })();
 

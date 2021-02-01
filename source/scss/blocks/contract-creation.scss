@@ -1,4 +1,8 @@
 .contract-creation {
+  &__device-search {
+    margin-bottom: 24px;
+  }
+
   &__container {
     display: flex;
     align-items: flex-start;
@@ -12,5 +16,6 @@
   &__payment {
     flex-grow: 1;
     max-width: 24%;
+    min-width: 24%;
   }
 }

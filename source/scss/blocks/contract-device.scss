@@ -1,0 +1,121 @@
+.contract-device {
+  padding: 28px;
+  border: 1px solid $bg;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    @include h18;
+    margin: 0;
+    padding-right: 24px;
+    color: $text-main;
+  }
+
+  &__img-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    max-width: 286px;
+  }
+
+  &__content {
+    display: inline-block;
+    flex-grow: 1;
+  }
+
+  &__details {
+    display: flex;
+    margin-bottom: 4px;
+  }
+
+  &__details-item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__details-title {
+    margin-bottom: 2px;
+  }
+
+  &__checkbox {
+    margin-bottom: 14px;
+  }
+
+  &__schedule {
+    vertical-align: middle;
+    margin-right: 22px;
+  }
+
+  &__counter {
+    display: inline-flex;
+    align-items: center;
+    background-color: $bg;
+    border-radius: 5px;
+    vertical-align: middle;
+  }
+
+  &__counter-down,
+  &__counter-up {
+    @include btn-reset;
+    position: relative;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 2px;
+      background-color: #94A0B1;
+      transform: translate(-50%, -50%);
+      border-radius: 1px;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__counter-up {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 16px;
+      width: 2px;
+      background-color: #94A0B1;
+      transform: translate(-50%, -50%);
+      border-radius: 1px;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__counter-down:hover,
+  &__counter-up:hover,
+  &__counter-down:focus,
+  &__counter-up:focus {
+    &::before,
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &__counter-value {
+    padding: 0 10px;
+  }
+}

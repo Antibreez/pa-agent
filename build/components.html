@@ -11,12 +11,12 @@
   <body>
     <div class="wrapper">
       <!--Меню-->
-      <h3>Меню</h3>
+      <h2>Меню</h2>
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper" style="width: 100%">
       <!--Кнопки-->
-      <h3>Кнопки</h3>
+      <h2>Кнопки</h2>
       <div>
         <button class="btn-primary">btn-primary</button>
         <button class="btn-primary" disabled="">btn-primary</button>
@@ -68,7 +68,7 @@
         </a>
       </div>
       <div>===========================</div>
-      <h3>Input</h3>
+      <h2>Input</h2>
       <div class="input-block" style="margin-bottom: 30px;">
         <input class="input-text  js-wrong" type="text" placeholder="input-text">
         <label class="input-label">input-label</label>
@@ -94,7 +94,7 @@
       </div>
 
       <div>===========================</div>
-      <h3>File load</h3>
+      <h2>File load</h2>
       <div class="input-file">
         <label class="input-file__label">
           <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="delivery-doc" class="input-file__input  visually-hidden">
@@ -116,7 +116,7 @@
       </div>
 
       <div>===========================</div>
-      <h3>Select</h3>
+      <h2>Select</h2>
     <div class="select-block" style="width: 50%; margin: 0 auto 50px;">
       <select name="options" class="select">
         <option value="" disabled="" selected="" hidden="">.select</option>
@@ -156,17 +156,164 @@
     </div>
 
     <div>===========================</div>
-      <h3>Date</h3>
+      <h2>Date</h2>
       <div class="date-block">
         <label for="date-input-1" class="date-label">.date-input</label>
         <input id="date-input-1" class="date-input">
       </div>
 
     <div>===========================</div>
-      <h3>Search</h3>
+      <h2 id="search">Search</h2>
+      <p>без дополнительных классов</p>
+      <pre>
+        &lt;div&gt; class="search-block"&lt;/div&gt;
+        ...
+      </pre>
       <div class="search-block">
         <div class="search-wrap">
-          <form class="search-form show-clear show-current show-result">
+          <form class="search-form">
+            <input class="search" type="text" placeholder="Поиск">
+            <div class="search__current">
+              <div class="search__current-content">
+                <p class="search__current-value">Value</p>
+                <button type="button" class="search__current-clear"></button>
+              </div>
+            </div>
+          </form>
+          <button class="search-close"></button>
+          <div class="search-result">
+            <div class="search-result__column">
+              <h2 class="search-result__title">Клиенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов <span class="matches">Иван</span> <span class="matches">Иван</span>ович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Петрович</div>
+              <div class="search-item"><span class="matches">Иван</span>ков Корнелий Зевс</div>
+              <div class="search-item"><span class="matches">Иван</span>досов Карим Гибкевич</div>
+            </div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Агенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов Кирилл Кириллович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+            </div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Агенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов Кирилл Кириллович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <p>класс <b>.show-clear</b> добавляет крестик очистки поля</p>
+      <pre>
+        &lt;div&gt; class="search-block show-clear"&lt;/div&gt;
+        ...
+      </pre>
+      <div class="search-block show-clear">
+        <div class="search-wrap">
+          <form class="search-form">
+            <input class="search" type="text" placeholder="Поиск">
+            <div class="search__current">
+              <div class="search__current-content">
+                <p class="search__current-value">Value</p>
+                <button type="button" class="search__current-clear"></button>
+              </div>
+            </div>
+          </form>
+          <button class="search-close"></button>
+          <div class="search-result">
+            <div class="search-result__column">
+              <h2 class="search-result__title">Клиенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов <span class="matches">Иван</span> <span class="matches">Иван</span>ович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Петрович</div>
+              <div class="search-item"><span class="matches">Иван</span>ков Корнелий Зевс</div>
+              <div class="search-item"><span class="matches">Иван</span>досов Карим Гибкевич</div>
+            </div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Агенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов Кирилл Кириллович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+            </div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Агенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов Кирилл Кириллович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <p style="margin: 0;">класс <b>.show-result</b> добавляет результат поиска</p>
+      <pre>
+        &lt;div&gt; class="search-block show-result"&lt;/div&gt;
+        ...
+      </pre>
+      <div class="search-block  show-result">
+        <div class="search-wrap">
+          <form class="search-form">
+            <input class="search" type="text" placeholder="Поиск">
+            <div class="search__current">
+              <div class="search__current-content">
+                <p class="search__current-value">Value</p>
+                <button type="button" class="search__current-clear"></button>
+              </div>
+            </div>
+          </form>
+          <button class="search-close"></button>
+          <div class="search-result">
+            <div class="search-result__column">
+              <h2 class="search-result__title">Клиенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов <span class="matches">Иван</span> <span class="matches">Иван</span>ович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Петрович</div>
+              <div class="search-item"><span class="matches">Иван</span>ков Корнелий Зевс</div>
+              <div class="search-item"><span class="matches">Иван</span>досов Карим Гибкевич</div>
+            </div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Агенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов Кирилл Кириллович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+            </div>
+            <div class="search-result__column">
+              <h2 class="search-result__title">Агенты</h2>
+              <div class="search-item"><span class="matches">Иван</span>ов Кирилл Кириллович</div>
+              <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <p style="margin: 0;">класс <b>.show-current</b> добавляет текущий выбор из поиска</p>
+      <pre>
+        &lt;div&gt; class="search-block show-current"&lt;/div&gt;
+        ...
+      </pre>
+      <div class="search-block show-current">
+        <div class="search-wrap">
+          <form class="search-form">
             <input class="search" type="text" placeholder="Поиск">
             <div class="search__current">
               <div class="search__current-content">
@@ -206,41 +353,14 @@
       <br>
       <br>
       <br>
-      <p><strong>.js-show-result</strong> на <strong>input.search</strong> открывает окно с результатами поиска</p>
-      <p>на мобильном разрешении при фокусе в поле поиска блоку <strong>.search-block</strong> добавляется класс <strong>.js-focus</strong> чтобы поиск показывался на все окно, при окончании поиска класс <strong>.js-focus</strong> должен убираться</p>
-      <p><strong>.js-show</strong> на <strong>.search-close</strong> показывает крестик на поле поиска</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <!--Модальное окно-->
-    <h3>Модальное окно</h3>
+    <h2>Модальное окно</h2>
       <button class="modal-button btn-primary">Открыть модальное окно</button>
 
       <section class="modal">
         <div class="modal__overlay">
 
           <div class="modal__body">
-            <button class="modal__close"></button>
             <h1 class="modal__title">Заголовок модалки</h1>
             <p class="modal__desc">
               Описательный текст, которого может не быть. Такой текст может занимать несколько строчек.
@@ -251,33 +371,43 @@
               содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
             </div>
             <div class="modal__btn-block">
+              <button class="modal__close modal__btn-item  btn-secondary">Кнопка</button>
               <button class="modal__btn-item  btn-primary">Кнопка</button>
-              <button class="modal__btn-item  btn-secondary">Кнопка</button>
             </div>
           </div>
         </div>
       </section>
-    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
   <script src="js/vendor.min.js"></script>
   <script src="js/script.min.js"></script>
   <script>
     (function() {
-      // const $modal = document.querySelector('.modal');
-      // const $button = document.querySelector('.modal-button');
-
-      // if (!$modal) {
-      //   return;
-      // }
-
-      // const modal = new Modal($button, $modal);
+      //console.log($('.modal-button')[0]);
+      new Modal($('.modal-button')[0], $('.modal')[0]);
     })();
 
     (function() {

@@ -170,7 +170,7 @@
     </section>
 
     <!--Доставлен/Получен-->
-    <section class="delivery-or-pickup no-dat">
+    <section class="delivery-or-pickup  done">
       <div class="delivery-or-pickup__container  wrapper">
         <div class="contract-info__block  contract-info__block--delivered  info-block">
           <h2 class="contract-info__title-check  info-block__title">
@@ -248,18 +248,18 @@
           <form class="payment-waiting__send-form">
             <div class="payment-waiting__logo"></div>
             <div class="payment-waiting__send-form-wrapper">
-              <div class="payment-waiting__checkbox  checkbox-1">
-                <input id="payment-waiting__email-1" type="checkbox" name="email" class="checkbox-1__input  visually-hidden">
-                <label for="payment-waiting__email-1" class="checkbox-1__label"></label>
+              <label class="payment-waiting__checkbox  checkbox-1">
+                <input type="checkbox" name="email" class="checkbox-1__input  visually-hidden">
+                <div class="checkbox-1__label"></div>
                 <p class="checkbox-1__name">Отправить клиенту на E-mail</p>
                 <p class="checkbox-1__desc">ivanov@email.ru</p>
-              </div>
-              <div class="payment-waiting__checkbox  checkbox-1">
-                <input id="payment-waiting__phone-1" type="checkbox" name="phone" class="checkbox-1__input  visually-hidden">
-                <label for="payment-waiting__phone-1" class="checkbox-1__label"></label>
+              </label>
+              <label class="payment-waiting__checkbox  checkbox-1">
+                <input type="checkbox" name="phone" class="checkbox-1__input  visually-hidden">
+                <div class="checkbox-1__label"></div>
                 <p class="checkbox-1__name">Отправить клиенту на номер телефона</p>
                 <p class="checkbox-1__desc">+7 (123) 456-78-90</p>
-              </div>
+              </label>
               <button type="submit" class="btn-primary">Отправить</button>
             </div>
           </form>
@@ -269,7 +269,7 @@
 
     <!--Ожидается Доставка-->
 
-    <section class="delivery-or-pickup no-dat">
+    <section class="delivery-or-pickup">
       <div class="delivery-or-pickup__container  wrapper">
         <div class="delivery-or-pickup__wrapper">
             <div class="delivery-or-pickup__title-block">

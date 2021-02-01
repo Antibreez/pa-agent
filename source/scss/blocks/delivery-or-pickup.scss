@@ -1,6 +1,14 @@
 .delivery-or-pickup {
   margin-bottom: 24px;
 
+  &.done:hover {
+    cursor: pointer;
+  }
+
+  &.done:hover .contract-info__delivered-toggle {
+    background-image: url("../img/arrow-down_default.svg");
+  }
+
   &__wrapper {
     padding: 28px;
     border: 1px solid $bg;

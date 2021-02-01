@@ -1,7 +1,7 @@
 (function() {
 
-  $('.contract-info__delivered-toggle').click(function() {
-    $(this).parent().next().slideToggle();
-    $(this).toggleClass('opened');
+  $('.delivery-or-pickup.done').click(function() {
+    $(this).find('.contract-info__delivered-adress').slideToggle();
+    $(this).find('.contract-info__delivered-toggle').toggleClass('opened');
   });
 })();

@@ -139,3 +139,18 @@
 .btn-arrow-v.opened svg {
   transform: rotate(270deg);
 }
+
+.btn-text {
+  @include btn-reset;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: $primary;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $primary-hover;
+  }
+}
