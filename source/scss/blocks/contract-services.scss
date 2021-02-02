@@ -123,6 +123,10 @@ tr:not(:first-of-type):hover
     &:first-child {
       color: $text-main;
     }
+
+    &.alert {
+      color: #FC4242;
+    }
   }
 }
 
@@ -164,6 +168,19 @@ tr:not(:first-of-type):hover
   &.active {
     background-color: #DDF9EC;
   }
+
+  &.expired {
+    background-color: #94A0B1;
+    color: #fff;
+  }
+
+  &.freezed {
+    background-color: #DCF5FF;
+  }
+
+  &.blocked {
+    background-color: #FFD6D6;
+  }
 }
 
 .contract-services__status-waiting {
@@ -179,6 +196,11 @@ tr:not(:first-of-type):hover
     background-repeat: no-repeat;
     background-image: url("../img/time.svg");
   }
+}
+
+.contract-services__status-default {
+  margin: 0;
+  margin-right: 24px;
 }
 
 .contract-services__delivery-type {

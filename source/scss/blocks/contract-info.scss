@@ -5,6 +5,72 @@
     margin-right: 16px;
   }
 
+  &__title span {
+    vertical-align: middle;
+  }
+
+  &__title-status {
+    @include b12;
+    padding: 3px 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+
+    &.pending {
+      background-color: #FEEDAE;
+    }
+
+    &.active {
+      background-color: #DDF9EC;
+    }
+
+    &.expired {
+      background-color: #94A0B1;
+      color: #fff;
+    }
+
+    &.freezed {
+      background-color: #DCF5FF;
+    }
+
+    &.blocked {
+      background-color: #FFD6D6;
+    }
+  }
+
+  &__serial-number {
+    @include b14;
+    display: block;
+    color: $text-minor;
+    margin-top: 14px;
+  }
+
+  &__toggle-info {
+    padding: 19px 24px;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+    margin-bottom: 24px;
+  }
+
+  &__toggle-info-link {
+    @include link-reset;
+    @include b14;
+    color: $text-minor;
+    transition: color 0.3s;
+
+    &:not(.active):hover,
+    &:not(.active):focus {
+      color: $primary;
+    }
+
+    &:first-child {
+      margin-right: 32px;
+    }
+
+    &.active {
+      color: $text-main;
+    }
+  }
+
   &__blocks-wrapper {
     display: flex;
     flex-wrap: wrap;

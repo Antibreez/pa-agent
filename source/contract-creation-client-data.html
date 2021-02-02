@@ -85,7 +85,7 @@
             <h2 class="light-block__title">Для кого оформляем договор?</h2>
             <div class="contract-creation__client-type-choose">
               <label class="contract-creation__individual-choose  radio-1">
-                <input type="radio" name="client-type" class="radio-1__input  visually-hidden" value="client-individual">
+                <input type="radio" name="client-type" class="radio-1__input  visually-hidden" value="client-individual" checked>
                 <div class="radio-1__label"></div>
                 <p class="radio-1__name">Физическое лицо</p>
                 <p class="radio-1__desc">Необходимо указать данные клиента и его паспортные данные</p>
@@ -100,19 +100,40 @@
           </div>
 
           <div class="contract-creation__client-data  light-block">
-            <h2 class="light-block__title">Данные клиента <span class="note-mark">*</span></h2>
+            <h2 class="light-block__title">
+              <span class="contract-creation__title-individual">Данные клиента <span class="note-mark">*</span></span>
+              <span class="contract-creation__title-entity">Данные контактного лица <span class="note-mark">*</span></span>
+            </h2>
             <div class="contract-creation__client-data-wrapper">
               <div class="contract-creation__client-data-name  input-block">
-                <input class="input-text" type="text" name="name">
+                <input class="input-text" type="text" name="client-name">
                 <label class="input-label">ФИО (через пробел)</label>
               </div>
               <div class="contract-creation__client-data-phone  input-block">
-                <input class="input-text  input-phone" type="text" name="phone">
+                <input class="input-text  input-phone" type="text" name="client-phone">
                 <label class="input-label">Телефон</label>
               </div>
               <div class="contract-creation__client-data-email  input-block">
-                <input class="input-text" type="email" name="email">
+                <input class="input-text" type="email" name="client-email">
                 <label class="input-label">Email</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="contract-creation__company-data  light-block">
+            <h2 class="light-block__title">Данные компании <span class="note-mark">*</span></h2>
+            <div class="contract-creation__company-data-wrapper">
+              <div class="contract-creation__company-data-name  input-block">
+                <input class="input-text" type="text" name="company-name">
+                <label class="input-label">Полное название организации</label>
+              </div>
+              <div class="contract-creation__company-data-address  input-block">
+                <input class="input-text  input-phone" type="text" name="company-address">
+                <label class="input-label">Юридическиё адрес</label>
+              </div>
+              <div class="contract-creation__company-data-inn  input-block">
+                <input class="input-text" type="email" name="company-inn">
+                <label class="input-label">ИНН</label>
               </div>
             </div>
           </div>
@@ -121,7 +142,7 @@
             <h2 class="light-block__title">Нужен монтаж? <span class="note-mark">*</span></h2>
             <div class="contract-creation__installation-wrapper">
               <label class="contract-creation__installation-yes  radio-1">
-                <input type="radio" name="installation" class="radio-1__input  visually-hidden" value="installation-yes">
+                <input type="radio" name="installation" class="radio-1__input  visually-hidden" value="installation-yes" checked>
                 <div class="radio-1__label"></div>
                 <p class="radio-1__name">Требуется монтаж</p>
                 <p class="radio-1__desc">Договор будет передан менеджеру ИЦ, время и стоимость монтажа согласовывается отдельно</p>
@@ -139,7 +160,7 @@
             <h2 class="light-block__title">Способ оплаты <span class="note-mark">*</span></h2>
             <div class="contract-creation__payment-type-wrapper">
               <label class="contract-creation__payment-type-online  radio-1">
-                <input type="radio" name="payment-type" class="radio-1__input  visually-hidden" value="payment-type-online">
+                <input type="radio" name="payment-type" class="radio-1__input  visually-hidden" value="payment-type-online" checked>
                 <div class="radio-1__label"></div>
                 <p class="radio-1__name">Оплата Онлайн</p>
                 <p class="radio-1__desc">Будет выставлен ссылка для оплаты клиентом онлайн</p>
@@ -169,7 +190,7 @@
             <h2 class="light-block__title">Способ доставки</h2>
             <div class="contract-creation__delivery-type-wrapper">
               <label class="contract-creation__delivery-type-delivery  radio-1">
-                <input type="radio" name="delivery-type" class="radio-1__input  visually-hidden" value="delivery-type-delivery">
+                <input type="radio" name="delivery-type" class="radio-1__input  visually-hidden" value="delivery-type-delivery" checked>
                 <div class="radio-1__label"></div>
                 <p class="radio-1__name">Нужна доставка</p>
                 <p class="radio-1__desc">Укажите адрес доставки</p>
@@ -278,33 +299,65 @@
                   </button>
                 </div>
               </div>
+
+
+              <div class="contract-creation__passport-download  file-load">
+                <div class="file-load__pdf-logo"></div>
+                <div class="file-load__info">
+                  <p class="file-load__name">Файл 1</p>
+                  <p class="file-load__size">PDF, 450 Кбайт</p>
+                </div>
+                <a href="#" class="file-load__link" download>
+                  <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.60601 11.2931C7.19036 10.9026 6.51646 10.9026 6.10081 11.2931C5.68515 11.6836 5.68515 12.3168 6.10081 12.7073L10.8904 17.2073C11.306 17.5978 11.9799 17.5978 12.3956 17.2073L17.1851 12.7073C17.6008 12.3168 17.6008 11.6836 17.1851 11.2931C16.7695 10.9026 16.0956 10.9026 15.6799 11.2931L12.7073 14.086V3.50024C12.7073 2.94795 12.2308 2.50024 11.643 2.50024C11.0552 2.50024 10.5787 2.94795 10.5787 3.50024V14.086L7.60601 11.2931Z"/>
+                  <path d="M3.12869 16.5002C3.12869 15.9479 2.65217 15.5002 2.06435 15.5002C1.47652 15.5002 1 15.9479 1 16.5002V21.5002C1 22.0525 1.47652 22.5002 2.06435 22.5002H21.2225C21.8103 22.5002 22.2868 22.0525 22.2868 21.5002V16.5002C22.2868 15.9479 21.8103 15.5002 21.2225 15.5002C20.6347 15.5002 20.1581 15.9479 20.1581 16.5002V20.5002H3.12869V16.5002Z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contract-creation__contract-details  light-block">
+            <h2 class="light-block__title">Детали договора</span></h2>
+            <div class="contract-creation__contract-details-wrapper">
+              <div class="contract-creation__contract-details-name  input-block">
+                <input class="input-text" type="text" value="DA-2020" disabled>
+                <label class="input-label">Договор</label>
+              </div>
+              <div class="contract-creation__contract-details-number  input-block">
+                <input class="input-text" type="text" name="contract-number">
+                <label class="input-label">№ договора</label>
+              </div>
             </div>
           </div>
 
         </div>
-        <div class="contract-creation__payment contract-payment">
-          <div class="contract-payment__detail">
-            <span class="contract-payment__detail-name">Товары</span>
-            <span class="contract-payment__detail-dots"></span>
-            <span class="contract-payment__detail-price">
-              <span>22 000</span><span>&nbsp;₽</span>
-            </span>
-          </div>
-          <div class="contract-payment__detail">
-            <span class="contract-payment__detail-name">Услуги</span>
-            <span class="contract-payment__detail-dots"></span>
-            <span class="contract-payment__detail-price">
-              <span>0</span><span>&nbsp;₽</span>
-            </span>
-          </div>
-          <div class="contract-payment__result">
-            <span class="contract-payment__result-title">К оплате</span>
-            <span class="contract-payment__result-value">
+        <div class="contract-creation__payment">
+          <a href="#" class="contract-creation__to-start-page  btn-secondary">Вернуться к составу договора</a>
+          <div class="contract-payment">
+            <div class="contract-payment__detail">
+              <span class="contract-payment__detail-name">Товары</span>
+              <span class="contract-payment__detail-dots"></span>
+              <span class="contract-payment__detail-price">
+                <span>22 000</span><span>&nbsp;₽</span>
+              </span>
+            </div>
+            <div class="contract-payment__detail">
+              <span class="contract-payment__detail-name">Услуги</span>
+              <span class="contract-payment__detail-dots"></span>
+              <span class="contract-payment__detail-price">
+                <span>0</span><span>&nbsp;₽</span>
+              </span>
+            </div>
+            <div class="contract-payment__result">
+              <span class="contract-payment__result-title">К оплате</span>
+              <span class="contract-payment__result-value">
 
-              <span>0</span><span>&nbsp;₽</span>
-            </span>
+                <span>0</span><span>&nbsp;₽</span>
+              </span>
+            </div>
+            <button class="contract-payment__next btn-primary" disabled>Сохранить</button>
           </div>
-          <button class="contract-payment__next btn-primary" disabled>Продолжить</button>
         </div>
       </div>
     </section>

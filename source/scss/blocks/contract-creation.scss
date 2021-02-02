@@ -19,12 +19,20 @@
     min-width: 24%;
   }
 
+  &__to-start-page {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
   &__client-type-choose,
   &__installation-wrapper,
   &__payment-type-wrapper,
   &__delivery-type-wrapper,
   &__delivery-address-wrapper,
-  &__passport-data-wrapper {
+  &__passport-data-wrapper,
+  &__contract-details-wrapper,
+  &__client-data-wrapper,
+  &__company-data-wrapper {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +40,9 @@
   }
 
   &__delivery-address-wrapper > div,
-  &__passport-data-wrapper > div {
+  &__passport-data-wrapper > div,
+  &__client-data-wrapper > div,
+  &__company-data-wrapper > div {
     margin-top: 14px;
   }
 
@@ -42,12 +52,21 @@
 
   &__passport-data-department,
   &__passport-data-address,
-  &__passport-data-photo {
+  &__passport-data-photo,
+  &__client-data-name,
+  &__company-data-name,
+  &__passport-download {
     width: 100%;
   }
 
   &__individual-choose,
+  &__entity-choose,
+  &__client-data-phone,
+  &__client-data-email,
+  &__company-data-address,
+  &__company-data-inn,
   &__installation-yes,
+  &__installation-no,
   &__payment-type-online,
   &__payment-type-cash,
   &__payment-type-card,
@@ -59,7 +78,9 @@
   &__passport-data-birthday,
   &__passport-data-issue-date,
   &__passport-data-serial,
-  &__passport-data-code {
+  &__passport-data-code,
+  &__contract-details-name,
+  &__contract-details-number {
     width: calc(50% - 7px);
   }
 
@@ -82,27 +103,47 @@
     margin-bottom: 14px;
   }
 
-  &__entity-choose,
-  &__installation-no {
-    width: calc(50% - 7px);
-  }
+  // &__entity-choose,
+  // &__installation-no {
+  //   width: calc(50% - 7px);
+  // }
 
-  &__client-data-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  // &__client-data-wrapper {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
 
-  &__client-data-name {
-    width: 100%;
-    margin-bottom: 14px;
-  }
+  // &__client-data-name {
+  //   width: 100%;
+  //   margin-bottom: 14px;
+  // }
 
-  &__client-data-phone {
-    flex-grow: 1;
-    margin-right: 14px;
-  }
+  // &__client-data-phone {
+  //   flex-grow: 1;
+  //   margin-right: 14px;
+  // }
 
-  &__client-data-email {
-    flex-grow: 1;
-  }
+  // &__client-data-email {
+  //   flex-grow: 1;
+  // }
+}
+
+.contract-creation__title-entity {
+  display: none;
+}
+
+.contract-creation__company-data {
+  display: none;
+}
+
+.contract-creation__details.show-for-entity .contract-creation__title-entity {
+  display: block;
+}
+
+.contract-creation__details.show-for-entity .contract-creation__title-individual {
+  display: none;
+}
+
+.contract-creation__details.show-for-entity .contract-creation__company-data {
+  display: block;
 }

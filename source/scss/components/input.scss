@@ -73,3 +73,13 @@
   display: block;
   color: #FC4242;
 }
+
+.input-text:disabled {
+  background-color: #fff;
+  border: 1px solid $stroke;
+  color: $stroke;
+
+  & + .input-label {
+    color: $stroke;
+  }
+}
