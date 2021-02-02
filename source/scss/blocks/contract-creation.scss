@@ -18,4 +18,91 @@
     max-width: 24%;
     min-width: 24%;
   }
+
+  &__client-type-choose,
+  &__installation-wrapper,
+  &__payment-type-wrapper,
+  &__delivery-type-wrapper,
+  &__delivery-address-wrapper,
+  &__passport-data-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__delivery-address-wrapper > div,
+  &__passport-data-wrapper > div {
+    margin-top: 14px;
+  }
+
+  &__passport-data-wrapper > .contract-creation__passport-data-photo {
+    margin-top: 24px;
+  }
+
+  &__passport-data-department,
+  &__passport-data-address,
+  &__passport-data-photo {
+    width: 100%;
+  }
+
+  &__individual-choose,
+  &__installation-yes,
+  &__payment-type-online,
+  &__payment-type-cash,
+  &__payment-type-card,
+  &__payment-type-invoice,
+  &__delivery-type-delivery,
+  &__delivery-type-pickup,
+  &__delivery-address-city,
+  &__delivery-address-street,
+  &__passport-data-birthday,
+  &__passport-data-issue-date,
+  &__passport-data-serial,
+  &__passport-data-code {
+    width: calc(50% - 7px);
+  }
+
+  &__delivery-address-house,
+  &__delivery-address-entrance,
+  &__delivery-address-apartment,
+  &__delivery-address-floor,
+  &__delivery-address-intercom {
+    width: calc((100% - 56px) / 5);
+  }
+
+  &__delivery-address-date,
+  &__delivery-address-time,
+  &__delivery-address-cost {
+    width: calc((100% - 28px) / 3);
+  }
+
+  &__payment-type-online,
+  &__payment-type-cash {
+    margin-bottom: 14px;
+  }
+
+  &__entity-choose,
+  &__installation-no {
+    width: calc(50% - 7px);
+  }
+
+  &__client-data-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__client-data-name {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  &__client-data-phone {
+    flex-grow: 1;
+    margin-right: 14px;
+  }
+
+  &__client-data-email {
+    flex-grow: 1;
+  }
 }

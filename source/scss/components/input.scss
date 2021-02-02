@@ -1,6 +1,15 @@
 .input-block {
   display: flex;
   flex-direction: column;
+
+  &.js-wrong  .input-text {
+    border: 1px solid #FC4242;
+  }
+
+  &.js-wrong .input-note {
+    display: block;
+    color: #FC4242;
+  }
 }
 
 .input-label {
@@ -27,9 +36,9 @@
     background-color: #E6E6EF;
   }
 
-  &.js-wrong {
-    border: 1px solid #FC4242;
-  }
+  // &.js-wrong {
+  //   border: 1px solid #FC4242;
+  // }
 
   &::-webkit-input-placeholder {
     color: $text-minor;

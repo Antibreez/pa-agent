@@ -25,12 +25,21 @@
     color: $text-minor;
   }
 
-  &__link {
+  &__clear {
+    @include btn-reset;
+  }
+
+  &__link,
+  &__clear {
     @include link-reset;
     display: block;
     width: 24px;
     height: 24px;
     margin-left: auto;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     & svg {
       fill: #94A0B1;

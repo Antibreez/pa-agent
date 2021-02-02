@@ -28,7 +28,8 @@
   var fileDropArea = document.querySelectorAll('.input-file__label');
 
   function makeFileLoad(fileDropArea) {
-    var fileInput = fileDropArea.querySelector('input'); // Сбрасываем стандартные события при перетаскивании файла
+    var fileInput = fileDropArea.querySelector('input');
+    var fileClear = fileDropArea.parentNode.querySelector('.file-load__clear'); // Сбрасываем стандартные события при перетаскивании файла
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
       fileDropArea.addEventListener(eventName, preventDefaults, false);
@@ -98,7 +99,18 @@
       }
     };
 
+    function onClear() {
+      fileDropArea.parentNode.classList.remove('loaded');
+      fileInput.value = '';
+
+      if (!/safari/i.test(navigator.userAgent)) {
+        fileInput.type = '';
+        fileInput.type = 'file';
+      }
+    }
+
     fileInput.addEventListener('change', onFileChange);
+    fileClear.addEventListener('click', onClear);
   }
 
   window.makeFileLoad = makeFileLoad;
@@ -109,19 +121,6 @@
 
   fileDropArea.forEach(function (item) {
     makeFileLoad(item);
-  });
-})();
-
-(function () {
-  var deliveryTimeInputs = document.querySelectorAll('.delivery-or-pickup__modal-time');
-
-  if (!deliveryTimeInputs[0]) {
-    return;
-  }
-
-  var im = new Inputmask("99:99");
-  deliveryTimeInputs.forEach(function (item) {
-    im.mask(item);
   });
 })();
 
@@ -214,6 +213,19 @@
 })();
 
 (function () {
+  var inputs = document.querySelectorAll('.input-phone');
+
+  if (!inputs[0]) {
+    return;
+  }
+
+  var im = new Inputmask("+7(999) 999-99-99");
+  inputs.forEach(function (item) {
+    im.mask(item);
+  });
+})();
+
+(function () {
   var items = document.querySelectorAll('.search');
   var close = document.querySelectorAll('.search + .search-close');
 
@@ -271,6 +283,19 @@
   });
   $('.select').on('select2:select', function (e) {
     $(this).addClass('picked');
+  });
+})();
+
+(function () {
+  var deliveryTimeInputs = document.querySelectorAll('.delivery-or-pickup__modal-time');
+
+  if (!deliveryTimeInputs[0]) {
+    return;
+  }
+
+  var im = new Inputmask("99:99");
+  deliveryTimeInputs.forEach(function (item) {
+    im.mask(item);
   });
 })();
 

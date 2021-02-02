@@ -3,6 +3,7 @@
 
   function makeFileLoad(fileDropArea) {
     const fileInput = fileDropArea.querySelector('input');
+    const fileClear = fileDropArea.parentNode.querySelector('.file-load__clear');
     // Сбрасываем стандартные события при перетаскивании файла
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -73,7 +74,19 @@
       }
     }
 
+    function onClear() {
+      fileDropArea.parentNode.classList.remove('loaded');
+
+      fileInput.value = '';
+
+      if(!/safari/i.test(navigator.userAgent)){
+        fileInput.type = '';
+        fileInput.type = 'file';
+      }
+    }
+
     fileInput.addEventListener('change', onFileChange);
+    fileClear.addEventListener('click', onClear);
   }
 
   window.makeFileLoad = makeFileLoad;

@@ -1,0 +1,17 @@
+.light-block {
+  padding: 28px;
+  border: 1px solid $bg;
+  border-radius: 5px;
+  margin-bottom: 24px;
+
+  &__title {
+    @include h24;
+    margin: 0;
+    margin-bottom: 24px;
+    color: $text-main;
+
+    & .note-mark {
+      color: #FC4242;
+    }
+  }
+}

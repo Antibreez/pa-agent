@@ -6274,6 +6274,7 @@ input.search.js-inputed {
   position: relative;
   display: block;
   padding: 15px;
+  padding-right: 54px;
   border: 1px solid #F4F4F8;
   border-radius: 5px;
   -webkit-transition: border-color 0.3s;
@@ -6416,6 +6417,77 @@ input.search.js-inputed {
   background-image: url("../img/check-white.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.radio-1 {
+  position: relative;
+  display: block;
+  padding: 15px;
+  padding-right: 54px;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.radio-1:hover {
+  cursor: pointer;
+  border-color: #D1D8E1;
+}
+
+.radio-1:hover .radio-1__name {
+  color: #1A1A1A;
+}
+
+.radio-1__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  margin-bottom: 5px;
+  color: #94A0B1;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.radio-1__desc {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  color: #94A0B1;
+}
+
+.radio-1__label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #F4F4F8;
+}
+
+.radio-1__input:checked + div {
+  border: 2px solid #2858FF;
+}
+
+.radio-1__input:checked + div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #2858FF;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.radio-1__input:checked + div + .radio-1__name {
+  color: #1A1A1A;
 }
 
 .modal {
@@ -6651,6 +6723,15 @@ input.search.js-inputed {
           flex-direction: column;
 }
 
+.input-block.js-wrong .input-text {
+  border: 1px solid #FC4242;
+}
+
+.input-block.js-wrong .input-note {
+  display: block;
+  color: #FC4242;
+}
+
 .input-label {
   font-weight: 400;
   font-size: 12px;
@@ -6681,10 +6762,6 @@ input.search.js-inputed {
 
 .input-text:hover, .input-text:focus, .input-text.js-inputed {
   background-color: #E6E6EF;
-}
-
-.input-text.js-wrong {
-  border: 1px solid #FC4242;
 }
 
 .input-text::-webkit-input-placeholder {
@@ -6892,7 +6969,19 @@ div.input-file__file-load {
   color: #94A0B1;
 }
 
-.file-load__link {
+.file-load__clear {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+}
+
+.file-load__clear:hover, .file-load__clear:active, .file-load__clear:focus {
+  background-color: transparent;
+}
+
+.file-load__link, .file-load__clear {
   text-decoration: none;
   color: inherit;
   display: block;
@@ -6901,13 +6990,17 @@ div.input-file__file-load {
   margin-left: auto;
 }
 
-.file-load__link svg {
+.file-load__link:hover, .file-load__clear:hover {
+  cursor: pointer;
+}
+
+.file-load__link svg, .file-load__clear svg {
   fill: #94A0B1;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.file-load__link:hover svg {
+.file-load__link:hover svg, .file-load__clear:hover svg {
   fill: #2858FF;
 }
 
@@ -7311,6 +7404,26 @@ div.input-file__file-load {
   margin: 0;
   color: #1A1A1A;
   margin-bottom: 10px;
+}
+
+.light-block {
+  padding: 28px;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+  margin-bottom: 24px;
+}
+
+.light-block__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  margin-bottom: 24px;
+  color: #1A1A1A;
+}
+
+.light-block__title .note-mark {
+  color: #FC4242;
 }
 
 .user-data {
@@ -8988,6 +9101,77 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
           flex-grow: 1;
   max-width: 24%;
   min-width: 24%;
+}
+
+.contract-creation__client-type-choose, .contract-creation__installation-wrapper, .contract-creation__payment-type-wrapper, .contract-creation__delivery-type-wrapper, .contract-creation__delivery-address-wrapper, .contract-creation__passport-data-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contract-creation__delivery-address-wrapper > div,
+.contract-creation__passport-data-wrapper > div {
+  margin-top: 14px;
+}
+
+.contract-creation__passport-data-wrapper > .contract-creation__passport-data-photo {
+  margin-top: 24px;
+}
+
+.contract-creation__passport-data-department, .contract-creation__passport-data-address, .contract-creation__passport-data-photo {
+  width: 100%;
+}
+
+.contract-creation__individual-choose, .contract-creation__installation-yes, .contract-creation__payment-type-online, .contract-creation__payment-type-cash, .contract-creation__payment-type-card, .contract-creation__payment-type-invoice, .contract-creation__delivery-type-delivery, .contract-creation__delivery-type-pickup, .contract-creation__delivery-address-city, .contract-creation__delivery-address-street, .contract-creation__passport-data-birthday, .contract-creation__passport-data-issue-date, .contract-creation__passport-data-serial, .contract-creation__passport-data-code {
+  width: calc(50% - 7px);
+}
+
+.contract-creation__delivery-address-house, .contract-creation__delivery-address-entrance, .contract-creation__delivery-address-apartment, .contract-creation__delivery-address-floor, .contract-creation__delivery-address-intercom {
+  width: calc((100% - 56px) / 5);
+}
+
+.contract-creation__delivery-address-date, .contract-creation__delivery-address-time, .contract-creation__delivery-address-cost {
+  width: calc((100% - 28px) / 3);
+}
+
+.contract-creation__payment-type-online, .contract-creation__payment-type-cash {
+  margin-bottom: 14px;
+}
+
+.contract-creation__entity-choose, .contract-creation__installation-no {
+  width: calc(50% - 7px);
+}
+
+.contract-creation__client-data-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contract-creation__client-data-name {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.contract-creation__client-data-phone {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 14px;
+}
+
+.contract-creation__client-data-email {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .contract-subject {
