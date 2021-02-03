@@ -6811,6 +6811,10 @@ input.search.js-inputed {
   color: #D1D8E1;
 }
 
+.input-money {
+  text-align: right;
+}
+
 .input-file__label {
   font-weight: 400;
   font-size: 14px;
@@ -6858,6 +6862,16 @@ div.input-file__file-load {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.radio-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.radio-block .radio:not(:last-child) {
+  margin-right: 24px;
 }
 
 .radio {
@@ -7433,6 +7447,26 @@ div.input-file__file-load {
 }
 
 .light-block__title .note-mark {
+  color: #FC4242;
+}
+
+.light-block-small {
+  padding: 28px;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+  margin-bottom: 14px;
+}
+
+.light-block-small__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 24px;
+  color: #1A1A1A;
+}
+
+.light-block-small__title .note-mark {
   color: #FC4242;
 }
 
@@ -8212,7 +8246,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 }
 
 .contract-info__block {
-  width: 32%;
+  width: calc((100% - 48px) / 3);
 }
 
 .contract-info__block--paid, .contract-info__block--delivered {
@@ -8565,12 +8599,24 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   padding-bottom: 0;
 }
 
+.delivery-or-pickup__block-desc {
+  margin-bottom: 0;
+  color: #94A0B1;
+}
+
 .delivery-or-pickup__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 14px;
   border-top: 1px solid #D1D8E1;
+}
+
+.delivery-or-pickup__details--no-border {
+  border-top: none;
 }
 
 .delivery-or-pickup__detail {
@@ -8581,6 +8627,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .delivery-or-pickup__detail:not(:last-child) {
   margin-right: 15px;
+}
+
+.delivery-or-pickup__installation-block {
+  margin-bottom: 30px;
 }
 
 .delivery-or-pickup__payment-link {
@@ -8630,6 +8680,64 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .delivery-or-pickup__modal-input-file {
   width: 100%;
+}
+
+.delivery-or-pickup__installation-desc {
+  margin: 18px 0 14px;
+  color: #94A0B1;
+}
+
+.delivery-or-pickup__installation-cost-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.delivery-or-pickup__installation-cost-value, .delivery-or-pickup__installation-date, .delivery-or-pickup__installation-time {
+  width: calc((100% - 30px) / 3);
+}
+
+.delivery-or-pickup__address-manual {
+  display: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.delivery-or-pickup__installation-address-city, .delivery-or-pickup__installation-address-street {
+  width: calc(50% - 7px);
+}
+
+.delivery-or-pickup__installation-address-house, .delivery-or-pickup__installation-address-entrance, .delivery-or-pickup__installation-address-apartment, .delivery-or-pickup__installation-address-floor, .delivery-or-pickup__installation-address-intercom {
+  width: calc((100% - 56px) / 5);
+}
+
+div.delivery-or-pickup__address-manual {
+  display: none;
+}
+
+div.delivery-or-pickup__address-wrapper--registraition {
+  display: none;
+}
+
+.delivery-or-pickup__details.show-for-manual .delivery-or-pickup__address-manual {
+  display: block;
+}
+
+.delivery-or-pickup__details.show-for-registraiton .delivery-or-pickup__address-wrapper--registraition {
+  display: block;
 }
 
 .contract-services {
@@ -9675,4 +9783,143 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .subscription-all__select:nth-child(4), .subscription-all__select:nth-child(5), .subscription-all__select:nth-child(6), .subscription-all__select:nth-child(7) {
   width: calc((100% - 42px) / 4);
+}
+
+.subscription-page__actions {
+  margin-bottom: 24px;
+}
+
+.subscription-page__actions-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subscription-page__action-item {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  position: relative;
+  padding: 30px 16px 30px 80px;
+  width: calc((100% - 48px) / 3);
+  color: #1A1A1A;
+  text-align: left;
+  border: 1px solid #F4F4F8;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.subscription-page__action-item:hover, .subscription-page__action-item:active, .subscription-page__action-item:focus {
+  background-color: transparent;
+}
+
+.subscription-page__action-item:not(:disabled):hover, .subscription-page__action-item:not(:disabled):focus {
+  cursor: pointer;
+  border-color: #D1D8E1;
+}
+
+.subscription-page__action-item:first-child, .subscription-page__action-item:nth-child(2), .subscription-page__action-item:nth-child(3) {
+  margin-bottom: 20px;
+}
+
+.subscription-page__action-item::before, .subscription-page__action-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.subscription-page__action-item::before {
+  left: 16px;
+  width: 48px;
+  height: 48px;
+  background-color: #F4F4F8;
+  border-radius: 50%;
+}
+
+.subscription-page__action-item::after {
+  left: 28px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscription-page__action-item:disabled {
+  opacity: 0.5;
+}
+
+.subscription-page__action-item--prolong::after {
+  background-image: url("../img/time.svg");
+}
+
+.subscription-page__action-item--freez::after {
+  background-image: url("../img/snowflake.svg");
+}
+
+.subscription-page__action-item--block::after {
+  background-image: url("../img/lock.svg");
+}
+
+.subscription-page__action-item--service::after {
+  background-image: url("../img/cog.svg");
+}
+
+.subscription-page__action-item--repair::after {
+  background-image: url("../img/wrench.svg");
+}
+
+.subscription-page__action-item--delete::after {
+  background-image: url("../img/file-clear.svg");
+}
+
+.subscription-page__additional-services-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 14px;
+}
+
+.subscription-page__additional-services-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  color: #94A0B1;
+}
+
+.subscription-page__additional-item {
+  width: 100%;
+  padding: 12px;
+  margin-top: 14px;
+  background-color: #F4F4F8;
+  border-radius: 5px;
+}
+
+.subscription-page__additional-item-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  color: #1A1A1A;
+}
+
+.subscription-page__additional-item-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  color: #94A0B1;
 }

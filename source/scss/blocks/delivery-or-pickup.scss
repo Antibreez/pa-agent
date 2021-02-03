@@ -53,11 +53,21 @@
     }
   }
 
+  &__block-desc {
+    margin-bottom: 0;
+    color: $text-minor;
+  }
+
   &__details {
     display: flex;
+    justify-content: space-between;
     padding-top: 14px;
     //margin-bottom: 20px;
     border-top: 1px solid $stroke;
+
+    &--no-border {
+      border-top: none;
+    }
   }
 
   &__detail {
@@ -65,6 +75,10 @@
     &:not(:last-child) {
       margin-right: 15px;
     }
+  }
+
+  &__installation-block {
+    margin-bottom: 30px;
   }
 
   &__payment-link {
@@ -107,7 +121,64 @@
   &__modal-input-file {
     width: 100%;
   }
+
+  &__installation-desc {
+    margin: 18px 0 14px;
+    color: $text-minor;
+  }
+
+  &__installation-cost-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+
+  &__installation-cost-value,
+  &__installation-date,
+  &__installation-time {
+    width: calc((100% - 30px) / 3);
+  }
+
+  &__address-manual {
+    display: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__installation-address-city,
+  &__installation-address-street {
+    width: calc(50% - 7px);
+  }
+
+  &__installation-address-house,
+  &__installation-address-entrance,
+  &__installation-address-apartment,
+  &__installation-address-floor,
+  &__installation-address-intercom {
+    width: calc((100% - 56px) / 5);
+  }
 }
+
+div.delivery-or-pickup__address-manual {
+  display: none;
+}
+
+div.delivery-or-pickup__address-wrapper--registraition {
+  display: none;
+}
+
+.delivery-or-pickup__details.show-for-manual  .delivery-or-pickup__address-manual {
+  display: block;
+}
+
+.delivery-or-pickup__details.show-for-registraiton  .delivery-or-pickup__address-wrapper--registraition {
+  display: block;
+}
+
+
 
 // div.delivery-or-pickup__file-load {
 //   display: none;

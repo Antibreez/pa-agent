@@ -1,3 +1,10 @@
+.radio-block {
+  display: flex;
+  & .radio:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
 .radio {
   font-size: 0;
 

@@ -78,7 +78,7 @@
   }
 
   &__block {
-    width: 32%;
+    width: calc((100% - 48px) / 3);
   }
 
   &__block--paid,

@@ -1,0 +1,119 @@
+.subscription-page {
+  &__actions {
+    margin-bottom: 24px;
+  }
+
+  &__actions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__action-item {
+    @include btn-reset;
+    @include b14;
+    position: relative;
+    padding: 30px 16px 30px 80px;
+    width: calc((100% - 48px) / 3);
+    color: $text-main;
+    text-align: left;
+    border: 1px solid $bg;
+    border-radius: 5px;
+    transition: all 0.3s;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      cursor: pointer;
+      border-color: $stroke;
+    }
+
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-bottom: 20px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: 16px;
+      width: 48px;
+      height: 48px;
+      background-color: $bg;
+      border-radius: 50%;
+    }
+
+    &::after {
+      left: 28px;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &--prolong::after {
+      background-image: url("../img/time.svg");
+    }
+
+    &--freez::after {
+      background-image: url("../img/snowflake.svg");
+    }
+
+    &--block::after {
+      background-image: url("../img/lock.svg");
+    }
+
+    &--service::after {
+      background-image: url("../img/cog.svg");
+    }
+
+    &--repair::after {
+      background-image: url("../img/wrench.svg");
+    }
+
+    &--delete::after {
+      background-image: url("../img/file-clear.svg");
+    }
+  }
+
+  &__additional-services-title {
+    @include h18;
+    margin-bottom: 14px;
+  }
+
+  &__additional-services-desc {
+    @include b14;
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__additional-item {
+    width: 100%;
+    padding: 12px;
+    margin-top: 14px;
+    background-color: $bg;
+    border-radius: 5px;
+  }
+
+  &__additional-item-title {
+    @include b14;
+    margin: 0;
+    color: $text-main;
+  }
+
+  &__additional-item-desc {
+    @include b14;
+    margin: 0;
+    color: $text-minor;
+  }
+}
