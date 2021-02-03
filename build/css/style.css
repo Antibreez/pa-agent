@@ -8706,9 +8706,6 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 .delivery-or-pickup__address-manual {
   display: none;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
@@ -8724,19 +8721,33 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   width: calc((100% - 56px) / 5);
 }
 
-div.delivery-or-pickup__address-manual {
+.delivery-or-pickup__installation-address-done {
+  margin-top: 18px;
+}
+
+div.delivery-address {
   display: none;
 }
 
-div.delivery-or-pickup__address-wrapper--registraition {
+div.manual-address {
   display: none;
 }
 
-.delivery-or-pickup__details.show-for-manual .delivery-or-pickup__address-manual {
+div.registration-address {
+  display: none;
+}
+
+.delivery-or-pickup__wrapper.show-for-delivery .delivery-address {
   display: block;
 }
 
-.delivery-or-pickup__details.show-for-registraiton .delivery-or-pickup__address-wrapper--registraition {
+.delivery-or-pickup__wrapper.show-for-manual .manual-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.delivery-or-pickup__wrapper.show-for-registration .registration-address {
   display: block;
 }
 

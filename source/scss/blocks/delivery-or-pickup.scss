@@ -143,7 +143,6 @@
   &__address-manual {
     display: none;
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -160,21 +159,33 @@
   &__installation-address-intercom {
     width: calc((100% - 56px) / 5);
   }
+
+  &__installation-address-done {
+    margin-top: 18px;
+  }
 }
 
-div.delivery-or-pickup__address-manual {
+div.delivery-address {
   display: none;
 }
 
-div.delivery-or-pickup__address-wrapper--registraition {
+div.manual-address {
   display: none;
 }
 
-.delivery-or-pickup__details.show-for-manual  .delivery-or-pickup__address-manual {
+div.registration-address {
+  display: none;
+}
+
+.delivery-or-pickup__wrapper.show-for-delivery .delivery-address {
   display: block;
 }
 
-.delivery-or-pickup__details.show-for-registraiton  .delivery-or-pickup__address-wrapper--registraition {
+.delivery-or-pickup__wrapper.show-for-manual  .manual-address {
+  display: flex;
+}
+
+.delivery-or-pickup__wrapper.show-for-registration  .registration-address {
   display: block;
 }
 

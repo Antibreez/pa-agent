@@ -92,7 +92,7 @@
 
     <section class="delivery-or-pickup">
       <div class="delivery-or-pickup__container  wrapper">
-        <div class="delivery-or-pickup__wrapper">
+        <div class="delivery-or-pickup__wrapper  show-for-delivery">
             <div class="delivery-or-pickup__title-block">
               <h2 class="delivery-or-pickup__title info-block__title">Ожидается монтаж</h2>
               <a class="delivery-or-pickup__change  btn-arrow"><span></span></a>
@@ -124,7 +124,7 @@
               </div>
             </div>
 
-            <div class="delivery-or-pickup__address-wrapper">
+            <div class="delivery-or-pickup__address-wrapper  delivery-address">
               <div class="">
                 <p class="delivery-or-pickup__address  info-block__desc">
                   Москва, Лермонтовский проспект, 8к1
@@ -151,7 +151,7 @@
               </div>
             </div>
 
-            <div class="delivery-or-pickup__address-wrapper  delivery-or-pickup__address-wrapper--registraition">
+            <div class="delivery-or-pickup__address-wrapper  registration-address">
               <div class="">
                 <p class="delivery-or-pickup__address  info-block__desc">
                   Москва, Лермонтовский проспект, 8к1
@@ -178,7 +178,7 @@
               </div>
             </div>
 
-            <div class="delivery-or-pickup__address-manual">
+            <div class="delivery-or-pickup__address-manual  manual-address">
               <div class="delivery-or-pickup__installation-address-city  input-block">
                 <input class="input-text" type="text" name="city">
                 <label class="input-label">Город</label>
@@ -207,10 +207,6 @@
                 <input class="input-text" type="text" name="intercom">
                 <label class="input-label">Домофон</label>
               </div>
-              <div class="delivery-or-pickup__installation-address-date  date-block">
-                <label for="delivery-date" class="date-label">Дата</label>
-                <input id="delivery-date" class="date-input" name="delivery-date">
-              </div>
             </div>
 
             <div class="delivery-or-pickup__installation-cost">
@@ -237,6 +233,65 @@
             </div>
 
 
+        </div>
+      </div>
+    </section>
+
+
+    <section class="delivery-or-pickup  done">
+      <div class="delivery-or-pickup__container  wrapper">
+        <div class="contract-info__block  contract-info__block--delivered  info-block">
+          <h2 class="contract-info__title-check  info-block__title">
+            <button class="contract-info__delivered-toggle"></button>
+            <span>Смонтирован&nbsp;&nbsp;|&nbsp;&nbsp;25.12.2020 - 13:40
+          </span></h2>
+          <div class="contract-info__delivered-adress">
+            <div class="contract-info__delivered-details  delivery-or-pickup__details  delivery-or-pickup__details--no-border">
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Телефон для связи с ИЦ</p>
+                <p class="info-block__desc">+7 (123) 456-78-90</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Имя менеджера ИЦ</p>
+                <p class="info-block__desc">Иван Иванов</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Дата монтажа</p>
+                <p class="info-block__desc">25.12.2020</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Время монтажа</p>
+                <p class="info-block__desc">13:40</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Стоимость</p>
+                <p class="info-block__desc">9 800  ₽</p>
+              </div>
+            </div>
+          </div>
+          <div class="contract-info__delivered-adress  delivery-or-pickup__installation-address-done">
+            <p class="delivery-or-pickup__address  info-block__desc">
+              Москва, Лермонтовский проспект, 8к1
+            </p>
+            <div class="contract-info__delivered-details  delivery-or-pickup__details">
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Подъезд</p>
+                <p class="info-block__desc">1</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Кв / Офис</p>
+                <p class="info-block__desc">172</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Домофон</p>
+                <p class="info-block__desc">172#8766</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Этаж</p>
+                <p class="info-block__desc">10</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

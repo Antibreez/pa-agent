@@ -526,19 +526,51 @@
     return;
   }
 
-  var wrapper = document.querySelector('.contract-creation__details');
+  var wrapper = radios[0].parentNode.parentNode.parentNode.parentNode;
 
   function onRadioChange() {
+    console.log(wrapper);
+
     if (radios[0].checked) {
-      wrapper.classList.remove('show-for-manual');
+      if (wrapper.classList.contains('show-for-manual')) {
+        wrapper.classList.remove('show-for-manual');
+      }
+
+      if (wrapper.classList.contains('show-for-registration')) {
+        wrapper.classList.remove('show-for-registration');
+      }
+
+      if (!wrapper.classList.contains('show-for-delivery')) {
+        wrapper.classList.add('show-for-delivery');
+      }
     }
 
     if (radios[1].checked) {
-      wrapper.classList.remove('show-for-manual');
+      if (wrapper.classList.contains('show-for-manual')) {
+        wrapper.classList.remove('show-for-manual');
+      }
+
+      if (wrapper.classList.contains('show-for-delivery')) {
+        wrapper.classList.remove('show-for-delivery');
+      }
+
+      if (!wrapper.classList.contains('show-for-registration')) {
+        wrapper.classList.add('show-for-registration');
+      }
     }
 
     if (radios[2].checked) {
-      wrapper.classList.add('show-for-manual');
+      if (wrapper.classList.contains('show-for-delivery')) {
+        wrapper.classList.remove('show-for-delivery');
+      }
+
+      if (wrapper.classList.contains('show-for-registration')) {
+        wrapper.classList.remove('show-for-registration');
+      }
+
+      if (!wrapper.classList.contains('show-for-manual')) {
+        wrapper.classList.add('show-for-manual');
+      }
     }
   }
 
