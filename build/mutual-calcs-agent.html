@@ -69,10 +69,88 @@
 
         <div class="mutual-calcs__earned  light-block">
           <div class="mutual-calcs__earned-title-block">
-            <h2 class="light-block__title">Для кого оформляем договор?</h2>
-            <div class="mutual-calcs__earned-date  date-block">
-              <label for="earned-date" class="date-label">Дата</label>
-              <input id="earned-date" class="date-input" name="calcs-date" placeholder="Не указана">
+            <h2 class="light-block__title">Заработали</h2>
+            <div class="mutual-calcs__earned-date-block">
+              <button class="mutual-calcs__earned-date-btn"></button>
+              <!-- <div class="mutual-calcs__earned-date  date-block">
+                <input id="earned-date" class="date-input" name="calcs-date" placeholder="">
+              </div> -->
+              <div class="mutual-calcs__earned-date-menu">
+                <ul class="mutual-calcs__earned-date-menu-list">
+                  <li class="mutual-calcs__earned-date-menu-item">
+                    <button class="mutual-calcs__earned-date-menu-btn all-time">За все время</button>
+                  </li>
+                  <li class="mutual-calcs__earned-date-menu-item">
+                    <button class="mutual-calcs__earned-date-menu-btn">За последний год</button>
+                  </li>
+                  <li class="mutual-calcs__earned-date-menu-item">
+                    <button class="mutual-calcs__earned-date-menu-btn">За 3 месяца</button>
+                  </li>
+                  <li class="mutual-calcs__earned-date-menu-item">
+                    <div class="mutual-calcs__earned-date-input  date-block">
+                      <label for="earned-date" class="date-label earned-date-period-btn">Указать период...</label>
+                      <input id="earned-date" class="date-input-period  visually-hidden" name="calcs-date" placeholder="">
+
+                      <!--Начальный период учета данных-->
+                      <span class="earned-date__start-period" style="display: none;">10.01.2020</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mutual-calcs__details">
+            <div class="mutual-calcs__details-item">
+              <p class="info-block__subtitle">Подписок оформлено</p>
+              <p class="mutual-calcs__details-value">376 шт.</p>
+            </div>
+            <div class="mutual-calcs__details-item">
+              <p class="info-block__subtitle">Размер комиссии за период</p>
+              <p class="mutual-calcs__details-value">360 000 ₽</p>
+            </div>
+            <div class="mutual-calcs__details-item">
+              <p class="info-block__subtitle">Получено комиссии</p>
+              <p class="mutual-calcs__details-value">280 000 ₽</p>
+            </div>
+            <div class="mutual-calcs__details-item">
+              <p class="info-block__subtitle">Ожидается перевод</p>
+              <p class="mutual-calcs__details-value">80 000 ₽</p>
+            </div>
+            <div class="mutual-calcs__details-item">
+              <p class="info-block__subtitle">Просрочено</p>
+              <p class="mutual-calcs__details-value">3 000 ₽</p>
+            </div>
+          </div>
+          <div class="mutual-calcs__diagram">
+            <div class="mutual-calcs__diagram-item">
+              <div class="mutual-calcs__diagram-pic">
+                <div class="mutual-calcs__diagram-pic-value" style="height: 0%;"></div>
+              </div>
+              <span class="mutual-calcs__diagram-year">2019</span>
+            </div>
+            <div class="mutual-calcs__diagram-item">
+              <div class="mutual-calcs__diagram-pic">
+                <div class="mutual-calcs__diagram-pic-value" style="height: 100%;"></div>
+              </div>
+              <span class="mutual-calcs__diagram-year">2020</span>
+            </div>
+            <div class="mutual-calcs__diagram-item">
+              <div class="mutual-calcs__diagram-pic">
+                <div class="mutual-calcs__diagram-pic-value" style="height: 43%;"></div>
+              </div>
+              <span class="mutual-calcs__diagram-year">2021</span>
+            </div>
+            <div class="mutual-calcs__diagram-item">
+              <div class="mutual-calcs__diagram-pic">
+                <div class="mutual-calcs__diagram-pic-value" style="height: 0%;"></div>
+              </div>
+              <span class="mutual-calcs__diagram-year">2022</span>
+            </div>
+            <div class="mutual-calcs__diagram-item">
+              <div class="mutual-calcs__diagram-pic">
+                <div class="mutual-calcs__diagram-pic-value" style="height: 0%;"></div>
+              </div>
+              <span class="mutual-calcs__diagram-year">2023</span>
             </div>
           </div>
 
