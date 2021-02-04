@@ -11,6 +11,7 @@
 
   &__title {
     @include section-title;
+    @include h24;
     margin: 0;
     margin-right: auto;
     color: $text-main;

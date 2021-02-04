@@ -1,5 +1,5 @@
 (function() {
-  const radios = document.querySelectorAll('.delivery-or-pickup__installation-block  input');
+  const radios = document.querySelectorAll('.delivery-or-pickup__installation-choose-block  input');
 
   if (!radios[0]) {
     return;

@@ -9,7 +9,6 @@
 
   const onLinkClick = function(e) {
     const target = e.target;
-    console.log(target.classList.contains('chekcbox-btn__label'));
 
     if (
       target.classList.contains('checkbox-btn__label')

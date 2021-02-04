@@ -77,7 +77,7 @@
     }
   }
 
-  &__installation-block {
+  &__installation-choose-block {
     margin-bottom: 30px;
   }
 
@@ -88,6 +88,19 @@
     display: flex;
     justify-content: space-between;
     margin-top: 18px;
+  }
+
+  &__payment-link-sended {
+    margin-left: auto;
+    margin-right: 20px;
+
+    & .info-block__subtitle {
+      color: $text-main;
+    }
+
+    & .info-block__desc {
+      color: $text-minor;
+    }
   }
 
   &__confirm {

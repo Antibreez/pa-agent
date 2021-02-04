@@ -90,6 +90,10 @@
     justify-content: space-between;
   }
 
+  &__modal-body .modal__title {
+    margin-bottom: 28px;
+  }
+
   &__modal-sender,
   &__modal-recipient,
   &__modal-sum {

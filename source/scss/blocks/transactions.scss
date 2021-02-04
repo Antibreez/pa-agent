@@ -13,6 +13,13 @@
     margin: 0;
   }
 
+  &__subtitle {
+    @include h20;
+    margin: 0;
+    color: $text-main;
+    margin-bottom: 10px;
+  }
+
   &__sum--current {
     color: $primary;
   }
@@ -25,6 +32,10 @@
     padding: 34px 28px 39px;
     background-color: $bg;
     border-radius: 5px;
+  }
+
+  & tr.checked .transactions__row-sum {
+    color: $primary;
   }
 }
 
@@ -76,13 +87,16 @@
     padding-right: 24px;
     padding-bottom: 26px;
 
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  &:not(.transactions__table--no-checkbox) th,
+  &:not(.transactions__table--no-checkbox) td {
     &:first-child {
       font-size: 0;
       line-height: 0;
-    }
-
-    &:last-child {
-      text-align: right;
     }
   }
 
@@ -102,8 +116,45 @@
 
     &:last-child span {
       white-space: nowrap;
-      color: $primary;
+      color: $text-minor;
     }
   }
 
+  & tr:last-of-type td {
+    padding-bottom: 0;
+  }
+
+}
+
+.transactions__table--no-checkbox {
+
+  & col {
+    &:first-child {
+      width: 17%;
+    }
+
+    &:nth-child(2) {
+      width: 16%;
+    }
+
+    &:nth-child(3) {
+      width: 16%;
+    }
+
+    &:nth-child(4) {
+      width: 10%;
+    }
+
+    &:nth-child(5) {
+      width: 15%;
+    }
+
+    &:nth-child(6) {
+      width: 15%;
+    }
+
+    &:nth-child(7) {
+      width: 11%;
+    }
+  }
 }

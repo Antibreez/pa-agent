@@ -48,7 +48,7 @@
     padding: 19px 24px;
     border: 1px solid $stroke;
     border-radius: 5px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
 
   &__toggle-info-link {
@@ -79,6 +79,10 @@
 
   &__block {
     width: calc((100% - 48px) / 3);
+  }
+
+  &__block--duo {
+    width: calc((100% - 24px) / 2);
   }
 
   &__block--paid,

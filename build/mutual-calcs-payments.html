@@ -51,276 +51,291 @@
   </header>
 
   <main>
-    <div class="breadcrumbs">
-      <div class="breadcrumbs__container  wrapper">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Подписки</a>
-            <span>&#8594;</span>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link">Daikin FTXJ25MW/RXJ250M</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+
 
     <section class="contract-info">
       <div class="contract-info__container  wrapper">
         <div class="contract-info__title-block  title-block">
           <h1 class="contract-info__title  title-block__title">
-            <span>Облачный кондиционер Daikin FTXJ25MW/RXJ250M</span>
-            <span class="contract-info__title-status  pending">В ожидании</span>
-            <span class="contract-info__serial-number">Не указан S/N</span>
+            Взаиморасчеты
           </h1>
+          <button class="mutual-calcs__make-payment  btn-primary">Создать платёж</button>
         </div>
 
         <div class="contract-info__toggle-info">
-          <a class="contract-info__toggle-info-link  active">Обшая информация</a>
-          <a href="#" class="contract-info__toggle-info-link">Взаиморасчёты и платежи</a>
+          <a href="#" class="contract-info__toggle-info-link">Взаиморасчёты</a>
+          <a class="contract-info__toggle-info-link  active">Платежи</a>
         </div>
 
-        <div class="contract-info__blocks-wrapper">
-          <div class="contract-info__block  info-block">
-            <h2 class="info-block__title">О подписке</h2>
-            <p class="info-block__subtitle">Номер договора</p>
-            <p class="info-block__desc">DA2020-17</p>
-            <p class="info-block__subtitle">Ближ. платёж</p>
-            <p class="info-block__desc">85 998 ₽</p>
-            <p class="info-block__subtitle">Осталось</p>
-            <p class="info-block__desc">—</p>
-          </div>
-          <div class="contract-info__block  info-block">
-            <h2 class="info-block__title">Клиент</h2>
-            <p class="info-block__subtitle">Имя</p>
-            <p class="info-block__desc">Иванов Иван Иванович</p>
-            <p class="info-block__subtitle">Телефон</p>
-            <p class="info-block__desc">+7 (123) 456-78-90</p>
-            <p class="info-block__subtitle">E-mail</p>
-            <p class="info-block__desc">ivanov@email.ru</p>
-          </div>
-          <div class="contract-info__block  info-block">
-            <h2 class="info-block__title">Агент</h2>
-            <p class="info-block__subtitle">Имя</p>
-            <p class="info-block__desc">Александров Александр Александрович</p>
-            <p class="info-block__subtitle">Компания</p>
-            <p class="info-block__desc">ООО “МТС”</p>
-            <p class="info-block__subtitle">Комиссия по договору</p>
-            <p class="info-block__desc">11 250&nbsp;&nbsp;₽&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;ожидает выплаты </p>
-          </div>
-        </div>
+
       </div>
     </section>
 
-    <section class="subscription-page__actions">
-      <form>
-        <div class="subscription-page__actions-container  wrapper">
-          <button type="button" class="subscription-page__action-item  subscription-page__action-item--prolong" disabled="">Продлить действие услуги</button>
-          <button type="button" class="subscription-page__action-item  subscription-page__action-item--freez" disabled="">Заморозить услугу</button>
-          <button type="button" class="subscription-page__action-item  subscription-page__action-item--block" disabled="">Заблокировать подписку</button>
-          <button type="button" class="subscription-page__action-item  subscription-page__action-item--service" disabled="">Заказать ТО</button>
-          <button type="button" class="subscription-page__action-item  subscription-page__action-item--repair" disabled="">Заказать ремонт</button>
-          <button type="button" class="subscription-page__action-item  subscription-page__action-item--delete">Удалить подписку из договора</button>
-        </div>
-      </form>
-    </section>
-
-   <section class="subscription-page__additional-services">
-     <div class="subscription-page__additional-services-wrapper  wrapper">
-        <div class="light-block">
-          <h2 class="subscription-page__additional-services-title  light-block__title">Дополнительные услуги</h2>
-          <p class="subscription-page__additional-services-desc">
-            Дополнительные услуги увеличивают стоимость ежегодного платежа для клиента.
-          </p>
-          <div class="subscription-page__additional-item">
-            <h3 class="subscription-page__additional-item-title">Расширенная гарантия</h3>
-            <h3 class="subscription-page__additional-item-desc">+ 500 ₽ к ежегодному платежу</h3>
+    <div class="mutual-calcs">
+      <div class="mututal-calcs__container  wrapper">
+        <div class="contracts-all__filters  filters">
+          <div class="filters__title-block">
+            <h2 class="filters__title">Фильтры</h2>
+            <button class="filters__btn btn-arrow-v">
+              <span>Свернуть</span>
+              <span>Развернуть</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="filters__form-wrapper">
+            <form class="contracts-all__filters-form  filters__form">
+              <div class="contracts-all__input-payment-date  date-block">
+                <label for="contracts-all-date" class="date-label">Дата</label>
+                <input id="contracts-all-date" class="date-input" name="calcs-date" placeholder="Не указана">
+              </div>
+              <div class="contracts-all__input-sender-wide  input-block">
+                <input class="input-text" type="text" name="calcs-sender" placeholder="Введите имя отправителя">
+                <label class="input-label">Отправитель</label>
+              </div>
+              <div class="contracts-all__input-recipient-wide  input-block">
+                <input class="input-text" type="text" name="calcs-recipient" placeholder="Введите имя получателя">
+                <label class="input-label">Получатель</label>
+              </div>
+            </form>
           </div>
         </div>
-     </div>
-   </section>
 
-   <section class="payment-waiting">
-     <div class="payment-waiting__container  wrapper">
-       <div class="payment-waiting__wrapper">
-         <form class="payment-waiting__info-form">
-           <h2 class="info-block__title">Ожидается оплата (оплата онлайн)</h2>
-           <div class="payment-waiting__details">
-             <div class="payment-waiting__detail  payment-waiting__detail--sum">
-               <p class="info-block__subtitle">Сумма</p>
-               <p class="info-block__desc">85 998 ₽</p>
-             </div>
-             <div class="payment-waiting__detail  payment-waiting__detail--time">
-               <p class="info-block__subtitle">Время действия ссылки</p>
-               <p class="info-block__desc">17:32</p>
-             </div>
-             <div class="payment-waiting__detail  payment-waiting__detail--link">
-               <p class="info-block__subtitle">Адрес ссылки</p>
-               <p class="info-block__desc">https://daichi.ru/payment/5fe09526ec203/</p>
-             </div>
-           </div>
-           <a href="#" class="payment-waiting__new-link btn-secondary">Получить новую</a>
+        <div class="mutual-calcs-payment-block">
+          <div class="mutual-calcs-payment-block__block">
+            <table class="mutual-calcs-payment-block__table">
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <tr class="mutual-calcs-payment-block__header">
+                <th>Сумма</th>
+                <th>Дата</th>
+                <th>Отправитель</th>
+                <th>Получатель</th>
+                <th>Назначение платежа</th>
+              </tr>
+              <!--СТРОКА ДОГОВОРА-->
+              <tr>
+                <td colspan="7">
+                  <a class="mutual-calcs-payment-block__link">
+                    <table class="mutual-calcs-payment-block__inner-table">
+                      <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tr class="mutual-calcs-payment-block__data">
+                        <td>
+                          <p>
+                            16 999 ₽
+                          </p>
+                        </td>
+                        <td>
+                          <p>01.01.2021</p>
+                        </td>
+                        <td>
+                          <p>Роман Романов</p>
+                        </td>
+                        <td>
+                          <p>ООО Даичи</p>
+                        </td>
+                        <td>
+                          <p>Оплата по договору DA2021-01 от 01.01.2022</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+              </tr>
+              <!--СТРОКА ДОГОВОРА-->
+              <tr>
+                <td colspan="7">
+                  <a class="mutual-calcs-payment-block__link">
+                    <table class="mutual-calcs-payment-block__inner-table">
+                      <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tr class="mutual-calcs-payment-block__data">
+                        <td>
+                          <p>
+                            83 998 ₽
+                          </p>
+                        </td>
+                        <td>
+                          <p>01.01.2021</p>
+                        </td>
+                        <td>
+                          <p>Александр Александров</p>
+                        </td>
+                        <td>
+                          <p>ООО Даичи</p>
+                        </td>
+                        <td>
+                          <p>Оплата по договору DA2021-01 от 01.01.2022</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+              </tr>
+              <!--СТРОКА ДОГОВОРА-->
+              <tr>
+                <td colspan="7">
+                  <a class="mutual-calcs-payment-block__link">
+                    <table class="mutual-calcs-payment-block__inner-table">
+                      <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tr class="mutual-calcs-payment-block__data">
+                        <td>
+                          <p>
+                            11 250 ₽
+                          </p>
+                        </td>
+                        <td>
+                          <p>01.01.2021</p>
+                        </td>
+                        <td>
+                          <p>Александр Александров</p>
+                        </td>
+                        <td>
+                          <p>ООО Даичи</p>
+                        </td>
+                        <td>
+                          <p>Комиссия агента 15% за первый взнос по договору DA2020-15</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+              </tr>
+              <!--СТРОКА ДОГОВОРА-->
+              <tr>
+                <td colspan="7">
+                  <a class="mutual-calcs-payment-block__link">
+                    <table class="mutual-calcs-payment-block__inner-table">
+                      <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tr class="mutual-calcs-payment-block__data">
+                        <td>
+                          <p>
+                            11 250 ₽
+                          </p>
+                        </td>
+                        <td>
+                          <p>01.01.2021</p>
+                        </td>
+                        <td>
+                          <p>Александр Александров</p>
+                        </td>
+                        <td>
+                          <p>ООО Даичи</p>
+                        </td>
+                        <td>
+                          <p>Оплата подписки на услугу облачный кондиционер, договор DA-2020-12</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+              </tr>
+              <!--СТРОКА ДОГОВОРА-->
+              <tr>
+                <td colspan="7">
+                  <a class="mutual-calcs-payment-block__link">
+                    <table class="mutual-calcs-payment-block__inner-table">
+                      <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tr class="mutual-calcs-payment-block__data">
+                        <td>
+                          <p>
+                            11 250 ₽
+                          </p>
+                        </td>
+                        <td>
+                          <p>01.01.2021</p>
+                        </td>
+                        <td>
+                          <p>Александр Александров</p>
+                        </td>
+                        <td>
+                          <p>ООО Даичи</p>
+                        </td>
+                        <td>
+                          <p>Комиссия агента за оплату подписочного периода на облачный конжиционер</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
 
-           <!-- <div class="payment-waiting__confirm">
-             <button type="button" class="payment-waiting__confirm-btn  checkbox-btn">
-               <span class="checkbox-btn__checkbox"></span>
-               <p class="checkbox-btn__label">Подтвердить факт оплаты</p>
-             </button>
-           </div> -->
-         </form>
-         <form class="payment-waiting__send-form">
-           <div class="payment-waiting__logo"></div>
-           <div class="payment-waiting__send-form-wrapper">
-             <label class="payment-waiting__checkbox  checkbox-1">
-               <input type="checkbox" name="email" class="checkbox-1__input  visually-hidden">
-               <div class="checkbox-1__label"></div>
-               <p class="checkbox-1__name">Отправить клиенту на E-mail</p>
-               <p class="checkbox-1__desc">ivanov@email.ru</p>
-             </label>
-             <label class="payment-waiting__checkbox  checkbox-1">
-               <input type="checkbox" name="phone" class="checkbox-1__input  visually-hidden">
-               <div class="checkbox-1__label"></div>
-               <p class="checkbox-1__name">Отправить клиенту на номер телефона</p>
-               <p class="checkbox-1__desc">+7 (123) 456-78-90</p>
-             </label>
-             <button type="submit" class="btn-primary">Отправить</button>
-           </div>
-         </form>
-       </div>
-     </div>
-   </section>
+        <div class="contracts__pagination-block">
+          <button class="contracts__show-more">Показать еще</button>
+          <div class="contracts__pagination">
+            <button class="contracts__prev" disabled="">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"></path>
+              </svg>
+            </button>
+            <button class="contracts__page-number  active">1</button>
+            <button class="contracts__page-number">2</button>
+            <button class="contracts__page-number">3</button>
+            <button class="contracts__page-number">...</button>
+            <button class="contracts__page-number">14</button>
+            <button class="contracts__next">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
 
-   <section class="delivery-or-pickup">
-     <div class="delivery-or-pickup__container  wrapper">
-       <div class="delivery-or-pickup__wrapper">
-           <div class="delivery-or-pickup__title-block">
-             <h2 class="delivery-or-pickup__title info-block__title">Ожидается доставка</h2>
-             <a href="#" class="delivery-or-pickup__change  btn-arrow">Изменить способ доставки<span></span></a>
-           </div>
-           <p class="delivery-or-pickup__address  info-block__desc">
-             Москва, Лермонтовский проспект, 8к1
-           </p>
-           <div class="delivery-or-pickup__details">
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Подъезд</p>
-               <p class="info-block__desc">1</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Кв / Офис</p>
-               <p class="info-block__desc">172</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Домофон</p>
-               <p class="info-block__desc">172#8766</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Этаж</p>
-               <p class="info-block__desc">10</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Дата</p>
-               <p class="info-block__desc">20.12.2020</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Время</p>
-               <p class="info-block__desc">09:00 - 22:00</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Стоимость</p>
-               <p class="info-block__desc">1 500  ₽</p>
-             </div>
-           </div>
 
-           <div class="delivery-or-pickup__payment-link">
-             <div>
-               <p class="info-block__subtitle">Ссылка на оплату доставки</p>
-               <p class="info-block__desc">https://daichi.ru/payment/5fe09526ec203/</p>
-             </div>
-             <form>
-               <button class="delivery-or-pickup__send btn-primary">Отправить клиенту</button>
-             </form>
-           </div>
-           <div class="delivery-or-pickup__confirm">
-             <button class="deliver-or-pickup__confirm-btn  checkbox-btn">
-               <span class="checkbox-btn__checkbox"></span>
-               <p class="checkbox-btn__label">Подтвердить факт доставки</p>
-             </button>
-           </div>
-       </div>
-     </div>
-   </section>
+      </div>
+    </div>
 
-   <section class="delivery-or-pickup">
-     <div class="delivery-or-pickup__container  wrapper">
-       <div class="delivery-or-pickup__wrapper">
-           <div class="delivery-or-pickup__title-block">
-             <h2 class="delivery-or-pickup__title info-block__title">Ожидается монтаж</h2>
-             <a class="delivery-or-pickup__change  btn-arrow"><span></span></a>
-           </div>
-           <p class="delivery-or-pickup__block-desc  info-block__desc">
-             Заявка передана менеджеру инженерного центра и находится в обработке.
-           </p>
-           <div class="delivery-or-pickup__details  delivery-or-pickup__details--no-border">
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Телефон для связи с ИЦ</p>
-               <p class="info-block__desc">+7 (123) 456-78-90</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Имя менеджера ИЦ</p>
-               <p class="info-block__desc">—</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Дата монтажа</p>
-               <p class="info-block__desc">—</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Время монтажа</p>
-               <p class="info-block__desc">—</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Стоимость</p>
-               <p class="info-block__desc">—</p>
-             </div>
-           </div>
-       </div>
-     </div>
-   </section>
 
-   <section class="delivery-or-pickup">
-     <div class="delivery-or-pickup__container  wrapper">
-       <div class="delivery-or-pickup__wrapper">
-           <div class="delivery-or-pickup__title-block">
-             <h2 class="delivery-or-pickup__title info-block__title">Ожидает подключения к облаку</h2>
-             <a class="delivery-or-pickup__change  btn-arrow"><span></span></a>
-           </div>
-           <p class="delivery-or-pickup__block-desc  info-block__desc">
-             Необходимо подключить кондиционер к облачному серверу
-           </p>
-           <div class="delivery-or-pickup__details  delivery-or-pickup__details--no-border">
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Аккаунт Daichi Cloud</p>
-               <p class="info-block__desc">—</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Адрес Wi-Fi сети</p>
-               <p class="info-block__desc">—</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Название помещения</p>
-               <p class="info-block__desc">—</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Серийный номер</p>
-               <p class="info-block__desc">—</p>
-             </div>
-             <div class="delivery-or-pickup__detail">
-               <p class="info-block__subtitle">Дата подключения</p>
-               <p class="info-block__desc">—</p>
-             </div>
-           </div>
-       </div>
-     </div>
-   </section>
   </main>
 
   <footer class="footer">
@@ -540,7 +555,7 @@
                       <td><span>DA2021-01</span></td>
                       <td><span>Роман Романов</span></td>
                       <td><span>ООО Даичи</span></td>
-                      <td><span>12 999 ₽</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -557,7 +572,7 @@
                       <td><span>DA2021-01</span></td>
                       <td><span>Роман Романов</span></td>
                       <td><span>ООО Даичи</span></td>
-                      <td><span>12 999 ₽</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -574,7 +589,7 @@
                       <td><span>DA2021-01</span></td>
                       <td><span>Роман Романов</span></td>
                       <td><span>ООО Даичи</span></td>
-                      <td><span>12 999 ₽</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -591,7 +606,7 @@
                       <td><span>DA2021-01</span></td>
                       <td><span>Роман Романов</span></td>
                       <td><span>ООО Даичи</span></td>
-                      <td><span>12 999 ₽</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -608,7 +623,7 @@
                       <td><span>DA2021-01</span></td>
                       <td><span>Роман Романов</span></td>
                       <td><span>ООО Даичи</span></td>
-                      <td><span>12 999 ₽</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
                     </tr>
                   </table>
                 </div>
@@ -618,6 +633,75 @@
             <div class="modal__btn-block">
               <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
               <button type="submit" class="modal__btn-item  btn-primary">Подтвердить</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+
+  <!--Модальное окно информации о платеже-->
+  <section id="payment-info__modal" class="modal">
+    <div class="modal__overlay">
+
+        <div class="modal__body  payment-waiting__modal-body">
+          <form>
+            <h1 class="modal__title">Роман Романов → ООО Даичи  |  01.01.2022</h1>
+            <div class="payment-waiting__modal-content  modal__content">
+
+
+              <div class="payment-waiting__modal-transactions  transactions">
+                <p class="transactions__desc  info-block__subtitle">
+                  Оплата по договору DA2020-01 от 01.01.2022
+                </p>
+                <div class="transactions__title-block">
+                  <h3 class="transactions__subtitle">Операций на сумму 16 998  ₽</h3>
+                </div>
+
+                <div class="transactions__table-block">
+                  <table class="transactions__table  transactions__table--no-checkbox">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr>
+                      <th>Тип операции</th>
+                      <th>Услуга</th>
+                      <th>Оборудование</th>
+                      <th>Договор</th>
+                      <th>Отправитель</th>
+                      <th>Получатель</th>
+                      <th>Сумма</th>
+                    </tr>
+                    <tr class="checked">
+                      <td><span>Первый взнос</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                    <tr class="checked">
+                      <td><span>1 год подписки</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal__btn-block">
+              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Закрыть</button>
             </div>
           </form>
         </div>
@@ -675,25 +759,6 @@
             <p class="modal__desc">
               Если договор находится в статусе “В обработке”, то все работы по его оформлению будут приостановлены, он не будет заключен с клиентом.<br>
               Если договор находится в статусе “Заключен”, то все подписки в рамках договора будут переведены в статус “заблокирована”.
-            </p>
-            <div class="modal__btn-block">
-              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
-              <button type="submit" class="modal__save  modal__btn-item  btn-primary">Подтвердить</button>
-            </div>
-          </form>
-        </div>
-    </div>
-  </section>
-
-  <!--Модальное окно aннулирования-->
-  <section id="delete-service__modal" class="modal">
-    <div class="modal__overlay">
-
-        <div class="modal__body">
-          <form>
-            <h1 class="modal__title">Вы точно хотите удалить услугу?</h1>
-            <p class="modal__desc">
-              Услуга будет навсегда удалена из договора и не будет предоставлена клиенту. Общая стоимость оплаты по договору и сумма комиссии агента будут изменены.
             </p>
             <div class="modal__btn-block">
               <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>

@@ -7360,6 +7360,9 @@ div.input-file__file-load {
   line-height: 38px;
   color: #1A1A1A;
   margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
   margin: 0;
   margin-right: auto;
   color: #1A1A1A;
@@ -7428,6 +7431,37 @@ div.input-file__file-load {
   margin: 0;
   color: #1A1A1A;
   margin-bottom: 10px;
+}
+
+.info-block__progressbar-block {
+  padding-top: 4px;
+}
+
+.info-block__progressbar-bg {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #D1D8E1;
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+
+.info-block__progressbar-current {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #2858FF;
+  border-radius: 2px;
+}
+
+.info-block__progressbar-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .light-block {
@@ -8153,6 +8187,20 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   width: 24%;
 }
 
+.contracts-all__input-contract-number, .contracts-all__input-sender, .contracts-all__input-recipient {
+  width: calc((100% - 28px) / 3);
+  margin-top: 24px;
+}
+
+.contracts-all__input-payment-date {
+  width: 100%;
+}
+
+.contracts-all__input-sender-wide, .contracts-all__input-recipient-wide {
+  width: calc((100% - 14px) / 2);
+  margin-top: 24px;
+}
+
 .contract-info {
   margin-bottom: 24px;
 }
@@ -8208,7 +8256,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   padding: 19px 24px;
   border: 1px solid #D1D8E1;
   border-radius: 5px;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .contract-info__toggle-info-link {
@@ -8247,6 +8295,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .contract-info__block {
   width: calc((100% - 48px) / 3);
+}
+
+.contract-info__block--duo {
+  width: calc((100% - 24px) / 2);
 }
 
 .contract-info__block--paid, .contract-info__block--delivered {
@@ -8450,6 +8502,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
           justify-content: space-between;
 }
 
+.payment-waiting__modal-body .modal__title {
+  margin-bottom: 28px;
+}
+
 .payment-waiting__modal-sender, .payment-waiting__modal-recipient, .payment-waiting__modal-sum {
   width: 32%;
   margin-bottom: 24px;
@@ -8629,7 +8685,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   margin-right: 15px;
 }
 
-.delivery-or-pickup__installation-block {
+.delivery-or-pickup__installation-choose-block {
   margin-bottom: 30px;
 }
 
@@ -8644,6 +8700,19 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 18px;
+}
+
+.delivery-or-pickup__payment-link-sended {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.delivery-or-pickup__payment-link-sended .info-block__subtitle {
+  color: #1A1A1A;
+}
+
+.delivery-or-pickup__payment-link-sended .info-block__desc {
+  color: #94A0B1;
 }
 
 .delivery-or-pickup__confirm {
@@ -9153,6 +9222,15 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   margin: 0;
 }
 
+.transactions__subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  color: #1A1A1A;
+  margin-bottom: 10px;
+}
+
 .transactions__sum--current {
   color: #2858FF;
 }
@@ -9165,6 +9243,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   padding: 34px 28px 39px;
   background-color: #F4F4F8;
   border-radius: 5px;
+}
+
+.transactions tr.checked .transactions__row-sum {
+  color: #2858FF;
 }
 
 .transactions__table {
@@ -9217,15 +9299,15 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   padding-bottom: 26px;
 }
 
-.transactions__table th:first-child,
-.transactions__table td:first-child {
-  font-size: 0;
-  line-height: 0;
-}
-
 .transactions__table th:last-child,
 .transactions__table td:last-child {
   text-align: right;
+}
+
+.transactions__table:not(.transactions__table--no-checkbox) th:first-child,
+.transactions__table:not(.transactions__table--no-checkbox) td:first-child {
+  font-size: 0;
+  line-height: 0;
 }
 
 .transactions__table td {
@@ -9247,7 +9329,39 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .transactions__table td:last-child span {
   white-space: nowrap;
-  color: #2858FF;
+  color: #94A0B1;
+}
+
+.transactions__table tr:last-of-type td {
+  padding-bottom: 0;
+}
+
+.transactions__table--no-checkbox col:first-child {
+  width: 17%;
+}
+
+.transactions__table--no-checkbox col:nth-child(2) {
+  width: 16%;
+}
+
+.transactions__table--no-checkbox col:nth-child(3) {
+  width: 16%;
+}
+
+.transactions__table--no-checkbox col:nth-child(4) {
+  width: 10%;
+}
+
+.transactions__table--no-checkbox col:nth-child(5) {
+  width: 15%;
+}
+
+.transactions__table--no-checkbox col:nth-child(6) {
+  width: 15%;
+}
+
+.transactions__table--no-checkbox col:nth-child(7) {
+  width: 11%;
 }
 
 .verification__modal-content {
@@ -9933,4 +10047,800 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   line-height: 21px;
   margin: 0;
   color: #94A0B1;
+}
+
+.mutual-calcs-block {
+  margin-bottom: 40px;
+}
+
+.mutual-calcs-block__block {
+  padding: 34px 14px;
+  border-radius: 5px;
+  background-color: #F4F4F8;
+}
+
+.mutual-calcs-block__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #1A1A1A;
+  margin: 0;
+  margin-bottom: 24px;
+  color: #1A1A1A;
+}
+
+.mutual-calcs-block__desc {
+  margin-bottom: 24px;
+}
+
+.mutual-calcs-block__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 20px 0;
+}
+
+.mutual-calcs-block__header + tr .mutual-calcs-block__link {
+  border-top: none;
+}
+
+.mutual-calcs-block col:first-child {
+  width: 18%;
+}
+
+.mutual-calcs-block col:nth-child(2) {
+  width: 18%;
+}
+
+.mutual-calcs-block col:nth-child(3) {
+  width: 18%;
+}
+
+.mutual-calcs-block col:nth-child(4) {
+  width: 18%;
+}
+
+.mutual-calcs-block col:nth-child(5) {
+  width: 6%;
+}
+
+.mutual-calcs-block col:nth-child(6) {
+  width: 9%;
+}
+
+.mutual-calcs-block col:nth-child(7) {
+  width: 13%;
+}
+
+.mutual-calcs-block__delivery-confirm {
+  margin-top: 0;
+  margin-right: 24px;
+}
+
+.mutual-calcs-block__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mutual-calcs-block__table th {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  padding-bottom: 6px;
+  text-align: left;
+  color: #94A0B1;
+  padding-right: 14px;
+}
+
+.mutual-calcs-block__table th:first-child {
+  padding-left: 14px;
+}
+
+.mutual-calcs-block__table th:nth-child(6) {
+  text-align: right;
+  padding-right: 0;
+}
+
+.mutual-calcs-block__table th:last-child {
+  text-align: right;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.mutual-calcs-block__table
+tr:not(:first-of-type):hover
++ tr .mutual-calcs-block__link {
+  border-top-color: transparent;
+}
+
+.mutual-calcs-block__inner-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mutual-calcs-block__data {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.mutual-calcs-block__data td {
+  vertical-align: top;
+  text-align: left;
+  padding-right: 14px;
+}
+
+.mutual-calcs-block__data td:first-child {
+  padding-left: 14px;
+}
+
+.mutual-calcs-block__data td:nth-child(6) {
+  text-align: right;
+}
+
+.mutual-calcs-block__data td:last-child {
+  text-align: right;
+  padding-right: 14px;
+}
+
+.mutual-calcs-block__data p {
+  margin: 0;
+  color: #94A0B1;
+}
+
+.mutual-calcs-block__data p:first-child {
+  color: #1A1A1A;
+}
+
+.mutual-calcs-block__data p.alert {
+  color: #FC4242;
+}
+
+p.mutual-calcs-block__data-price {
+  color: #94A0B1;
+}
+
+p.mutual-calcs-block__data-price.confirmed {
+  color: #40DA90;
+}
+
+p.mutual-calcs-block__data-status {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 3px 8px;
+  min-width: 100px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+}
+
+p.mutual-calcs-block__data-status.confirmed {
+  background-color: #DDF9EC;
+}
+
+p.mutual-calcs-block__data-status.pending {
+  background-color: #94A0B1;
+  color: #fff;
+}
+
+.mutual-calcs-block__status {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #94A0B1;
+}
+
+.mutual-calcs-block__status td {
+  width: 100%;
+}
+
+.mutual-calcs-block__status p {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mutual-calcs-block__status-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 23px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.mutual-calcs-block__status-type {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #444444;
+  margin: 0;
+  margin-right: 24px;
+  padding: 3px 15px;
+  border-radius: 5px;
+}
+
+.mutual-calcs-block__status-type.pending {
+  background-color: #FEEDAE;
+}
+
+.mutual-calcs-block__status-type.active {
+  background-color: #DDF9EC;
+}
+
+.mutual-calcs-block__status-type.expired {
+  background-color: #94A0B1;
+  color: #fff;
+}
+
+.mutual-calcs-block__status-type.freezed {
+  background-color: #DCF5FF;
+}
+
+.mutual-calcs-block__status-type.blocked {
+  background-color: #FFD6D6;
+}
+
+.mutual-calcs-block__status-waiting {
+  margin: 0;
+  margin-right: 24px;
+}
+
+.mutual-calcs-block__status-waiting::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-image: url("../img/time.svg");
+}
+
+.mutual-calcs-block__status-default {
+  margin: 0;
+  margin-right: 24px;
+}
+
+.mutual-calcs-block__delivery-type {
+  text-decoration: none;
+  color: inherit;
+  color: #2858FF;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 24px;
+}
+
+.mutual-calcs-block__delivery-type:hover, .mutual-calcs-block__delivery-type:focus {
+  color: #113EE0;
+}
+
+.mutual-calcs-block__status-detail {
+  margin: 0;
+  margin-left: auto;
+}
+
+.mutual-calcs-block__pagination-block {
+  margin-top: 24px;
+}
+
+.mutual-calcs-block__pagination-block button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+button.mutual-calcs-block__show-more {
+  width: 100%;
+  padding: 32px 30px 31px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1A1A1A;
+  border: 2px solid #D1D8E1;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button.mutual-calcs-block__show-more:hover, button.mutual-calcs-block__show-more:active {
+  color: #2858FF;
+  border-color: #2858FF;
+  cursor: pointer;
+}
+
+.mutual-calcs-block__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button.mutual-calcs-block__page-number {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1A1A1A;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 4px;
+}
+
+button.mutual-calcs-block__page-number.active {
+  background-color: #2858FF;
+  color: #fff;
+}
+
+button.mutual-calcs-block__page-number:not(.active):hover, button.mutual-calcs-block__page-number:not(.active):focus {
+  color: #2858FF;
+  cursor: pointer;
+}
+
+.mutual-calcs-block__prev,
+.mutual-calcs-block__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mutual-calcs-block__prev:not(:disabled):hover,
+.mutual-calcs-block__next:not(:disabled):hover {
+  cursor: pointer;
+}
+
+.mutual-calcs-block__prev svg,
+.mutual-calcs-block__next svg {
+  fill: #1A1A1A;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.mutual-calcs-block__prev svg:hover,
+.mutual-calcs-block__next svg:hover {
+  fill: #2858FF;
+}
+
+.mutual-calcs-block__prev:disabled svg,
+.mutual-calcs-block__next:disabled svg {
+  fill: #D1D8E1;
+}
+
+.mutual-calcs-block__prev:not(:disabled):hover svg,
+.mutual-calcs-block__prev:not(:disabled):focus svg,
+.mutual-calcs-block__next:not(:disabled):hover svg,
+.mutual-calcs-block__next:not(:disabled):focus svg {
+  fill: #2858FF;
+}
+
+.mutual-calcs-block__prev {
+  margin-right: 20px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.mutual-calcs-block__next {
+  margin-left: 16px;
+}
+
+.mutual-calcs-payment-block {
+  margin-bottom: 40px;
+}
+
+.mutual-calcs-payment-block__block {
+  padding: 34px 14px;
+  border-radius: 5px;
+  background-color: #F4F4F8;
+}
+
+.mutual-calcs-payment-block__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #1A1A1A;
+  margin: 0;
+  margin-bottom: 24px;
+  color: #1A1A1A;
+}
+
+.mutual-calcs-payment-block__desc {
+  margin-bottom: 24px;
+}
+
+.mutual-calcs-payment-block__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 20px 0;
+}
+
+.mutual-calcs-payment-block__link:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border-top-color: transparent;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.mutual-calcs-payment-block__header + tr .mutual-calcs-payment-block__link {
+  border-top: none;
+}
+
+.mutual-calcs-payment-block col:first-child {
+  width: 13%;
+}
+
+.mutual-calcs-payment-block col:nth-child(2) {
+  width: 13%;
+}
+
+.mutual-calcs-payment-block col:nth-child(3) {
+  width: 24%;
+}
+
+.mutual-calcs-payment-block col:nth-child(4) {
+  width: 24%;
+}
+
+.mutual-calcs-payment-block col:nth-child(5) {
+  width: 26%;
+}
+
+.mutual-calcs-payment-block__delivery-confirm {
+  margin-top: 0;
+  margin-right: 24px;
+}
+
+.mutual-calcs-payment-block__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mutual-calcs-payment-block__table th {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  padding-bottom: 6px;
+  text-align: left;
+  color: #94A0B1;
+  padding-right: 14px;
+}
+
+.mutual-calcs-payment-block__table th:first-child {
+  padding-left: 14px;
+}
+
+.mutual-calcs-payment-block__table
+tr:not(:first-of-type):hover
++ tr .mutual-calcs-payment-block__link {
+  border-top-color: transparent;
+}
+
+.mutual-calcs-payment-block__inner-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mutual-calcs-payment-block__data {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.mutual-calcs-payment-block__data td {
+  vertical-align: top;
+  text-align: left;
+  padding-right: 14px;
+}
+
+.mutual-calcs-payment-block__data td:first-child {
+  padding-left: 14px;
+}
+
+.mutual-calcs-payment-block__data td:first-child p {
+  font-weight: 500;
+}
+
+.mutual-calcs-payment-block__data td:last-child p {
+  color: #94A0B1;
+}
+
+.mutual-calcs-payment-block__data p {
+  margin: 0;
+  color: #94A0B1;
+}
+
+.mutual-calcs-payment-block__data p:first-child {
+  color: #1A1A1A;
+}
+
+.mutual-calcs-payment-block__data p.alert {
+  color: #FC4242;
+}
+
+p.mutual-calcs-payment-block__data-price {
+  color: #94A0B1;
+}
+
+p.mutual-calcs-payment-block__data-price.confirmed {
+  color: #40DA90;
+}
+
+p.mutual-calcs-payment-block__data-status {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 3px 8px;
+  min-width: 100px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+}
+
+p.mutual-calcs-payment-block__data-status.confirmed {
+  background-color: #DDF9EC;
+}
+
+p.mutual-calcs-payment-block__data-status.pending {
+  background-color: #94A0B1;
+  color: #fff;
+}
+
+.mutual-calcs-payment-block__status {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #94A0B1;
+}
+
+.mutual-calcs-payment-block__status td {
+  width: 100%;
+}
+
+.mutual-calcs-payment-block__status p {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mutual-calcs-payment-block__status-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 23px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.mutual-calcs-payment-block__status-type {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #444444;
+  margin: 0;
+  margin-right: 24px;
+  padding: 3px 15px;
+  border-radius: 5px;
+}
+
+.mutual-calcs-payment-block__status-type.pending {
+  background-color: #FEEDAE;
+}
+
+.mutual-calcs-payment-block__status-type.active {
+  background-color: #DDF9EC;
+}
+
+.mutual-calcs-payment-block__status-type.expired {
+  background-color: #94A0B1;
+  color: #fff;
+}
+
+.mutual-calcs-payment-block__status-type.freezed {
+  background-color: #DCF5FF;
+}
+
+.mutual-calcs-payment-block__status-type.blocked {
+  background-color: #FFD6D6;
+}
+
+.mutual-calcs-payment-block__status-waiting {
+  margin: 0;
+  margin-right: 24px;
+}
+
+.mutual-calcs-payment-block__status-waiting::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-image: url("../img/time.svg");
+}
+
+.mutual-calcs-payment-block__status-default {
+  margin: 0;
+  margin-right: 24px;
+}
+
+.mutual-calcs-payment-block__delivery-type {
+  text-decoration: none;
+  color: inherit;
+  color: #2858FF;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 24px;
+}
+
+.mutual-calcs-payment-block__delivery-type:hover, .mutual-calcs-payment-block__delivery-type:focus {
+  color: #113EE0;
+}
+
+.mutual-calcs-payment-block__status-detail {
+  margin: 0;
+  margin-left: auto;
+}
+
+.mutual-calcs-payment-block__pagination-block {
+  margin-top: 24px;
+}
+
+.mutual-calcs-payment-block__pagination-block button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+button.mutual-calcs-payment-block__show-more {
+  width: 100%;
+  padding: 32px 30px 31px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1A1A1A;
+  border: 2px solid #D1D8E1;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button.mutual-calcs-payment-block__show-more:hover, button.mutual-calcs-payment-block__show-more:active {
+  color: #2858FF;
+  border-color: #2858FF;
+  cursor: pointer;
+}
+
+.mutual-calcs-payment-block__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button.mutual-calcs-payment-block__page-number {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1A1A1A;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 4px;
+}
+
+button.mutual-calcs-payment-block__page-number.active {
+  background-color: #2858FF;
+  color: #fff;
+}
+
+button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual-calcs-payment-block__page-number:not(.active):focus {
+  color: #2858FF;
+  cursor: pointer;
+}
+
+.mutual-calcs-payment-block__prev,
+.mutual-calcs-payment-block__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mutual-calcs-payment-block__prev:not(:disabled):hover,
+.mutual-calcs-payment-block__next:not(:disabled):hover {
+  cursor: pointer;
+}
+
+.mutual-calcs-payment-block__prev svg,
+.mutual-calcs-payment-block__next svg {
+  fill: #1A1A1A;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.mutual-calcs-payment-block__prev svg:hover,
+.mutual-calcs-payment-block__next svg:hover {
+  fill: #2858FF;
+}
+
+.mutual-calcs-payment-block__prev:disabled svg,
+.mutual-calcs-payment-block__next:disabled svg {
+  fill: #D1D8E1;
+}
+
+.mutual-calcs-payment-block__prev:not(:disabled):hover svg,
+.mutual-calcs-payment-block__prev:not(:disabled):focus svg,
+.mutual-calcs-payment-block__next:not(:disabled):hover svg,
+.mutual-calcs-payment-block__next:not(:disabled):focus svg {
+  fill: #2858FF;
+}
+
+.mutual-calcs-payment-block__prev {
+  margin-right: 20px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.mutual-calcs-payment-block__next {
+  margin-left: 16px;
 }

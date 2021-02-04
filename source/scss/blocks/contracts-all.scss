@@ -25,4 +25,21 @@
   &__select {
     width: 24%;
   }
+
+  &__input-contract-number,
+  &__input-sender,
+  &__input-recipient {
+    width: calc((100% - 28px) / 3);
+    margin-top: 24px;
+  }
+
+  &__input-payment-date {
+    width: 100%;
+  }
+
+  &__input-sender-wide,
+  &__input-recipient-wide {
+    width: calc((100% - 14px) / 2);
+    margin-top: 24px;
+  }
 }

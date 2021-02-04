@@ -358,7 +358,6 @@
 
   var onLinkClick = function onLinkClick(e) {
     var target = e.target;
-    console.log(target.classList.contains('chekcbox-btn__label'));
 
     if (target.classList.contains('checkbox-btn__label') || target.classList.contains('checkbox-btn__checkbox') || target.classList.contains('deliver-or-pickup__confirm-btn') || target.classList.contains('contract-services__delivery-confirm')) {
       e.preventDefault();
@@ -378,6 +377,17 @@
   }
 
   $('.date-input').datepicker();
+})();
+
+(function () {
+  var cancellationBtn = document.querySelector('.subscription-page__action-item--delete');
+
+  if (!cancellationBtn) {
+    return;
+  }
+
+  var modal = document.getElementById('delete-service__modal');
+  new Modal(cancellationBtn, modal);
 })();
 
 (function () {
@@ -520,7 +530,7 @@
 })();
 
 (function () {
-  var radios = document.querySelectorAll('.delivery-or-pickup__installation-block  input');
+  var radios = document.querySelectorAll('.delivery-or-pickup__installation-choose-block  input');
 
   if (!radios[0]) {
     return;
@@ -580,6 +590,85 @@
 })();
 
 (function () {
+  var paymentConfirmBtns = document.querySelectorAll('.mutual-calcs__make-payment');
+
+  if (!paymentConfirmBtns[0]) {
+    return;
+  }
+
+  $('#payment-date').datepicker();
+  var modal = document.getElementById('payment-waiting__modal');
+  var close = modal.querySelector('.modal__close');
+  var overlay = modal.querySelector('.modal__overlay');
+  var mainCheckbox = modal.querySelector('.transactions__check-all input');
+  var senderInput = modal.querySelector('.payment-waiting__modal-sender input');
+  var recipientInput = modal.querySelector('.payment-waiting__modal-recipient input');
+  var sumInput = modal.querySelector('.payment-waiting__modal-sum input');
+  var purposeInput = modal.querySelector('.payment-waiting__modal-purpose input');
+
+  var getAllCheckbox = function getAllCheckbox() {
+    return modal.querySelectorAll('.transactions__check input');
+  };
+
+  var onAllChange = function onAllChange() {
+    getAllCheckbox().forEach(function (item) {
+      var row = item.parentNode.parentNode.parentNode.parentNode;
+
+      if (mainCheckbox.checked) {
+        item.checked = true;
+
+        if (!row.classList.contains('checked')) {
+          row.classList.add('checked');
+        }
+      } else {
+        item.checked = false;
+
+        if (row.classList.contains('checked')) {
+          row.classList.remove('checked');
+        }
+      }
+    });
+  };
+
+  var onCloseClick = function onCloseClick() {
+    mainCheckbox.checked = false;
+    getAllCheckbox().forEach(function (item) {
+      item.checked = false;
+      item.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
+    });
+    $('#payment-date').datepicker('setDate', '');
+    senderInput.value = '';
+    recipientInput.value = '';
+    sumInput.value = '';
+    purposeInput.value = '';
+  };
+
+  var onOverlayClick = function onOverlayClick(e) {
+    if (e.target.classList.contains('modal__overlay')) {
+      onCloseClick();
+    }
+  };
+
+  var onCheckboxChange = function onCheckboxChange(e) {
+    if (e.target.checked) {
+      e.target.parentNode.parentNode.parentNode.parentNode.classList.add('checked');
+    } else {
+      e.target.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
+    }
+  };
+
+  paymentConfirmBtns.forEach(function (btn) {
+    new Modal(btn, modal);
+  });
+  close.addEventListener('click', onCloseClick);
+  overlay.addEventListener('click', onOverlayClick);
+  mainCheckbox.addEventListener('change', onAllChange);
+  getAllCheckbox().forEach(function (item) {
+    item.addEventListener('change', onCheckboxChange);
+  });
+})();
+
+(function () {
   var paymentConfirmBtns = document.querySelectorAll('.payment-waiting__confirm-btn');
 
   if (!paymentConfirmBtns[0]) {
@@ -602,10 +691,20 @@
 
   var onAllChange = function onAllChange() {
     getAllCheckbox().forEach(function (item) {
+      var row = item.parentNode.parentNode.parentNode.parentNode;
+
       if (mainCheckbox.checked) {
         item.checked = true;
+
+        if (!row.classList.contains('checked')) {
+          row.classList.add('checked');
+        }
       } else {
         item.checked = false;
+
+        if (row.classList.contains('checked')) {
+          row.classList.remove('checked');
+        }
       }
     });
   };
@@ -614,6 +713,7 @@
     mainCheckbox.checked = false;
     getAllCheckbox().forEach(function (item) {
       item.checked = false;
+      item.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
     });
     $('#payment-date').datepicker('setDate', '');
     senderInput.value = '';
@@ -628,12 +728,36 @@
     }
   };
 
+  var onCheckboxChange = function onCheckboxChange(e) {
+    if (e.target.checked) {
+      e.target.parentNode.parentNode.parentNode.parentNode.classList.add('checked');
+    } else {
+      e.target.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
+    }
+  };
+
   paymentConfirmBtns.forEach(function (btn) {
     new Modal(btn, modal);
   });
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
   mainCheckbox.addEventListener('change', onAllChange);
+  getAllCheckbox().forEach(function (item) {
+    item.addEventListener('change', onCheckboxChange);
+  });
+})();
+
+(function () {
+  var payments = document.querySelectorAll('.mutual-calcs-payment-block__link');
+
+  if (!payments[0]) {
+    return;
+  }
+
+  var modal = document.getElementById('payment-info__modal');
+  payments.forEach(function (item) {
+    new Modal(item, modal);
+  });
 })();
 
 (function () {

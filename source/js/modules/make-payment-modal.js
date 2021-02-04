@@ -1,5 +1,5 @@
 (function() {
-  const paymentConfirmBtns = document.querySelectorAll('.payment-waiting__confirm-btn');
+  const paymentConfirmBtns = document.querySelectorAll('.mutual-calcs__make-payment');
 
   if (!paymentConfirmBtns[0]) {
     return;

@@ -12,7 +12,6 @@
 
   <main>
 
-    <!--Ожидает монтаж с подтверждением-->
     <section class="delivery-or-pickup">
       <div class="delivery-or-pickup__container  wrapper">
         <div class="delivery-or-pickup__wrapper">
@@ -55,7 +54,6 @@
       </div>
     </section>
 
-    <!--Ожидает монтаж без подтверждения-->
     <section class="delivery-or-pickup">
       <div class="delivery-or-pickup__container  wrapper">
         <div class="delivery-or-pickup__wrapper">
@@ -100,26 +98,26 @@
               <a class="delivery-or-pickup__change  btn-arrow"><span></span></a>
             </div>
 
-            <div class="delivery-or-pickup__installation-choose-block  radio-block">
+            <div class="delivery-or-pickup__installation-block  radio-block">
               <div class="delivery-or-pickup__installation-type  radio">
                 <label class="radio__label">
-                  <input class="radio__input visually-hidden"  type="radio" name="installation-address" value="delivery-address" checked>
+                  <input class="radio__input visually-hidden" type="radio" name="installation-address" value="delivery-address" checked="">
                   <div></div>
                   <p class="radio__text">Использовать адрес доставки</p>
                 </label>
               </div>
 
-              <div class="delivery-or-pickup__installation-type  radio">
+              <div class="delivery-or-pickup__installation-block  radio">
                 <label class="radio__label">
-                  <input class="radio__input visually-hidden"  type="radio" name="installation-address" value="registration-address">
+                  <input class="radio__input visually-hidden" type="radio" name="installation-address" value="registration-address">
                   <div></div>
                   <p class="radio__text">Использовать адрес регистрации</p>
                 </label>
               </div>
 
-              <div class="delivery-or-pickup__installation-type  radio">
+              <div class="delivery-or-pickup__installation-block  radio">
                 <label class="radio__label">
-                  <input class="radio__input visually-hidden"  type="radio" name="installation-address" value="manual">
+                  <input class="radio__input visually-hidden" type="radio" name="installation-address" value="manual">
                   <div></div>
                   <p class="radio__text">Указать вручную</p>
                 </label>
@@ -156,25 +154,25 @@
             <div class="delivery-or-pickup__address-wrapper  registration-address">
               <div class="">
                 <p class="delivery-or-pickup__address  info-block__desc">
-                  Москва, Волгоградский проспект, 8к1
+                  Москва, Лермонтовский проспект, 8к1
                 </p>
 
                 <div class="delivery-or-pickup__details">
                   <div class="delivery-or-pickup__detail">
                     <p class="info-block__subtitle">Подъезд</p>
-                    <p class="info-block__desc">5</p>
+                    <p class="info-block__desc">1</p>
                   </div>
                   <div class="delivery-or-pickup__detail">
                     <p class="info-block__subtitle">Кв / Офис</p>
-                    <p class="info-block__desc">252</p>
+                    <p class="info-block__desc">172</p>
                   </div>
                   <div class="delivery-or-pickup__detail">
                     <p class="info-block__subtitle">Домофон</p>
-                    <p class="info-block__desc">252</p>
+                    <p class="info-block__desc">172#8766</p>
                   </div>
                   <div class="delivery-or-pickup__detail">
                     <p class="info-block__subtitle">Этаж</p>
-                    <p class="info-block__desc">15</p>
+                    <p class="info-block__desc">10</p>
                   </div>
                 </div>
               </div>
@@ -240,14 +238,13 @@
     </section>
 
 
-    <!--Смонтирован-->
     <section class="delivery-or-pickup  done">
       <div class="delivery-or-pickup__container  wrapper">
         <div class="contract-info__block  contract-info__block--delivered  info-block">
           <h2 class="contract-info__title-check  info-block__title">
             <button class="contract-info__delivered-toggle"></button>
-            <span>Смонтирован&nbsp;&nbsp;|&nbsp;&nbsp;25.12.2020 - 13:40</spa>
-          </h2>
+            <span>Смонтирован&nbsp;&nbsp;|&nbsp;&nbsp;25.12.2020 - 13:40
+          </span></h2>
           <div class="contract-info__delivered-adress">
             <div class="contract-info__delivered-details  delivery-or-pickup__details  delivery-or-pickup__details--no-border">
               <div class="delivery-or-pickup__detail">
@@ -320,7 +317,7 @@
 
               <div class="delivery-or-pickup__modal-checkbox  checkbox">
                 <label class="checkbox__label">
-                  <input class="checkbox__input visually-hidden"  type="checkbox" name="deliver-confirm">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="deliver-confirm">
                   <div></div>
                   <p class="checkbox__text">Подтвердить монтаж для все услуг в договоре со статусом «Ожидается монтаж» (3)</p>
                 </label>
@@ -348,9 +345,9 @@
             </div> -->
             <div class="modal__btn-block">
               <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
-              <button type="submit" class="modal__submit  modal__btn-item  btn-primary" disabled>Подтвердить</button>
+              <button type="submit" class="modal__submit  modal__btn-item  btn-primary" disabled="">Подтвердить</button>
             </div>
-          </form>
+          </div></form>
         </div>
     </div>
   </section>
