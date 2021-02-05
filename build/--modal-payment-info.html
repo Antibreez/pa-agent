@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+
+  <main>
+
+  <!--Модальное окно информации о платеже-->
+  <section id="payment-info__modal" class="modal" style="visibility: visible; opacity: 1">
+    <div class="modal__overlay">
+
+        <div class="modal__body  payment-waiting__modal-body">
+          <form>
+            <h1 class="modal__title">Роман Романов → ООО Даичи  |  01.01.2022</h1>
+            <div class="payment-waiting__modal-content  modal__content">
+
+
+              <div class="payment-waiting__modal-transactions  transactions">
+                <p class="transactions__desc  info-block__subtitle">
+                  Оплата по договору DA2020-01 от 01.01.2022
+                </p>
+                <div class="transactions__title-block">
+                  <h3 class="transactions__subtitle">Операций на сумму 16 998  ₽</h3>
+                </div>
+
+                <div class="transactions__table-block">
+                  <table class="transactions__table  transactions__table--no-checkbox">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr>
+                      <th>Тип операции</th>
+                      <th>Услуга</th>
+                      <th>Оборудование</th>
+                      <th>Договор</th>
+                      <th>Отправитель</th>
+                      <th>Получатель</th>
+                      <th>Сумма</th>
+                    </tr>
+                    <tr class="checked">
+                      <td><span>Первый взнос</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                    <tr class="checked">
+                      <td><span>1 год подписки</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal__btn-block">
+              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Закрыть</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

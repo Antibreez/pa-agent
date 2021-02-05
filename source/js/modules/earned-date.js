@@ -35,7 +35,8 @@
     closeText : "Готово",
 
     beforeShow: function(input, inst) {
-      inst.dpDiv.addClass('disabled-close');
+      inst.dpDiv.css('transform', 'translateX(-24px)');
+      inst.dpDiv.addClass('calendar-range');
     },
 
     onSelect: function(dateText, inst, extensionRange) {

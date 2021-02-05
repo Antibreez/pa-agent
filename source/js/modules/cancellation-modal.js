@@ -1,11 +1,19 @@
 (function() {
-  const cancellationBtn = document.querySelector('.contract-info__cancellation');
+  const cancellationBtn = document.querySelectorAll('.contract-info__cancellation');
 
-  if (!cancellationBtn) {
+  if (!cancellationBtn[0]) {
     return;
   }
 
   const modal = document.getElementById('cancellation__modal');
 
-  new Modal(cancellationBtn, modal);
+  if (!modal) {
+    return;
+  }
+
+  cancellationBtn.forEach(function(item) {
+    new Modal(item, modal);
+  });
+
+
 })();

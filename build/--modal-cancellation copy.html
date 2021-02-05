@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+
+  <main>
+
+  <!--Модальное окно aннулирования-->
+  <section id="cancellation__modal" class="modal">
+    <div class="modal__overlay">
+
+        <div class="modal__body">
+          <form>
+            <h1 class="modal__title">Вы точно хотите аннулировать договор?</h1>
+            <p class="modal__desc">
+              Если договор находится в статусе “В обработке”, то все работы по его оформлению будут приостановлены, он не будет заключен с клиентом.<br>
+              Если договор находится в статусе “Заключен”, то все подписки в рамках договора будут переведены в статус “заблокирована”.
+            </p>
+            <div class="modal__btn-block">
+              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+              <button type="submit" class="modal__save  modal__btn-item  btn-primary">Подтвердить</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

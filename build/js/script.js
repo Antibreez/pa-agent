@@ -306,14 +306,21 @@
 })();
 
 (function () {
-  var cancellationBtn = document.querySelector('.contract-info__cancellation');
+  var cancellationBtn = document.querySelectorAll('.contract-info__cancellation');
 
-  if (!cancellationBtn) {
+  if (!cancellationBtn[0]) {
     return;
   }
 
   var modal = document.getElementById('cancellation__modal');
-  new Modal(cancellationBtn, modal);
+
+  if (!modal) {
+    return;
+  }
+
+  cancellationBtn.forEach(function (item) {
+    new Modal(item, modal);
+  });
 })();
 
 (function () {
@@ -370,24 +377,41 @@
 })();
 
 (function () {
-  var contractsAll = document.querySelector('.contracts-all');
+  var contractsLinkAll = document.querySelectorAll('.contracts__link');
 
-  if (!contractsAll) {
+  if (!contractsLinkAll[0]) {
     return;
   }
 
-  $('.date-input').datepicker();
+  var onLinkClick = function onLinkClick(e) {
+    var target = e.target;
+
+    if (target.classList.contains('checkbox-btn__label') || target.classList.contains('checkbox-btn__checkbox') || target.classList.contains('contract-info__verification') || target.classList.contains('payment-waiting__confirm-btn') || target.classList.contains('contract-services__delivery-confirm')) {
+      e.preventDefault();
+    }
+  };
+
+  contractsLinkAll.forEach(function (link) {
+    link.addEventListener('click', onLinkClick);
+  });
 })();
 
 (function () {
-  var cancellationBtn = document.querySelector('.subscription-page__action-item--delete');
+  var cancellationBtn = document.querySelectorAll('.subscription-page__action-item--delete');
 
-  if (!cancellationBtn) {
+  if (!cancellationBtn[0]) {
     return;
   }
 
   var modal = document.getElementById('delete-service__modal');
-  new Modal(cancellationBtn, modal);
+
+  if (!modal) {
+    return;
+  }
+
+  cancellationBtn.forEach(function (item) {
+    new Modal(item, modal);
+  });
 })();
 
 (function () {
@@ -395,23 +419,93 @@
 
   if (!deliveryBtns[0]) {
     return;
+  } // $('#delivery-date').datepicker().on('change', function(dateText) {
+  //   onFieldChange();
+  // });
+
+
+  var modal = document.getElementById('delivery-or-pickup__modal');
+
+  if (!modal) {
+    return;
+  } // const close = modal.querySelector('.modal__close');
+  // const overlay = modal.querySelector('.modal__overlay');
+  // const submit = modal.querySelector('.modal__submit');
+  // const fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
+  // const fileInput = modal.querySelector('.input-file__input');
+  // const dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
+  // const timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
+  // const confirmCheckbox = modal.querySelector('.checkbox__input');
+
+
+  deliveryBtns.forEach(function (btn) {
+    new Modal(btn, modal);
+  }); // const onCloseClick = function() {
+  //   if (fileInputBlock.classList.contains('loaded')) {
+  //     fileInputBlock.classList.remove('loaded');
+  //     fileInput.value = '';
+  //     submit.setAttribute('disabled', '');
+  //     if(!/safari/i.test(navigator.userAgent)){
+  //       fileInput.type = '';
+  //       fileInput.type = 'file';
+  //     }
+  //   }
+  //   dateInput.value = '';
+  //   timeInput.value = '';
+  //   confirmCheckbox.checked = false;
+  //   $('#delivery-date').datepicker('setDate', '');
+  // }
+  // const onOverlayClick = function(e) {
+  //   if (e.target.classList.contains('modal__overlay')) {
+  //     onCloseClick();
+  //   }
+  // }
+  // const onFieldChange = function(e) {
+  //   if (isFormFilled() && submit.hasAttribute('disabled')) {
+  //     submit.removeAttribute('disabled');
+  //   } else if (!isFormFilled() && !submit.hasAttribute('disabled')) {
+  //     submit.setAttribute('disabled', '');
+  //   }
+  // }
+  // const isFormFilled = function() {
+  //   return $('#delivery-date').datepicker('getDate')
+  //     && timeInput.value !== ''
+  //     && confirmCheckbox.checked === true
+  //     && fileInput.value !== ''
+  // }
+  // close.addEventListener('click', onCloseClick);
+  // overlay.addEventListener('click', onOverlayClick);
+  // dateInput.addEventListener('input', onFieldChange);
+  // timeInput.addEventListener('input', onFieldChange);
+  // fileInput.addEventListener('change', onFieldChange);
+  // confirmCheckbox.addEventListener('change', onFieldChange);
+})();
+
+(function () {
+  // const deliveryBtns = document.querySelectorAll('.deliver-or-pickup__confirm-btn');
+  // if (!deliveryBtns[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('delivery-or-pickup__modal');
+
+  if (!modal) {
+    return;
   }
 
   $('#delivery-date').datepicker().on('change', function (dateText) {
     onFieldChange();
   });
-  var modal = document.getElementById('delivery-or-pickup__modal');
   var close = modal.querySelector('.modal__close');
   var overlay = modal.querySelector('.modal__overlay');
   var submit = modal.querySelector('.modal__submit');
   var fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
   var fileInput = modal.querySelector('.input-file__input');
+  var fileClear = modal.querySelector('.file-load__clear');
   var dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
   var timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
-  var confirmCheckbox = modal.querySelector('.checkbox__input');
-  deliveryBtns.forEach(function (btn) {
-    new Modal(btn, modal);
-  });
+  var confirmCheckbox = modal.querySelector('.checkbox__input'); // deliveryBtns.forEach(function(btn) {
+  //   new Modal(btn, modal);
+  // });
 
   var onCloseClick = function onCloseClick() {
     if (fileInputBlock.classList.contains('loaded')) {
@@ -445,6 +539,12 @@
     }
   };
 
+  var onFileClear = function onFileClear() {
+    if (!submit.hasAttribute('disabled')) {
+      submit.setAttribute('disabled', '');
+    }
+  };
+
   var isFormFilled = function isFormFilled() {
     return $('#delivery-date').datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true && fileInput.value !== '';
   };
@@ -455,6 +555,7 @@
   timeInput.addEventListener('input', onFieldChange);
   fileInput.addEventListener('change', onFieldChange);
   confirmCheckbox.addEventListener('change', onFieldChange);
+  fileClear.addEventListener('click', onFileClear);
 })();
 
 (function () {
@@ -486,7 +587,8 @@
     selectOtherMonths: true,
     closeText: "Готово",
     beforeShow: function beforeShow(input, inst) {
-      inst.dpDiv.addClass('disabled-close');
+      inst.dpDiv.css('transform', 'translateX(-24px)');
+      inst.dpDiv.addClass('calendar-range');
     },
     onSelect: function onSelect(dateText, inst, extensionRange) {
       $('.mutual-calcs__earned-date-btn').text(extensionRange.startDateText + ' - ' + extensionRange.endDateText);
@@ -524,64 +626,66 @@
 
   if (!deliveryBtns[0]) {
     return;
-  }
+  } // $('#delivery-date').datepicker().on('change', function(dateText) {
+  //   onFieldChange();
+  // });
 
-  $('#delivery-date').datepicker().on('change', function (dateText) {
-    onFieldChange();
-  });
+
   var modal = document.getElementById('installation__modal');
-  var close = modal.querySelector('.modal__close');
-  var overlay = modal.querySelector('.modal__overlay');
-  var submit = modal.querySelector('.modal__submit'); // const fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
-  // const fileInput = modal.querySelector('.input-file__input');
 
-  var dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
-  var timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
-  var confirmCheckbox = modal.querySelector('.checkbox__input');
+  if (!modal) {
+    return;
+  } // const close = modal.querySelector('.modal__close');
+  // const overlay = modal.querySelector('.modal__overlay');
+  // const submit = modal.querySelector('.modal__submit');
+  // const fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
+  // const fileInput = modal.querySelector('.input-file__input');
+  // const dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
+  // const timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
+  // const confirmCheckbox = modal.querySelector('.checkbox__input');
+
+
   deliveryBtns.forEach(function (btn) {
     new Modal(btn, modal);
-  });
-
-  var onCloseClick = function onCloseClick() {
-    // if (fileInputBlock.classList.contains('loaded')) {
-    //   fileInputBlock.classList.remove('loaded');
-    //   fileInput.value = '';
-    //   submit.setAttribute('disabled', '');
-    //   if(!/safari/i.test(navigator.userAgent)){
-    //     fileInput.type = '';
-    //     fileInput.type = 'file';
-    //   }
-    // }
-    dateInput.value = '';
-    timeInput.value = '';
-    confirmCheckbox.checked = false;
-    $('#delivery-date').datepicker('setDate', '');
-  };
-
-  var onOverlayClick = function onOverlayClick(e) {
-    if (e.target.classList.contains('modal__overlay')) {
-      onCloseClick();
-    }
-  };
-
-  var onFieldChange = function onFieldChange(e) {
-    if (isFormFilled() && submit.hasAttribute('disabled')) {
-      submit.removeAttribute('disabled');
-    } else if (!isFormFilled() && !submit.hasAttribute('disabled')) {
-      submit.setAttribute('disabled', '');
-    }
-  };
-
-  var isFormFilled = function isFormFilled() {
-    return $('#delivery-date').datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true; //&& fileInput.value !== ''
-  };
-
-  close.addEventListener('click', onCloseClick);
-  overlay.addEventListener('click', onOverlayClick);
-  dateInput.addEventListener('input', onFieldChange);
-  timeInput.addEventListener('input', onFieldChange); //fileInput.addEventListener('change', onFieldChange);
-
-  confirmCheckbox.addEventListener('change', onFieldChange);
+  }); //const onCloseClick = function() {
+  // if (fileInputBlock.classList.contains('loaded')) {
+  //   fileInputBlock.classList.remove('loaded');
+  //   fileInput.value = '';
+  //   submit.setAttribute('disabled', '');
+  //   if(!/safari/i.test(navigator.userAgent)){
+  //     fileInput.type = '';
+  //     fileInput.type = 'file';
+  //   }
+  // }
+  //   dateInput.value = '';
+  //   timeInput.value = '';
+  //   confirmCheckbox.checked = false;
+  //   $('#delivery-date').datepicker('setDate', '');
+  // }
+  // const onOverlayClick = function(e) {
+  //   if (e.target.classList.contains('modal__overlay')) {
+  //     onCloseClick();
+  //   }
+  // }
+  // const onFieldChange = function(e) {
+  //   if (isFormFilled() && submit.hasAttribute('disabled')) {
+  //     submit.removeAttribute('disabled');
+  //   } else if (!isFormFilled() && !submit.hasAttribute('disabled')) {
+  //     submit.setAttribute('disabled', '');
+  //   }
+  // }
+  // const isFormFilled = function() {
+  //   return $('#delivery-date').datepicker('getDate')
+  //     && timeInput.value !== ''
+  //     && confirmCheckbox.checked === true
+  //     //&& fileInput.value !== ''
+  // }
+  // close.addEventListener('click', onCloseClick);
+  // overlay.addEventListener('click', onOverlayClick);
+  // dateInput.addEventListener('input', onFieldChange);
+  // timeInput.addEventListener('input', onFieldChange);
+  //fileInput.addEventListener('change', onFieldChange);
+  //confirmCheckbox.addEventListener('change', onFieldChange);
 })();
 
 (function () {
@@ -645,57 +749,44 @@
 })();
 
 (function () {
-  var paymentConfirmBtns = document.querySelectorAll('.mutual-calcs__make-payment');
+  // const deliveryBtns = document.querySelectorAll('.installation__confirm-btn');
+  // if (!deliveryBtns[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('installation__modal');
 
-  if (!paymentConfirmBtns[0]) {
+  if (!modal) {
     return;
   }
 
-  $('#payment-date').datepicker();
-  var modal = document.getElementById('payment-waiting__modal');
+  $('#delivery-date').datepicker().on('change', function (dateText) {
+    onFieldChange();
+  });
   var close = modal.querySelector('.modal__close');
   var overlay = modal.querySelector('.modal__overlay');
-  var mainCheckbox = modal.querySelector('.transactions__check-all input');
-  var senderInput = modal.querySelector('.payment-waiting__modal-sender input');
-  var recipientInput = modal.querySelector('.payment-waiting__modal-recipient input');
-  var sumInput = modal.querySelector('.payment-waiting__modal-sum input');
-  var purposeInput = modal.querySelector('.payment-waiting__modal-purpose input');
+  var submit = modal.querySelector('.modal__submit'); // const fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
+  // const fileInput = modal.querySelector('.input-file__input');
 
-  var getAllCheckbox = function getAllCheckbox() {
-    return modal.querySelectorAll('.transactions__check input');
-  };
-
-  var onAllChange = function onAllChange() {
-    getAllCheckbox().forEach(function (item) {
-      var row = item.parentNode.parentNode.parentNode.parentNode;
-
-      if (mainCheckbox.checked) {
-        item.checked = true;
-
-        if (!row.classList.contains('checked')) {
-          row.classList.add('checked');
-        }
-      } else {
-        item.checked = false;
-
-        if (row.classList.contains('checked')) {
-          row.classList.remove('checked');
-        }
-      }
-    });
-  };
+  var dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
+  var timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
+  var confirmCheckbox = modal.querySelector('.checkbox__input'); // deliveryBtns.forEach(function(btn) {
+  //   new Modal(btn, modal);
+  // });
 
   var onCloseClick = function onCloseClick() {
-    mainCheckbox.checked = false;
-    getAllCheckbox().forEach(function (item) {
-      item.checked = false;
-      item.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
-    });
-    $('#payment-date').datepicker('setDate', '');
-    senderInput.value = '';
-    recipientInput.value = '';
-    sumInput.value = '';
-    purposeInput.value = '';
+    // if (fileInputBlock.classList.contains('loaded')) {
+    //   fileInputBlock.classList.remove('loaded');
+    //   fileInput.value = '';
+    //   submit.setAttribute('disabled', '');
+    //   if(!/safari/i.test(navigator.userAgent)){
+    //     fileInput.type = '';
+    //     fileInput.type = 'file';
+    //   }
+    // }
+    dateInput.value = '';
+    timeInput.value = '';
+    confirmCheckbox.checked = false;
+    $('#delivery-date').datepicker('setDate', '');
   };
 
   var onOverlayClick = function onOverlayClick(e) {
@@ -704,23 +795,97 @@
     }
   };
 
-  var onCheckboxChange = function onCheckboxChange(e) {
-    if (e.target.checked) {
-      e.target.parentNode.parentNode.parentNode.parentNode.classList.add('checked');
-    } else {
-      e.target.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
+  var onFieldChange = function onFieldChange(e) {
+    if (isFormFilled() && submit.hasAttribute('disabled')) {
+      submit.removeAttribute('disabled');
+    } else if (!isFormFilled() && !submit.hasAttribute('disabled')) {
+      submit.setAttribute('disabled', '');
     }
   };
 
-  paymentConfirmBtns.forEach(function (btn) {
-    new Modal(btn, modal);
-  });
+  var isFormFilled = function isFormFilled() {
+    return $('#delivery-date').datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true; //&& fileInput.value !== ''
+  };
+
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
-  mainCheckbox.addEventListener('change', onAllChange);
-  getAllCheckbox().forEach(function (item) {
-    item.addEventListener('change', onCheckboxChange);
-  });
+  dateInput.addEventListener('input', onFieldChange);
+  timeInput.addEventListener('input', onFieldChange); //fileInput.addEventListener('change', onFieldChange);
+
+  confirmCheckbox.addEventListener('change', onFieldChange);
+})();
+
+(function () {
+  var paymentConfirmBtns = document.querySelectorAll('.mutual-calcs__make-payment');
+
+  if (!paymentConfirmBtns[0]) {
+    return;
+  }
+
+  var modal = document.getElementById('payment-waiting__modal');
+
+  if (!modal) {
+    return;
+  } // const close = modal.querySelector('.modal__close');
+  // const overlay = modal.querySelector('.modal__overlay');
+  // const mainCheckbox = modal.querySelector('.transactions__check-all input');
+  // const senderInput = modal.querySelector('.payment-waiting__modal-sender input');
+  // const recipientInput = modal.querySelector('.payment-waiting__modal-recipient input');
+  // const sumInput = modal.querySelector('.payment-waiting__modal-sum input');
+  // const purposeInput = modal.querySelector('.payment-waiting__modal-purpose input');
+  // const getAllCheckbox = function() {
+  //   return modal.querySelectorAll('.transactions__check input');
+  // };
+  // const onAllChange = function() {
+  //   getAllCheckbox().forEach(function(item) {
+  //     const row = item.parentNode.parentNode.parentNode.parentNode;
+  //     if (mainCheckbox.checked) {
+  //       item.checked = true;
+  //       if (!row.classList.contains('checked')) {
+  //         row.classList.add('checked');
+  //       }
+  //     } else {
+  //       item.checked = false;
+  //       if (row.classList.contains('checked')) {
+  //         row.classList.remove('checked');
+  //       }
+  //     }
+  //   })
+  // };
+  // const onCloseClick = function() {
+  //   mainCheckbox.checked = false;
+  //   getAllCheckbox().forEach(function(item) {
+  //     item.checked = false;
+  //     item.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
+  //   });
+  //   $('#payment-date').datepicker('setDate', '');
+  //   senderInput.value = '';
+  //   recipientInput.value = '';
+  //   sumInput.value = '';
+  //   purposeInput.value = '';
+  // };
+  // const onOverlayClick = function(e) {
+  //   if (e.target.classList.contains('modal__overlay')) {
+  //     onCloseClick();
+  //   }
+  // }
+  // const onCheckboxChange = function(e) {
+  //   if (e.target.checked) {
+  //     e.target.parentNode.parentNode.parentNode.parentNode.classList.add('checked');
+  //   } else {
+  //     e.target.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
+  //   }
+  // }
+
+
+  paymentConfirmBtns.forEach(function (btn) {
+    new Modal(btn, modal);
+  }); // close.addEventListener('click', onCloseClick);
+  // overlay.addEventListener('click', onOverlayClick);
+  // mainCheckbox.addEventListener('change', onAllChange);
+  // getAllCheckbox().forEach(function(item) {
+  //   item.addEventListener('change', onCheckboxChange);
+  // })
 })();
 
 (function () {
@@ -728,10 +893,86 @@
 
   if (!paymentConfirmBtns[0]) {
     return;
+  } //$('#payment-date').datepicker();
+
+
+  var modal = document.getElementById('payment-waiting__modal');
+
+  if (!modal) {
+    return;
+  } // const close = modal.querySelector('.modal__close');
+  // const overlay = modal.querySelector('.modal__overlay');
+  // const mainCheckbox = modal.querySelector('.transactions__check-all input');
+  // const senderInput = modal.querySelector('.payment-waiting__modal-sender input');
+  // const recipientInput = modal.querySelector('.payment-waiting__modal-recipient input');
+  // const sumInput = modal.querySelector('.payment-waiting__modal-sum input');
+  // const purposeInput = modal.querySelector('.payment-waiting__modal-purpose input');
+  // const getAllCheckbox = function() {
+  //   return modal.querySelectorAll('.transactions__check input');
+  // };
+  // const onAllChange = function() {
+  //   getAllCheckbox().forEach(function(item) {
+  //     const row = item.parentNode.parentNode.parentNode.parentNode;
+  //     if (mainCheckbox.checked) {
+  //       item.checked = true;
+  //       if (!row.classList.contains('checked')) {
+  //         row.classList.add('checked');
+  //       }
+  //     } else {
+  //       item.checked = false;
+  //       if (row.classList.contains('checked')) {
+  //         row.classList.remove('checked');
+  //       }
+  //     }
+  //   })
+  // };
+  // const onCloseClick = function() {
+  //   mainCheckbox.checked = false;
+  //   getAllCheckbox().forEach(function(item) {
+  //     item.checked = false;
+  //     item.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
+  //   });
+  //   $('#payment-date').datepicker('setDate', '');
+  //   senderInput.value = '';
+  //   recipientInput.value = '';
+  //   sumInput.value = '';
+  //   purposeInput.value = '';
+  // };
+  // const onOverlayClick = function(e) {
+  //   if (e.target.classList.contains('modal__overlay')) {
+  //     onCloseClick();
+  //   }
+  // }
+  // const onCheckboxChange = function(e) {
+  //   if (e.target.checked) {
+  //     e.target.parentNode.parentNode.parentNode.parentNode.classList.add('checked');
+  //   } else {
+  //     e.target.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
+  //   }
+  // }
+
+
+  paymentConfirmBtns.forEach(function (btn) {
+    new Modal(btn, modal);
+  }); // close.addEventListener('click', onCloseClick);
+  // overlay.addEventListener('click', onOverlayClick);
+  // mainCheckbox.addEventListener('change', onAllChange);
+  // getAllCheckbox().forEach(function(item) {
+  //   item.addEventListener('change', onCheckboxChange);
+  // })
+})();
+
+(function () {
+  // const paymentConfirmBtns = document.querySelectorAll('.payment-waiting__confirm-btn');
+  // if (!paymentConfirmBtns[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('payment-waiting__modal');
+
+  if (!modal) {
+    return;
   }
 
-  $('#payment-date').datepicker();
-  var modal = document.getElementById('payment-waiting__modal');
   var close = modal.querySelector('.modal__close');
   var overlay = modal.querySelector('.modal__overlay');
   var mainCheckbox = modal.querySelector('.transactions__check-all input');
@@ -789,11 +1030,11 @@
     } else {
       e.target.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
     }
-  };
+  }; // paymentConfirmBtns.forEach(function(btn) {
+  //   new Modal(btn, modal);
+  // });
 
-  paymentConfirmBtns.forEach(function (btn) {
-    new Modal(btn, modal);
-  });
+
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
   mainCheckbox.addEventListener('change', onAllChange);
@@ -823,6 +1064,41 @@
   }
 
   var modal = document.getElementById('schedule__modal');
+
+  if (!modal) {
+    return;
+  } // const radios = document.querySelectorAll('.schedule__modal-toggle input');
+  // const toggle = document.querySelector('.schedule__modal-toggle');
+  // radios.forEach(function(item, id) {
+  //   item.addEventListener('change', function() {
+  //     if (id === 0) {
+  //       toggle.classList.remove('second-tab');
+  //       toggle.classList.add('first-tab');
+  //     }
+  //     if (id === 1) {
+  //       toggle.classList.remove('first-tab');
+  //       toggle.classList.add('second-tab');
+  //     }
+  //   })
+  // })
+
+
+  scheduleBtns.forEach(function (item) {
+    new Modal(item, modal);
+  });
+})();
+
+(function () {
+  // const scheduleBtns = document.querySelectorAll('.contract-device__schedule');
+  // if (!scheduleBtns[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('schedule__modal');
+
+  if (!modal) {
+    return;
+  }
+
   var radios = document.querySelectorAll('.schedule__modal-toggle input');
   var toggle = document.querySelector('.schedule__modal-toggle');
   radios.forEach(function (item, id) {
@@ -837,10 +1113,9 @@
         toggle.classList.add('second-tab');
       }
     });
-  });
-  scheduleBtns.forEach(function (item) {
-    new Modal(item, modal);
-  });
+  }); // scheduleBtns.forEach(function(item) {
+  //   new Modal(item, modal);
+  // });
 })();
 
 (function () {
@@ -851,18 +1126,68 @@
 })();
 
 (function () {
-  var verificationBtn = document.querySelector('.contract-info__verification');
+  var verificationBtn = document.querySelectorAll('.contract-info__verification');
 
-  if (!verificationBtn) {
+  if (!verificationBtn[0]) {
     return;
   }
 
   var modal = document.getElementById('verification__modal');
+
+  if (!modal) {
+    return;
+  } // const fileInputBlock = modal.querySelector('.verification__modal-input-file');
+  // const fileInput = modal.querySelector('.input-file__input');
+  // const close = modal.querySelector('.modal__close');
+  // const overlay = modal.querySelector('.modal__overlay');
+  // const saveBtn = document.querySelector('.modal__save');
+  // const onCloseClick = function() {
+  //   if (fileInputBlock.classList.contains('loaded')) {
+  //     fileInputBlock.classList.remove('loaded');
+  //     fileInput.value = '';
+  //     saveBtn.setAttribute('disabled', '');
+  //     if(!/safari/i.test(navigator.userAgent)){
+  //       fileInput.type = '';
+  //       fileInput.type = 'file';
+  //     }
+  //   }
+  // }
+  // const onOverlayClick = function(e) {
+  //   if (e.target.classList.contains('modal__overlay')) {
+  //     onCloseClick();
+  //   }
+  // }
+  // const onInputChange = function() {
+  //   if (fileInput.value !== '') {
+  //     saveBtn.removeAttribute('disabled');
+  //   }
+  // }
+
+
+  verificationBtn.forEach(function (item) {
+    new Modal(item, modal);
+  }); // close.addEventListener('click', onCloseClick);
+  // overlay.addEventListener('click', onOverlayClick);
+  // fileInput.addEventListener('change', onInputChange);
+})();
+
+(function () {
+  // const verificationBtn = document.querySelectorAll('.contract-info__verification');
+  // if (!verificationBtn[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('verification__modal');
+
+  if (!modal) {
+    return;
+  }
+
   var fileInputBlock = modal.querySelector('.verification__modal-input-file');
   var fileInput = modal.querySelector('.input-file__input');
   var close = modal.querySelector('.modal__close');
   var overlay = modal.querySelector('.modal__overlay');
-  var saveBtn = document.querySelector('.modal__save');
+  var saveBtn = modal.querySelector('.modal__save');
+  var fileClear = modal.querySelector('.file-load__clear');
 
   var onCloseClick = function onCloseClick() {
     if (fileInputBlock.classList.contains('loaded')) {
@@ -889,8 +1214,17 @@
     }
   };
 
-  new Modal(verificationBtn, modal);
+  var onFileClear = function onFileClear() {
+    if (!saveBtn.hasAttribute('disabled')) {
+      saveBtn.setAttribute('disabled', '');
+    }
+  }; // verificationBtn.forEach(function(item) {
+  //   new Modal(item, modal);
+  // })
+
+
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
   fileInput.addEventListener('change', onInputChange);
+  fileClear.addEventListener('click', onFileClear);
 })();

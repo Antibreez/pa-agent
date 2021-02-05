@@ -1,11 +1,18 @@
 (function() {
-  const cancellationBtn = document.querySelector('.subscription-page__action-item--delete');
+  const cancellationBtn = document.querySelectorAll('.subscription-page__action-item--delete');
 
-  if (!cancellationBtn) {
+  if (!cancellationBtn[0]) {
     return;
   }
 
   const modal = document.getElementById('delete-service__modal');
 
-  new Modal(cancellationBtn, modal);
+  if (!modal) {
+    return;
+  }
+
+  cancellationBtn.forEach(function(item) {
+    new Modal(item, modal);
+  })
+
 })();

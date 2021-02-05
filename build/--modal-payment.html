@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+
+  <main>
+
+
+
+    <!--Модальное окно подтверждения оплаты-->
+    <section id="payment-waiting__modal" class="modal" style="visibility: visible; opacity: 1">
+      <div class="modal__overlay">
+
+          <div class="modal__body  payment-waiting__modal-body">
+            <form>
+              <h1 class="modal__title">Укажите данные платежа</h1>
+              <div class="payment-waiting__modal-content  modal__content">
+
+                <div class="payment-waiting__modal-sender  input-block">
+                  <input class="input-text" type="text">
+                  <label class="input-label">Отправитель</label>
+                </div>
+                <div class="payment-waiting__modal-recipient  input-block">
+                  <input class="input-text" type="text">
+                  <label class="input-label">Получатель</label>
+                </div>
+                <div class="payment-waiting__modal-sum  input-block">
+                  <input class="input-text" type="text">
+                  <label class="input-label">Сумма платежа</label>
+                </div>
+                <div class="payment-waiting__modal-date-block  date-block">
+                  <label for="payment-date" class="date-label">Дата доставки</label>
+                  <input id="payment-date" class="date-input">
+                </div>
+                <div class="payment-waiting__modal-purpose  input-block">
+                  <input class="input-text" type="text">
+                  <label class="input-label">Назначение платежа</label>
+                </div>
+                <div class="payment-waiting__modal-transactions  transactions">
+                  <div class="transactions__title-block">
+                    <h3 class="transactions__title">Выберите операции</h3>
+                    <div class="transactions__sum-block">
+                      <span class="transactions__sum  transactions__sum--current">85 998  ₽</span>
+                      <span>&nbsp;/&nbsp;</span>
+                      <span class="transactions__sum">85 998  ₽</span>
+                    </div>
+                  </div>
+                  <p class="transactions__desc  info-block__subtitle">
+                    Выберите операции из списка ожидающих оплаты со стороны указанного отправителя.
+                  </p>
+
+                  <div class="transactions__table-block">
+                    <table class="transactions__table">
+                      <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tr>
+                        <th>
+                          <div class="transactions__check-all  checkbox  checkbox--no-text  checkbox--border">
+                            <label class="checkbox__label">
+                              <input class="checkbox__input visually-hidden" type="checkbox" name="check-all">
+                              <div></div>
+                            </label>
+                          </div>
+                        </th>
+                        <th>Тип операции</th>
+                        <th>Услуга</th>
+                        <th>Оборудование</th>
+                        <th>Договор</th>
+                        <th>Отправитель</th>
+                        <th>Получатель</th>
+                        <th>Сумма</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                            <label class="checkbox__label">
+                              <input class="checkbox__input visually-hidden" type="checkbox" name="check-1">
+                              <div></div>
+                            </label>
+                          </div>
+                        </td>
+                        <td><span>Первый взнос</span></td>
+                        <td><span>Облачный кондиционер</span></td>
+                        <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                        <td><span>DA2021-01</span></td>
+                        <td><span>Роман Романов</span></td>
+                        <td><span>ООО Даичи</span></td>
+                        <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                            <label class="checkbox__label">
+                              <input class="checkbox__input visually-hidden" type="checkbox" name="check-2">
+                              <div></div>
+                            </label>
+                          </div>
+                        </td>
+                        <td><span>1 год подписки</span></td>
+                        <td><span>Облачный кондиционер</span></td>
+                        <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                        <td><span>DA2021-01</span></td>
+                        <td><span>Роман Романов</span></td>
+                        <td><span>ООО Даичи</span></td>
+                        <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                            <label class="checkbox__label">
+                              <input class="checkbox__input visually-hidden" type="checkbox" name="check-3">
+                              <div></div>
+                            </label>
+                          </div>
+                        </td>
+                        <td><span>Первый взнос</span></td>
+                        <td><span>Облачный кондиционер</span></td>
+                        <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                        <td><span>DA2021-01</span></td>
+                        <td><span>Роман Романов</span></td>
+                        <td><span>ООО Даичи</span></td>
+                        <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                            <label class="checkbox__label">
+                              <input class="checkbox__input visually-hidden" type="checkbox" name="check-4">
+                              <div></div>
+                            </label>
+                          </div>
+                        </td>
+                        <td><span>1 год подписки</span></td>
+                        <td><span>Облачный кондиционер</span></td>
+                        <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                        <td><span>DA2021-01</span></td>
+                        <td><span>Роман Романов</span></td>
+                        <td><span>ООО Даичи</span></td>
+                        <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                            <label class="checkbox__label">
+                              <input class="checkbox__input visually-hidden" type="checkbox" name="check-5">
+                              <div></div>
+                            </label>
+                          </div>
+                        </td>
+                        <td><span>Первый взнос</span></td>
+                        <td><span>Облачный кондиционер</span></td>
+                        <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                        <td><span>DA2021-01</span></td>
+                        <td><span>Роман Романов</span></td>
+                        <td><span>ООО Даичи</span></td>
+                        <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal__btn-block">
+                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                <button type="submit" class="modal__btn-item  btn-primary">Подтвердить</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

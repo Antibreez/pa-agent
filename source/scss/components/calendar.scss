@@ -103,13 +103,19 @@
 }
 
 .ui-state-default.ui-state-active {
-  background-color: $bg;
-}
-
-.selected-start  .ui-state-default.ui-state-active,
-.selected-end  .ui-state-default.ui-state-active {
   background-color: $primary;
   color: #fff;
+}
+
+.ui-datepicker.calendar-range .selected-start  .ui-state-default.ui-state-active,
+.ui-datepicker.calendar-range .selected-end  .ui-state-default.ui-state-active {
+  background-color: $primary;
+  color: #fff;
+}
+
+.ui-datepicker.calendar-range .ui-state-default.ui-state-active {
+  background-color: $bg;
+  color: $text-main;
 }
 
 .ui-datepicker-current {

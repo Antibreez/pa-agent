@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+
+  <main>
+
+    <!--Модальное окно подтверждения монтажа-->
+    <section id="installation__modal" class="modal" style="visibility: visible; opacity: 1">
+      <div class="modal__overlay">
+
+          <div class="modal__body">
+            <form>
+              <h1 class="modal__title">Подтвердите фактическую дату и время совершения монтажа</h1>
+              <div class="delivery-or-pickup__modal-content  modal__content">
+                <div class="delivery-or-pickup__modal-date-block  date-block">
+                  <label for="delivery-date" class="date-label">Дата монтажа</label>
+                  <input id="delivery-date" class="delivery-or-pickup__modal-date  date-input" placeholder="Не указана" name="installation-date">
+                </div>
+                <div class="delivery-or-pickup__modal-time-block  input-block">
+                  <input class="delivery-or-pickup__modal-time  input-text" type="text" name="installation-date">
+                  <label class="input-label">Время монтажа</label>
+                </div>
+
+                <div class="delivery-or-pickup__modal-checkbox  checkbox">
+                  <label class="checkbox__label">
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="deliver-confirm">
+                    <div></div>
+                    <p class="checkbox__text">Подтвердить монтаж для все услуг в договоре со статусом «Ожидается монтаж» (3)</p>
+                  </label>
+                </div>
+
+              <div class="modal__btn-block">
+                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                <button type="submit" class="modal__submit  modal__btn-item  btn-primary" disabled="">Подтвердить</button>
+              </div>
+            </div></form>
+          </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
