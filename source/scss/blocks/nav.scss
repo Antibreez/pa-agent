@@ -31,3 +31,12 @@
     }
   }
 }
+
+.nav__list--footer .nav__link {
+  color: $text-main;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+}

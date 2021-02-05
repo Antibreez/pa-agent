@@ -7264,6 +7264,14 @@ div.input-file__file-load {
   color: #2858FF;
 }
 
+.nav__list--footer .nav__link {
+  color: #1A1A1A;
+}
+
+.nav__list--footer .nav__link:hover, .nav__list--footer .nav__link:focus {
+  color: #2858FF;
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -7428,11 +7436,11 @@ div.input-file__file-load {
 }
 
 .footer__tel-block::before {
-  background-image: url("../img/phone.svg");
+  background-image: url("../img/phone-black.svg");
 }
 
 .footer__mail-block::before {
-  background-image: url("../img/mail.svg");
+  background-image: url("../img/mail-black.svg");
 }
 
 .footer__tel, .footer__mail {
@@ -8242,6 +8250,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   color: #1A1A1A;
   margin: 0;
   margin-bottom: 24px;
+}
+
+.support__title--main {
+  margin-bottom: 40px;
 }
 
 .support__item {
@@ -11669,18 +11681,9 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
   margin-bottom: 40px;
 }
 
-.agents__title {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 38px;
-  color: #1A1A1A;
-  margin: 0;
-  margin-bottom: 24px;
-}
-
 .agents__item {
   width: 100%;
-  min-height: 250px;
+  min-height: 214px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11698,22 +11701,24 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
   width: 32%;
   min-height: 100%;
   background-size: cover;
+  background-color: #F7F7F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.agents__item--cloud .support__img-block {
-  background-image: url("../img/cloud-ac.jpg");
+.agents__img {
+  max-width: 50%;
 }
 
-.agents__item--my-comfort .support__img-block {
+.agents__item--my-comfort .agents__img-block {
   background-image: url("../img/my-comfort-bg.jpg");
-}
-
-.agents__item--climat-online .support__img-block {
-  background-image: url("../img/climat-online-bg.jpg");
-}
-
-.agents__item--mobile-control .support__img-block {
-  background-image: url("../img/mobile-control-bg.jpg");
 }
 
 .agents__content {
@@ -11722,12 +11727,57 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
   color: #1A1A1A;
 }
 
+.agents__title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.agents__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 72px;
+}
+
+.agents__actions-link {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.agents__actions-link--mutual-calcs {
+  background-image: url("../img/two-arrows.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.agents__actions-link--mutual-calcs:hover, .agents__actions-link--mutual-calcs:focus {
+  background-image: url("../img/two-arrows_hover.svg");
+}
+
+.agents__actions-link--contracts {
+  background-image: url("../img/docs.svg");
+}
+
+.agents__actions-link--contracts:hover, .agents__actions-link--contracts:focus {
+  background-image: url("../img/docs_hover.svg");
+}
+
 .agents__name {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   margin: 0;
-  margin-bottom: 14px;
 }
 
 .agents__desc {
@@ -11768,17 +11818,67 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
   margin-right: 10px;
 }
 
-.agents__docs {
+.agents__users-block {
   width: 100%;
   padding: 24px 28px;
   display: none;
 }
 
-.agents__docs-list {
-  margin: 0;
-  padding: 0;
+.agents__table-block {
+  padding: 34px 28px;
+  background-color: #F4F4F8;
+  border-radius: 5px;
 }
 
-.agents__docs-item:not(:last-of-type) {
-  margin-bottom: 20px;
+.agents__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.agents__table col:first-child {
+  width: 30%;
+}
+
+.agents__table col:nth-child(2) {
+  width: 30%;
+}
+
+.agents__table col:nth-child(3) {
+  width: calc(30% - 80px);
+}
+
+.agents__table col:nth-child(4) {
+  width: 80px;
+}
+
+.agents__table th {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0;
+  padding-bottom: 28px;
+  color: #94A0B1;
+  text-align: left;
+}
+
+.agents__table th:not(:last-child) {
+  padding-right: 14px;
+}
+
+.agents__table td {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0;
+  padding-bottom: 43px;
+  color: #1A1A1A;
+  text-align: left;
+}
+
+.agents__table td:not(:last-child) {
+  padding-right: 14px;
+}
+
+.agents__table tr:last-of-type td {
+  padding-bottom: 0;
 }

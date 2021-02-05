@@ -52,13 +52,13 @@
   &__tel-block {
     margin-right: 25px;
     &::before {
-      background-image: url("../img/phone.svg");
+      background-image: url("../img/phone-black.svg");
     }
   }
 
   &__mail-block {
     &::before {
-      background-image: url("../img/mail.svg");
+      background-image: url("../img/mail-black.svg");
     }
   }
 

@@ -17,7 +17,7 @@
       <nav class="header__nav  nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link  nav__link--active">Личный кабинет</a>
+            <a href="#" class="nav__link">Личный кабинет</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">Договоры</a>
@@ -32,7 +32,7 @@
             <a href="#" class="nav__link">Клиенты</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Агенты</a>
+            <a class="nav__link  nav__link--active">Агенты</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">Поддержка</a>
@@ -51,628 +51,10 @@
   </header>
 
   <main>
-    <section class="user-data">
-      <div class="user-data__container  wrapper">
-        <h2 class="visually-hidden">Данные пользователя</h2>
-        <div class="user-data__intro">
-          <div class="user-data__greeting">
-            <p class="user-data__hello">Здравствуйте,</p>
-            <p class="user-data__name">Константин Константинович</p>
-          </div>
-          <div class="user-data__manager">
-            <p class="user-data__manager-title">Ваш менеджер Daichi</p>
-            <p class="user-data__manager-name">Иванов Александр Николаевич</p>
-          </div>
-          <div class="user-data__contacts">
-            <a href="tel:+78001200070" class="user-data__tel">8 800 120-00-70</a>
-            <a href="mailto:info@daichi.ru" class="user-data__mail">info@daichi.ru</a>
-          </div>
-        </div>
-        <div class="user-data__services">
-          <h3 class="user-data__title">Услуги</h3>
-          <p class="user-data__subtitle">Активные услуги</p>
-          <p class="user-data__amount  user-data__amount--active">
-            26 шт.
-          </p>
-          <p class="user-data__subtitle">В ожидании</p>
-          <p class="user-data__amount">4 шт.</p>
-          <a href="#" class="user-data__link btn-arrow">
-            Смотреть все
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"></path>
-            </svg>
-          </a>
-        </div>
-        <div class="user-data__calc">
-          <h3 class="user-data__title">Взаиморасчёты</h3>
-          <p class="user-data__subtitle">Заработано за посл. месяц</p>
-          <p class="user-data__amount  user-data__amount--active">
-            360 000 ₽
-          </p>
-          <p class="user-data__subtitle">Ожидается в след. месяце</p>
-          <p class="user-data__amount">500 000 ₽</p>
-          <a href="#" class="user-data__link btn-arrow">
-            Смотреть все
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="last-contracts">
-      <div class="last-contracts__container  wrapper">
-        <div class="last-contracts__title-block">
-          <h2 class="last-contracts__title">Последние договоры</h2>
-          <a href="#" class="last-contracts__title-link  btn-arrow">
-            Все договоры
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"></path>
-            </svg>
-          </a>
-        </div>
-        <div class="contracts">
-          <table class="contracts__table">
-            <colgroup>
-              <col>
-              <col>
-              <col>
-              <col>
-              <col>
-              <col>
-            </colgroup>
-            <tr class="contracts__header">
-              <th>№ договора</th>
-              <th>Тип услуги</th>
-              <th>Дата оформления</th>
-              <th>Клиент</th>
-              <th>Агент</th>
-              <th>Общая стоимость</th>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  draft">Черновик</p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  processing">В обработке</p>
-                          <p class="contracts__status-verification  waiting">Ожидается верификация</p>
-                          <p class="contracts__status-payment  waiting">Ожидается оплата</p>
-                          <p class="contracts__status-detail">
-                            0/3 оплачено; 0/3 смонтировано; 0/3 доставлено; 0/3 подключено к облаку
-                          </p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  done">Заключен</p>
-                          <p class="contracts__status-verification  done">Верифицирован 26.07.2020</p>
-                          <p class="contracts__status-payment  done">Оплачен 26.07.2020 </p>
-                          <p class="contracts__status-detail">
-                            3/3 оплачено; 3/3 смонтировано; 3/3 доставлено; 3/3 подключено к облаку
-                          </p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  canceled">Аннулирован</p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  draft">Черновик</p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  processing">В обработке</p>
-                          <p class="contracts__status-verification  waiting">Ожидается верификация</p>
-                          <p class="contracts__status-payment  waiting">Ожидается оплата</p>
-                          <p class="contracts__status-detail">
-                            0/3 оплачено; 0/3 смонтировано; 0/3 доставлено; 0/3 подключено к облаку
-                          </p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  done">Заключен</p>
-                          <p class="contracts__status-verification  done">Верифицирован 26.07.2020</p>
-                          <p class="contracts__status-payment  done">Оплачен 26.07.2020 </p>
-                          <p class="contracts__status-detail">
-                            3/3 оплачено; 3/3 смонтировано; 3/3 доставлено; 3/3 подключено к облаку
-                          </p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  canceled">Аннулирован</p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  draft">Черновик</p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-            <!--СТРОКА ДОГОВОРА-->
-            <tr>
-              <td colspan="6">
-                <a href="#" class="contracts__link">
-                  <table class="contracts__inner-table">
-                    <colgroup>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                      <col>
-                    </colgroup>
-                    <tr class="contracts__data">
-                      <td>
-                        <p>DA2020-17</p>
-                      </td>
-                      <td>
-                        <p>Облачный кондиционер</p>
-                        <p>3 услуги</p>
-                      </td>
-                      <td>
-                        <p>27.07.2020</p>
-                      </td>
-                      <td>
-                        <p>Иванов Иван Иванович</p>
-                        <p>ivanov@gmail.ru</p>
-                        <p>+7 (123) 456-78-90</p>
-                      </td>
-                      <td>
-                        <p>Александров Александр Александрович</p>
-                        <p>ООО МЭК</p>
-                      </td>
-                      <td>
-                        <p>137 992  ₽</p>
-                      </td>
-                    </tr>
-                    <tr class="contracts__status">
-                      <td colspan="6">
-                        <div class="contracts__status-container">
-                          <p class="contracts__status-type  processing">В обработке</p>
-                          <p class="contracts__status-verification  waiting">Ожидается верификация</p>
-                          <p class="contracts__status-payment  waiting">Ожидается оплата</p>
-                          <p class="contracts__status-detail">
-                            0/3 оплачено; 0/3 смонтировано; 0/3 доставлено; 0/3 подключено к облаку
-                          </p>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="last-contracts__promo">
-          <div class="last-contracts__promo-left">
-            <h2 class="last-contracts__promo-title">Заключите договор!</h2>
-            <p class="last-contracts__promo-desc">
-              Продавайте услуги и программы обслуживания, отслеживайте очередь взаиморасчётов и следите за статусами подписок ваших клиентов
-            </p>
-            <a href="#" class="last-contracts__new-contract  btn-primary">Создать новый договор</a>
-          </div>
-          <div class="last-contracts__promo-right"></div>
-        </div>
-        <!-- <div class="contracts__pagination-block">
-          <button class="contracts__show-more">Показать еще</button>
-          <div class="contracts__pagination">
-            <button class="contracts__prev" disabled>
-              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"/>
-              </svg>
-            </button>
-            <button class="contracts__page-number  active">1</button>
-            <button class="contracts__page-number">2</button>
-            <button class="contracts__page-number">3</button>
-            <button class="contracts__page-number">...</button>
-            <button class="contracts__page-number">14</button>
-            <button class="contracts__next">
-              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"/>
-              </svg>
-            </button>
-          </div>
-        </div> -->
-      </div>
-    </section>
 
     <section class="support">
       <div class="support__container  wrapper">
-        <h2 class="support__title">Поддержка</h2>
+        <h2 class="support__title  support__title--main">Поддержка</h2>
 
         <!--КАРТОЧКА ПОДДЕРЖКИ-->
         <div class="support__item  support__item--cloud">
@@ -1059,6 +441,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -1137,6 +520,217 @@
         </div>
       </div>
   </footer>
+
+  <!--Модальное окно верификации-->
+  <section id="verification__modal" class="modal">
+    <div class="modal__overlay">
+
+        <div class="modal__body">
+          <form>
+            <h1 class="modal__title">Верифицировать договор</h1>
+            <p class="modal__desc">
+              Загрузите подписанный скан договора для его верификации.
+            </p>
+            <div class="verification__modal-content  modal__content">
+
+              <div class="verification__modal-input-file  input-file">
+                <label class="input-file__label">
+                  <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="delivery-doc" class="input-file__input  visually-hidden">
+                  <span>Приложите документы, подтверждающие получение *
+                </span></label>
+                <div class="input-file__file-load  file-load">
+                  <div class="file-load__pdf-logo"></div>
+                  <div class="file-load__info">
+                    <p class="file-load__name">Файл 1</p>
+                    <p class="file-load__size">PDF, 450 Кбайт</p>
+                  </div>
+                  <button type="button" class="file-load__clear">
+                    <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.29289 4.7929C4.68341 4.40238 5.31659 4.40238 5.7071 4.7929L19.8492 18.935C20.2398 19.3256 20.2398 19.9587 19.8492 20.3492C19.4587 20.7398 18.8255 20.7398 18.435 20.3492L4.29289 6.20711C3.90237 5.81659 3.90237 5.18342 4.29289 4.7929Z"></path>
+                      <path d="M4.29291 20.3492C4.68344 20.7398 5.31661 20.7398 5.70713 20.3492L19.8493 6.2071C20.2398 5.81659 20.2398 5.18341 19.8493 4.79289C19.4587 4.40237 18.8256 4.40237 18.435 4.79289L4.29291 18.935C3.9024 19.3255 3.90239 19.9587 4.29291 20.3492Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="modal__btn-block">
+              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+              <button type="submit" class="modal__save  modal__btn-item  btn-primary" disabled="">Сохранить</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+
+  <!--Модальное окно подтверждения оплаты-->
+  <section id="payment-waiting__modal" class="modal">
+    <div class="modal__overlay">
+
+        <div class="modal__body  payment-waiting__modal-body">
+          <form>
+            <h1 class="modal__title">Укажите данные платежа</h1>
+            <div class="payment-waiting__modal-content  modal__content">
+
+              <div class="payment-waiting__modal-sender  input-block">
+                <input class="input-text" type="text">
+                <label class="input-label">Отправитель</label>
+              </div>
+              <div class="payment-waiting__modal-recipient  input-block">
+                <input class="input-text" type="text">
+                <label class="input-label">Получатель</label>
+              </div>
+              <div class="payment-waiting__modal-sum  input-block">
+                <input class="input-text" type="text">
+                <label class="input-label">Сумма платежа</label>
+              </div>
+              <div class="payment-waiting__modal-date-block  date-block">
+                <label for="payment-date" class="date-label">Дата доставки</label>
+                <input id="payment-date" class="date-input">
+              </div>
+              <div class="payment-waiting__modal-purpose  input-block">
+                <input class="input-text" type="text">
+                <label class="input-label">Назначение платежа</label>
+              </div>
+              <div class="payment-waiting__modal-transactions  transactions">
+                <div class="transactions__title-block">
+                  <h3 class="transactions__title">Выберите операции</h3>
+                  <div class="transactions__sum-block">
+                    <span class="transactions__sum  transactions__sum--current">85 998  ₽</span>
+                    <span>&nbsp;/&nbsp;</span>
+                    <span class="transactions__sum">85 998  ₽</span>
+                  </div>
+                </div>
+                <p class="transactions__desc  info-block__subtitle">
+                  Выберите операции из списка ожидающих оплаты со стороны указанного отправителя.
+                </p>
+
+                <div class="transactions__table-block">
+                  <table class="transactions__table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr>
+                      <th>
+                        <div class="transactions__check-all  checkbox  checkbox--no-text  checkbox--border">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input visually-hidden" type="checkbox" name="check-all">
+                            <div></div>
+                          </label>
+                        </div>
+                      </th>
+                      <th>Тип операции</th>
+                      <th>Услуга</th>
+                      <th>Оборудование</th>
+                      <th>Договор</th>
+                      <th>Отправитель</th>
+                      <th>Получатель</th>
+                      <th>Сумма</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input visually-hidden" type="checkbox" name="check-1">
+                            <div></div>
+                          </label>
+                        </div>
+                      </td>
+                      <td><span>Первый взнос</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input visually-hidden" type="checkbox" name="check-2">
+                            <div></div>
+                          </label>
+                        </div>
+                      </td>
+                      <td><span>1 год подписки</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input visually-hidden" type="checkbox" name="check-3">
+                            <div></div>
+                          </label>
+                        </div>
+                      </td>
+                      <td><span>Первый взнос</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input visually-hidden" type="checkbox" name="check-4">
+                            <div></div>
+                          </label>
+                        </div>
+                      </td>
+                      <td><span>1 год подписки</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="transactions__check  checkbox  checkbox--no-text  checkbox--border">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input visually-hidden" type="checkbox" name="check-5">
+                            <div></div>
+                          </label>
+                        </div>
+                      </td>
+                      <td><span>Первый взнос</span></td>
+                      <td><span>Облачный кондиционер</span></td>
+                      <td><span>Daichi A35AVQ1/A35FV1</span></td>
+                      <td><span>DA2021-01</span></td>
+                      <td><span>Роман Романов</span></td>
+                      <td><span>ООО Даичи</span></td>
+                      <td><span class="transactions__row-sum">12 999 ₽</span></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal__btn-block">
+              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+              <button type="submit" class="modal__btn-item  btn-primary">Подтвердить</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/script.min.js"></script>

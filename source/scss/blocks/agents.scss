@@ -3,14 +3,9 @@
     margin-bottom: 40px;
   }
 
-  &__title {
-    @include section-title;
-    margin-bottom: 24px;
-  }
-
   &__item {
     width: 100%;
-    min-height: 250px;
+    min-height: 214px;
     display: flex;
     flex-wrap: wrap;
     border: 1px solid $bg;
@@ -25,22 +20,18 @@
     width: 32%;
     min-height: 100%;
     background-size: cover;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &__item--cloud .support__img-block {
-    background-image: url("../img/cloud-ac.jpg");
+  &__img {
+    max-width: 50%;
   }
 
-  &__item--my-comfort .support__img-block {
+  &__item--my-comfort .agents__img-block {
     background-image: url("../img/my-comfort-bg.jpg");
-  }
-
-  &__item--climat-online .support__img-block {
-    background-image: url("../img/climat-online-bg.jpg");
-  }
-
-  &__item--mobile-control .support__img-block {
-    background-image: url("../img/mobile-control-bg.jpg");
   }
 
   &__content {
@@ -49,10 +40,48 @@
     color: $text-main;
   }
 
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 72px;
+  }
+
+  &__actions-link {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    &--mutual-calcs {
+      background-image: url("../img/two-arrows.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all 0.3s;
+
+      &:hover,
+      &:focus {
+        background-image: url("../img/two-arrows_hover.svg");
+      }
+    }
+
+    &--contracts {
+      background-image: url("../img/docs.svg");
+
+      &:hover,
+      &:focus {
+        background-image: url("../img/docs_hover.svg");
+      }
+    }
+  }
+
   &__name {
     @include h18;
     margin: 0;
-    margin-bottom: 14px;
   }
 
   &__desc {
@@ -87,20 +116,64 @@
     margin-right: 10px;
   }
 
-  &__docs {
+  &__users-block {
     width: 100%;
     padding: 24px 28px;
     display: none;
   }
 
-  &__docs-list {
-    margin: 0;
-    padding: 0;
+  &__table-block {
+    padding: 34px 28px;
+    background-color: $bg;
+    border-radius: 5px;
   }
 
-  &__docs-item {
-    &:not(:last-of-type) {
-      margin-bottom: 20px;
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    & col:first-child {
+      width: 30%;
+    }
+
+    & col:nth-child(2) {
+      width: 30%;
+    }
+
+    & col:nth-child(3) {
+      width: calc(30% - 80px);
+    }
+
+    & col:nth-child(4) {
+      width: 80px;
+    }
+
+    & th {
+      @include b12;
+      padding: 0;
+      padding-bottom: 28px;
+      color: $text-minor;
+      text-align: left;
+
+      &:not(:last-child) {
+        padding-right: 14px;
+      }
+    }
+
+    & td {
+      @include b14;
+      padding: 0;
+      padding-bottom: 43px;
+      color: $text-main;
+      text-align: left;
+
+      &:not(:last-child) {
+        padding-right: 14px;
+      }
+    }
+
+    & tr:last-of-type td {
+      padding-bottom: 0;
     }
   }
 }
