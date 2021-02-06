@@ -9,7 +9,7 @@
 
   &__intro {
     padding: 28px 40px;
-    width: 49%;
+    width: 668px;
     background-color: $bg;
     border-radius: 5px;
   }
@@ -88,7 +88,7 @@
   &__services,
   &__calc {
     padding: 28px 40px;
-    width: 24%;
+    width: calc((100% - 716px) / 2);
     background-color: $bg;
     border-radius: 5px;
   }

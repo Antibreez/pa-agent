@@ -11,8 +11,12 @@
     return;
   }
 
-  $('#delivery-date').datepicker().on('change', function(dateText) {
-    onFieldChange();
+  const $date = $('#installation__modal .date-input');
+
+  $date.datepicker().on('change', function(dateText) {
+    if ($('#installation__modal').hasClass('js-show')) {
+      onFieldChange();
+    }
   });
 
   const close = modal.querySelector('.modal__close');
@@ -44,7 +48,7 @@
     dateInput.value = '';
     timeInput.value = '';
     confirmCheckbox.checked = false;
-    $('#delivery-date').datepicker('setDate', '');
+    $date.datepicker('setDate', '');
   }
 
   const onOverlayClick = function(e) {
@@ -54,6 +58,9 @@
   }
 
   const onFieldChange = function(e) {
+    console.log($date.datepicker('getDate'));
+    console.log(timeInput.value !== '');
+    console.log(confirmCheckbox.checked === true);
     if (isFormFilled() && submit.hasAttribute('disabled')) {
       submit.removeAttribute('disabled');
     } else if (!isFormFilled() && !submit.hasAttribute('disabled')) {
@@ -62,7 +69,7 @@
   }
 
   const isFormFilled = function() {
-    return $('#delivery-date').datepicker('getDate')
+    return $date.datepicker('getDate')
       && timeInput.value !== ''
       && confirmCheckbox.checked === true
       //&& fileInput.value !== ''

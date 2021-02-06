@@ -1,9 +1,4 @@
 (function() {
-  // const deliveryBtns = document.querySelectorAll('.deliver-or-pickup__confirm-btn');
-
-  // if (!deliveryBtns[0]) {
-  //   return;
-  // }
 
   const modal = document.getElementById('delivery-or-pickup__modal');
 
@@ -11,8 +6,12 @@
     return;
   }
 
-  $('#delivery-date').datepicker().on('change', function(dateText) {
-    onFieldChange();
+  const $date = $('#delivery-or-pickup__modal .date-input');
+
+  $date.datepicker().on('change', function(dateText) {
+    if ($('#delivery-or-pickup__modal').hasClass('js-show')) {
+      onFieldChange();
+    }
   });
 
   const close = modal.querySelector('.modal__close');
@@ -24,10 +23,6 @@
   const dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
   const timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
   const confirmCheckbox = modal.querySelector('.checkbox__input');
-
-  // deliveryBtns.forEach(function(btn) {
-  //   new Modal(btn, modal);
-  // });
 
   const onCloseClick = function() {
     if (fileInputBlock.classList.contains('loaded')) {
@@ -45,7 +40,7 @@
     dateInput.value = '';
     timeInput.value = '';
     confirmCheckbox.checked = false;
-    $('#delivery-date').datepicker('setDate', '');
+    $date.datepicker('setDate', '');
   }
 
   const onOverlayClick = function(e) {
@@ -69,7 +64,7 @@
   }
 
   const isFormFilled = function() {
-    return $('#delivery-date').datepicker('getDate')
+    return $date.datepicker('getDate')
       && timeInput.value !== ''
       && confirmCheckbox.checked === true
       && fileInput.value !== ''

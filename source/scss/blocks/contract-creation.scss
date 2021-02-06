@@ -32,7 +32,8 @@
   &__passport-data-wrapper,
   &__contract-details-wrapper,
   &__client-data-wrapper,
-  &__company-data-wrapper {
+  &__company-data-wrapper,
+  &__pickup-form {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +56,8 @@
   &__passport-data-photo,
   &__client-data-name,
   &__company-data-name,
-  &__passport-download {
+  &__passport-download,
+  &__pickup-address-wrapper {
     width: 100%;
   }
 
@@ -80,7 +82,9 @@
   &__passport-data-serial,
   &__passport-data-code,
   &__contract-details-name,
-  &__contract-details-number {
+  &__contract-details-number,
+  &__pickup-address-date,
+  &__pickup-address-time {
     width: calc(50% - 7px);
   }
 
@@ -101,6 +105,30 @@
   &__payment-type-online,
   &__payment-type-cash {
     margin-bottom: 14px;
+  }
+
+  &__pickup-address-wrapper {
+    padding-top: 16px;
+  }
+
+  &__pickup-form-item {
+    margin-bottom: 15px;
+  }
+
+  &__delivery-different-checkbox {
+    margin-bottom: 30px;
+  }
+
+  &__delivery-device-name {
+    @include h18;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 14px;
+    color: $text-main;
+  }
+
+  &__delivery-device:not(:last-of-type) {
+    margin-bottom: 30px;
   }
 
   // &__entity-choose,
@@ -146,4 +174,18 @@
 
 .contract-creation__details.show-for-entity .contract-creation__company-data {
   display: block;
+}
+
+.contract-creation__pickup-form {
+  display: none;
+}
+
+.contract-creation__delivery-device.show-for-pickup
+.contract-creation__pickup-form {
+  display: flex;
+}
+
+.contract-creation__delivery-device.show-for-pickup
+.contract-creation__delivery-address-wrapper {
+  display: none;
 }

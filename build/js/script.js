@@ -489,18 +489,45 @@
 })();
 
 (function () {
-  // const deliveryBtns = document.querySelectorAll('.deliver-or-pickup__confirm-btn');
-  // if (!deliveryBtns[0]) {
-  //   return;
-  // }
+  var devices = document.querySelectorAll('.contract-creation__delivery-device');
+
+  if (!devices[0]) {
+    return;
+  }
+
+  devices.forEach(function (item) {
+    var radios = item.querySelectorAll('.contract-creation__delivery-type-wrapper  input');
+
+    function onRadioChange(e) {
+      var wrapper = e.target.parentNode.parentNode.parentNode;
+
+      if (radios[0].checked) {
+        wrapper.classList.remove('show-for-pickup');
+      }
+
+      if (radios[1].checked) {
+        wrapper.classList.add('show-for-pickup');
+      }
+    }
+
+    radios.forEach(function (item) {
+      item.addEventListener('change', onRadioChange);
+    });
+  });
+})();
+
+(function () {
   var modal = document.getElementById('delivery-or-pickup__modal');
 
   if (!modal) {
     return;
   }
 
-  $('#delivery-date').datepicker().on('change', function (dateText) {
-    onFieldChange();
+  var $date = $('#delivery-or-pickup__modal .date-input');
+  $date.datepicker().on('change', function (dateText) {
+    if ($('#delivery-or-pickup__modal').hasClass('js-show')) {
+      onFieldChange();
+    }
   });
   var close = modal.querySelector('.modal__close');
   var overlay = modal.querySelector('.modal__overlay');
@@ -510,9 +537,7 @@
   var fileClear = modal.querySelector('.file-load__clear');
   var dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
   var timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
-  var confirmCheckbox = modal.querySelector('.checkbox__input'); // deliveryBtns.forEach(function(btn) {
-  //   new Modal(btn, modal);
-  // });
+  var confirmCheckbox = modal.querySelector('.checkbox__input');
 
   var onCloseClick = function onCloseClick() {
     if (fileInputBlock.classList.contains('loaded')) {
@@ -529,7 +554,7 @@
     dateInput.value = '';
     timeInput.value = '';
     confirmCheckbox.checked = false;
-    $('#delivery-date').datepicker('setDate', '');
+    $date.datepicker('setDate', '');
   };
 
   var onOverlayClick = function onOverlayClick(e) {
@@ -553,7 +578,7 @@
   };
 
   var isFormFilled = function isFormFilled() {
-    return $('#delivery-date').datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true && fileInput.value !== '';
+    return $date.datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true && fileInput.value !== '';
   };
 
   close.addEventListener('click', onCloseClick);
@@ -766,8 +791,11 @@
     return;
   }
 
-  $('#delivery-date').datepicker().on('change', function (dateText) {
-    onFieldChange();
+  var $date = $('#installation__modal .date-input');
+  $date.datepicker().on('change', function (dateText) {
+    if ($('#installation__modal').hasClass('js-show')) {
+      onFieldChange();
+    }
   });
   var close = modal.querySelector('.modal__close');
   var overlay = modal.querySelector('.modal__overlay');
@@ -793,7 +821,7 @@
     dateInput.value = '';
     timeInput.value = '';
     confirmCheckbox.checked = false;
-    $('#delivery-date').datepicker('setDate', '');
+    $date.datepicker('setDate', '');
   };
 
   var onOverlayClick = function onOverlayClick(e) {
@@ -803,6 +831,10 @@
   };
 
   var onFieldChange = function onFieldChange(e) {
+    console.log($date.datepicker('getDate'));
+    console.log(timeInput.value !== '');
+    console.log(confirmCheckbox.checked === true);
+
     if (isFormFilled() && submit.hasAttribute('disabled')) {
       submit.removeAttribute('disabled');
     } else if (!isFormFilled() && !submit.hasAttribute('disabled')) {
@@ -811,7 +843,7 @@
   };
 
   var isFormFilled = function isFormFilled() {
-    return $('#delivery-date').datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true; //&& fileInput.value !== ''
+    return $date.datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true; //&& fileInput.value !== ''
   };
 
   close.addEventListener('click', onCloseClick);

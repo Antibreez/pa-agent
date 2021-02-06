@@ -5485,6 +5485,16 @@ a {
   outline: none;
 }
 
+.overflow-3lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+}
+
 .btn-primary,
 .btn-secondary,
 .btn-secondary-arrow-v {
@@ -6581,7 +6591,7 @@ input.search.js-inputed {
   margin-left: 0;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 1439px) {
   .modal {
     overflow: hidden;
     height: calc(var(--vh, 1vh) * 100);
@@ -7727,7 +7737,7 @@ div.input-file__file-load {
 
 .user-data__intro {
   padding: 28px 40px;
-  width: 49%;
+  width: 668px;
   background-color: #F4F4F8;
   border-radius: 5px;
 }
@@ -7819,7 +7829,7 @@ div.input-file__file-load {
 
 .user-data__services, .user-data__calc {
   padding: 28px 40px;
-  width: 24%;
+  width: calc((100% - 716px) / 2);
   background-color: #F4F4F8;
   border-radius: 5px;
 }
@@ -7885,11 +7895,11 @@ div.input-file__file-load {
 }
 
 .contracts col:nth-child(2) {
-  width: 19%;
+  width: 17%;
 }
 
 .contracts col:nth-child(3) {
-  width: 13%;
+  width: 15%;
 }
 
 .contracts col:nth-child(4) {
@@ -7897,16 +7907,17 @@ div.input-file__file-load {
 }
 
 .contracts col:nth-child(5) {
-  width: 19%;
+  width: 17%;
 }
 
 .contracts col:nth-child(6) {
-  width: 13%;
+  width: 15%;
 }
 
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .contracts__table th {
@@ -7917,6 +7928,7 @@ div.input-file__file-load {
   padding-bottom: 6px;
   text-align: left;
   color: #94A0B1;
+  padding-right: 14px;
 }
 
 .contracts__table th:first-child {
@@ -7937,6 +7949,7 @@ tr:not(:first-of-type):hover
 .contracts__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .contracts__data {
@@ -7948,6 +7961,7 @@ tr:not(:first-of-type):hover
 .contracts__data td {
   vertical-align: top;
   text-align: left;
+  padding-right: 14px;
 }
 
 .contracts__data td:first-child {
@@ -7962,6 +7976,13 @@ tr:not(:first-of-type):hover
 .contracts__data p {
   margin: 0;
   color: #94A0B1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
 }
 
 .contracts__data p:first-child {
@@ -8057,9 +8078,18 @@ tr:not(:first-of-type):hover
   background-image: url("../img/time.svg");
 }
 
+.contracts__status-container
+p:not(.contracts__status-detail),
+.contracts__status-container
+div:not(.contracts__status-detail) {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .contracts__status-detail {
   margin: 0;
   margin-left: auto;
+  text-align: right;
 }
 
 .contracts__pagination-block {
@@ -8202,6 +8232,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 .last-contracts__promo {
   width: 100%;
   margin-top: 24px;
+  margin-bottom: 80px;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9059,7 +9090,7 @@ div.registration-address {
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 20px 0;
+  padding: 20px 0 0;
   border-top: 1px solid #D1D8E1;
 }
 
@@ -9079,19 +9110,19 @@ div.registration-address {
 }
 
 .contract-services col:nth-child(2) {
-  width: 9%;
+  width: 12%;
 }
 
 .contract-services col:nth-child(3) {
-  width: 11%;
+  width: 10%;
 }
 
 .contract-services col:nth-child(4) {
-  width: 22%;
+  width: 21%;
 }
 
 .contract-services col:nth-child(5) {
-  width: 20%;
+  width: 19%;
 }
 
 .contract-services col:nth-child(6) {
@@ -9106,6 +9137,7 @@ div.registration-address {
 .contract-services__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .contract-services__table th {
@@ -9116,6 +9148,7 @@ div.registration-address {
   padding-bottom: 6px;
   text-align: left;
   color: #94A0B1;
+  padding-right: 14px;
 }
 
 .contract-services__table th:first-child {
@@ -9136,6 +9169,7 @@ tr:not(:first-of-type):hover
 .contract-services__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .contract-services__data {
@@ -9147,6 +9181,7 @@ tr:not(:first-of-type):hover
 .contract-services__data td {
   vertical-align: top;
   text-align: left;
+  padding-right: 14px;
 }
 
 .contract-services__data td:first-child {
@@ -9161,6 +9196,13 @@ tr:not(:first-of-type):hover
 .contract-services__data p {
   margin: 0;
   color: #94A0B1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
 }
 
 .contract-services__data p:first-child {
@@ -9205,6 +9247,10 @@ tr:not(:first-of-type):hover
   padding-right: 14px;
 }
 
+.contract-services__status-container > * {
+  margin-bottom: 23px;
+}
+
 .contract-services__status-type {
   font-weight: 400;
   font-size: 12px;
@@ -9235,6 +9281,10 @@ tr:not(:first-of-type):hover
 
 .contract-services__status-type.blocked {
   background-color: #FFD6D6;
+}
+
+div.contract-services__status-container > * {
+  margin-bottom: 23px;
 }
 
 .contract-services__status-waiting {
@@ -9657,7 +9707,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   margin-bottom: 24px;
 }
 
-.contract-creation__client-type-choose, .contract-creation__installation-wrapper, .contract-creation__payment-type-wrapper, .contract-creation__delivery-type-wrapper, .contract-creation__delivery-address-wrapper, .contract-creation__passport-data-wrapper, .contract-creation__contract-details-wrapper, .contract-creation__client-data-wrapper, .contract-creation__company-data-wrapper {
+.contract-creation__client-type-choose, .contract-creation__installation-wrapper, .contract-creation__payment-type-wrapper, .contract-creation__delivery-type-wrapper, .contract-creation__delivery-address-wrapper, .contract-creation__passport-data-wrapper, .contract-creation__contract-details-wrapper, .contract-creation__client-data-wrapper, .contract-creation__company-data-wrapper, .contract-creation__pickup-form {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9680,11 +9730,11 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   margin-top: 24px;
 }
 
-.contract-creation__passport-data-department, .contract-creation__passport-data-address, .contract-creation__passport-data-photo, .contract-creation__client-data-name, .contract-creation__company-data-name, .contract-creation__passport-download {
+.contract-creation__passport-data-department, .contract-creation__passport-data-address, .contract-creation__passport-data-photo, .contract-creation__client-data-name, .contract-creation__company-data-name, .contract-creation__passport-download, .contract-creation__pickup-address-wrapper {
   width: 100%;
 }
 
-.contract-creation__individual-choose, .contract-creation__entity-choose, .contract-creation__client-data-phone, .contract-creation__client-data-email, .contract-creation__company-data-address, .contract-creation__company-data-inn, .contract-creation__installation-yes, .contract-creation__installation-no, .contract-creation__payment-type-online, .contract-creation__payment-type-cash, .contract-creation__payment-type-card, .contract-creation__payment-type-invoice, .contract-creation__delivery-type-delivery, .contract-creation__delivery-type-pickup, .contract-creation__delivery-address-city, .contract-creation__delivery-address-street, .contract-creation__passport-data-birthday, .contract-creation__passport-data-issue-date, .contract-creation__passport-data-serial, .contract-creation__passport-data-code, .contract-creation__contract-details-name, .contract-creation__contract-details-number {
+.contract-creation__individual-choose, .contract-creation__entity-choose, .contract-creation__client-data-phone, .contract-creation__client-data-email, .contract-creation__company-data-address, .contract-creation__company-data-inn, .contract-creation__installation-yes, .contract-creation__installation-no, .contract-creation__payment-type-online, .contract-creation__payment-type-cash, .contract-creation__payment-type-card, .contract-creation__payment-type-invoice, .contract-creation__delivery-type-delivery, .contract-creation__delivery-type-pickup, .contract-creation__delivery-address-city, .contract-creation__delivery-address-street, .contract-creation__passport-data-birthday, .contract-creation__passport-data-issue-date, .contract-creation__passport-data-serial, .contract-creation__passport-data-code, .contract-creation__contract-details-name, .contract-creation__contract-details-number, .contract-creation__pickup-address-date, .contract-creation__pickup-address-time {
   width: calc(50% - 7px);
 }
 
@@ -9698,6 +9748,32 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .contract-creation__payment-type-online, .contract-creation__payment-type-cash {
   margin-bottom: 14px;
+}
+
+.contract-creation__pickup-address-wrapper {
+  padding-top: 16px;
+}
+
+.contract-creation__pickup-form-item {
+  margin-bottom: 15px;
+}
+
+.contract-creation__delivery-different-checkbox {
+  margin-bottom: 30px;
+}
+
+.contract-creation__delivery-device-name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 14px;
+  color: #1A1A1A;
+}
+
+.contract-creation__delivery-device:not(:last-of-type) {
+  margin-bottom: 30px;
 }
 
 .contract-creation__title-entity {
@@ -9718,6 +9794,22 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .contract-creation__details.show-for-entity .contract-creation__company-data {
   display: block;
+}
+
+.contract-creation__pickup-form {
+  display: none;
+}
+
+.contract-creation__delivery-device.show-for-pickup
+.contract-creation__pickup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contract-creation__delivery-device.show-for-pickup
+.contract-creation__delivery-address-wrapper {
+  display: none;
 }
 
 .contract-subject {
@@ -9934,8 +10026,8 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 1px;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .contract-device__counter-up::after {
@@ -9949,12 +10041,12 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 1px;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .contract-device__counter-down:hover::before, .contract-device__counter-down:hover::after, .contract-device__counter-up:hover::before, .contract-device__counter-up:hover::after, .contract-device__counter-down:focus::before, .contract-device__counter-down:focus::after, .contract-device__counter-up:focus::before, .contract-device__counter-up:focus::after {
-  opacity: 0.7;
+  background-color: #2858FF;
 }
 
 .contract-device__counter-value {
@@ -10296,31 +10388,39 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 }
 
 .mutual-calcs-block col:first-child {
-  width: 18%;
+  width: 13%;
 }
 
 .mutual-calcs-block col:nth-child(2) {
-  width: 18%;
+  width: 14%;
 }
 
 .mutual-calcs-block col:nth-child(3) {
-  width: 18%;
+  width: 14%;
 }
 
 .mutual-calcs-block col:nth-child(4) {
-  width: 18%;
+  width: 8%;
 }
 
 .mutual-calcs-block col:nth-child(5) {
-  width: 6%;
+  width: 12%;
 }
 
 .mutual-calcs-block col:nth-child(6) {
-  width: 9%;
+  width: 12%;
 }
 
 .mutual-calcs-block col:nth-child(7) {
-  width: 13%;
+  width: 8%;
+}
+
+.mutual-calcs-block col:nth-child(8) {
+  width: 8%;
+}
+
+.mutual-calcs-block col:nth-child(9) {
+  width: 11%;
 }
 
 .mutual-calcs-block__delivery-confirm {
@@ -10331,6 +10431,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .mutual-calcs-block__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .mutual-calcs-block__table th {
@@ -10348,7 +10449,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   padding-left: 14px;
 }
 
-.mutual-calcs-block__table th:nth-child(6) {
+.mutual-calcs-block__table th:nth-child(8) {
   text-align: right;
   padding-right: 0;
 }
@@ -10368,6 +10469,7 @@ tr:not(:first-of-type):hover
 .mutual-calcs-block__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .mutual-calcs-block__data {
@@ -10386,7 +10488,8 @@ tr:not(:first-of-type):hover
   padding-left: 14px;
 }
 
-.mutual-calcs-block__data td:nth-child(6) {
+.mutual-calcs-block__data td:nth-child(8) {
+  padding: 0;
   text-align: right;
 }
 
@@ -10398,6 +10501,13 @@ tr:not(:first-of-type):hover
 .mutual-calcs-block__data p {
   margin: 0;
   color: #94A0B1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
 }
 
 .mutual-calcs-block__data p:first-child {
@@ -10416,7 +10526,12 @@ p.mutual-calcs-block__data-price.confirmed {
   color: #40DA90;
 }
 
-p.mutual-calcs-block__data-status {
+.mutual-calcs-block__data-status-mobile {
+  display: none;
+}
+
+p.mutual-calcs-block__data-status,
+span.mutual-calcs-block__data-status {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -10434,11 +10549,13 @@ p.mutual-calcs-block__data-status {
   border-radius: 5px;
 }
 
-p.mutual-calcs-block__data-status.confirmed {
+p.mutual-calcs-block__data-status.confirmed,
+span.mutual-calcs-block__data-status.confirmed {
   background-color: #DDF9EC;
 }
 
-p.mutual-calcs-block__data-status.pending {
+p.mutual-calcs-block__data-status.pending,
+span.mutual-calcs-block__data-status.pending {
   background-color: #94A0B1;
   color: #fff;
 }
@@ -10664,6 +10781,69 @@ button.mutual-calcs-block__page-number:not(.active):hover, button.mutual-calcs-b
   margin-left: 16px;
 }
 
+@media (max-width: 1439px) {
+  .mutual-calcs-block__header th:last-child {
+    display: none;
+  }
+  .mutual-calcs-block col:first-child {
+    width: 12%;
+  }
+  .mutual-calcs-block col:nth-child(2) {
+    width: 15%;
+  }
+  .mutual-calcs-block col:nth-child(3) {
+    width: 16%;
+  }
+  .mutual-calcs-block col:nth-child(4) {
+    width: 11%;
+  }
+  .mutual-calcs-block col:nth-child(5) {
+    width: 12%;
+  }
+  .mutual-calcs-block col:nth-child(6) {
+    width: 14%;
+  }
+  .mutual-calcs-block col:nth-child(7) {
+    width: 11%;
+  }
+  .mutual-calcs-block col:nth-child(8) {
+    width: 9%;
+  }
+  .mutual-calcs-block col:nth-child(9) {
+    width: 0%;
+  }
+  .mutual-calcs-block__table th:nth-child(8) {
+    padding-right: 14px;
+  }
+  .mutual-calcs-block__table th:last-child {
+    padding: 0;
+  }
+  .mutual-calcs-block__data td {
+    vertical-align: middle;
+  }
+  .mutual-calcs-block__data td:nth-child(8) {
+    padding-right: 14px;
+  }
+  .mutual-calcs-block__data td:last-child {
+    padding: 0;
+  }
+  .mutual-calcs-block__data td:last-child {
+    display: none;
+  }
+  .mutual-calcs-block__data-status-mobile {
+    display: table-cell;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    padding-top: 16px;
+  }
+  .mutual-calcs-block__data-status-mobile span:first-child {
+    color: #94A0B1;
+    margin-right: 30px;
+  }
+}
+
 .mutual-calcs-payment-block {
   margin-bottom: 40px;
 }
@@ -10708,11 +10888,11 @@ button.mutual-calcs-block__page-number:not(.active):hover, button.mutual-calcs-b
 }
 
 .mutual-calcs-payment-block col:first-child {
-  width: 13%;
+  width: 14%;
 }
 
 .mutual-calcs-payment-block col:nth-child(2) {
-  width: 13%;
+  width: 12%;
 }
 
 .mutual-calcs-payment-block col:nth-child(3) {
@@ -10735,6 +10915,7 @@ button.mutual-calcs-block__page-number:not(.active):hover, button.mutual-calcs-b
 .mutual-calcs-payment-block__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .mutual-calcs-payment-block__table th {
@@ -10761,6 +10942,7 @@ tr:not(:first-of-type):hover
 .mutual-calcs-payment-block__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .mutual-calcs-payment-block__data {
@@ -10790,6 +10972,13 @@ tr:not(:first-of-type):hover
 .mutual-calcs-payment-block__data p {
   margin: 0;
   color: #94A0B1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
 }
 
 .mutual-calcs-payment-block__data p:first-child {
@@ -11270,23 +11459,23 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
 }
 
 .clients-block col:first-child {
-  width: 26%;
+  width: 18%;
 }
 
 .clients-block col:nth-child(2) {
-  width: 17%;
+  width: 18%;
 }
 
 .clients-block col:nth-child(3) {
-  width: 13%;
+  width: 18%;
 }
 
 .clients-block col:nth-child(4) {
-  width: 23%;
+  width: 22%;
 }
 
 .clients-block col:nth-child(5) {
-  width: calc(21% - 86px);
+  width: calc(24% - 86px);
 }
 
 .clients-block col:nth-child(6) {
@@ -11345,6 +11534,7 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
 .clients-block__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .clients-block__table th {
@@ -11381,6 +11571,7 @@ tr:not(:first-of-type):hover
 .clients-block__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .clients-block__data {
@@ -11411,6 +11602,13 @@ tr:not(:first-of-type):hover
 .clients-block__data p {
   margin: 0;
   color: #94A0B1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
 }
 
 .clients-block__data p:first-child {
@@ -11675,6 +11873,12 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
 
 .clients-block__next {
   margin-left: 16px;
+}
+
+@media (max-width: 1439px) {
+  .clients-block__data td {
+    vertical-align: middle;
+  }
 }
 
 .agents__checkbox {

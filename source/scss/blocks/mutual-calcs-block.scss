@@ -36,31 +36,39 @@
 
   & col {
     &:first-child {
-      width: 18%;
+      width: 13%;
     }
 
     &:nth-child(2) {
-      width: 18%;
+      width: 14%;
     }
 
     &:nth-child(3) {
-      width: 18%;
+      width: 14%;
     }
 
     &:nth-child(4) {
-      width: 18%;
+      width: 8%;
     }
 
     &:nth-child(5) {
-      width: 6%;
+      width: 12%;
     }
 
     &:nth-child(6) {
-      width: 9%;
+      width: 12%;
     }
 
     &:nth-child(7) {
-      width: 13%;
+      width: 8%;
+    }
+
+    &:nth-child(8) {
+      width: 8%;
+    }
+
+    &:nth-child(9) {
+      width: 11%;
     }
   }
 
@@ -73,6 +81,7 @@
 .mutual-calcs-block__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 
   & th {
     @include b12;
@@ -86,7 +95,7 @@
       padding-left: 14px;
     }
 
-    &:nth-child(6) {
+    &:nth-child(8) {
       text-align: right;
       padding-right: 0;
     }
@@ -108,6 +117,7 @@ tr:not(:first-of-type):hover
 .mutual-calcs-block__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .mutual-calcs-block__data {
@@ -122,7 +132,8 @@ tr:not(:first-of-type):hover
       padding-left: 14px;
     }
 
-    &:nth-child(6) {
+    &:nth-child(8) {
+      padding: 0;
       text-align: right;
     }
 
@@ -143,6 +154,8 @@ tr:not(:first-of-type):hover
     &.alert {
       color: #FC4242;
     }
+
+    @include overflow-3lines;
   }
 }
 
@@ -154,7 +167,12 @@ p.mutual-calcs-block__data-price {
   }
 }
 
-p.mutual-calcs-block__data-status {
+.mutual-calcs-block__data-status-mobile {
+  display: none;
+}
+
+p.mutual-calcs-block__data-status,
+span.mutual-calcs-block__data-status {
   @include b12;
   padding: 3px 8px;
   min-width: 100px;
@@ -360,4 +378,97 @@ button.mutual-calcs-block__page-number {
 
 .mutual-calcs-block__next {
   margin-left: 16px;
+}
+
+@include tablet {
+  .mutual-calcs-block {
+    &__header {
+      & th:last-child {
+        display: none;
+      }
+    }
+
+    & col {
+      &:first-child {
+        width: 12%;
+      }
+
+      &:nth-child(2) {
+        width: 15%;
+      }
+
+      &:nth-child(3) {
+        width: 16%;
+      }
+
+      &:nth-child(4) {
+        width: 11%;
+      }
+
+      &:nth-child(5) {
+        width: 12%;
+      }
+
+      &:nth-child(6) {
+        width: 14%;
+      }
+
+      &:nth-child(7) {
+        width: 11%;
+      }
+
+      &:nth-child(8) {
+        width: 9%;
+      }
+
+      &:nth-child(9) {
+        width: 0%;
+      }
+    }
+  }
+
+  .mutual-calcs-block__table {
+    & th {
+
+      &:nth-child(8) {
+        padding-right: 14px;
+      }
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+
+  .mutual-calcs-block__data {
+    & td {
+      vertical-align: middle;
+
+      &:nth-child(8) {
+        padding-right: 14px;
+      }
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+
+  .mutual-calcs-block__data {
+    & td:last-child {
+      display: none;
+    }
+  }
+
+  .mutual-calcs-block__data-status-mobile {
+    display: table-cell;
+    @include b12;
+    text-align: right;
+    padding-top: 16px;
+
+    & span:first-child {
+      color: $text-minor;
+      margin-right: 30px;
+    }
+  }
 }

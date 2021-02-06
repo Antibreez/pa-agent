@@ -37,11 +37,11 @@
 
   & col {
     &:first-child {
-      width: 13%;
+      width: 14%;
     }
 
     &:nth-child(2) {
-      width: 13%;
+      width: 12%;
     }
 
     &:nth-child(3) {
@@ -66,6 +66,7 @@
 .mutual-calcs-payment-block__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 
   & th {
     @include b12;
@@ -90,6 +91,7 @@ tr:not(:first-of-type):hover
 .mutual-calcs-payment-block__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .mutual-calcs-payment-block__data {
@@ -124,6 +126,8 @@ tr:not(:first-of-type):hover
     &.alert {
       color: #FC4242;
     }
+
+    @include overflow-3lines;
   }
 }
 

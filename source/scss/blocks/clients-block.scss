@@ -36,23 +36,23 @@
 
   & col {
     &:first-child {
-      width: 26%;
+      width: 18%;
     }
 
     &:nth-child(2) {
-      width: 17%;
+      width: 18%;
     }
 
     &:nth-child(3) {
-      width: 13%;
+      width: 18%;
     }
 
     &:nth-child(4) {
-      width: 23%;
+      width: 22%;
     }
 
     &:nth-child(5) {
-      width: calc(21% - 86px);
+      width: calc(24% - 86px);
     }
 
     &:nth-child(6) {
@@ -110,6 +110,7 @@
 .clients-block__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 
   & th {
     @include b12;
@@ -144,6 +145,7 @@ tr:not(:first-of-type):hover
 .clients-block__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .clients-block__data {
@@ -179,6 +181,8 @@ tr:not(:first-of-type):hover
     &.alert {
       color: #FC4242;
     }
+
+    @include overflow-3lines;
   }
 }
 
@@ -396,4 +400,12 @@ button.clients-block__page-number {
 
 .clients-block__next {
   margin-left: 16px;
+}
+
+@include tablet {
+  .clients-block__data {
+    & td {
+      vertical-align: middle;
+    }
+  }
 }

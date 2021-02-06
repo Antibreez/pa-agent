@@ -26,11 +26,11 @@
     }
 
     &:nth-child(2) {
-      width: 19%;
+      width: 17%;
     }
 
     &:nth-child(3) {
-      width: 13%;
+      width: 15%;
     }
 
     &:nth-child(4) {
@@ -38,11 +38,11 @@
     }
 
     &:nth-child(5) {
-      width: 19%;
+      width: 17%;
     }
 
     &:nth-child(6) {
-      width: 13%;
+      width: 15%;
     }
   }
 }
@@ -50,6 +50,7 @@
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 
   & th {
     @include b12;
@@ -57,6 +58,7 @@
     padding-bottom: 6px;
     text-align: left;
     color: $text-minor;
+    padding-right: 14px;
 
     &:first-child {
       padding-left: 14px;
@@ -78,6 +80,7 @@ tr:not(:first-of-type):hover
 .contracts__inner-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .contracts__data {
@@ -86,6 +89,7 @@ tr:not(:first-of-type):hover
   & td {
     vertical-align: top;
     text-align: left;
+    padding-right: 14px;
 
     &:first-child {
       padding-left: 14px;
@@ -104,6 +108,8 @@ tr:not(:first-of-type):hover
     &:first-child {
       color: $text-main;
     }
+
+    @include overflow-3lines;
   }
 }
 
@@ -183,9 +189,17 @@ tr:not(:first-of-type):hover
   }
 }
 
+.contracts__status-container
+p:not(.contracts__status-detail),
+.contracts__status-container
+div:not(.contracts__status-detail) {
+  flex-shrink: 0;
+}
+
 .contracts__status-detail {
   margin: 0;
   margin-left: auto;
+  text-align: right;
 }
 
 .contracts__pagination-block {
@@ -285,4 +299,8 @@ button.contracts__page-number {
 
 .contracts__next {
   margin-left: 16px;
+}
+
+@include tablet {
+
 }
