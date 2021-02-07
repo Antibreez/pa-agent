@@ -105,11 +105,12 @@
   &__benefit-name {
     margin: 0;
     margin-bottom: 2px;
+    color: $text-minor;
   }
 
   &__benefit-desc {
     margin: 0;
-    color: $text-minor;
+    color: $text-main;
   }
 
   &__contract {

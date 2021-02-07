@@ -8569,6 +8569,18 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   background-image: url("../img/check.svg");
 }
 
+.contract-info__title-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .contract-info__delivered-adress {
   display: none;
 }
@@ -10952,7 +10964,7 @@ tr:not(:first-of-type):hover
 }
 
 .mutual-calcs-payment-block__data td {
-  vertical-align: top;
+  vertical-align: middle;
   text-align: left;
   padding-right: 14px;
 }
@@ -12011,11 +12023,12 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
 .agents__benefit-name {
   margin: 0;
   margin-bottom: 2px;
+  color: #94A0B1;
 }
 
 .agents__benefit-desc {
   margin: 0;
-  color: #94A0B1;
+  color: #1A1A1A;
 }
 
 .agents__contract {
