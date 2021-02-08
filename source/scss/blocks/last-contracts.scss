@@ -49,4 +49,65 @@
   }
 }
 
+@include tablet {
+  .last-contracts {
+    &__promo {
+      margin-bottom: 24px;
+    }
+
+    &__promo-left {
+      padding: 28px 40px;
+    }
+  }
+}
+
+@include mobile {
+  .last-contracts {
+    //display: none;
+    margin-bottom: 40px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__title-block {
+      flex-direction: column;
+      width: calc(100% - 48px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__title {
+      @include h24;
+      margin-bottom: 24px;
+    }
+
+    &__promo {
+      order: 3;
+      flex-direction: column-reverse;
+      width: calc(100% - 48px);
+      margin: 0 auto;
+    }
+
+    &__promo-right {
+      width: 100%;
+      min-height: auto;
+      padding-top: 59%;
+    }
+
+    &__promo-left {
+      width: 100%;
+      padding: 18px;
+    }
+
+    &__promo-title {
+      @include h24;
+      margin-bottom: 20px;
+    }
+  }
+}
+
 

@@ -404,6 +404,22 @@
 })();
 
 (function () {
+  var contracts = document.querySelector('.contracts-mobile');
+
+  if (!contracts) {
+    return;
+  }
+
+  var slider = new Swiper('.contracts-mobile__slider', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.contracts-mobile__pagination',
+      dynamicBullets: true
+    }
+  });
+})();
+
+(function () {
   var cancellationBtn = document.querySelectorAll('.subscription-page__action-item--delete');
 
   if (!cancellationBtn[0]) {
@@ -1155,6 +1171,50 @@
   }); // scheduleBtns.forEach(function(item) {
   //   new Modal(item, modal);
   // });
+})();
+
+(function () {
+  var mainPage = document.querySelector('.main-page');
+
+  if (!mainPage) {
+    return;
+  }
+
+  var support = document.querySelector('.support');
+  var supportContainer = document.querySelector('.support__container');
+  var items = support.querySelectorAll('.support__item');
+
+  function makeSlider() {
+    var fragment = document.createDocumentFragment();
+    var container = document.createElement('div');
+    container.classList.add('swiper-container');
+    container.classList.add('support__slider');
+    var wrapper = document.createElement('div');
+    wrapper.classList.add('swiper-wrapper');
+    items.forEach(function (item, idx) {
+      if (idx !== 0) {
+        var slide = document.createElement('div');
+        slide.classList.add('swiper-slide');
+        var node = item.cloneNode(true);
+        slide.appendChild(node);
+        wrapper.appendChild(slide);
+      }
+    });
+    var pagination = document.createElement('div');
+    pagination.classList.add('support__slider-pagination', 'swiper-pagination');
+    container.appendChild(wrapper);
+    container.appendChild(pagination);
+    fragment.appendChild(container);
+    supportContainer.appendChild(fragment);
+    var slider = new Swiper('.support__slider', {
+      slidesPerView: 1,
+      pagination: {
+        el: '.support__slider-pagination'
+      }
+    });
+  }
+
+  makeSlider();
 })();
 
 (function () {

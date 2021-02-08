@@ -34,6 +34,11 @@ main {
   flex-grow: 1;
   padding-top: 124px;
   padding-bottom: 100px;
+
+  @include mobile {
+    padding-top: 108px;
+    padding-bottom: 40px;
+  }
 }
 
 img {
@@ -104,13 +109,16 @@ a {
   //   padding-left: 15px;
   //   padding-right: 15px;
   // }
+
+  @include mobile {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 * {
   outline: none;
 }
-
-
 
 .overflow-3lines {
   overflow: hidden;

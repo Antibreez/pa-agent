@@ -40,3 +40,17 @@
     color: $primary;
   }
 }
+
+@include mobile {
+  .nav__list--footer {
+    flex-direction: column;
+  }
+
+  .nav__list--footer  .nav__item {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

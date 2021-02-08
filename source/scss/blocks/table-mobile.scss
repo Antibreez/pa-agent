@@ -1,0 +1,61 @@
+.table-mobile {
+  width: 100%;
+  position: relative;
+  padding-bottom: 40px;
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  &__item {
+    width: calc(100% - 48px);
+    padding: 28px 18px 32px;
+    margin: 0 auto;
+    background-color: $bg;
+    border-radius: 5px;
+    border: none;
+    height: 100%;
+
+    &:hover {
+      background-color: $bg;
+      box-shadow: none;
+    }
+  }
+
+  &__text-block-mb {
+    margin-bottom: 24px;
+  }
+
+  &__text-main,
+  &__text-main-g {
+    @include b14;
+    margin: 0;
+    color: $text-main;
+  }
+
+  &__text-main-g {
+    color: $text-minor;
+  }
+
+  &__text-minor {
+    @include b12;
+    margin: 0;
+    color: $text-minor;
+  }
+}
+
+.table-mobile  .contracts__status-container {
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  & p {
+    margin: 0;
+    text-align: left;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}

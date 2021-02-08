@@ -118,3 +118,67 @@
     }
   }
 }
+
+@include tablet {
+  .user-data {
+    &__intro,
+    &__services,
+    &__calc {
+      width: calc((100% - 48px) / 3);
+      padding: 28px;
+    }
+
+    &__greeting {
+      padding-bottom: 14px;
+    }
+
+    &__name {
+      @include h24;
+    }
+
+    &__manager {
+      padding-top: 14px;
+      margin-bottom: 17px;
+    }
+
+    &__manager-name {
+      @include b14;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    &__contacts {
+      flex-direction: column;
+    }
+
+    &__tel {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@include mobile {
+  .user-data {
+    margin-bottom: 40px;
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__intro,
+    &__services,
+    &__calc {
+      width: 100%;
+      padding: 18px;
+    }
+
+    &__intro,
+    &__services {
+      margin-bottom: 24px;
+    }
+
+    &__amount:nth-of-type(4) {
+      margin-bottom: 28px;
+    }
+  }
+}

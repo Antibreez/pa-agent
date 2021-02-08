@@ -301,6 +301,18 @@ button.contracts__page-number {
   margin-left: 16px;
 }
 
-@include tablet {
+.contracts-mobile {
+  display: none;
+}
 
+@include mobile {
+  .contracts {
+    display: none;
+  }
+
+  .contracts-mobile {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+  }
 }

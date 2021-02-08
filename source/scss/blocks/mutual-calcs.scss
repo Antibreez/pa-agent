@@ -130,3 +130,20 @@
   @include b14;
   color: $text-minor;
 }
+
+@include tablet {
+  .mutual-calcs__details-item {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mutual-calcs__details-value {
+    @include h24;
+    margin-top: auto;
+  }
+
+  .mutual-calcs__diagram-item {
+    width: 17%;
+  }
+}

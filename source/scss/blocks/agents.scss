@@ -178,3 +178,25 @@
     }
   }
 }
+
+@include tablet {
+  .agents {
+    &__img-block {
+      width: 342px;
+    }
+
+    &__content {
+      width: calc(100% - 342px);
+    }
+
+    &__benefits-item {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__benefit-desc {
+      margin-top: auto;
+    }
+  }
+}

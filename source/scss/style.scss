@@ -1,6 +1,6 @@
 // vendor
 @import "vendor/normalize.scss";
-@import "vendor/swiper.scss";
+@import "vendor/swiper-bundle.scss";
 @import "vendor/jquery.mCustomScrollbar.scss";
 @import "vendor/select2.scss";
 @import "vendor/jquery-ui.scss";
@@ -27,6 +27,7 @@
 @import "components/input-file.scss";
 @import "components/radio.scss";
 @import "components/calendar.scss";
+@import "components/slider.scss";
 
 // blocks
 @import "blocks/title-block.scss";
@@ -63,3 +64,4 @@
 @import "blocks/mutual-calcs.scss";
 @import "blocks/clients-block.scss";
 @import "blocks/agents.scss";
+@import "blocks/table-mobile.scss";
