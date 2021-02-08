@@ -18,13 +18,11 @@
     wrapper.classList.add('swiper-wrapper');
 
     items.forEach(function(item, idx) {
-      if (idx !== 0) {
-        const slide = document.createElement('div');
-        slide.classList.add('swiper-slide')
-        const node = item.cloneNode(true);
-        slide.appendChild(node);
-        wrapper.appendChild(slide);
-      }
+      const slide = document.createElement('div');
+      slide.classList.add('swiper-slide')
+      const node = item.cloneNode(true);
+      slide.appendChild(node);
+      wrapper.appendChild(slide);
     });
 
     const pagination = document.createElement('div');

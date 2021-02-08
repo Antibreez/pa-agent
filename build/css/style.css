@@ -8733,11 +8733,8 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     padding-left: 0;
     padding-right: 0;
   }
-  .support__container > .support__item:not(:first-of-type) {
+  .support__container > .support__item {
     display: none;
-  }
-  .support__container > .support__item:first-of-type {
-    margin-bottom: 40px;
   }
   .support__img-block {
     width: 100%;

@@ -1192,13 +1192,11 @@
     var wrapper = document.createElement('div');
     wrapper.classList.add('swiper-wrapper');
     items.forEach(function (item, idx) {
-      if (idx !== 0) {
-        var slide = document.createElement('div');
-        slide.classList.add('swiper-slide');
-        var node = item.cloneNode(true);
-        slide.appendChild(node);
-        wrapper.appendChild(slide);
-      }
+      var slide = document.createElement('div');
+      slide.classList.add('swiper-slide');
+      var node = item.cloneNode(true);
+      slide.appendChild(node);
+      wrapper.appendChild(slide);
     });
     var pagination = document.createElement('div');
     pagination.classList.add('support__slider-pagination', 'swiper-pagination');

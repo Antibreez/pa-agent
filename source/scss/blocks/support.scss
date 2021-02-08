@@ -152,12 +152,8 @@
       padding-right: 0;
     }
 
-    &__container > .support__item:not(:first-of-type) {
+    &__container > .support__item {
       display: none;
-    }
-
-    &__container > .support__item:first-of-type {
-      margin-bottom: 40px;
     }
 
     &__img-block {
