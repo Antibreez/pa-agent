@@ -147,3 +147,61 @@
     width: 17%;
   }
 }
+
+@include mobile {
+  .mutual-calcs {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__container > *:not(.mutual-calcs-block-mobile):not(.mutual-calcs-payment-mobile) {
+      width: calc(100% - 48px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__earned {
+      padding: 18px;
+      padding-bottom: 43px;
+    }
+
+    &__earned-title-block {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__earned-date-block {
+      width: 100%;
+    }
+
+    &__earned-date-btn {
+      min-width: auto;
+      width: 100%;
+    }
+
+    &__details {
+      flex-direction: column;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    &__details-item {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__diagram-item {
+      width: 10%;
+    }
+
+    &__diagram-year {
+      display: block;
+      transform: translateY(15px) rotate(-90deg);
+      transform-origin: center;
+    }
+  }
+}

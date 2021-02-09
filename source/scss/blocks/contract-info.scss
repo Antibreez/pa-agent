@@ -173,3 +173,11 @@
     background-color: #D1D8E1;
   }
 }
+
+@include mobile {
+  .contract-info {
+    &__toggle-info {
+      margin-bottom: 24px;
+    }
+  }
+}

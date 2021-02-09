@@ -8,3 +8,17 @@
   @include section-title;
   margin-right: auto;
 }
+
+@include mobile {
+  div.title-block {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    & a,
+    & button {
+      margin-top: 24px;
+      width: 100%;
+    }
+  }
+}

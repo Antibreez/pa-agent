@@ -61,7 +61,7 @@
     if ($(this).hasClass('all-time')) {
       $('.mutual-calcs__earned-date-btn').text(
         $(this).text()
-        + ' (с '
+        + ' (с\u00a0'
         + $('.earned-date__start-period').text()
         + ')'
       )
@@ -77,7 +77,7 @@
 
   $('.mutual-calcs__earned-date-btn').text(
     $('.mutual-calcs__earned-date-menu-btn.all-time').text()
-    + ' (с '
+    + ' (с\u00a0'
     + $('.earned-date__start-period').text()
     + ')'
   )

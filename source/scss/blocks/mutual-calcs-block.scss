@@ -380,6 +380,10 @@ button.mutual-calcs-block__page-number {
   margin-left: 16px;
 }
 
+.mutual-calcs-block-mobile {
+  display: none;
+}
+
 @include tablet {
   .mutual-calcs-block {
     &__header {
@@ -470,5 +474,26 @@ button.mutual-calcs-block__page-number {
       color: $text-minor;
       margin-right: 30px;
     }
+  }
+}
+
+@include mobile {
+  .mutual-calcs-block-mobile {
+    display: block;
+  }
+
+  .mutual-calcs-block {
+    display: none;
+  }
+
+  .mutual-calcs-block__data-status-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0;
+  }
+
+  .mutual-calcs-block__data-status {
+    margin-top: 5px;
   }
 }

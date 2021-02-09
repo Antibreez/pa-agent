@@ -29,6 +29,7 @@
   &__text-main,
   &__text-main-g {
     @include b14;
+    @include overflow-3lines;
     margin: 0;
     color: $text-main;
   }
@@ -39,18 +40,37 @@
 
   &__text-minor {
     @include b12;
+    @include overflow-3lines;
     margin: 0;
     color: $text-minor;
+
+    &.alert {
+      color: #fc4242;
+    }
   }
 }
 
-.table-mobile  .contracts__status-container {
+.table-mobile  .contracts__status-container,
+.table-mobile  .contract-services__status-container {
   padding: 0;
   flex-direction: column;
   align-items: flex-start;
 
+  & button {
+    text-align: left;
+  }
 
-  & p {
+  & .checkbox-btn__checkbox {
+    flex-shrink: 0;
+  }
+
+  & .checkbox-btn {
+    align-items: flex-start;
+  }
+
+  & > p,
+  & > object,
+  & > div {
     margin: 0;
     text-align: left;
 

@@ -346,3 +346,17 @@ button.mutual-calcs-payment-block__page-number {
 .mutual-calcs-payment-block__next {
   margin-left: 16px;
 }
+
+.mutual-calcs-payment-mobile {
+  display: none;
+}
+
+@include mobile {
+  .mutual-calcs-payment-mobile {
+    display: block;
+  }
+
+  .mutual-calcs-payment-block {
+    display: none;
+  }
+}

@@ -2,11 +2,15 @@
 
   function formatOption (item) {
     const value = item.text.split('splitter');
+    const br = window.matchMedia('(max-width: 999px)').matches ? '<br>' : '';
+    console.log(br);
 
     if (value.length > 1) {
       const result = $('<span>'
         + value[0]
-        + '</span><span>'
+        + '</span>'
+        + br
+        + '<span>'
         + value[1]
         + '</span>');
       return result;

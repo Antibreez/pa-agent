@@ -332,3 +332,25 @@ button.contract-services__page-number {
 .contract-services__next {
   margin-left: 16px;
 }
+
+.contract-services-mobile {
+  display: none;
+}
+
+.contract-services-mobile .contract-services__status p {
+  align-items: flex-start;
+
+  &::before {
+    transform: translateY(-2px);
+  }
+}
+
+@include mobile {
+  .contract-services-mobile {
+    display: block;
+  }
+
+  .contract-services {
+    display: none;
+  }
+}

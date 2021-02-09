@@ -39,3 +39,18 @@
     }
   }
 }
+
+@include mobile {
+  .subscription-all {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__container > *:not(.contract-services-mobile) {
+      width: calc(100% - 48px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

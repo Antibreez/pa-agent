@@ -43,3 +43,26 @@
     margin-top: 24px;
   }
 }
+
+@include mobile {
+  .contracts-all {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__container > *:not(.contracts-mobile) {
+      width: calc(100% - 48px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__search {
+      margin-bottom: 35px;
+    }
+
+    &  .contracts-mobile {
+      margin-bottom: 0;
+    }
+  }
+}

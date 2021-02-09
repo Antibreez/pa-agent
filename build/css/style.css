@@ -5737,7 +5737,9 @@ a {
 }
 
 .select2-container .select2-selection--single {
-  height: 56px;
+  min-height: 56px;
+  padding: 16px 0;
+  height: auto;
   border: 2px solid #F4F4F8;
   border-radius: 6px;
   font-family: "Suisse Intl", "Arial", "Helvetica", "Helvetica CY", "Nimbus Sans";
@@ -5757,7 +5759,7 @@ a {
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   padding: 0 54px 0 20px;
   font-size: 14px;
-  line-height: 54px;
+  line-height: 21px;
   color: #94A0B1;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -5777,7 +5779,7 @@ a {
 
 .select2-container .select2-selection--single .select2-selection__arrow {
   width: 54px;
-  height: 54px;
+  height: 100%;
 }
 
 .select + .select2-container .select2-selection--single .select2-selection__arrow b {
@@ -5838,6 +5840,24 @@ a {
 
 .select2-results__option span:last-child {
   color: #94A0B1;
+}
+
+@media (max-width: 999px) {
+  .select2-results__option {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .select2-results__option br {
+    display: none;
+  }
+  .select2-results__option span:first-child {
+    margin-bottom: 5px;
+  }
+  .select2-results__option span + br + span {
+    margin-bottom: 16px;
+  }
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
@@ -5999,24 +6019,64 @@ input.search:focus {
   border: 1px solid #D1D8E1;
 }
 
+input.search[placeholder] {
+  color: #94A0B1;
+  opacity: 1;
+  text-overflow: ellipsis;
+}
+
 input.search::-webkit-input-placeholder {
   color: #94A0B1;
   opacity: 1;
+  text-overflow: ellipsis;
 }
 
 input.search::-moz-placeholder {
   color: #94A0B1;
   opacity: 1;
+  text-overflow: ellipsis;
 }
 
 input.search:-moz-placeholder {
   color: #94A0B1;
   opacity: 1;
+  text-overflow: ellipsis;
 }
 
 input.search:-ms-input-placeholder {
   color: #94A0B1;
   opacity: 1;
+  text-overflow: ellipsis;
+}
+
+input.search:focus[placeholder] {
+  color: #94A0B1;
+  opacity: 1;
+  text-overflow: ellipsis;
+}
+
+input.search:focus::-webkit-input-placeholder {
+  color: #94A0B1;
+  opacity: 1;
+  text-overflow: ellipsis;
+}
+
+input.search:focus::-moz-placeholder {
+  color: #94A0B1;
+  opacity: 1;
+  text-overflow: ellipsis;
+}
+
+input.search:focus:-moz-placeholder {
+  color: #94A0B1;
+  opacity: 1;
+  text-overflow: ellipsis;
+}
+
+input.search:focus:-ms-input-placeholder {
+  color: #94A0B1;
+  opacity: 1;
+  text-overflow: ellipsis;
 }
 
 .search-close {
@@ -6133,6 +6193,32 @@ input.search.js-inputed {
 
 .search-result--small .search-item:not(:last-child) {
   margin-bottom: 8px;
+}
+
+@media (max-width: 999px) {
+  input.search {
+    padding-right: 40px;
+  }
+  .search-result {
+    padding: 24px 0;
+    max-height: 490px;
+  }
+  .search-result__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 17px;
+  }
+  .search-result__column {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-right: 0;
+  }
+  .search-result__column:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 
 .date-block {
@@ -7184,6 +7270,24 @@ div.input-file__file-load {
   margin-right: auto;
 }
 
+@media (max-width: 999px) {
+  div.title-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  div.title-block a,
+  div.title-block button {
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+
 .file-load {
   text-decoration: none;
   color: inherit;
@@ -7771,6 +7875,40 @@ div.input-file__file-load {
 
 .filters__form-wrapper {
   display: none;
+}
+
+@media (max-width: 999px) {
+  .filters {
+    padding: 18px;
+  }
+  .filters__title-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .filters__title {
+    margin-bottom: 27px;
+  }
+  div.filters {
+    margin-bottom: 40px;
+  }
+  div.filters .filters__form-wrapper .filters__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.filters .filters__form-wrapper .filters__form > div {
+    width: 100%;
+    margin: 0;
+  }
+  div.filters .filters__form-wrapper .filters__form > div:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 
 .info-block {
@@ -8437,6 +8575,9 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     display: block;
     margin-bottom: 40px;
   }
+  .contracts__pagination-block {
+    display: none;
+  }
 }
 
 .last-contracts {
@@ -8847,6 +8988,24 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   margin-top: 24px;
 }
 
+@media (max-width: 999px) {
+  .contracts-all__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .contracts-all__container > *:not(.contracts-mobile) {
+    width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contracts-all__search {
+    margin-bottom: 35px;
+  }
+  .contracts-all .contracts-mobile {
+    margin-bottom: 0;
+  }
+}
+
 .contract-info {
   margin-bottom: 24px;
 }
@@ -9051,6 +9210,12 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .contract-info__status-value.draft::before {
   background-color: #D1D8E1;
+}
+
+@media (max-width: 999px) {
+  .contract-info__toggle-info {
+    margin-bottom: 24px;
+  }
 }
 
 .payment-waiting {
@@ -9858,6 +10023,30 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   margin-left: 16px;
 }
 
+.contract-services-mobile {
+  display: none;
+}
+
+.contract-services-mobile .contract-services__status p {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contract-services-mobile .contract-services__status p::before {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+@media (max-width: 999px) {
+  .contract-services-mobile {
+    display: block;
+  }
+  .contract-services {
+    display: none;
+  }
+}
+
 .documents__title {
   font-weight: 500;
   font-size: 32px;
@@ -10629,6 +10818,18 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   width: calc((100% - 42px) / 4);
 }
 
+@media (max-width: 999px) {
+  .subscription-all__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .subscription-all__container > *:not(.contract-services-mobile) {
+    width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .subscription-page__actions {
   margin-bottom: 24px;
 }
@@ -11197,6 +11398,10 @@ button.mutual-calcs-block__page-number:not(.active):hover, button.mutual-calcs-b
   margin-left: 16px;
 }
 
+.mutual-calcs-block-mobile {
+  display: none;
+}
+
 @media (max-width: 1439px) {
   .mutual-calcs-block__header th:last-child {
     display: none;
@@ -11257,6 +11462,31 @@ button.mutual-calcs-block__page-number:not(.active):hover, button.mutual-calcs-b
   .mutual-calcs-block__data-status-mobile span:first-child {
     color: #94A0B1;
     margin-right: 30px;
+  }
+}
+
+@media (max-width: 999px) {
+  .mutual-calcs-block-mobile {
+    display: block;
+  }
+  .mutual-calcs-block {
+    display: none;
+  }
+  .mutual-calcs-block__data-status-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 0;
+  }
+  .mutual-calcs-block__data-status {
+    margin-top: 5px;
   }
 }
 
@@ -11661,6 +11891,19 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
   margin-left: 16px;
 }
 
+.mutual-calcs-payment-mobile {
+  display: none;
+}
+
+@media (max-width: 999px) {
+  .mutual-calcs-payment-mobile {
+    display: block;
+  }
+  .mutual-calcs-payment-block {
+    display: none;
+  }
+}
+
 .mutual-calcs__earned-title-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11858,6 +12101,62 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
   }
   .mutual-calcs__diagram-item {
     width: 17%;
+  }
+}
+
+@media (max-width: 999px) {
+  .mutual-calcs__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .mutual-calcs__container > *:not(.mutual-calcs-block-mobile):not(.mutual-calcs-payment-mobile) {
+    width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mutual-calcs__earned {
+    padding: 18px;
+    padding-bottom: 43px;
+  }
+  .mutual-calcs__earned-title-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .mutual-calcs__earned-date-block {
+    width: 100%;
+  }
+  .mutual-calcs__earned-date-btn {
+    min-width: auto;
+    width: 100%;
+  }
+  .mutual-calcs__details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .mutual-calcs__details-item {
+    width: 100%;
+  }
+  .mutual-calcs__details-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .mutual-calcs__diagram-item {
+    width: 10%;
+  }
+  .mutual-calcs__diagram-year {
+    display: block;
+    -webkit-transform: translateY(15px) rotate(-90deg);
+            transform: translateY(15px) rotate(-90deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 }
 
@@ -12583,6 +12882,13 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
   margin: 0;
   color: #1A1A1A;
 }
@@ -12595,11 +12901,23 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
   margin: 0;
   color: #94A0B1;
 }
 
-.table-mobile .contracts__status-container {
+.table-mobile__text-minor.alert {
+  color: #fc4242;
+}
+
+.table-mobile .contracts__status-container,
+.table-mobile .contract-services__status-container {
   padding: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -12610,11 +12928,39 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
           align-items: flex-start;
 }
 
-.table-mobile .contracts__status-container p {
+.table-mobile .contracts__status-container button,
+.table-mobile .contract-services__status-container button {
+  text-align: left;
+}
+
+.table-mobile .contracts__status-container .checkbox-btn__checkbox,
+.table-mobile .contract-services__status-container .checkbox-btn__checkbox {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.table-mobile .contracts__status-container .checkbox-btn,
+.table-mobile .contract-services__status-container .checkbox-btn {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.table-mobile .contracts__status-container > p,
+.table-mobile .contracts__status-container > object,
+.table-mobile .contracts__status-container > div,
+.table-mobile .contract-services__status-container > p,
+.table-mobile .contract-services__status-container > object,
+.table-mobile .contract-services__status-container > div {
   margin: 0;
   text-align: left;
 }
 
-.table-mobile .contracts__status-container p:not(:last-child) {
+.table-mobile .contracts__status-container > p:not(:last-child),
+.table-mobile .contracts__status-container > object:not(:last-child),
+.table-mobile .contracts__status-container > div:not(:last-child),
+.table-mobile .contract-services__status-container > p:not(:last-child),
+.table-mobile .contract-services__status-container > object:not(:last-child),
+.table-mobile .contract-services__status-container > div:not(:last-child) {
   margin-bottom: 24px;
 }

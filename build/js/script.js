@@ -274,9 +274,11 @@
 (function () {
   function formatOption(item) {
     var value = item.text.split('splitter');
+    var br = window.matchMedia('(max-width: 999px)').matches ? '<br>' : '';
+    console.log(br);
 
     if (value.length > 1) {
-      var result = $('<span>' + value[0] + '</span><span>' + value[1] + '</span>');
+      var result = $('<span>' + value[0] + '</span>' + br + '<span>' + value[1] + '</span>');
       return result;
     } else {
       return item.text;
@@ -400,6 +402,22 @@
 
   contractsLinkAll.forEach(function (link) {
     link.addEventListener('click', onLinkClick);
+  });
+})();
+
+(function () {
+  var contracts = document.querySelector('.contract-services-mobile');
+
+  if (!contracts) {
+    return;
+  }
+
+  var slider = new Swiper('.contract-services-mobile__slider', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.contract-services-mobile__pagination',
+      dynamicBullets: true
+    }
   });
 })();
 
@@ -652,14 +670,14 @@
   });
   $('.mutual-calcs__earned-date-menu-btn').on('click', function () {
     if ($(this).hasClass('all-time')) {
-      $('.mutual-calcs__earned-date-btn').text($(this).text() + ' (с ' + $('.earned-date__start-period').text() + ')');
+      $('.mutual-calcs__earned-date-btn').text($(this).text() + " (\u0441\xA0" + $('.earned-date__start-period').text() + ')');
     } else {
       $('.mutual-calcs__earned-date-btn').text($(this).text());
     }
 
     menu.hide();
   });
-  $('.mutual-calcs__earned-date-btn').text($('.mutual-calcs__earned-date-menu-btn.all-time').text() + ' (с ' + $('.earned-date__start-period').text() + ')');
+  $('.mutual-calcs__earned-date-btn').text($('.mutual-calcs__earned-date-menu-btn.all-time').text() + " (\u0441\xA0" + $('.earned-date__start-period').text() + ')');
 })();
 
 (function () {
@@ -941,6 +959,38 @@
   // getAllCheckbox().forEach(function(item) {
   //   item.addEventListener('change', onCheckboxChange);
   // })
+})();
+
+(function () {
+  var contracts = document.querySelector('.mutual-calcs-payment-mobile');
+
+  if (!contracts) {
+    return;
+  }
+
+  var slider = new Swiper('.mutual-calcs-payment-mobile__slider', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.mutual-calcs-payment-mobile__pagination',
+      dynamicBullets: true
+    }
+  });
+})();
+
+(function () {
+  var contracts = document.querySelector('.mutual-calcs-block-mobile');
+
+  if (!contracts) {
+    return;
+  }
+
+  var slider = new Swiper('.mutual-calcs-block-mobile__slider', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.mutual-calcs-block-mobile__pagination',
+      dynamicBullets: true
+    }
+  });
 })();
 
 (function () {
