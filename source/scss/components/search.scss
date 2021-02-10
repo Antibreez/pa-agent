@@ -301,6 +301,10 @@ input.search.js-inputed {
     max-height: 490px;
   }
 
+  .search-result--small {
+    max-height: 330px;
+  }
+
   .search-result__content {
     flex-direction: column;
     padding: 0 17px;

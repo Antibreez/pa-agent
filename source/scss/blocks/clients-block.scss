@@ -402,10 +402,40 @@ button.clients-block__page-number {
   margin-left: 16px;
 }
 
+.clients-mobile-block {
+  display: none;
+}
+
 @include tablet {
   .clients-block__data {
     & td {
       vertical-align: middle;
     }
+  }
+}
+
+@include mobile {
+  .clients-mobile-block {
+    display: block;
+  }
+
+  .clients-block__block {
+    display: none;
+  }
+
+  .clients-block__actions object {
+    justify-content: flex-start;
+  }
+
+  .clients-block__link-outer--mutual-calcs {
+    margin-right: 22px;
+  }
+
+  .clients-block {
+    margin-bottom: 24px;
+  }
+
+  .clients-block__checkbox {
+    margin-bottom: 0;
   }
 }

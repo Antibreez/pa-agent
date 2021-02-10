@@ -63,3 +63,9 @@
     color: $text-main;
   }
 }
+
+@include mobile {
+  .radio-1 {
+    padding-right: 50px;
+  }
+}

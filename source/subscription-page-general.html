@@ -78,6 +78,9 @@
             <span class="contract-info__title-status  pending">В ожидании</span>
             <span class="contract-info__serial-number">Не указан S/N</span>
           </h1>
+          <button class="contract-info__serial-btn btn-primary">
+            Указать серийный номер
+          </button>
         </div>
 
         <div class="contract-info__toggle-info">
@@ -703,6 +706,26 @@
             <div class="modal__btn-block">
               <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
               <button type="submit" class="modal__save  modal__btn-item  btn-primary">Подтвердить</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+
+  <!--Модальное окно указания серийного номера-->
+  <section id="write-serial" class="modal">
+    <div class="modal__overlay">
+
+        <div class="modal__body">
+          <form>
+            <h1 class="modal__title">Укажите серийный номер</h1>
+            <div class="write-serial__input  input-block">
+              <input class="input-text" type="text" name="device-serial" placeholder="не указано">
+              <label class="input-label">Серийный номер</label>
+            </div>
+            <div class="modal__btn-block">
+              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+              <button type="submit" class="modal__save  modal__btn-item  btn-primary" disabled>Подтвердить</button>
             </div>
           </form>
         </div>

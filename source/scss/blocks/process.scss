@@ -36,3 +36,16 @@
     color: $text-main;
   }
 }
+
+@include mobile {
+  .process {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__stage:first-child {
+      margin-bottom: 18px;
+      margin-right: 0;
+    }
+  }
+}

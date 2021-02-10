@@ -40,10 +40,19 @@
     justify-content: space-between;
   }
 
+  &__client-type-choose,
+  &__installation-wrapper,
+  &__payment-type-wrapper,
+  &__delivery-different-checkbox {
+    padding-top: 14px;
+  }
+
   &__delivery-address-wrapper > div,
   &__passport-data-wrapper > div,
   &__client-data-wrapper > div,
-  &__company-data-wrapper > div {
+  &__company-data-wrapper > div,
+  &__contract-details-wrapper > div,
+  &__pickup-form > div {
     margin-top: 14px;
   }
 
@@ -188,4 +197,62 @@
 .contract-creation__delivery-device.show-for-pickup
 .contract-creation__delivery-address-wrapper {
   display: none;
+}
+
+@include tablet {
+  .contract-creation {
+    &__payment {
+      flex-shrink: 0;
+      width: 291px;
+      max-width: none;
+    }
+
+    &__details {
+      //flex-grow: 0;
+    }
+  }
+}
+
+@include mobile {
+  .contract-creation {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__details {
+      margin-bottom: 24px;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &__payment {
+      width: 100%;
+    }
+
+    &__client-type-choose,
+    &__installation-wrapper,
+    &__payment-type-wrapper,
+    &__delivery-type-wrapper {
+      flex-direction: column;
+
+      & label {
+        width: 100%;
+      }
+
+      & label:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__client-data-wrapper,
+    &__delivery-address-wrapper,
+    &__passport-data-wrapper,
+    &__contract-details-wrapper,
+    &__company-data-wrapper,
+    &__pickup-form {
+      & > div {
+        width: 100%;
+      }
+    }
+  }
 }

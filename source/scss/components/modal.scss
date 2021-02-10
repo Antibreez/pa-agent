@@ -62,13 +62,15 @@
     color: $text-minor;
   }
 
-  &__content {
-    margin-bottom: 50px;
-  }
+  // &__content {
+  //   margin-bottom: 50px;
+  // }
 
   &__btn-block {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 28px;
   }
 
   &__btn-item {
@@ -110,7 +112,7 @@
   // }
 }
 
-@include tablet {
+@include mobile {
   .modal {
     overflow: hidden;
     height: calc(var(--vh, 1vh) * 100);

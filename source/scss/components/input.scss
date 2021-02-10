@@ -40,24 +40,34 @@
   //   border: 1px solid #FC4242;
   // }
 
+  &[placeholder] {
+    color: $text-minor;
+    opacity: 1;
+    text-overflow: ellipsis;
+  }
+
   &::-webkit-input-placeholder {
     color: $text-minor;
     opacity: 1;
+    text-overflow: ellipsis;
   }
 
   &::-moz-placeholder {
     color: $text-minor;
     opacity: 1;
+    text-overflow: ellipsis;
   }
 
   &:-moz-placeholder {
     color: $text-minor;
     opacity: 1;
+    text-overflow: ellipsis;
   }
 
   &:-ms-input-placeholder {
     color: $text-minor;
     opacity: 1;
+    text-overflow: ellipsis;
   }
 }
 

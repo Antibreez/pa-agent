@@ -7,7 +7,7 @@
   &__title {
     @include h24;
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     color: $text-main;
 
     & .note-mark {
@@ -31,6 +31,12 @@
     & .note-mark {
       color: #FC4242;
     }
+  }
+}
+
+@include mobile {
+  .light-block {
+    padding: 24px 17px;
   }
 }
 

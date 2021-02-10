@@ -30,3 +30,18 @@
     margin-left: auto;
   }
 }
+
+@include mobile {
+  .contract-subject {
+    padding: 24px 17px;
+    margin-bottom: 24px;
+
+    &__registration-block {
+      flex-direction: column;
+    }
+
+    &__registration-type:first-child {
+      margin-bottom: 24px;
+    }
+  }
+}
