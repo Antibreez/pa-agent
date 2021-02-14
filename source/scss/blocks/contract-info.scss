@@ -178,6 +178,33 @@
   }
 }
 
+@include tablet {
+  .contract-info {
+    &__title-block--subscription {
+      flex-direction: column;
+    }
+
+    &__title-block--subscription
+    .contract-info__title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__title-status {
+      margin: 14px 0;
+    }
+
+    &__serial-number {
+      margin: 0;
+    }
+
+    &__serial-btn {
+      margin-top: 14px;
+    }
+  }
+}
+
 @include mobile {
   .contract-info {
     &__toggle-info {

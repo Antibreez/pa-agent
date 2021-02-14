@@ -6754,9 +6754,9 @@ input.search.js-inputed {
   }
   .modal__title {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 24px;
   }
   .modal__desc {
     font-weight: 400;
@@ -6766,14 +6766,15 @@ input.search.js-inputed {
   .modal__content {
     margin-bottom: 30px;
   }
+  .modal__content > div {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .modal__btn-block {
     position: fixed;
     top: calc(var(--vh, 1vh) * 100);
     left: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     width: 100%;
     padding: 20px 15px 150px;
     -webkit-transform: translateY(0);
@@ -6784,12 +6785,16 @@ input.search.js-inputed {
     transition: transform 0.2s ease-in;
     transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
   }
+  .modal__btn-item {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
   .modal__btn-item:last-child {
-    margin-left: 0;
-    margin-top: 5px;
+    margin-left: 14px;
   }
   .modal__btn-item:first-child {
-    margin-top: 0;
+    margin-left: 0;
   }
   .modal.js-show .modal__overlay {
     background-color: rgba(0, 0, 0, 0.25);
@@ -7957,7 +7962,7 @@ div.input-file__file-load {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  padding: 28px 28px 18px;
+  padding: 28px 28px 16px;
   background-color: #F4F4F8;
   border-radius: 5px;
 }
@@ -9266,6 +9271,36 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   background-color: #D1D8E1;
 }
 
+@media (max-width: 1439px) {
+  .contract-info__title-block--subscription {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contract-info__title-block--subscription .contract-info__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contract-info__title-status {
+    margin: 14px 0;
+  }
+  .contract-info__serial-number {
+    margin: 0;
+  }
+  .contract-info__serial-btn {
+    margin-top: 14px;
+  }
+}
+
 @media (max-width: 999px) {
   .contract-info__toggle-info {
     margin-bottom: 24px;
@@ -9414,6 +9449,18 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   display: block;
 }
 
+@media (max-width: 1439px) {
+  .payment-waiting__info-form {
+    width: 62%;
+  }
+  .payment-waiting__send-form {
+    width: 38%;
+  }
+  .payment-waiting__modal-body {
+    min-width: 986px;
+  }
+}
+
 .passport-data {
   margin-bottom: 40px;
 }
@@ -9442,6 +9489,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .passport-data__column:nth-child(3) {
   width: 51%;
+  padding-right: 0;
 }
 
 .passport-data__title-block {
@@ -9471,6 +9519,29 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .passport-data__fill {
   margin: 14px 0 10px;
+}
+
+@media (max-width: 1439px) {
+  .passport-data__column:first-child, .passport-data__column:nth-child(2) {
+    width: 37%;
+  }
+  .passport-data__column:last-child {
+    width: 26%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .passport-data__title-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .passport-data__photo-title {
+    margin-bottom: 14px;
+  }
 }
 
 .delivery-or-pickup {
@@ -9573,6 +9644,8 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -9719,6 +9792,30 @@ div.registration-address {
 
 .delivery-or-pickup__wrapper.show-for-registration .registration-address {
   display: block;
+}
+
+@media (max-width: 1439px) {
+  .delivery-or-pickup__cloud-desc {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 18px;
+  }
+  .delivery-or-pickup__login {
+    width: auto;
+    min-width: 200px;
+    padding-right: 20px;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .delivery-or-pickup__password {
+    width: auto;
+    margin: 0;
+    margin-right: auto;
+  }
+  .delivery-or-pickup__password + form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .contract-services {
@@ -10246,6 +10343,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .transactions__table th:last-child,
 .transactions__table td:last-child {
   text-align: right;
+  padding-right: 0;
 }
 
 .transactions__table:not(.transactions__table--no-checkbox) th:first-child,
@@ -10306,6 +10404,62 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .transactions__table--no-checkbox col:nth-child(7) {
   width: 11%;
+}
+
+@media (max-width: 1439px) {
+  .transactions col:first-child {
+    width: 48px;
+  }
+  .transactions col:nth-child(2) {
+    width: calc(21% - 48px);
+  }
+  .transactions col:nth-child(3) {
+    width: 15%;
+  }
+  .transactions col:nth-child(4) {
+    width: 15%;
+  }
+  .transactions col:nth-child(5) {
+    width: 13%;
+  }
+  .transactions col:nth-child(6) {
+    width: 15%;
+  }
+  .transactions col:nth-child(7) {
+    width: 12%;
+  }
+  .transactions col:nth-child(8) {
+    width: 8%;
+  }
+  .transactions th,
+  .transactions td {
+    padding-right: 14px;
+  }
+  .transactions th:last-child,
+  .transactions td:last-child {
+    padding-right: 0;
+  }
+  .transactions__table--no-checkbox col:first-child {
+    width: 17%;
+  }
+  .transactions__table--no-checkbox col:nth-child(2) {
+    width: 16%;
+  }
+  .transactions__table--no-checkbox col:nth-child(3) {
+    width: 16%;
+  }
+  .transactions__table--no-checkbox col:nth-child(4) {
+    width: 10%;
+  }
+  .transactions__table--no-checkbox col:nth-child(5) {
+    width: 15%;
+  }
+  .transactions__table--no-checkbox col:nth-child(6) {
+    width: 15%;
+  }
+  .transactions__table--no-checkbox col:nth-child(7) {
+    width: 11%;
+  }
 }
 
 .verification__modal-content {
@@ -11164,6 +11318,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   background-image: url("../img/file-clear.svg");
 }
 
+.subscription-page__action-item--return::after {
+  background-image: url("../img/return.svg");
+}
+
 .subscription-page__additional-services-title {
   font-weight: 500;
   font-size: 18px;
@@ -11205,6 +11363,12 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .write-serial__input {
   padding-top: 13px;
+}
+
+@media (max-width: 1439px) {
+  .subscription-page__action-item {
+    padding: 19px 16px 19px 80px;
+  }
 }
 
 .mutual-calcs-block {

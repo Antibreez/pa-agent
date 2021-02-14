@@ -133,3 +133,19 @@
 // + .payment-waiting__checkbox.sended {
 //   margin-bottom: 55px;
 // }
+
+@include tablet {
+  .payment-waiting {
+    &__info-form {
+      width: 62%;
+    }
+
+    &__send-form {
+      width: 38%;
+    }
+
+    &__modal-body {
+      min-width: 986px;
+    }
+  }
+}

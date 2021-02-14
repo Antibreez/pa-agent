@@ -84,6 +84,10 @@
     &--delete::after {
       background-image: url("../img/file-clear.svg");
     }
+
+    &--return::after {
+      background-image: url("../img/return.svg");
+    }
   }
 
   &__additional-services-title {
@@ -120,4 +124,12 @@
 
 .write-serial__input {
   padding-top: 13px;
+}
+
+@include tablet {
+  .subscription-page {
+    &__action-item {
+      padding: 19px 16px 19px 80px;
+    }
+  }
 }

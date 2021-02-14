@@ -144,8 +144,8 @@
     }
 
     &__title {
-      @include h18;
-      margin-bottom: 30px;
+      @include h24;
+      margin-bottom: 24px;
     }
 
     &__desc {
@@ -156,6 +156,12 @@
       margin-bottom: 30px;
     }
 
+    &__content > div {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     // &__close {
     //   right: 15px;
     // }
@@ -164,7 +170,6 @@
       position: fixed;
       top: calc(var(--vh, 1vh) * 100);
       left: 0;
-      flex-direction: column;
       width: 100%;
       padding: 20px 15px 150px;
       transform: translateY(0);
@@ -173,13 +178,14 @@
     }
 
     &__btn-item {
+      flex-grow: 1;
+
       &:last-child {
-        margin-left: 0;
-        margin-top: 5px;
+        margin-left: 14px;
       }
 
       &:first-child {
-        margin-top: 0;
+        margin-left: 0;
       }
     }
   }
