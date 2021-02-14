@@ -163,6 +163,7 @@
   &__installation-address-city,
   &__installation-address-street {
     width: calc(50% - 7px);
+    margin-bottom: 14px;
   }
 
   &__installation-address-house,
@@ -173,8 +174,29 @@
     width: calc((100% - 56px) / 5);
   }
 
+  &__installation-company {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
   &__installation-address-done {
     margin-top: 18px;
+  }
+
+  &__cloud-desc {
+    max-width: 53%;
+  }
+
+  &__login {
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: 40px;
+  }
+
+  &__password {
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: 20px;
   }
 }
 

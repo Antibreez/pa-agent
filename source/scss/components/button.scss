@@ -48,12 +48,12 @@
   padding: 10px 16px 9px;
   border: 2px solid $primary;
   color: $text-main;
-  background-color: #fff;
+  background-color: transparent;
 
   &:hover,
   &:focus {
     color: $primary;
-    background-color: #fff;
+    background-color: transparent;
     cursor: pointer;
   }
 
@@ -64,7 +64,7 @@
 
   &:active {
     color: $primary;
-    background-color: #fff;
+    background-color: transparent;
   }
 
   &:active svg {

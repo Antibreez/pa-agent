@@ -214,9 +214,13 @@
             <div class="delivery-or-pickup__installation-cost">
               <form>
                 <p class="delivery-or-pickup__installation-desc  info-block__desc">
-                  Заявка передана менеджеру инженерного центра и находится в обработке.
+                  Укажите стоимость работ, наименование монтажной организации а также дату и время проведения
                 </p>
                 <div class="delivery-or-pickup__installation-cost-wrapper">
+                  <div class="delivery-or-pickup__installation-company  input-block">
+                    <input class="input-text" type="text" name="delivery-or-pickup__installation-company">
+                    <label class="input-label">Наименование организации</label>
+                  </div>
                   <div class="delivery-or-pickup__installation-cost-value  input-block">
                     <input class="input-text  input-money" type="text" name="client-name">
                     <label class="input-label">Стоимость монтажа</label>
@@ -310,8 +314,8 @@
             <h1 class="modal__title">Подтвердите фактическую дату и время совершения монтажа</h1>
             <div class="delivery-or-pickup__modal-content  modal__content">
               <div class="delivery-or-pickup__modal-date-block  date-block">
-                <label for="installation-date" class="date-label">Дата монтажа</label>
-                <input id="installation-date" class="delivery-or-pickup__modal-date  date-input" placeholder="Не указана" name="installation-date">
+                <label for="installed-date" class="date-label">Дата монтажа</label>
+                <input id="installed-date" class="delivery-or-pickup__modal-date  date-input" placeholder="Не указана" name="installed-date">
               </div>
               <div class="delivery-or-pickup__modal-time-block  input-block">
                 <input class="delivery-or-pickup__modal-time  input-text" type="text" name="installation-time">
@@ -324,6 +328,26 @@
                   <div></div>
                   <p class="checkbox__text">Подтвердить монтаж для все услуг в договоре со статусом «Ожидается монтаж» (3)</p>
                 </label>
+              </div>
+
+              <div class="delivery-or-pickup__modal-input-file  input-file">
+                <label class="input-file__label">
+                  <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="installation-doc" class="input-file__input  visually-hidden">
+                  <span>Приложите документы, подтверждающие факт монтажа *
+                </span></label>
+                <div class="input-file__file-load  file-load">
+                  <div class="file-load__pdf-logo"></div>
+                  <div class="file-load__info">
+                    <p class="file-load__name">Файл 1</p>
+                    <p class="file-load__size">PDF, 450 Кбайт</p>
+                  </div>
+                  <button type="button" class="file-load__clear">
+                    <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.29289 4.7929C4.68341 4.40238 5.31659 4.40238 5.7071 4.7929L19.8492 18.935C20.2398 19.3256 20.2398 19.9587 19.8492 20.3492C19.4587 20.7398 18.8255 20.7398 18.435 20.3492L4.29289 6.20711C3.90237 5.81659 3.90237 5.18342 4.29289 4.7929Z"></path>
+                      <path d="M4.29291 20.3492C4.68344 20.7398 5.31661 20.7398 5.70713 20.3492L19.8493 6.2071C20.2398 5.81659 20.2398 5.18341 19.8493 4.79289C19.4587 4.40237 18.8256 4.40237 18.435 4.79289L4.29291 18.935C3.9024 19.3255 3.90239 19.9587 4.29291 20.3492Z"></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
 
             <div class="modal__btn-block">

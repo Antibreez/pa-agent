@@ -11,24 +11,49 @@
     return;
   }
 
-  const fileInputBlock = modal.querySelector('.verification__modal-input-file');
-  const fileInput = modal.querySelector('.input-file__input');
+  const fileInputBlock = modal.querySelectorAll('.verification__modal-input-file');
+  //const fileInput = modal.querySelector('.input-file__input');
+  //const fileClear = modal.querySelector('.file-load__clear');
+
   const close = modal.querySelector('.modal__close');
   const overlay = modal.querySelector('.modal__overlay');
   const saveBtn = modal.querySelector('.modal__save');
-  const fileClear = modal.querySelector('.file-load__clear');
 
   const onCloseClick = function() {
-    if (fileInputBlock.classList.contains('loaded')) {
-      fileInputBlock.classList.remove('loaded');
+    fileInputBlock.forEach(function(inputBlock) {
+      const fileInput = inputBlock.querySelector('.input-file__input');
 
-      fileInput.value = '';
-      saveBtn.setAttribute('disabled', '');
+      if (inputBlock.classList.contains('loaded')) {
+        inputBlock.classList.remove('loaded');
 
-      if(!/safari/i.test(navigator.userAgent)){
-        fileInput.type = '';
-        fileInput.type = 'file';
+        fileInput.value = '';
+        saveBtn.setAttribute('disabled', '');
+
+        if(!/safari/i.test(navigator.userAgent)){
+          fileInput.type = '';
+          fileInput.type = 'file';
+        }
       }
+    })
+  }
+
+  const checkInputs = function() {
+    let filled = true;
+
+    fileInputBlock.forEach(function(inputBlock) {
+      const fileInput = inputBlock.querySelector('.input-file__input');
+
+      if (fileInput.value === '') {
+        filled = false;
+      }
+    });
+
+    if (filled && saveBtn.hasAttribute('disabled')) {
+      saveBtn.removeAttribute('disabled');
+    }
+
+    if (!filled && !saveBtn.hasAttribute('disabled')) {
+      saveBtn.setAttribute('disabled', '');
     }
   }
 
@@ -38,11 +63,11 @@
     }
   }
 
-  const onInputChange = function() {
-    if (fileInput.value !== '') {
-      saveBtn.removeAttribute('disabled');
-    }
-  }
+  // const onInputChange = function() {
+  //   if (fileInput.value !== '') {
+  //     saveBtn.removeAttribute('disabled');
+  //   }
+  // }
 
   const onFileClear = function() {
     if (!saveBtn.hasAttribute('disabled')) {
@@ -54,8 +79,14 @@
   //   new Modal(item, modal);
   // })
 
+  fileInputBlock.forEach(function(inputBlock) {
+    const fileInput = inputBlock.querySelector('.input-file__input');
+    const fileClear = inputBlock.querySelector('.file-load__clear');
+
+    fileInput.addEventListener('change', checkInputs);
+    fileClear.addEventListener('click', onFileClear);
+  })
+
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
-  fileInput.addEventListener('change', onInputChange);
-  fileClear.addEventListener('click', onFileClear);
 })();

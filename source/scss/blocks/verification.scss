@@ -1,3 +1,9 @@
 .verification__modal-content {
   margin-bottom: 28px;
 }
+
+.verification__modal-input-file {
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+}

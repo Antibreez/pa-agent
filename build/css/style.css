@@ -5560,14 +5560,14 @@ a {
   padding: 10px 16px 9px;
   border: 2px solid #2858FF;
   color: #1A1A1A;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .btn-secondary:hover, .btn-secondary:focus,
 .btn-secondary-arrow-v:hover,
 .btn-secondary-arrow-v:focus {
   color: #2858FF;
-  background-color: #fff;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -5581,7 +5581,7 @@ a {
 .btn-secondary:active,
 .btn-secondary-arrow-v:active {
   color: #2858FF;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .btn-secondary:active svg,
@@ -9661,14 +9661,38 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .delivery-or-pickup__installation-address-city, .delivery-or-pickup__installation-address-street {
   width: calc(50% - 7px);
+  margin-bottom: 14px;
 }
 
 .delivery-or-pickup__installation-address-house, .delivery-or-pickup__installation-address-entrance, .delivery-or-pickup__installation-address-apartment, .delivery-or-pickup__installation-address-floor, .delivery-or-pickup__installation-address-intercom {
   width: calc((100% - 56px) / 5);
 }
 
+.delivery-or-pickup__installation-company {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
 .delivery-or-pickup__installation-address-done {
   margin-top: 18px;
+}
+
+.delivery-or-pickup__cloud-desc {
+  max-width: 53%;
+}
+
+.delivery-or-pickup__login {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: auto;
+  margin-left: 40px;
+}
+
+.delivery-or-pickup__password {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: auto;
+  margin-left: 20px;
 }
 
 div.delivery-address {
@@ -10286,6 +10310,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .verification__modal-content {
   margin-bottom: 28px;
+}
+
+.verification__modal-input-file:not(:first-child) {
+  margin-top: 12px;
 }
 
 .process {

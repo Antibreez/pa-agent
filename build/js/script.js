@@ -865,9 +865,10 @@
   });
   var close = modal.querySelector('.modal__close');
   var overlay = modal.querySelector('.modal__overlay');
-  var submit = modal.querySelector('.modal__submit'); // const fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
-  // const fileInput = modal.querySelector('.input-file__input');
-
+  var submit = modal.querySelector('.modal__submit');
+  var fileInputBlock = modal.querySelector('.delivery-or-pickup__modal-input-file');
+  var fileInput = modal.querySelector('.input-file__input');
+  var fileClear = modal.querySelector('.file-load__clear');
   var dateInput = modal.querySelector('.delivery-or-pickup__modal-date');
   var timeInput = modal.querySelector('.delivery-or-pickup__modal-time');
   var confirmCheckbox = modal.querySelector('.checkbox__input'); // deliveryBtns.forEach(function(btn) {
@@ -875,15 +876,17 @@
   // });
 
   var onCloseClick = function onCloseClick() {
-    // if (fileInputBlock.classList.contains('loaded')) {
-    //   fileInputBlock.classList.remove('loaded');
-    //   fileInput.value = '';
-    //   submit.setAttribute('disabled', '');
-    //   if(!/safari/i.test(navigator.userAgent)){
-    //     fileInput.type = '';
-    //     fileInput.type = 'file';
-    //   }
-    // }
+    if (fileInputBlock.classList.contains('loaded')) {
+      fileInputBlock.classList.remove('loaded');
+      fileInput.value = '';
+      submit.setAttribute('disabled', '');
+
+      if (!/safari/i.test(navigator.userAgent)) {
+        fileInput.type = '';
+        fileInput.type = 'file';
+      }
+    }
+
     dateInput.value = '';
     timeInput.value = '';
     confirmCheckbox.checked = false;
@@ -897,10 +900,6 @@
   };
 
   var onFieldChange = function onFieldChange(e) {
-    console.log($date.datepicker('getDate'));
-    console.log(timeInput.value !== '');
-    console.log(confirmCheckbox.checked === true);
-
     if (isFormFilled() && submit.hasAttribute('disabled')) {
       submit.removeAttribute('disabled');
     } else if (!isFormFilled() && !submit.hasAttribute('disabled')) {
@@ -909,15 +908,22 @@
   };
 
   var isFormFilled = function isFormFilled() {
-    return $date.datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true; //&& fileInput.value !== ''
+    return $date.datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true && fileInput.value !== '';
+  };
+
+  var onFileClear = function onFileClear() {
+    if (!submit.hasAttribute('disabled')) {
+      submit.setAttribute('disabled', '');
+    }
   };
 
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
   dateInput.addEventListener('input', onFieldChange);
-  timeInput.addEventListener('input', onFieldChange); //fileInput.addEventListener('change', onFieldChange);
-
+  timeInput.addEventListener('input', onFieldChange);
+  fileInput.addEventListener('change', onFieldChange);
   confirmCheckbox.addEventListener('change', onFieldChange);
+  fileClear.addEventListener('click', onFileClear);
 })();
 
 (function () {
@@ -1361,23 +1367,46 @@
     return;
   }
 
-  var fileInputBlock = modal.querySelector('.verification__modal-input-file');
-  var fileInput = modal.querySelector('.input-file__input');
+  var fileInputBlock = modal.querySelectorAll('.verification__modal-input-file'); //const fileInput = modal.querySelector('.input-file__input');
+  //const fileClear = modal.querySelector('.file-load__clear');
+
   var close = modal.querySelector('.modal__close');
   var overlay = modal.querySelector('.modal__overlay');
   var saveBtn = modal.querySelector('.modal__save');
-  var fileClear = modal.querySelector('.file-load__clear');
 
   var onCloseClick = function onCloseClick() {
-    if (fileInputBlock.classList.contains('loaded')) {
-      fileInputBlock.classList.remove('loaded');
-      fileInput.value = '';
-      saveBtn.setAttribute('disabled', '');
+    fileInputBlock.forEach(function (inputBlock) {
+      var fileInput = inputBlock.querySelector('.input-file__input');
 
-      if (!/safari/i.test(navigator.userAgent)) {
-        fileInput.type = '';
-        fileInput.type = 'file';
+      if (inputBlock.classList.contains('loaded')) {
+        inputBlock.classList.remove('loaded');
+        fileInput.value = '';
+        saveBtn.setAttribute('disabled', '');
+
+        if (!/safari/i.test(navigator.userAgent)) {
+          fileInput.type = '';
+          fileInput.type = 'file';
+        }
       }
+    });
+  };
+
+  var checkInputs = function checkInputs() {
+    var filled = true;
+    fileInputBlock.forEach(function (inputBlock) {
+      var fileInput = inputBlock.querySelector('.input-file__input');
+
+      if (fileInput.value === '') {
+        filled = false;
+      }
+    });
+
+    if (filled && saveBtn.hasAttribute('disabled')) {
+      saveBtn.removeAttribute('disabled');
+    }
+
+    if (!filled && !saveBtn.hasAttribute('disabled')) {
+      saveBtn.setAttribute('disabled', '');
     }
   };
 
@@ -1385,13 +1414,12 @@
     if (e.target.classList.contains('modal__overlay')) {
       onCloseClick();
     }
-  };
+  }; // const onInputChange = function() {
+  //   if (fileInput.value !== '') {
+  //     saveBtn.removeAttribute('disabled');
+  //   }
+  // }
 
-  var onInputChange = function onInputChange() {
-    if (fileInput.value !== '') {
-      saveBtn.removeAttribute('disabled');
-    }
-  };
 
   var onFileClear = function onFileClear() {
     if (!saveBtn.hasAttribute('disabled')) {
@@ -1402,10 +1430,14 @@
   // })
 
 
+  fileInputBlock.forEach(function (inputBlock) {
+    var fileInput = inputBlock.querySelector('.input-file__input');
+    var fileClear = inputBlock.querySelector('.file-load__clear');
+    fileInput.addEventListener('change', checkInputs);
+    fileClear.addEventListener('click', onFileClear);
+  });
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
-  fileInput.addEventListener('change', onInputChange);
-  fileClear.addEventListener('click', onFileClear);
 })();
 
 (function () {
