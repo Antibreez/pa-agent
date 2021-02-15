@@ -6751,6 +6751,7 @@ input.search.js-inputed {
     height: 100%;
     margin: 0;
     overflow-y: auto;
+    padding-bottom: 0;
   }
   .modal__title {
     font-weight: 500;
@@ -7351,6 +7352,8 @@ div.input-file__file-load {
 }
 
 .file-load__pdf-logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 24px;
   height: 24px;
   margin-right: 20px;
@@ -7363,6 +7366,10 @@ div.input-file__file-load {
   line-height: 21px;
   margin: 0;
   color: #1A1A1A;
+}
+
+.file-load__info {
+  padding-right: 10px;
 }
 
 .file-load__size {
@@ -7392,6 +7399,8 @@ div.input-file__file-load {
   width: 24px;
   height: 24px;
   margin-left: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .file-load__link:hover, .file-load__clear:hover {
@@ -9353,6 +9362,8 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 .contract-info__title-check::after {
   content: "";
   display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 24px;
   height: 24px;
   background-image: url("../img/check.svg");
@@ -9384,6 +9395,8 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   height: auto;
   border: none;
   background-color: transparent;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 24px;
   height: 24px;
   margin-right: 14px;
@@ -9472,6 +9485,28 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   .contract-info__toggle-info {
     margin-bottom: 24px;
   }
+  .contract-info__title-btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contract-info__title-btn button {
+    margin-top: 14px;
+  }
+  .contract-info__block--paid,
+  .contract-info__block--delivered {
+    padding: 17px;
+    padding-bottom: 3px;
+  }
+  .contract-info__title-check {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .payment-waiting {
@@ -9532,6 +9567,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   width: 59%;
 }
 
+.payment-waiting__send-form .payment-waiting__confirm {
+  display: none;
+}
+
 .payment-waiting__send-form-wrapper {
   padding-left: 32px;
   border-left: 1px solid #D1D8E1;
@@ -9560,10 +9599,6 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 .payment-waiting__confirm {
   margin-top: 28px;
   width: 100%;
-}
-
-.payment-waiting__repeat {
-  display: none;
 }
 
 .payment-waiting__modal-body {
@@ -9597,23 +9632,6 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .payment-waiting__modal-transactions {
   width: 100%;
-}
-
-.payment-waiting__checkbox.sended
-+ .payment-waiting__checkbox.sended
-+ button {
-  display: none;
-}
-
-.payment-waiting__checkbox.sended
-+ button {
-  display: none;
-}
-
-.payment-waiting__checkbox.sended
-+ button
-+ button {
-  display: block;
 }
 
 @media (max-width: 1439px) {
@@ -9661,6 +9679,90 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   #payment-waiting__modal
 .payment-waiting__modal-body .transactions__title-block .transactions__title {
     margin-bottom: 14px;
+  }
+  #payment-info__modal
+.payment-waiting__modal-body {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: auto;
+  }
+  #payment-info__modal
+.payment-waiting__modal-body .modal__title,
+  #payment-info__modal
+.payment-waiting__modal-body .modal__content > *:not(.payment-waiting__modal-transactions) {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  #payment-info__modal
+.payment-waiting__modal-body .transactions__title-block,
+  #payment-info__modal
+.payment-waiting__modal-body .transactions__desc {
+    padding: 0 18px;
+  }
+  .payment-waiting__info-form,
+  .payment-waiting__send-form {
+    width: 100%;
+    padding: 0;
+  }
+  .payment-waiting__info-form {
+    padding-bottom: 28px;
+  }
+  .payment-waiting__info-form .payment-waiting__confirm {
+    display: none;
+  }
+  .payment-waiting__send-form {
+    border-top: 1px solid #d1d8e1;
+  }
+  .payment-waiting__send-form .payment-waiting__confirm {
+    display: block;
+  }
+  .payment-waiting__send-form + .payment-waiting__confirm {
+    display: none;
+  }
+  .payment-waiting__send-form-wrapper {
+    padding-left: 0;
+    padding-top: 28px;
+    border: none;
+  }
+  .payment-waiting__info-form .info-block__title {
+    padding-right: 40px;
+  }
+  .payment-waiting__wrapper {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 17px;
+  }
+  .payment-waiting__new-link {
+    margin-top: 0;
+  }
+  .payment-waiting__logo {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+  }
+  .payment-waiting__details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .payment-waiting__detail:not(:last-child) {
+    margin-bottom: 14px;
+  }
+  .payment-waiting__detail--link .info-block__desc {
+    word-wrap: break-word;
+  }
+  .payment-waiting__confirm {
+    margin: 14px 0 0;
+  }
+  .payment-waiting__confirm + button {
+    margin-top: 14px;
   }
 }
 
@@ -9744,6 +9846,23 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   }
   .passport-data__photo-title {
     margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 999px) {
+  .passport-data__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 17px;
+  }
+  .passport-data__column:nth-child(n) {
+    width: 100%;
+    padding: 0;
+  }
+  .passport-data__column:last-child {
+    padding-top: 7px;
   }
 }
 
@@ -10018,6 +10137,59 @@ div.registration-address {
   .delivery-or-pickup__password + form {
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 999px) {
+  .delivery-or-pickup__wrapper {
+    position: relative;
+    padding: 17px;
+  }
+  .delivery-or-pickup__details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .delivery-or-pickup__detail {
+    margin-bottom: 5px;
+  }
+  .delivery-or-pickup__title-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-right: 26px;
+    margin-bottom: 28px;
+  }
+  .delivery-or-pickup__change span {
+    position: absolute;
+    top: 17px;
+    right: 13px;
+  }
+  .delivery-or-pickup__change {
+    margin-top: 14px;
+  }
+  .delivery-or-pickup__confirm {
+    margin-top: 10px;
+  }
+  .delivery-or-pickup__payment-link {
+    margin-top: 5px;
+    padding: 12px;
+    margin-bottom: 14px;
+  }
+  .delivery-or-pickup__payment-link .info-block__desc {
+    word-break: break-word;
+    margin-bottom: 20px;
+  }
+  .delivery-or-pickup__payment-link form {
+    width: 100%;
+  }
+  .delivery-or-pickup__send {
+    width: 100%;
   }
 }
 

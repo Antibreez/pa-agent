@@ -86,3 +86,21 @@
     }
   }
 }
+
+@include mobile {
+  .passport-data {
+    &__wrapper {
+      flex-direction: column;
+      padding: 17px;
+    }
+
+    &__column:nth-child(n) {
+      width: 100%;
+      padding: 0;
+    }
+
+    &__column:last-child {
+      padding-top: 7px;
+    }
+  }
+}

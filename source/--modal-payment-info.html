@@ -20,21 +20,21 @@
   <main>
 
   <!--Модальное окно информации о платеже-->
-  <section id="payment-info__modal" class="modal">
+  <section id="payment-info__modal" class="modal js-show">
     <div class="modal__overlay">
 
         <div class="modal__body  payment-waiting__modal-body">
           <form>
-            <h1 class="modal__title">Роман Романов → ООО Даичи  |  01.01.2022</h1>
+            <h1 class="modal__title">Роман Романов → ООО&nbsp;Даичи  |  01.01.2022</h1>
             <div class="payment-waiting__modal-content  modal__content">
 
 
               <div class="payment-waiting__modal-transactions  transactions">
                 <p class="transactions__desc  info-block__subtitle">
-                  Оплата по договору DA2020-01 от 01.01.2022
+                  Оплата по договору DA2020-01 от&nbsp;01.01.2022
                 </p>
                 <div class="transactions__title-block">
-                  <h3 class="transactions__subtitle">Операций на сумму 16 998  ₽</h3>
+                  <h3 class="transactions__subtitle">Операций на сумму 16 998&nbsp;₽</h3>
                 </div>
 
                 <div class="transactions__table-block">
@@ -76,6 +76,83 @@
                       <td><span class="transactions__row-sum">12 999 ₽</span></td>
                     </tr>
                   </table>
+                </div>
+
+                <div class="transactions-mobile-block">
+                 <div class="transactions-mobile-block__slider  table-mobile  swiper-container">
+                    <div class="swiper-wrapper">
+
+                      <!--Мобильная карточка договора-->
+                      <div class="swiper-slide">
+                        <a class="transactions-mobile-block__link  table-mobile__item">
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Тип операции</p>
+                            <p class="table-mobile__text-main">Первый взнос</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Услуга</p>
+                            <p class="table-mobile__text-main">Облачный кондиционер</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Оборудование</p>
+                            <p class="table-mobile__text-main">Daichi A35AVQ1/A35FV1</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Договор</p>
+                            <p class="table-mobile__text-main">DA2021-01</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Отправитель</p>
+                            <p class="table-mobile__text-main">Роман Романов</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Получатель</p>
+                            <p class="table-mobile__text-main">ООО Даичи</p>
+                          </div>
+                          <div class="table-mobile__text-block">
+                            <p class="table-mobile__text-minor">Сумма</p>
+                            <p class="table-mobile__text-main  transactions__row-sum">12 999 ₽</p>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!--Мобильная карточка договора-->
+                      <div class="swiper-slide">
+                        <a class="transactions-mobile-block__link  table-mobile__item">
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Тип операции</p>
+                            <p class="table-mobile__text-main">Первый взнос</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Услуга</p>
+                            <p class="table-mobile__text-main">Облачный кондиционер</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Оборудование</p>
+                            <p class="table-mobile__text-main">Daichi A35AVQ1/A35FV1</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Договор</p>
+                            <p class="table-mobile__text-main">DA2021-01</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Отправитель</p>
+                            <p class="table-mobile__text-main">Роман Романов</p>
+                          </div>
+                          <div class="table-mobile__text-block-mb">
+                            <p class="table-mobile__text-minor">Получатель</p>
+                            <p class="table-mobile__text-main">ООО Даичи</p>
+                          </div>
+                          <div class="table-mobile__text-block">
+                            <p class="table-mobile__text-minor">Сумма</p>
+                            <p class="table-mobile__text-main  transactions__row-sum">12 999 ₽</p>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                    <div class="transactions-mobile-block__pagination swiper-pagination"></div>
+                 </div>
                 </div>
               </div>
 

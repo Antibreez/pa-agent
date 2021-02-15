@@ -44,6 +44,10 @@
 
   &__send-form {
     width: 59%;
+
+    & .payment-waiting__confirm {
+      display: none;
+    }
   }
 
   &__send-form-wrapper {
@@ -74,10 +78,6 @@
   &__confirm {
     margin-top: 28px;
     width: 100%;
-  }
-
-  &__repeat {
-    display: none;
   }
 
   &__modal-body {
@@ -112,22 +112,22 @@
   }
 }
 
-.payment-waiting__checkbox.sended
-+ .payment-waiting__checkbox.sended
-+ button {
-  display: none;
-}
+// .payment-waiting__checkbox.sended
+// + .payment-waiting__checkbox.sended
+// + button {
+//   display: none;
+// }
 
-.payment-waiting__checkbox.sended
-+ button {
-  display: none;
-}
+// .payment-waiting__checkbox.sended
+// + button {
+//   display: none;
+// }
 
-.payment-waiting__checkbox.sended
-+ button
-+ button {
-  display: block;
-}
+// .payment-waiting__checkbox.sended
+// + button
+// + button {
+//   display: block;
+// }
 
 // .payment-waiting__checkbox.sended
 // + .payment-waiting__checkbox.sended {
@@ -177,6 +177,99 @@
           margin-bottom: 14px;
         }
       }
+    }
+  }
+
+  #payment-info__modal
+  .payment-waiting {
+    &__modal-body {
+      padding-left: 0;
+      padding-right: 0;
+      min-width: auto;
+
+      & .modal__title,
+      & .modal__content > *:not(.payment-waiting__modal-transactions) {
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+
+      & .transactions__title-block,
+      & .transactions__desc {
+        padding: 0 18px;
+      }
+    }
+  }
+
+  .payment-waiting__info-form,
+  .payment-waiting__send-form {
+    width: 100%;
+    padding: 0;
+  }
+
+  .payment-waiting__info-form {
+    padding-bottom: 28px;
+
+    & .payment-waiting__confirm {
+      display: none;
+    }
+  }
+
+  .payment-waiting__send-form {
+    border-top: 1px solid #d1d8e1;
+
+    & .payment-waiting__confirm {
+      display: block;
+    }
+
+    & + .payment-waiting__confirm {
+      display: none;
+    }
+  }
+
+  .payment-waiting__send-form-wrapper {
+    padding-left: 0;
+    padding-top: 28px;
+    border: none;
+  }
+
+  .payment-waiting__info-form .info-block__title {
+    padding-right: 40px;
+  }
+
+  .payment-waiting__wrapper {
+    position: relative;
+    flex-direction: column;
+    padding: 17px;
+  }
+
+  .payment-waiting__new-link {
+    margin-top: 0;
+  }
+
+  .payment-waiting__logo {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+  }
+
+  .payment-waiting__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .payment-waiting__detail:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  .payment-waiting__detail--link .info-block__desc {
+    word-wrap: break-word;
+  }
+
+  .payment-waiting__confirm {
+    margin: 14px 0 0;
+
+    & + button {
+      margin-top: 14px;
     }
   }
 }
