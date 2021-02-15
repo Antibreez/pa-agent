@@ -39,6 +39,10 @@
   }
 }
 
+.transactions-mobile-block {
+  display: none;
+}
+
 .transactions__table {
   border-collapse: collapse;
   width: 100%;
@@ -238,4 +242,24 @@
       }
     }
   }
+}
+
+@include mobile {
+  .transactions__table-block {
+    display: none;
+  }
+
+  .transactions-mobile-block {
+    display: block;
+  }
+
+  a.transactions-mobile-block__link {
+    width: calc(100% - 36px);
+
+    &.checked .transactions__row-sum {
+      color: $primary;
+    }
+  }
+
+
 }

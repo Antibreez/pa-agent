@@ -41,7 +41,28 @@
   }
 }
 
+@include tablet {
+  .nav__list:not(.nav__list--footer) {
+    background-color: #fff;
+    padding: 28px 40px;
+  }
+}
+
 @include mobile {
+  .nav__list:not(.nav__list--footer) {
+    padding: 0;
+    flex-direction: column;
+
+    & .nav__item {
+      margin: 0;
+      padding-right: 50px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
   .nav__list--footer {
     flex-direction: column;
   }

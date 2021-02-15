@@ -1000,6 +1000,38 @@
 })();
 
 (function () {
+  var menuBtn = document.querySelector('.header__nav-btn');
+
+  if (!menuBtn) {
+    return;
+  }
+
+  var closeBtn = document.querySelector('.header__close-btn');
+  var nav = document.querySelector('.header__nav');
+
+  var checkIfTablet = function checkIfTablet() {
+    return window.matchMedia('(max-width: 1439px)').matches;
+  };
+
+  var isTablet = checkIfTablet();
+
+  var onBtnClick = function onBtnClick() {
+    if (checkIfTablet()) {
+      menuBtn.classList.toggle('js-opened');
+      nav.classList.toggle('js-show');
+    }
+  };
+
+  var onCloseClick = function onCloseClick() {
+    nav.classList.remove('js-show');
+    menuBtn.classList.toggle('js-opened');
+  };
+
+  menuBtn.addEventListener('click', onBtnClick);
+  closeBtn.addEventListener('click', onCloseClick);
+})();
+
+(function () {
   var contracts = document.querySelector('.mutual-calcs-payment-mobile');
 
   if (!contracts) {
@@ -1128,6 +1160,10 @@
     return modal.querySelectorAll('.transactions__check input');
   };
 
+  var getAllMobileCheckbox = function getAllMobileCheckbox() {
+    return modal.querySelectorAll('.transactions__mobile-check input');
+  };
+
   var onAllChange = function onAllChange() {
     getAllCheckbox().forEach(function (item) {
       var row = item.parentNode.parentNode.parentNode.parentNode;
@@ -1154,6 +1190,10 @@
       item.checked = false;
       item.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
     });
+    getAllMobileCheckbox().forEach(function (item) {
+      item.checked = false;
+      item.parentNode.parentNode.parentNode.classList.remove('checked');
+    });
     $('#payment-date').datepicker('setDate', '');
     senderInput.value = '';
     recipientInput.value = '';
@@ -1173,6 +1213,14 @@
     } else {
       e.target.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
     }
+  };
+
+  var onMobileCheckboxChange = function onMobileCheckboxChange(e) {
+    if (e.target.checked) {
+      e.target.parentNode.parentNode.parentNode.classList.add('checked');
+    } else {
+      e.target.parentNode.parentNode.parentNode.classList.remove('checked');
+    }
   }; // paymentConfirmBtns.forEach(function(btn) {
   //   new Modal(btn, modal);
   // });
@@ -1183,6 +1231,9 @@
   mainCheckbox.addEventListener('change', onAllChange);
   getAllCheckbox().forEach(function (item) {
     item.addEventListener('change', onCheckboxChange);
+  });
+  getAllMobileCheckbox().forEach(function (item) {
+    item.addEventListener('change', onMobileCheckboxChange);
   });
 })();
 
@@ -1307,6 +1358,22 @@
   $('.support__docs-btn').click(function () {
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
+  });
+})();
+
+(function () {
+  var transactions = document.querySelector('.transactions-mobile-block');
+
+  if (!transactions) {
+    return;
+  }
+
+  var slider = new Swiper('.transactions-mobile-block__slider', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.transactions-mobile-block__pagination',
+      dynamicBullets: true
+    }
   });
 })();
 

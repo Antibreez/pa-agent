@@ -23,6 +23,10 @@
     return modal.querySelectorAll('.transactions__check input');
   };
 
+  const getAllMobileCheckbox = function() {
+    return modal.querySelectorAll('.transactions__mobile-check input');
+  }
+
   const onAllChange = function() {
     getAllCheckbox().forEach(function(item) {
       const row = item.parentNode.parentNode.parentNode.parentNode;
@@ -42,10 +46,17 @@
 
   const onCloseClick = function() {
     mainCheckbox.checked = false;
+
     getAllCheckbox().forEach(function(item) {
       item.checked = false;
       item.parentNode.parentNode.parentNode.parentNode.classList.remove('checked');
     });
+
+    getAllMobileCheckbox().forEach(function(item) {
+      item.checked = false;
+      item.parentNode.parentNode.parentNode.classList.remove('checked');
+    });
+
     $('#payment-date').datepicker('setDate', '');
     senderInput.value = '';
     recipientInput.value = '';
@@ -67,6 +78,14 @@
     }
   }
 
+  const onMobileCheckboxChange = function(e) {
+    if (e.target.checked) {
+      e.target.parentNode.parentNode.parentNode.classList.add('checked');
+    } else {
+      e.target.parentNode.parentNode.parentNode.classList.remove('checked');
+    }
+  }
+
   // paymentConfirmBtns.forEach(function(btn) {
   //   new Modal(btn, modal);
   // });
@@ -76,5 +95,9 @@
   mainCheckbox.addEventListener('change', onAllChange);
   getAllCheckbox().forEach(function(item) {
     item.addEventListener('change', onCheckboxChange);
+  })
+
+  getAllMobileCheckbox().forEach(function(item) {
+    item.addEventListener('change', onMobileCheckboxChange);
   })
 })();

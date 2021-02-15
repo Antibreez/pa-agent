@@ -153,7 +153,8 @@
     }
 
     &__content {
-      margin-bottom: 30px;
+      //margin-bottom: 30px;
+      padding-bottom: 110px;
     }
 
     &__content > div {
@@ -175,6 +176,7 @@
       transform: translateY(0);
       background-color: #fff;
       transition: transform 0.2s ease-in;
+      z-index: 100;
     }
 
     &__btn-item {
