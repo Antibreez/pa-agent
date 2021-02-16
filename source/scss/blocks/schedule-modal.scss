@@ -66,16 +66,17 @@
   &__table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 
     & col:first-child {
       width: 65%;
     }
 
-    & col:nth-of-child(2) {
+    & col:nth-child(2) {
       width: 16%;
     }
 
-    & col:nth-of-child(3) {
+    & col:nth-child(3) {
       width: 19%;
     }
 
@@ -84,6 +85,7 @@
     }
 
     & th {
+      @include overflow-3lines;
       @include b12;
       color: $text-minor;
       padding-bottom: 27px;
@@ -94,6 +96,7 @@
     }
 
     & td {
+      @include overflow-3lines;
       @include b14;
       color: $text-main;
       &:not(:last-child) {
@@ -102,6 +105,65 @@
 
       &:last-child {
         text-align: right;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .schedule {
+    &__table-block {
+      padding: 23px 17px;
+    }
+
+    &__table {
+      & col:first-child {
+        width: 41%;
+      }
+
+      & col:nth-child(2) {
+        width: 18%;
+      }
+
+      & col:nth-child(3) {
+        width: 41%;
+      }
+
+      & th {
+        &:first-child {
+          padding-right: 24px;
+        }
+
+        &:nth-child(2) {
+          text-align: center;
+        }
+      }
+
+      & td {
+        &:first-child {
+          padding-right: 14px;
+        }
+
+        &:nth-child(2) {
+          padding-right: 0;
+          text-align: center;
+        }
+      }
+
+      & th,
+      & td {
+        &:last-child {
+          padding-left: 14px;
+        }
+      }
+    }
+
+    &__modal-label {
+      display: block;
+      padding-right: 0;
+
+      &:first-child {
+        margin-bottom: 24px;
       }
     }
   }

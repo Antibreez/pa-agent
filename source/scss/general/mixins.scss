@@ -150,3 +150,16 @@
   line-clamp: 3;
   box-orient: vertical;
 }
+
+
+@mixin overflow-10lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  //display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  line-clamp: 10;
+  box-orient: vertical;
+}

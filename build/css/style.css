@@ -6305,6 +6305,14 @@ input.search.js-inputed {
   font-size: 14px;
   line-height: 21px;
   color: #94A0B1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.breadcrumbs__item:not(:last-child) {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .breadcrumbs__item span {
@@ -8198,6 +8206,12 @@ div.input-file__file-load {
           justify-content: space-between;
 }
 
+@media (max-width: 999px) {
+  .info-block__progressbar-block {
+    margin-bottom: 12px;
+  }
+}
+
 .light-block {
   padding: 28px;
   border: 1px solid #F4F4F8;
@@ -9507,6 +9521,64 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .contract-info__btn:nth-child(n) {
+    margin-right: 0;
+  }
+  .contract-info__btn.contract-info__edit,
+  .contract-info__btn.contract-info__verification {
+    margin-top: 12px;
+  }
+  .contract-info__blocks-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 16px;
+  }
+  .contract-info__block {
+    width: 100%;
+    padding: 17px 17px 5px;
+  }
+  .contract-info__block:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .contract-info__title-block.contract-info__title-block--subscription {
+    margin-bottom: 40px;
+  }
+  .contract-info__title-block--subscription
+.contract-info__title {
+    max-width: 100%;
+  }
+  .contract-info__title-block--subscription
+.contract-info__title span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    line-clamp: 10;
+    box-orient: vertical;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .contract-info__title-block--subscription
+.contract-info__title span:nth-child(2) {
+    margin-top: 0;
+  }
+  .contract-info__title-block--subscription
+.contract-info__serial-btn {
+    margin-top: 12px;
+  }
+  .contract-info__toggle-info-link:nth-child(n) {
+    display: block;
+    margin: 0;
+  }
+  .contract-info__toggle-info-link:first-child {
+    margin-bottom: 24px;
+  }
 }
 
 .payment-waiting {
@@ -9756,7 +9828,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     margin-bottom: 14px;
   }
   .payment-waiting__detail--link .info-block__desc {
-    word-wrap: break-word;
+    word-break: break-word;
   }
   .payment-waiting__confirm {
     margin: 14px 0 0;
@@ -10190,6 +10262,36 @@ div.registration-address {
   }
   .delivery-or-pickup__send {
     width: 100%;
+  }
+  .delivery-or-pickup__installation-choose-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .delivery-or-pickup__installation-type:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .delivery-or-pickup__installation-cost-wrapper > div {
+    width: 100%;
+    margin: 0 0 28px;
+  }
+  .delivery-or-pickup__installation-cost-wrapper > div:last-child {
+    margin-bottom: 0;
+  }
+  .delivery-or-pickup__address-manual > div {
+    width: 100%;
+    margin: 0 0 28px;
+  }
+  .delivery-or-pickup__address-manual > div:last-child {
+    margin-bottom: 0;
+  }
+  .delivery-or-pickup__installation-desc {
+    margin-bottom: 28px;
+  }
+  .delivery-or-pickup__installation-confirm {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -11513,17 +11615,18 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .schedule__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .schedule__table col:first-child {
   width: 65%;
 }
 
-.schedule__table col:nth-of-child(2) {
+.schedule__table col:nth-child(2) {
   width: 16%;
 }
 
-.schedule__table col:nth-of-child(3) {
+.schedule__table col:nth-child(3) {
   width: 19%;
 }
 
@@ -11532,6 +11635,13 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 }
 
 .schedule__table th {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -11544,6 +11654,13 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 }
 
 .schedule__table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -11556,6 +11673,45 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .schedule__table td:last-child {
   text-align: right;
+}
+
+@media (max-width: 999px) {
+  .schedule__table-block {
+    padding: 23px 17px;
+  }
+  .schedule__table col:first-child {
+    width: 41%;
+  }
+  .schedule__table col:nth-child(2) {
+    width: 18%;
+  }
+  .schedule__table col:nth-child(3) {
+    width: 41%;
+  }
+  .schedule__table th:first-child {
+    padding-right: 24px;
+  }
+  .schedule__table th:nth-child(2) {
+    text-align: center;
+  }
+  .schedule__table td:first-child {
+    padding-right: 14px;
+  }
+  .schedule__table td:nth-child(2) {
+    padding-right: 0;
+    text-align: center;
+  }
+  .schedule__table th:last-child,
+  .schedule__table td:last-child {
+    padding-left: 14px;
+  }
+  .schedule__modal-label {
+    display: block;
+    padding-right: 0;
+  }
+  .schedule__modal-label:first-child {
+    margin-bottom: 24px;
+  }
 }
 
 .subscription-all__title-block {
@@ -11762,6 +11918,24 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 @media (max-width: 1439px) {
   .subscription-page__action-item {
     padding: 19px 16px 19px 80px;
+  }
+}
+
+@media (max-width: 999px) {
+  .subscription-page__actions {
+    margin-bottom: 40px;
+  }
+  .subscription-page__actions-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .subscription-page__action-item {
+    width: 100%;
+  }
+  .subscription-page__action-item:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 

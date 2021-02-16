@@ -133,3 +133,23 @@
     }
   }
 }
+
+@include mobile {
+  .subscription-page {
+    &__actions {
+      margin-bottom: 40px;
+    }
+
+    &__actions-container {
+      flex-direction: column;
+    }
+
+    &__action-item {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

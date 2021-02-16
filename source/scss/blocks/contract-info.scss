@@ -232,4 +232,66 @@
   .contract-info__title-check {
     align-items: flex-start;
   }
+
+  .contract-info__btn:nth-child(n) {
+    margin-right: 0;
+  }
+
+  .contract-info__btn.contract-info__edit,
+  .contract-info__btn.contract-info__verification {
+    margin-top: 12px;
+  }
+
+  .contract-info__blocks-wrapper {
+    flex-direction: column;
+    padding-top: 16px;
+  }
+
+  .contract-info__block {
+    width: 100%;
+    padding: 17px 17px 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .contract-info__title-block.contract-info__title-block--subscription {
+    margin-bottom: 40px;
+  }
+
+  .contract-info__title-block--subscription
+  .contract-info__title {
+    max-width: 100%;
+  }
+
+  .contract-info__title-block--subscription
+  .contract-info__title span {
+    &:first-child {
+      @include overflow-10lines;
+      @include h24;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  .contract-info__title-block--subscription
+  .contract-info__serial-btn {
+    margin-top: 12px;
+  }
+
+  .contract-info__toggle-info-link {
+    &:nth-child(n) {
+      display: block;
+      margin: 0;
+    }
+
+    &:first-child {
+      margin-bottom: 24px;
+    }
+  }
 }

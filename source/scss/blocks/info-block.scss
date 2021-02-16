@@ -51,3 +51,11 @@
     justify-content: space-between;
   }
 }
+
+@include mobile {
+  .info-block {
+    &__progressbar-block {
+      margin-bottom: 12px;
+    }
+  }
+}

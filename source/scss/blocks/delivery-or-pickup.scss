@@ -321,5 +321,46 @@ div.registration-address {
   .delivery-or-pickup__send {
     width: 100%;
   }
+
+  .delivery-or-pickup__installation-choose-block {
+    flex-direction: column;
+  }
+
+  .delivery-or-pickup__installation-type {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .delivery-or-pickup__installation-cost-wrapper {
+    & > div {
+      width: 100%;
+      margin: 0 0 28px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .delivery-or-pickup__address-manual {
+    & > div {
+      width: 100%;
+      margin: 0 0 28px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .delivery-or-pickup__installation-desc {
+    margin-bottom: 28px;
+  }
+
+  .delivery-or-pickup__installation-confirm {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
