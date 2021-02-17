@@ -1,6 +1,6 @@
 .subscription-page {
   &__actions {
-    margin-bottom: 24px;
+    margin-bottom: 4px;
   }
 
   &__actions-container {
@@ -27,9 +27,7 @@
       border-color: $stroke;
     }
 
-    &:first-child,
-    &:nth-child(2),
-    &:nth-child(3) {
+    &:nth-child(n) {
       margin-bottom: 20px;
     }
 

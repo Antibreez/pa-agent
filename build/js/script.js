@@ -78,6 +78,9 @@
 
       fileInput.files = files;
       onFileChange();
+      window.onVerificationFileDrop && window.onVerificationFileDrop();
+      window.onDeliveryFileDrop && window.onDeliveryFileDrop();
+      window.onInstallationFileDrop && window.onInstallationFileDrop();
     }
 
     ;
@@ -161,6 +164,14 @@
     };
   }
 
+  function onResize() {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  }
+
+  ;
+  window.addEventListener('resize', debounce(onResize));
+
   function Modal(trigger, modal) {
     this.trigger = trigger;
     this.modal = modal;
@@ -168,8 +179,8 @@
     this.closeBtn = this.modal.querySelector('.modal__close');
     this.onOverlayClick = this.onOverlayClick.bind(this);
     this.onCloseClick = this.onCloseClick.bind(this);
-    this.onTriggerClick = this.onTriggerClick.bind(this);
-    this.onResize = this.onResize.bind(this);
+    this.onTriggerClick = this.onTriggerClick.bind(this); //this.onResize = this.onResize.bind(this);
+
     this.addEventListeners();
   }
 
@@ -195,18 +206,16 @@
 
   Modal.prototype.onTriggerClick = function () {
     this.open();
-  };
+  }; // Modal.prototype.onResize = function() {
+  //     let vh = window.innerHeight * 0.01;
+  //     document.documentElement.style.setProperty('--vh', `${vh}px`);
+  // };
 
-  Modal.prototype.onResize = function () {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-  };
 
   Modal.prototype.addEventListeners = function () {
     this.overlay.addEventListener('click', this.onOverlayClick);
     this.closeBtn.addEventListener('click', this.onCloseClick);
     this.trigger.addEventListener('click', this.onTriggerClick);
-    window.addEventListener('resize', debounce(this.onResize));
   };
 
   window.Modal = Modal;
@@ -647,11 +656,15 @@
     return $date.datepicker('getDate') && timeInput.value !== '' && confirmCheckbox.checked === true && fileInput.value !== '';
   };
 
+  window.onDeliveryFileDrop = function () {
+    onFieldChange();
+  };
+
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
   dateInput.addEventListener('input', onFieldChange);
   timeInput.addEventListener('input', onFieldChange);
-  fileInput.addEventListener('change', onFieldChange);
+  fileInput.addEventListener('change', window.onDeliveryFileDrop);
   confirmCheckbox.addEventListener('change', onFieldChange);
   fileClear.addEventListener('click', onFileClear);
 })();
@@ -917,11 +930,15 @@
     }
   };
 
+  window.onInstallationFileDrop = function () {
+    onFieldChange();
+  };
+
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
   dateInput.addEventListener('input', onFieldChange);
   timeInput.addEventListener('input', onFieldChange);
-  fileInput.addEventListener('change', onFieldChange);
+  fileInput.addEventListener('change', window.onInstallationFileDrop);
   confirmCheckbox.addEventListener('change', onFieldChange);
   fileClear.addEventListener('click', onFileClear);
 })();
@@ -1497,10 +1514,14 @@
   // })
 
 
+  window.onVerificationFileDrop = function () {
+    checkInputs();
+  };
+
   fileInputBlock.forEach(function (inputBlock) {
     var fileInput = inputBlock.querySelector('.input-file__input');
     var fileClear = inputBlock.querySelector('.file-load__clear');
-    fileInput.addEventListener('change', checkInputs);
+    fileInput.addEventListener('change', window.onVerificationFileDrop);
     fileClear.addEventListener('click', onFileClear);
   });
   close.addEventListener('click', onCloseClick);

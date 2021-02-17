@@ -12,6 +12,13 @@
     };
   }
 
+  function onResize() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
+
+  window.addEventListener('resize', debounce(onResize));
+
   function Modal (trigger, modal) {
     this.trigger = trigger;
     this.modal = modal;
@@ -21,7 +28,7 @@
     this.onOverlayClick = this.onOverlayClick.bind(this);
     this.onCloseClick = this.onCloseClick.bind(this);
     this.onTriggerClick = this.onTriggerClick.bind(this);
-    this.onResize = this.onResize.bind(this);
+    //this.onResize = this.onResize.bind(this);
 
     this.addEventListeners();
   }
@@ -50,16 +57,15 @@
     this.open();
   }
 
-  Modal.prototype.onResize = function() {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-  };
+  // Modal.prototype.onResize = function() {
+  //     let vh = window.innerHeight * 0.01;
+  //     document.documentElement.style.setProperty('--vh', `${vh}px`);
+  // };
 
   Modal.prototype.addEventListeners = function() {
     this.overlay.addEventListener('click', this.onOverlayClick);
     this.closeBtn.addEventListener('click', this.onCloseClick);
     this.trigger.addEventListener('click', this.onTriggerClick);
-    window.addEventListener('resize', debounce(this.onResize));
   }
 
   window.Modal = Modal;

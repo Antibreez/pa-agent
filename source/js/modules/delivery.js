@@ -70,11 +70,15 @@
       && fileInput.value !== ''
   }
 
+  window.onDeliveryFileDrop = function () {
+    onFieldChange();
+  }
+
   close.addEventListener('click', onCloseClick);
   overlay.addEventListener('click', onOverlayClick);
   dateInput.addEventListener('input', onFieldChange);
   timeInput.addEventListener('input', onFieldChange);
-  fileInput.addEventListener('change', onFieldChange);
+  fileInput.addEventListener('change', window.onDeliveryFileDrop);
   confirmCheckbox.addEventListener('change', onFieldChange);
   fileClear.addEventListener('click', onFileClear);
 })();

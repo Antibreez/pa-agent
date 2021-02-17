@@ -52,6 +52,9 @@
 
       fileInput.files = files;
       onFileChange();
+      window.onVerificationFileDrop && window.onVerificationFileDrop();
+      window.onDeliveryFileDrop && window.onDeliveryFileDrop();
+      window.onInstallationFileDrop && window.onInstallationFileDrop();
     };
 
     const onFileChange = () => {

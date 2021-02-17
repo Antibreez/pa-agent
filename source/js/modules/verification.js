@@ -79,11 +79,16 @@
   //   new Modal(item, modal);
   // })
 
+  window.onVerificationFileDrop = function() {
+    checkInputs();
+  };
+
   fileInputBlock.forEach(function(inputBlock) {
     const fileInput = inputBlock.querySelector('.input-file__input');
     const fileClear = inputBlock.querySelector('.file-load__clear');
 
-    fileInput.addEventListener('change', checkInputs);
+
+    fileInput.addEventListener('change', window.onVerificationFileDrop);
     fileClear.addEventListener('click', onFileClear);
   })
 

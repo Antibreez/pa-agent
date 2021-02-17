@@ -6920,7 +6920,6 @@ input.search.js-inputed {
 }
 
 .input-text[placeholder] {
-  color: #94A0B1;
   opacity: 1;
   text-overflow: ellipsis;
 }
@@ -8158,6 +8157,10 @@ div.input-file__file-load {
   color: #1A1A1A;
 }
 
+.info-block__title span {
+  word-break: break-word;
+}
+
 .info-block__subtitle {
   font-weight: 400;
   font-size: 14px;
@@ -8173,6 +8176,7 @@ div.input-file__file-load {
   margin: 0;
   color: #1A1A1A;
   margin-bottom: 10px;
+  word-break: break-word;
 }
 
 .info-block__progressbar-block {
@@ -9516,6 +9520,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     padding: 17px;
     padding-bottom: 3px;
   }
+  .contract-info__block--paid
+.payment-waiting__confirm-btn {
+    width: 100%;
+  }
   .contract-info__title-check {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -9709,6 +9717,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 @media (max-width: 1439px) {
   .payment-waiting__info-form {
     width: 62%;
+    padding-right: 32px;
   }
   .payment-waiting__send-form {
     width: 38%;
@@ -9936,6 +9945,11 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   .passport-data__column:last-child {
     padding-top: 7px;
   }
+  .passport-data__fill {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .delivery-or-pickup {
@@ -10025,6 +10039,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .delivery-or-pickup__detail:not(:last-child) {
   margin-right: 15px;
+}
+
+.delivery-or-pickup__detail p {
+  word-break: break-word;
 }
 
 .delivery-or-pickup__installation-choose-block {
@@ -10292,6 +10310,9 @@ div.registration-address {
   .delivery-or-pickup__installation-confirm {
     padding-left: 5px;
     padding-right: 5px;
+  }
+  .delivery-or-pickup__fill {
+    width: 100%;
   }
 }
 
@@ -10716,6 +10737,12 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .documents__item:not(:last-child) {
   margin-bottom: 14px;
+}
+
+@media (max-width: 999px) {
+  .documents {
+    padding-top: 28px;
+  }
 }
 
 .transactions__title-block {
@@ -11769,7 +11796,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 }
 
 .subscription-page__actions {
-  margin-bottom: 24px;
+  margin-bottom: 4px;
 }
 
 .subscription-page__actions-container {
@@ -11812,7 +11839,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   border-color: #D1D8E1;
 }
 
-.subscription-page__action-item:first-child, .subscription-page__action-item:nth-child(2), .subscription-page__action-item:nth-child(3) {
+.subscription-page__action-item:nth-child(n) {
   margin-bottom: 20px;
 }
 

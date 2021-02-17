@@ -9,6 +9,10 @@
     margin: 0;
     margin-bottom: 14px;
     color: $text-main;
+
+    & span {
+      word-break: break-word;
+    }
   }
 
   &__subtitle {
@@ -22,6 +26,7 @@
     margin: 0;
     color: $text-main;
     margin-bottom: 10px;
+    word-break: break-word;
   }
 
   &__progressbar-block {

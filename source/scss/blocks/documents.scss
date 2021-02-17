@@ -14,3 +14,9 @@
     margin-bottom: 14px;
   }
 }
+
+@include mobile {
+  .documents {
+    padding-top: 28px;
+  }
+}
