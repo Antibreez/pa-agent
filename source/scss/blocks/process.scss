@@ -30,6 +30,12 @@
   &__stage-name {
     margin: 0;
     color: $text-minor;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:not(.process__stage-name--active):hover {
+      color: $primary;
+    }
   }
 
   &__stage-name--active {

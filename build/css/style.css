@@ -11032,6 +11032,13 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .process__stage-name {
   margin: 0;
   color: #94A0B1;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.process__stage-name:not(.process__stage-name--active):hover {
+  color: #2858FF;
 }
 
 .process__stage-name--active {
