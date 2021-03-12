@@ -1,0 +1,24 @@
+#passport-data__modal {
+  & .modal__body {
+    max-width: 850px;
+    min-width: auto;
+  }
+
+  & .modal__content {
+    & > * {
+      margin-top: 14px;
+    }
+
+    & .input-file {
+      margin-top: 24px;
+    }
+  }
+}
+
+@include mobile {
+  #passport-data__modal {
+    & .modal__body {
+      max-width: none;
+    }
+  }
+}

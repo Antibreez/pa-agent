@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+
+  <style>
+    .modal {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+
+  <main>
+
+
+
+    <!--Модальное окно паспортные данные -->
+    <section id="delivery-address__modal" class="modal js-show">
+      <div class="modal__overlay">
+
+          <div class="modal__body  payment-waiting__modal-body">
+            <form>
+              <h1 class="modal__title">Способ доставки</h1>
+              <div class="payment-waiting__modal-content  modal__content">
+                <div class="contract-creation__delivery-device">
+                  <div class="contract-creation__delivery-type-wrapper">
+                    <label class="contract-creation__delivery-type-delivery  radio-1">
+                      <input type="radio" name="delivery-type-1" class="radio-1__input  visually-hidden" value="delivery-type-delivery" checked="">
+                      <div class="radio-1__label"></div>
+                      <p class="radio-1__name">Нужна доставка</p>
+                      <p class="radio-1__desc">Укажите адрес доставки</p>
+                    </label>
+                    <label class="contract-creation__delivery-type-pickup  radio-1">
+                      <input type="radio" name="delivery-type-1" class="radio-1__input  visually-hidden" value="delivery-type-pickup">
+                      <div class="radio-1__label"></div>
+                      <p class="radio-1__name">Самовывоз</p>
+                      <p class="radio-1__desc">Выберите пункт самовывоза</p>
+                    </label>
+                  </div>
+
+                  <div class="contract-creation__delivery-address-wrapper">
+                    <div class="contract-creation__delivery-address-city  input-block">
+                      <input class="input-text" type="text" name="city-1">
+                      <label class="input-label">Город</label>
+                    </div>
+                    <div class="contract-creation__delivery-address-street  input-block">
+                      <input class="input-text" type="text" name="street-1">
+                      <label class="input-label">Улица</label>
+                    </div>
+                    <div class="contract-creation__delivery-address-house  input-block">
+                      <input class="input-text" type="text" name="house-1">
+                      <label class="input-label">Дом / Корпус*</label>
+                    </div>
+                    <div class="contract-creation__delivery-address-entrance  input-block">
+                      <input class="input-text" type="text" name="entrance-1">
+                      <label class="input-label">Подъезд</label>
+                    </div>
+                    <div class="contract-creation__delivery-address-apartment  input-block">
+                      <input class="input-text" type="text" name="apartment-1">
+                      <label class="input-label">Кв / Офис*</label>
+                    </div>
+                    <div class="contract-creation__delivery-address-floor  input-block">
+                      <input class="input-text" type="text" name="floor-1">
+                      <label class="input-label">Этаж</label>
+                    </div>
+                    <div class="contract-creation__delivery-address-intercom  input-block">
+                      <input class="input-text" type="text" name="intercom-1">
+                      <label class="input-label">Домофон</label>
+                    </div>
+                    <div class="contract-creation__delivery-address-date  date-block">
+                      <label for="delivery-form-date" class="date-label">Дата</label>
+                      <input id="delivery-form-date" class="date-input" name="delivery-date-1">
+                    </div>
+                    <div class="contract-creation__delivery-address-time  select-block">
+                      <select name="delivery-time-1" class="select">
+                        <option value="" disabled="" selected="" hidden=""></option>
+                        <option value="09:00 - 22:00">09:00 - 22:00</option>
+                        <option value="15:00 - 22:00">15:00 - 22:00</option>
+                      </select>
+                      <label class="select-label">Время</label>
+                    </div>
+                    <div class="contract-creation__delivery-address-cost  input-block">
+                      <input class="input-text" type="text" name="delivery-cost-1" placeholder="Укажите стоимость доставки">
+                      <label class="input-label">Стоимость доставки</label>
+                    </div>
+                  </div>
+
+                  <div class="contract-creation__pickup-form">
+                    <div class="contract-creation__pickup-address-wrapper">
+                      <div class="contract-creation__pickup-form-item  radio">
+                        <label class="radio__label">
+                          <input class="radio__input visually-hidden" type="radio" name="pickup-address-1" value="address-1">
+                          <div></div>
+                          <p class="radio__text">
+                            ул. Челябинская д.23 к.1  | Ближ. метро Первомайская  |  с 12:00 до 17:00
+                          </p>
+                        </label>
+                      </div>
+
+                      <div class="contract-creation__pickup-form-item  radio">
+                        <label class="radio__label">
+                          <input class="radio__input visually-hidden" type="radio" name="pickup-address-1" value="address-1">
+                          <div></div>
+                          <p class="radio__text">
+                            ул. Челябинская д.23 к.1  | Ближ. метро Первомайская  |  с 12:00 до 17:00
+                          </p>
+                        </label>
+                      </div>
+
+                      <div class="contract-creation__pickup-form-item  radio">
+                        <label class="radio__label">
+                          <input class="radio__input visually-hidden" type="radio" name="pickup-address-1" value="address-1">
+                          <div></div>
+                          <p class="radio__text">
+                            ул. Челябинская д.23 к.1  | Ближ. метро Первомайская  |  с 12:00 до 17:00
+                          </p>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="contract-creation__pickup-address-date  date-block">
+                      <label for="pickup-form-date" class="date-label">Дата</label>
+                      <input id="pickup-form-date" class="date-input" name="pickup-date-1">
+                    </div>
+                    <div class="contract-creation__pickup-address-time  select-block">
+                      <select name="pickup-time-1" class="select">
+                        <option value="" disabled="" selected="" hidden=""></option>
+                        <option value="09:00 - 22:00">09:00 - 22:00</option>
+                        <option value="15:00 - 22:00">15:00 - 22:00</option>
+                      </select>
+                      <label class="select-label">Время</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="modal__btn-block">
+                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                <button type="submit" class="modal__btn-item  btn-primary">Подтвердить</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

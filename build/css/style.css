@@ -14056,3 +14056,51 @@ button.clients-block__page-number:not(.active):hover, button.clients-block__page
 .table-mobile .contract-services__status-container > div:not(:last-child) {
   margin-bottom: 24px;
 }
+
+#passport-data__modal .modal__body {
+  max-width: 850px;
+  min-width: auto;
+}
+
+#passport-data__modal .modal__content > * {
+  margin-top: 14px;
+}
+
+#passport-data__modal .modal__content .input-file {
+  margin-top: 24px;
+}
+
+@media (max-width: 999px) {
+  #passport-data__modal .modal__body {
+    max-width: none;
+  }
+}
+
+#delivery-address__modal .modal__body {
+  max-width: 850px;
+  min-width: auto;
+}
+
+#delivery-address__modal .modal__content > * {
+  margin-top: 14px;
+}
+
+#delivery-address__modal .modal__content .input-file {
+  margin-top: 24px;
+}
+
+#delivery-address__modal .contract-creation__delivery-device {
+  margin-top: 0;
+}
+
+@media (max-width: 999px) {
+  #delivery-address__modal .modal__body {
+    max-width: none;
+  }
+  #delivery-address__modal .contract-creation__delivery-address-house,
+  #delivery-address__modal .contract-creation__delivery-address-entrance,
+  #delivery-address__modal .contract-creation__delivery-address-apartment,
+  #delivery-address__modal .contract-creation__delivery-address-floor {
+    width: calc((100% - 14px) / 2);
+  }
+}
