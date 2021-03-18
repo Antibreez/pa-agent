@@ -10556,6 +10556,14 @@ div.contract-services__status-container > * {
   background-image: url("../img/time.svg");
 }
 
+.contract-services__status-waiting.done {
+  color: #444;
+}
+
+.contract-services__status-waiting.done::before {
+  background-image: url("../img/check.svg");
+}
+
 .contract-services__status-default {
   margin: 0;
   margin-right: 24px;

@@ -210,6 +210,14 @@ div.contract-services__status-container > * {
     background-repeat: no-repeat;
     background-image: url("../img/time.svg");
   }
+
+  &.done {
+    color: #444;
+  }
+
+  &.done::before {
+    background-image: url("../img/check.svg");
+  }
 }
 
 .contract-services__status-default {
