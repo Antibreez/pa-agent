@@ -32,13 +32,31 @@
               <h1 class="modal__title">Укажите данные платежа</h1>
               <div class="payment-waiting__modal-content  modal__content">
 
-                <div class="payment-waiting__modal-sender  input-block">
+                <!-- <div class="payment-waiting__modal-sender  input-block">
                   <input class="input-text" type="text">
                   <label class="input-label">Отправитель</label>
+                </div> -->
+                <div class="payment-waiting__modal-sender  select-block">
+                  <select name="delivery-time-1" class="select">
+                    <option value="" disabled selected hidden></option>
+                    <option value="09:00 - 22:00">Роман Романов</option>
+                    <option value="15:00 - 22:00">Роман Романов</option>
+                    <option value="15:00 - 22:00">Роман Романов</option>
+                  </select>
+                  <label class="select-label">Отправитель</label>
                 </div>
-                <div class="payment-waiting__modal-recipient  input-block">
+                <!-- <div class="payment-waiting__modal-recipient  input-block">
                   <input class="input-text" type="text">
                   <label class="input-label">Получатель</label>
+                </div> -->
+                <div class="payment-waiting__modal-recipient  select-block">
+                  <select name="delivery-time-1" class="select">
+                    <option value="" disabled selected hidden></option>
+                    <option value="09:00 - 22:00">ООО Даичи</option>
+                    <option value="15:00 - 22:00">ООО Даичи</option>
+                    <option value="15:00 - 22:00">ООО Даичи</option>
+                  </select>
+                  <label class="select-label">Получатель</label>
                 </div>
                 <div class="payment-waiting__modal-sum  input-block">
                   <input class="input-text" type="text">

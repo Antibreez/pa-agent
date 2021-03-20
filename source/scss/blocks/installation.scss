@@ -1,0 +1,497 @@
+.installation {
+  &__title-wrapper {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    @include h32;
+    color: $text-main;
+  }
+
+  &__account-promo {
+    margin-bottom: 40px;
+  }
+
+  .last-contracts__promo {
+    margin: 0;
+  }
+
+  .last-contracts__promo-right {
+    background-image: url("../img/installation-promo-bg.jpg");
+  }
+
+  &__accounts-checkbox {
+    margin-bottom: 40px;
+  }
+}
+
+.installation-table-block {
+  margin-bottom: 40px;
+
+  &__block {
+    padding: 34px 14px;
+    border-radius: 5px;
+    background-color: $bg;
+  }
+
+  &__title {
+    @include section-title;
+    margin-bottom: 24px;
+    color: $text-main;
+  }
+
+  &__desc {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    @include link-reset;
+    display: block;
+    padding: 20px 0;
+
+    &.inactive {
+      td p,
+      div p {
+        color: $text-minor;
+      }
+    }
+    // border-top: 1px solid $stroke;
+
+    // &:hover {
+    //   cursor: pointer;
+    //   background-color: #fff;
+    //   border-top-color: transparent;
+    //   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+    // }
+  }
+
+  &__header + tr .installation-table-block__link {
+    border-top: none;
+  }
+
+  & col {
+    &:first-child {
+      width: 21%;
+    }
+
+    &:nth-child(2) {
+      width: 20%;
+    }
+
+    &:nth-child(3) {
+      width: 20%;
+    }
+
+    &:nth-child(4) {
+      width: calc(39% - 234px);
+    }
+
+    &:nth-child(5) {
+      width: 234px;
+      min-width: 234px;
+    }
+  }
+
+  &__delivery-confirm {
+    margin-top: 0;
+    margin-right: 24px;
+  }
+}
+
+.installation-table-block__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  & th {
+    @include b12;
+    margin: 0;
+    padding-bottom: 6px;
+    text-align: left;
+    color: $text-minor;
+    padding-right: 14px;
+
+    &:first-child {
+      padding-left: 14px;
+    }
+  }
+}
+
+.installation-table-block__table
+tr:not(:first-of-type):hover
++ tr .installation-table-block__link {
+  border-top-color: transparent;
+}
+
+.installation-table-block__inner-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.installation-table-block__data {
+  @include b14;
+
+  & td {
+    vertical-align: middle;
+    text-align: left;
+    padding-right: 14px;
+
+    &:first-child {
+      padding-left: 14px;
+    }
+
+    &:first-child p {
+      font-weight: 500;
+    }
+
+    &:last-child p {
+      color: $text-minor;
+    }
+  }
+
+  & p {
+    margin: 0;
+    color: $text-minor;
+
+    &:first-child {
+      color: $text-main;
+    }
+
+    &.alert {
+      color: #FC4242;
+    }
+
+    @include overflow-3lines;
+  }
+}
+
+.installation__account-actions {
+  object {
+    display: flex;
+    align-items: center;
+  }
+
+  .installation__account-copy {
+    margin-right: 24px;
+  }
+
+  .installation__account-print,
+  .installation__account-download {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .installation__account-print {
+    background-image: url("../img/print.svg");
+    margin-right: 24px;
+  }
+
+  .installation__account-download {
+    background-image: url("../img/download.svg");
+  }
+}
+
+.installation__account-inactive {
+  @include b12;
+  width: 100%;
+  padding: 3px 20px;
+  background-color: #B4C1D1;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+p.installation-table-block__data-price {
+  color: $text-minor;
+
+  &.confirmed {
+    color: #40DA90;
+  }
+}
+
+p.installation-table-block__data-status {
+  @include b12;
+  padding: 3px 8px;
+  min-width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
+  &.confirmed {
+    background-color: #DDF9EC;
+  }
+
+  &.pending {
+    background-color: $text-minor;
+    color: #fff;
+  }
+}
+
+.installation-table-block__status {
+  @include b14;
+  color: $text-minor;
+
+  & td {
+    width: 100%;
+  }
+
+  & p {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.installation-table-block__status-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 23px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.installation-table-block__status-type {
+  @include b12;
+  color: #444444;
+  margin: 0;
+  margin-right: 24px;
+  padding: 3px 15px;
+  border-radius: 5px;
+
+  &.pending {
+    background-color: #FEEDAE;
+  }
+
+  &.active {
+    background-color: #DDF9EC;
+  }
+
+  &.expired {
+    background-color: #94A0B1;
+    color: #fff;
+  }
+
+  &.freezed {
+    background-color: #DCF5FF;
+  }
+
+  &.blocked {
+    background-color: #FFD6D6;
+  }
+}
+
+.installation-table-block__status-waiting {
+  margin: 0;
+  margin-right: 24px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-image: url("../img/time.svg");
+  }
+}
+
+.installation-table-block__status-default {
+  margin: 0;
+  margin-right: 24px;
+}
+
+.installation-table-block__delivery-type {
+  @include link-reset;
+  color: $primary;
+  transition: all 0.3s;
+  margin-right: 24px;
+
+  &:hover,
+  &:focus {
+    color: $primary-hover;
+  }
+}
+
+.installation-table-block__status-detail {
+  margin: 0;
+  margin-left: auto;
+}
+
+.installation-table-block__pagination-block {
+  margin-top: 24px;
+
+  & button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+button.installation-table-block__show-more {
+  width: 100%;
+  padding: 32px 30px 31px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $text-main;
+  border: 2px solid $stroke;
+  border-radius: 5px;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    color: $primary;
+    border-color: $primary;
+    cursor: pointer;
+  }
+}
+
+.installation-table-block__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.installation-table-block__page-number {
+  @include b14;
+  color: $text-main;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  margin-right: 4px;
+
+  &.active {
+    background-color: $primary;
+    color: #fff;
+  }
+
+  &:not(.active):hover,
+  &:not(.active):focus {
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+.installation-table-block__prev,
+.installation-table-block__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:disabled):hover {
+    cursor: pointer;
+  }
+}
+
+.installation-table-block__prev svg,
+.installation-table-block__next svg {
+  fill: $text-main;
+  transition: all 0.3s;
+
+  &:hover {
+    fill: $primary;
+  }
+}
+
+.installation-table-block__prev:disabled svg,
+.installation-table-block__next:disabled svg {
+  fill: $stroke;
+}
+
+.installation-table-block__prev:not(:disabled):hover svg,
+.installation-table-block__prev:not(:disabled):focus svg,
+.installation-table-block__next:not(:disabled):hover svg,
+.installation-table-block__next:not(:disabled):focus svg {
+  fill: $primary;
+}
+
+.installation-table-block__prev {
+  margin-right: 20px;
+  transform: rotate(180deg)
+}
+
+.installation-table-block__next {
+  margin-left: 16px;
+}
+
+.installation-accounts-mobile {
+  display: none;
+}
+
+@include tablet {
+  .installation-table-block {
+    & col {
+      &:first-child {
+        width: 18%;
+      }
+
+      &:nth-child(2) {
+        width: 28%;
+      }
+
+      &:nth-child(3) {
+        width: 16%;
+      }
+
+      &:nth-child(4) {
+        width: calc(38% - 234px);
+      }
+
+      &:nth-child(5) {
+        width: 234px;
+        min-width: 234px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .installation {
+    &__title-wrapper {
+      margin-bottom: 24px;
+    }
+
+    .last-contracts__promo {
+      width: auto;
+    }
+
+    &__account-promo {
+      margin-bottom: 24px;
+    }
+
+    &__accounts-checkbox {
+      margin-bottom: 24px;
+    }
+  }
+
+  .installation-accounts-mobile {
+    display: block;
+  }
+
+  .installation-table-block {
+    display: none;
+  }
+
+  .installation__accounts-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+
+    & > *:not(.installation-accounts-mobile) {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+
+  .installation-accounts-name {
+    @include h18;
+    margin: 0;
+    color: $text-main;
+  }
+}
+

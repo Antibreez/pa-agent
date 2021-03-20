@@ -316,6 +316,58 @@
 })();
 
 (function () {
+  var cancellationBtn = document.querySelectorAll('.account-creation__new');
+
+  if (!cancellationBtn[0]) {
+    return;
+  }
+
+  var modal = document.getElementById('account-creation');
+
+  if (!modal) {
+    return;
+  }
+
+  cancellationBtn.forEach(function (item) {
+    new Modal(item, modal);
+  });
+})();
+
+(function () {
+  // const verificationBtn = document.querySelectorAll('.contract-info__verification');
+  // if (!verificationBtn[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('account-creation');
+
+  if (!modal) {
+    return;
+  }
+
+  var input = modal.querySelector('.account-creation__input .input-text');
+  var btn = modal.querySelector('.modal__save');
+
+  var onInput = function onInput(e) {
+    var value = e.target.value;
+
+    if (value.split(' ').join('') !== '' && value.length > 0 && btn.hasAttribute('disabled')) {
+      btn.removeAttribute('disabled');
+    }
+
+    if (value.split(' ').join('') === '' || value.length === 0) {
+      if (!btn.hasAttribute('disabled')) {
+        btn.setAttribute('disabled', '');
+      }
+    }
+  }; // verificationBtn.forEach(function(item) {
+  //   new Modal(item, modal);
+  // })
+
+
+  input.addEventListener('input', onInput);
+})();
+
+(function () {
   var contracts = document.querySelector('.agents__users-block-mobile');
 
   if (!contracts) {
@@ -729,6 +781,22 @@
   $('.filters__btn').click(function () {
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
+  });
+})();
+
+(function () {
+  var contracts = document.querySelector('.installation-accounts-mobile');
+
+  if (!contracts) {
+    return;
+  }
+
+  var slider = new Swiper('.installation-accounts-mobile__slider', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.installation-accounts-mobile__pagination',
+      dynamicBullets: true
+    }
   });
 })();
 

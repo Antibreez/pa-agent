@@ -1,0 +1,184 @@
+.main__account-template {
+  background-color: $text-minor;
+  padding: 75px 20px;
+  min-width: 635px;
+}
+
+.account-template {
+  display: flex;
+  flex-direction: column;
+  width: 595px;
+  height: 842px;
+  padding: 40px;
+  margin: 0 auto;
+  background-color: #fff;
+  background-image: url("../img/account-template-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+
+  &__header-icon {
+    flex-shrink: 0;
+    margin-right: 25px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__header-title {
+    margin: 0;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $text-main;
+  }
+
+  &__user-data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__login-data-item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__login-data-title {
+    margin: 0 0 10px;
+    font-size: 12px;
+    line-height: 12px;
+    color: $text-main;
+  }
+
+  &__login-data-name {
+    margin: 0;
+    font-size: 16px;
+    line-height: 17px;
+    color: $text-main;
+  }
+
+  &__app-block {
+    width: 260px;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    color: $text-main;
+  }
+
+  &__app-desc {
+    margin: 16px 0 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: $text-main;
+  }
+
+  &__app-icon {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  &__qr {
+    display: inline-block;
+    width: 76px;
+    height: 74px;
+  }
+
+  &__stages-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__stages-item {
+    position: relative;
+    padding: 0 0 0 50px;
+    font-size: 14px;
+    line-height: 15px;
+    color: $text-main;
+
+    span {
+      display: flex;
+      align-items: center;
+      max-width: 370px;
+      min-height: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      line-height: 17px;
+      color: #fff;
+      font-weight: 500;
+      border-radius: 50%;
+      background-color: #5EA9FF;
+    }
+
+    &:first-child::before {
+      content: "1";
+    }
+
+    &:nth-child(2)::before {
+      content: "2";
+    }
+
+    &:nth-child(3)::before {
+      content: "3";
+    }
+
+    &:nth-child(4)::before {
+      content: "4";
+    }
+
+    &:nth-child(5)::before {
+      content: "5";
+    }
+
+    &:nth-child(6)::before {
+      content: "6";
+    }
+
+    &:nth-child(7)::before {
+      content: "7";
+    }
+
+    &:nth-child(8)::before {
+      content: "8";
+    }
+
+    &:nth-child(9)::before {
+      content: "9";
+    }
+
+    &:nth-child(10)::before {
+      content: "10";
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+}
