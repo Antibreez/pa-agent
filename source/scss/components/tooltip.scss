@@ -1,0 +1,43 @@
+.tooltip {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  display: block;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  width: 188px;
+  transform: translate(-50%, calc(-100% - 11px));
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0s ease 0.3s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    width: 17px;
+    height: 11px;
+    background-image: url("../img/tail.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, 11px);
+  }
+}
+
+.tooltip-trigger {
+  position: relative;
+
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+}

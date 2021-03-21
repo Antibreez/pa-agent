@@ -174,6 +174,8 @@
 <path d="M21.09 6.75L12 12" stroke="#94A0B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M17.77 8.67L20.76 9.47" stroke="#94A0B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M17.77 8.66999L18.57 5.67999" stroke="#94A0B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="tail" viewBox="0 0 17 10">
+<path d="M6.68102 8.84266L0.25 0H16.75L9.88107 8.88921C9.06564 9.94446 7.46541 9.92119 6.68102 8.84266Z" fill="black" fill-opacity="0.8"/>
 </symbol><symbol id="time" viewBox="0 0 24 24">
 <circle cx="12" cy="12" r="8.25" stroke="#94A0B1" stroke-width="1.5"/>
 <path d="M12 8V12.5L15 15.5" stroke="#94A0B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
