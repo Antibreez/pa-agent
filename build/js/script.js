@@ -21,7 +21,9 @@
 })();
 
 (function () {
-  $('.date-input').datepicker();
+  $('.date-input').datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
 })();
 
 (function () {
@@ -749,6 +751,7 @@
     showOtherMonths: true,
     selectOtherMonths: true,
     closeText: "Готово",
+    dateFormat: 'dd.mm.yy',
     beforeShow: function beforeShow(input, inst) {
       inst.dpDiv.css('transform', 'translateX(-24px)');
       inst.dpDiv.addClass('calendar-range');

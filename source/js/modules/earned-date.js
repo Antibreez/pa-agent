@@ -33,6 +33,7 @@
     showOtherMonths: true,
     selectOtherMonths: true,
     closeText : "Готово",
+    dateFormat: 'dd.mm.yy',
 
     beforeShow: function(input, inst) {
       inst.dpDiv.css('transform', 'translateX(-24px)');
