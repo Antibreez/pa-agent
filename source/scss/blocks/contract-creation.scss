@@ -17,6 +17,11 @@
     flex-grow: 1;
     max-width: 24%;
     min-width: 24%;
+
+    @media(min-width: 1000px) {
+      position: sticky;
+      top: 104px;
+    }
   }
 
   &__to-start-page {

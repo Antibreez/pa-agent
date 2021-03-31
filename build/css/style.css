@@ -5483,7 +5483,7 @@ a {
 }
 
 .wrapper {
-  max-width: 1920px;
+  max-width: 1600px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
@@ -11140,6 +11140,13 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
           flex-grow: 1;
   max-width: 24%;
   min-width: 24%;
+}
+
+@media (min-width: 1000px) {
+  .contract-creation__payment {
+    position: sticky;
+    top: 104px;
+  }
 }
 
 .contract-creation__to-start-page {
