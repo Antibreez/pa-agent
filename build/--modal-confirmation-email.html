@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+
+  <style>
+    .modal {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+
+  <main>
+
+    <!--Модальное окно подтверждения почты-->
+    <section id="confirmation-email" class="modal js-show">
+      <div class="modal__overlay">
+
+          <div class="modal__body">
+            <form>
+              <h1 class="modal__title">Подтвердите новый Email</h1>
+              <p class="modal__desc">
+                На ваш новый почтовый адрес <span>newemail@daichi.ru</span> должно прийти письмо с подтверждением смены адреса электронной почты.<br><br>
+
+                На старый почтовый адрес <span>vanyafromsyzran@daichi.ru</span> придет письмо с возможностью отката изменений.
+              </p>
+              <div class="modal__btn-block">
+                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Закрыть</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

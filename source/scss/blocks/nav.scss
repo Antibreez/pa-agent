@@ -30,6 +30,12 @@
       color: $primary;
     }
   }
+
+  &__link--enterance {
+    color: $text-main;
+    padding-left: 15px;
+    border-left: 1px solid #D1D8E1;
+  }
 }
 
 .nav__list--footer .nav__link {

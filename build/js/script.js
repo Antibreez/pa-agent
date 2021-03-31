@@ -412,6 +412,106 @@
 })();
 
 (function () {
+  var changeButton = document.querySelectorAll('.user-settings__change-email');
+
+  if (!changeButton[0]) {
+    return;
+  }
+
+  var modal = document.getElementById('change-email');
+
+  if (!modal) {
+    return;
+  }
+
+  changeButton.forEach(function (item) {
+    new Modal(item, modal);
+  });
+})();
+
+(function () {
+  // const verificationBtn = document.querySelectorAll('.contract-info__verification');
+  // if (!verificationBtn[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('change-email');
+
+  if (!modal) {
+    return;
+  }
+
+  var input = modal.querySelector('.change-email__input .input-text');
+  var btn = modal.querySelector('.modal__save');
+
+  var onInput = function onInput(e) {
+    if (e.target.validity.valid) {
+      btn.removeAttribute('disabled');
+    }
+
+    if (!e.target.validity.valid) {
+      if (!btn.hasAttribute('disabled')) {
+        btn.setAttribute('disabled', '');
+      }
+    }
+  }; // verificationBtn.forEach(function(item) {
+  //   new Modal(item, modal);
+  // })
+
+
+  input.addEventListener('input', onInput);
+})();
+
+(function () {
+  var changeButton = document.querySelectorAll('.user-settings__change-phone');
+
+  if (!changeButton[0]) {
+    return;
+  }
+
+  var modal = document.getElementById('change-phone');
+
+  if (!modal) {
+    return;
+  }
+
+  changeButton.forEach(function (item) {
+    new Modal(item, modal);
+  });
+})();
+
+(function () {
+  // const verificationBtn = document.querySelectorAll('.contract-info__verification');
+  // if (!verificationBtn[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('change-phone');
+
+  if (!modal) {
+    return;
+  }
+
+  var input = modal.querySelector('.change-phone__input .input-text');
+  var btn = modal.querySelector('.modal__save');
+
+  var onInput = function onInput(e) {
+    if (e.target.value.indexOf('_') === -1) {
+      btn.removeAttribute('disabled');
+    }
+
+    if (e.target.value.indexOf('_') !== -1) {
+      if (!btn.hasAttribute('disabled')) {
+        btn.setAttribute('disabled', '');
+      }
+    }
+  }; // verificationBtn.forEach(function(item) {
+  //   new Modal(item, modal);
+  // })
+
+
+  input.addEventListener('input', onInput);
+})();
+
+(function () {
   var radios = document.querySelectorAll('.contract-creation__client-type  input');
 
   if (!radios[0]) {
@@ -449,6 +549,38 @@
       dynamicBullets: true
     }
   });
+})();
+
+(function () {
+  // const verificationBtn = document.querySelectorAll('.contract-info__verification');
+  // if (!verificationBtn[0]) {
+  //   return;
+  // }
+  var modal = document.getElementById('confirmation-code');
+
+  if (!modal) {
+    return;
+  }
+
+  var input = modal.querySelector('.confirmation-code__input .input-text');
+  var btn = modal.querySelector('.modal__save');
+
+  var onInput = function onInput(e) {
+    if (e.target.value.length === 6) {
+      btn.removeAttribute('disabled');
+    }
+
+    if (e.target.value.length < 6) {
+      if (!btn.hasAttribute('disabled')) {
+        btn.setAttribute('disabled', '');
+      }
+    }
+  }; // verificationBtn.forEach(function(item) {
+  //   new Modal(item, modal);
+  // })
+
+
+  input.addEventListener('input', onInput);
 })();
 
 (function () {
@@ -1152,6 +1284,24 @@
 })();
 
 (function () {
+  var pass = document.querySelectorAll('.input-password');
+
+  if (!pass[0]) {
+    return;
+  }
+
+  $(document).on('click', '.input-icon--show-password', function () {
+    $(this).toggleClass('active');
+
+    if ($(this).hasClass('active')) {
+      $(this).next().attr('type', 'text');
+    } else {
+      $(this).next().attr('type', 'password');
+    }
+  });
+})();
+
+(function () {
   var paymentConfirmBtns = document.querySelectorAll('.payment-waiting__confirm-btn');
 
   if (!paymentConfirmBtns[0]) {
@@ -1461,6 +1611,21 @@
     pagination: {
       el: '.transactions-mobile-block__pagination',
       dynamicBullets: true
+    }
+  });
+})();
+
+(function () {
+  $('.header__user-btn').on('click', function (e) {
+    if ($(this).is(e.target)) {
+      $(this).toggleClass('active');
+    }
+  });
+  $(document).on('mouseup', function (e) {
+    var block = $('.header__user-btn');
+
+    if (!block.is(e.target) && block.has(e.target).length === 0) {
+      block.removeClass('active');
     }
   });
 })();

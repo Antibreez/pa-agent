@@ -1,0 +1,61 @@
+.user-settings {
+  &__title {
+    margin: 0;
+    margin-bottom: 45px;
+    color: $text-main;
+  }
+
+  &__subtitle {
+    @include h20;
+    margin: 0 0 24px;
+    color: $text-main;
+  }
+
+  &__data-container {
+    .user-settings__data-name {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .input-block {
+      margin-bottom: 24px;
+      width: 32%;
+    }
+
+    .input-label {
+      color: $text-minor;
+    }
+
+    .input-text {
+      background-color: $bg;
+      border: none;
+      color: $text-main;
+    }
+  }
+
+  &__change-data {
+    @include btn-reset;
+    order: 4;
+    display: inline-block;
+    width: auto;
+    margin-top: 9px;
+    align-self: flex-start;
+    color: $primary;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $primary-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+#confirmation-code,
+#confirmation-email,
+#phone-success {
+  .modal__desc {
+    span {
+      color: $text-main;
+    }
+  }
+}

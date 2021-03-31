@@ -30,6 +30,10 @@
   order: 2;
   transition: all 0.3s;
 
+  &.js-wrong {
+    border: 1px solid #FC4242;
+  }
+
   &:hover,
   &:focus,
   &.js-inputed {
@@ -71,6 +75,18 @@
   }
 }
 
+.input-wrapper {
+  position: relative;
+  order: 2;
+  width: 100%;
+
+  .input-text {
+    width: 100%;
+  }
+}
+
+
+
 .input-note {
   @include b12;
   display: none;
@@ -79,9 +95,22 @@
   order: 3;
 }
 
-.input-text.js-wrong + label + .input-note {
+.input-desc-note {
+  @include b12;
+  margin-top: 9px;
+  color: $text-minor;
+  order: 4;
+}
+
+.input-text.js-wrong + label + .input-note,
+.input-text.js-wrong + label + .input-desc-note,
+.input-wrapper.js-wrong + label + .input-note {
   display: block;
   color: #FC4242;
+}
+
+.input-wrapper.js-wrong .input-text {
+  border: 1px solid #FC4242;
 }
 
 .input-text:disabled {
@@ -96,4 +125,32 @@
 
 .input-money {
   text-align: right;
+}
+
+.input-password {
+  padding-right: 50px;
+}
+
+.input-icon {
+  @include btn-reset;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+
+  &--show-password {
+    background-image: url("../img/eye.svg");
+
+    &.active {
+      background-image: url("../img/no-eye.svg");
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }

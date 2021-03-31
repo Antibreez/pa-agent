@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+
+  <style>
+    .modal {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+
+  <main>
+
+    <!--Модальное окно изменения телефона-->
+    <section id="change-phone" class="modal js-show">
+      <div class="modal__overlay">
+
+          <div class="modal__body">
+            <form>
+              <h1 class="modal__title">Укажите номер телефона</h1>
+              <p class="modal__desc">Укажите номер, на него должен прийти СМС-код с подтверждением.</p>
+              <div class="change-phone__input  input-block">
+                <input class="input-text input-phone" type="text" name="new-phone" placeholder="+7 (000) 000-00-00" required>
+                <label class="input-label">Номер телефона</label>
+              </div>
+              <div class="modal__btn-block">
+                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                <button type="submit" class="modal__save  modal__btn-item  btn-primary btn__confirmation-code" disabled>Продолжить</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

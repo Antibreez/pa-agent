@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container  wrapper">
+      <a href="#" class="header__logo">
+        <img src="img/daichi-logo.svg" alt="Daichi">
+      </a>
+      <nav class="header__nav  nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__link--enterance">Личный кабинет агента</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="enterance-page">
+    <section class="enterance">
+      <form>
+        <h1 class="enterance__title">Введите код</h1>
+        <p class="enterance__desc">
+          Мы отправили код подтверждения на номер<br> +7 (000) 000-00-00
+          <a href="#" class="enterance__link">Изменить</a>
+        </p>
+
+        <div class="input-block">
+          <input class="input-text js-wrong" type="password" placeholder="" maxlength="6">
+          <label class="input-label">Код подтверждения</label>
+          <span class="input-desc-note">Неверный код. Попробуйте еще раз</span>
+          <span class="input-desc-note">Получить новый код можно через <span>00:34</span></span>
+        </div>
+        <button class="enterance__get-code  btn-primary" disabled>Войти</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer  footer--short">
+      <div class="footer__bottom">
+        <div class="footer__bottom-container  wrapper">
+          <p class="footer__copyright">
+            © Daichi 2020. Все права защищены.
+          </p>
+          <a href="#" class="footer__policy">
+            Политика об обработке и защите персональных данных
+          </a>
+          <p class="footer__address">
+            г.Москва, Огородный проезд, дом 20, строение 3
+          </p>
+          <div class="footer__social-block">
+            <a href="#" class="footer__social">
+              <svg width="8" height="18" viewBox="0 0 8 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.69659 0.000244141H6.74274C4.0912 0.000244141 1.93349 2.20225 1.93349 4.90958V6.98031H0.304304C0.136136 6.98031 0 7.12058 0 7.29232V9.77486C0 9.9466 0.136136 10.0851 0.304304 10.0851H1.93349V17.6882C1.93349 17.86 2.06963 18.0002 2.23779 18.0002H4.66867C4.83684 18.0002 4.97297 17.86 4.97297 17.6882V10.0851H7.39139C7.55956 10.0851 7.6957 9.9466 7.6957 9.77486V7.29232C7.6957 7.12058 7.55956 6.98031 7.39139 6.98031H4.97297V4.90958C4.97297 3.91423 5.76666 3.1041 6.74185 3.1041H7.69659C7.86386 3.1041 8 2.96383 8 2.79299V0.30955C8 0.138713 7.86386 0.000244141 7.69659 0.000244141Z"/>
+                </svg>
+            </a>
+            <a href="#" class="footer__social">
+              <svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2204 1.28787C18.4985 0.373299 17.1656 0.000244141 14.6201 0.000244141H5.37972C2.77595 0.000244141 1.42045 0.397384 0.701225 1.37108C0 2.32045 0 3.71926 0 5.65527V9.3453C0 13.0959 0.832 15.0002 5.37972 15.0002H14.6201C16.8276 15.0002 18.0508 14.671 18.8422 13.8639C19.6537 13.0362 20 11.6849 20 9.3453V5.65527C20 3.61359 19.9457 2.20652 19.2204 1.28787ZM12.84 8.00971L8.64408 10.3468C8.55028 10.399 8.44768 10.4249 8.34523 10.4249C8.22923 10.4249 8.11347 10.3916 8.01095 10.3255C7.81795 10.2009 7.70007 9.97788 7.70007 9.73738V5.07826C7.70007 4.83818 7.8176 4.61542 8.01025 4.49071C8.20298 4.36596 8.44265 4.35744 8.64258 4.46814L12.8386 6.79013C13.0521 6.90826 13.1861 7.14312 13.1865 7.39937C13.1867 7.65581 13.0532 7.89102 12.84 8.00971Z"/>
+                </svg>
+            </a>
+            <a href="#" class="footer__social">
+              <svg width="19" height="11" viewBox="0 0 19 11" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1739 8.57922C17.7604 8.08347 17.2898 7.63628 16.8356 7.20559C16.6736 7.05256 16.5062 6.89495 16.3451 6.7355C15.8828 6.28373 15.8665 6.11146 16.232 5.59921C16.4854 5.24458 16.7542 4.88903 17.0148 4.5454C17.25 4.23383 17.4934 3.91311 17.7269 3.58963L17.7749 3.52274C18.2219 2.90328 18.6833 2.26457 18.9286 1.49208C18.9928 1.28956 19.0598 0.989914 18.9068 0.739748C18.753 0.488665 18.4562 0.41169 18.2463 0.377785C18.1422 0.358541 18.0391 0.355792 17.9432 0.355792L15.0204 0.35396H14.996C14.5535 0.35396 14.2558 0.56289 14.0857 0.991747C13.9219 1.40136 13.7436 1.83846 13.5391 2.25266C13.1328 3.07922 12.6162 4.03315 11.8687 4.82763L11.838 4.86062C11.7493 4.95593 11.6498 5.06131 11.5765 5.06131C11.5656 5.06131 11.5529 5.06131 11.5394 5.05673C11.3846 4.99716 11.2806 4.61962 11.2851 4.44734C11.2851 4.44551 11.2851 4.44276 11.2851 4.4391L11.2833 1.05498C11.2833 1.0449 11.2824 1.03207 11.2806 1.02107C11.2064 0.470337 11.0417 0.129451 10.4191 0.00574235C10.4028 0.00299326 10.3856 0.000244141 10.3694 0.000244141H7.32898C6.83401 0.000244141 6.56074 0.20276 6.30466 0.504243C6.23589 0.585799 6.09111 0.753493 6.1626 0.956925C6.23499 1.16402 6.47025 1.20709 6.54717 1.22175C6.92722 1.29415 7.14167 1.52782 7.2023 1.93468C7.30817 2.64211 7.32174 3.3972 7.24392 4.30806C7.22221 4.56281 7.17877 4.75799 7.10819 4.9266C7.091 4.96601 7.03309 5.09155 6.97336 5.09155C6.95436 5.09155 6.90007 5.08513 6.79963 5.01732C6.56436 4.85604 6.39153 4.6242 6.19065 4.33921C5.50656 3.3697 4.93197 2.30489 4.43429 1.07697C4.24969 0.625202 3.90584 0.37137 3.46426 0.36404C2.97925 0.355792 2.53948 0.353043 2.11962 0.353043C1.66175 0.353043 1.23646 0.357625 0.821124 0.365872C0.466413 0.37137 0.220287 0.477668 0.0908903 0.68385C-0.0385067 0.887282 -0.029458 1.15669 0.116227 1.482C1.28623 4.08538 2.34674 5.9795 3.55565 7.61979C4.40171 8.77074 5.25139 9.56614 6.22775 10.1233C7.25659 10.7134 8.41031 11.0002 9.75314 11.0002C9.90516 11.0002 10.0626 10.9957 10.2219 10.9892C11.0019 10.9508 11.2914 10.6685 11.3276 9.90794C11.3457 9.51757 11.3882 9.10979 11.5792 8.76249C11.6995 8.5444 11.8117 8.5444 11.8488 8.5444C11.9194 8.5444 12.0081 8.57647 12.1022 8.63695C12.2723 8.74874 12.418 8.89628 12.5374 9.02732C12.6496 9.15103 12.7609 9.27565 12.8722 9.40119C13.112 9.66969 13.3609 9.94826 13.6197 10.2113C14.187 10.7895 14.8123 11.0433 15.5308 10.9902H18.211C18.2164 10.9902 18.2228 10.9892 18.2282 10.9883C18.4951 10.9718 18.7268 10.8225 18.8625 10.5815C19.0317 10.2836 19.0281 9.90244 18.8535 9.56156C18.6562 9.17852 18.3992 8.84863 18.1739 8.57922Z"/>
+                </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <!--Модальное окно верификации-->
+  <section id="verification__modal" class="modal">
+    <div class="modal__overlay">
+
+        <div class="modal__body">
+          <form>
+            <h1 class="modal__title">Уточните дату и время получения товара</h1>
+            <p class="modal__desc">
+              Загрузите подписанный скан договора для его верификации.
+            </p>
+            <div class="verification__modal-content  modal__content">
+
+              <div class="verification__modal-input-file  input-file">
+                <label class="input-file__label">
+                  <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="contract-scan" class="input-file__input  visually-hidden">
+                  <span>Приложите подписанный скан договора *</spa>
+                </label>
+                <div class="input-file__file-load  file-load">
+                  <div class="file-load__pdf-logo"></div>
+                  <div class="file-load__info">
+                    <p class="file-load__name">Файл 1</p>
+                    <p class="file-load__size">PDF, 450 Кбайт</p>
+                  </div>
+                  <button type="button" class="file-load__clear">
+                    <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.29289 4.7929C4.68341 4.40238 5.31659 4.40238 5.7071 4.7929L19.8492 18.935C20.2398 19.3256 20.2398 19.9587 19.8492 20.3492C19.4587 20.7398 18.8255 20.7398 18.435 20.3492L4.29289 6.20711C3.90237 5.81659 3.90237 5.18342 4.29289 4.7929Z" />
+                      <path d="M4.29291 20.3492C4.68344 20.7398 5.31661 20.7398 5.70713 20.3492L19.8493 6.2071C20.2398 5.81659 20.2398 5.18341 19.8493 4.79289C19.4587 4.40237 18.8256 4.40237 18.435 4.79289L4.29291 18.935C3.9024 19.3255 3.90239 19.9587 4.29291 20.3492Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="verification__modal-input-file  input-file">
+                <label class="input-file__label">
+                  <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="installation-doc" class="input-file__input  visually-hidden">
+                  <span>Приложите документы, подтверждающие факт монтажа *</spa>
+                </label>
+                <div class="input-file__file-load  file-load">
+                  <div class="file-load__pdf-logo"></div>
+                  <div class="file-load__info">
+                    <p class="file-load__name">Файл 1</p>
+                    <p class="file-load__size">PDF, 450 Кбайт</p>
+                  </div>
+                  <button type="button" class="file-load__clear">
+                    <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.29289 4.7929C4.68341 4.40238 5.31659 4.40238 5.7071 4.7929L19.8492 18.935C20.2398 19.3256 20.2398 19.9587 19.8492 20.3492C19.4587 20.7398 18.8255 20.7398 18.435 20.3492L4.29289 6.20711C3.90237 5.81659 3.90237 5.18342 4.29289 4.7929Z" />
+                      <path d="M4.29291 20.3492C4.68344 20.7398 5.31661 20.7398 5.70713 20.3492L19.8493 6.2071C20.2398 5.81659 20.2398 5.18341 19.8493 4.79289C19.4587 4.40237 18.8256 4.40237 18.435 4.79289L4.29291 18.935C3.9024 19.3255 3.90239 19.9587 4.29291 20.3492Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="verification__modal-input-file  input-file">
+                <label class="input-file__label">
+                  <input type="file" accept="image/jpeg,image/png,image/gif,application/pdf" name="passport-scan" class="input-file__input  visually-hidden">
+                  <span>Приложите скан паспорта клиента *</spa>
+                </label>
+                <div class="input-file__file-load  file-load">
+                  <div class="file-load__pdf-logo"></div>
+                  <div class="file-load__info">
+                    <p class="file-load__name">Файл 1</p>
+                    <p class="file-load__size">PDF, 450 Кбайт</p>
+                  </div>
+                  <button type="button" class="file-load__clear">
+                    <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.29289 4.7929C4.68341 4.40238 5.31659 4.40238 5.7071 4.7929L19.8492 18.935C20.2398 19.3256 20.2398 19.9587 19.8492 20.3492C19.4587 20.7398 18.8255 20.7398 18.435 20.3492L4.29289 6.20711C3.90237 5.81659 3.90237 5.18342 4.29289 4.7929Z" />
+                      <path d="M4.29291 20.3492C4.68344 20.7398 5.31661 20.7398 5.70713 20.3492L19.8493 6.2071C20.2398 5.81659 20.2398 5.18341 19.8493 4.79289C19.4587 4.40237 18.8256 4.40237 18.435 4.79289L4.29291 18.935C3.9024 19.3255 3.90239 19.9587 4.29291 20.3492Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="modal__btn-block">
+              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+              <button type="submit" class="modal__save  modal__btn-item  btn-primary" disabled>Сохранить</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,6 +1,10 @@
 .footer {
   border-top: 1px solid $stroke;
 
+  &--short {
+    border-top: none;
+  }
+
   &__top {
     padding-top: 43px;
     display: flex;
