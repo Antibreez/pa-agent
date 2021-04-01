@@ -33,6 +33,16 @@
     margin-top: 24px;
   }
 
+  &__input-sender {
+    .input-label {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
   &__input-payment-date {
     width: 100%;
   }

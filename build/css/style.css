@@ -6122,8 +6122,8 @@ input.search.js-inputed {
   max-height: 549px;
   background-color: #fff;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 16px 80px rgba(23, 28, 60, 0.18);
+          box-shadow: 0px 16px 80px rgba(23, 28, 60, 0.18);
   z-index: 100;
 }
 
@@ -7582,6 +7582,7 @@ div.input-file__file-load {
 .nav__link--enterance {
   color: #1A1A1A;
   padding-left: 15px;
+  margin-left: -25px;
   border-left: 1px solid #D1D8E1;
 }
 
@@ -7627,9 +7628,30 @@ div.input-file__file-load {
   .nav__list--footer .nav__item:not(:last-child) {
     margin-bottom: 12px;
   }
+  .nav__list .nav__item.nav__item--enterance {
+    padding-right: 0;
+  }
+  .nav__link--enterance {
+    position: relative;
+    border-left: none;
+    display: block;
+  }
+  .nav__link--enterance::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    height: 19px;
+    width: 1px;
+    background-color: #D1D8E1;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
-.header {
+.header,
+.header-enterance {
   width: 100%;
   position: fixed;
   top: 0;
@@ -7641,7 +7663,8 @@ div.input-file__file-load {
   z-index: 100;
 }
 
-.header__container {
+.header__container,
+.header-enterance__container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7651,23 +7674,31 @@ div.input-file__file-load {
           align-items: center;
 }
 
-.header__logo {
+.header__logo,
+.header-enterance__logo {
   display: block;
   min-width: 108px;
   margin-right: 40px;
+  font-size: 0;
+  line-height: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.header__logo:hover, .header__logo:focus {
+.header__logo:hover, .header__logo:focus,
+.header-enterance__logo:hover,
+.header-enterance__logo:focus {
   opacity: 0.7;
 }
 
-.header__nav {
+.header__nav,
+.header-enterance__nav {
   margin-right: 20px;
 }
 
-.header__user, .header__user-mobile {
+.header__user, .header__user-mobile,
+.header-enterance__user,
+.header-enterance__user-mobile {
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7677,15 +7708,18 @@ div.input-file__file-load {
           align-items: center;
 }
 
-.header__user-mobile {
+.header__user-mobile,
+.header-enterance__user-mobile {
   display: none;
 }
 
-.header__user-info {
+.header__user-info,
+.header-enterance__user-info {
   margin-right: 10px;
 }
 
-.header__user-logo {
+.header__user-logo,
+.header-enterance__user-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7708,7 +7742,8 @@ div.input-file__file-load {
       flex-shrink: 0;
 }
 
-.header__user-name {
+.header__user-name,
+.header-enterance__user-name {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -7716,7 +7751,8 @@ div.input-file__file-load {
   color: #1A1A1A;
 }
 
-.header__user-company {
+.header__user-company,
+.header-enterance__user-company {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -7724,7 +7760,8 @@ div.input-file__file-load {
   color: #94A0B1;
 }
 
-.header__user-btn {
+.header__user-btn,
+.header-enterance__user-btn {
   position: relative;
   background-color: transparent;
   border: none;
@@ -7733,7 +7770,8 @@ div.input-file__file-load {
   padding: 0;
 }
 
-.header__user-btn::before {
+.header__user-btn::before,
+.header-enterance__user-btn::before {
   content: "";
   top: 0;
   left: 0;
@@ -7749,20 +7787,24 @@ div.input-file__file-load {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.header__user-btn.active::before {
+.header__user-btn.active::before,
+.header-enterance__user-btn.active::before {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.header__user-btn:hover {
+.header__user-btn:hover,
+.header-enterance__user-btn:hover {
   cursor: pointer;
 }
 
-.header__user-btn:hover::before {
+.header__user-btn:hover::before,
+.header-enterance__user-btn:hover::before {
   background-image: url("../img/arrow-down_default.svg");
 }
 
-.header__user-actions {
+.header__user-actions,
+.header-enterance__user-actions {
   position: absolute;
   bottom: -20px;
   right: 0;
@@ -7786,24 +7828,30 @@ div.input-file__file-load {
   visibility: hidden;
   -webkit-transition: opacity 0.2s, visibility 0s ease 0.2s;
   transition: opacity 0.2s, visibility 0s ease 0.2s;
+  z-index: 200;
 }
 
-.header__user-actions:hover {
+.header__user-actions:hover,
+.header-enterance__user-actions:hover {
   cursor: default;
 }
 
-.header__user-actions a:not(:last-child) {
+.header__user-actions a:not(:last-child),
+.header-enterance__user-actions a:not(:last-child) {
   margin-bottom: 8px;
 }
 
-.header__user-btn.active .header__user-actions {
+.header__user-btn.active .header__user-actions,
+.header-enterance__user-btn.active .header__user-actions {
   opacity: 1;
   visibility: visible;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.header__user-settings, .header__user-exit {
+.header__user-settings, .header__user-exit,
+.header-enterance__user-settings,
+.header-enterance__user-exit {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -7814,19 +7862,24 @@ div.input-file__file-load {
   transition: color 0.2s;
 }
 
-.header__user-settings:hover, .header__user-exit:hover {
+.header__user-settings:hover, .header__user-exit:hover,
+.header-enterance__user-settings:hover,
+.header-enterance__user-exit:hover {
   color: #2858FF;
 }
 
-.header__user-exit {
+.header__user-exit,
+.header-enterance__user-exit {
   color: #FC4242;
 }
 
-.header__nav-btn {
+.header__nav-btn,
+.header-enterance__nav-btn {
   display: none;
 }
 
-.header__close-btn {
+.header__close-btn,
+.header-enterance__close-btn {
   display: none;
 }
 
@@ -7878,6 +7931,18 @@ div.input-file__file-load {
   .header__nav.js-show .nav__list {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+  .header__nav--enterance {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    height: auto;
+    overflow: unset;
+  }
+  .header__nav--enterance .nav__list {
+    -webkit-transform: none;
+            transform: none;
+    padding: 0;
   }
   .header__nav-btn {
     margin: 0;
@@ -7962,6 +8027,7 @@ div.input-file__file-load {
     top: 0;
     padding: 42px 18px 25px;
     background-color: #fff;
+    overflow-y: auto;
   }
   .header__user {
     display: none;
@@ -7996,6 +8062,21 @@ div.input-file__file-load {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+  .header__nav--enterance {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    height: auto;
+    overflow: unset;
+    -webkit-transform: none;
+            transform: none;
+    padding: 0;
+  }
+  .header__nav--enterance .nav__list {
+    -webkit-transform: none;
+            transform: none;
+    padding: 0;
+  }
   .header__nav-btn {
     margin-left: auto;
   }
@@ -8020,6 +8101,17 @@ div.input-file__file-load {
   }
   .header__close-btn:hover {
     cursor: pointer;
+  }
+  .header__user-actions {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding-left: 58px;
+    padding-right: 0;
   }
 }
 
@@ -9435,6 +9527,14 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 .contracts-all__input-contract-number, .contracts-all__input-sender, .contracts-all__input-recipient {
   width: calc((100% - 28px) / 3);
   margin-top: 24px;
+}
+
+.contracts-all__input-sender .input-label {
+  display: block;
+}
+
+.contracts-all__input-sender input {
+  width: 100%;
 }
 
 .contracts-all__input-payment-date {
@@ -15111,6 +15211,10 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   color: #1A1A1A;
 }
 
+.user-settings__email, .user-settings__phone {
+  min-width: 437px;
+}
+
 .user-settings__change-data {
   margin: 0;
   padding: 0;
@@ -15143,6 +15247,22 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 #confirmation-email .modal__desc span,
 #phone-success .modal__desc span {
   color: #1A1A1A;
+}
+
+@media (max-width: 999px) {
+  .user-settings .input-block {
+    width: 100%;
+    min-width: none;
+  }
+  .user-settings__title {
+    margin-bottom: 40px;
+  }
+  .user-settings__data-name {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .enterance {
@@ -15197,7 +15317,7 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 }
 
 .enterance__link--code-repeat {
-  margin: 0 0 24px;
+  margin: -14px 0 24px;
 }
 
 .enterance__link--forgot-password {

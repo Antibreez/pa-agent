@@ -1,4 +1,5 @@
-.header {
+.header,
+.header-enterance {
   width: 100%;
   position: fixed;
   top: 0;
@@ -18,6 +19,8 @@
     display: block;
     min-width: 108px;
     margin-right: 40px;
+    font-size: 0;
+    line-height: 0;
     transition: all 0.3s;
 
     &:hover,
@@ -123,6 +126,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s, visibility 0s ease 0.2s;
+    z-index: 200;
 
     &:hover {
       cursor: default;
@@ -211,6 +215,19 @@
       }
     }
 
+    &__nav--enterance {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      height: auto;
+      overflow: unset;
+
+      & .nav__list {
+        transform: none;
+        padding: 0;
+      }
+    }
+
     &__nav-btn {
       @include btn-reset;
       position: relative;
@@ -271,6 +288,10 @@
       }
     }
   }
+
+  .header-enterance {
+
+  }
 }
 
 @include mobile {
@@ -286,6 +307,7 @@
       top: 0;
       padding: 42px 18px 25px;
       background-color: #fff;
+      overflow-y: auto;
     }
 
     &__user {
@@ -317,6 +339,21 @@
       }
     }
 
+    &__nav--enterance {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      height: auto;
+      overflow: unset;
+      transform: none;
+      padding: 0;
+
+      & .nav__list {
+        transform: none;
+        padding: 0;
+      }
+    }
+
     &__nav-btn {
       margin-left: auto;
     }
@@ -337,5 +374,17 @@
         cursor: pointer;
       }
     }
+
+    &__user-actions {
+      position: static;
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+      box-shadow: none;
+      padding-left: 58px;
+      padding-right: 0;
+    }
   }
+
+
 }

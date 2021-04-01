@@ -33,6 +33,11 @@
     }
   }
 
+  &__email,
+  &__phone {
+    min-width: 437px;
+  }
+
   &__change-data {
     @include btn-reset;
     order: 4;
@@ -56,6 +61,23 @@
   .modal__desc {
     span {
       color: $text-main;
+    }
+  }
+}
+
+@include mobile {
+  .user-settings {
+    .input-block {
+      width: 100%;
+      min-width: none;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__data-name {
+      flex-direction: column;
     }
   }
 }

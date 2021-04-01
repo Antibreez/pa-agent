@@ -34,6 +34,7 @@
   &__link--enterance {
     color: $text-main;
     padding-left: 15px;
+    margin-left: -25px;
     border-left: 1px solid #D1D8E1;
   }
 }
@@ -78,6 +79,28 @@
 
     &:not(:last-child) {
       margin-bottom: 12px;
+    }
+  }
+
+  .nav__list  .nav__item.nav__item--enterance {
+    padding-right: 0;
+  }
+
+  .nav__link--enterance {
+    position: relative;
+    border-left: none;
+    display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      height: 19px;
+      width: 1px;
+      background-color: #D1D8E1;
+      transform: translateY(-50%);
     }
   }
 }
