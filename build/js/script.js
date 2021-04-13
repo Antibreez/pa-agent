@@ -552,6 +552,18 @@
 })();
 
 (function () {
+  var triggers = document.querySelectorAll('[data-trigger]');
+  triggers.forEach(function (item) {
+    var name = item.getAttribute('data-trigger');
+    var modal = document.querySelector('[data-modal=' + name + ']');
+
+    if (modal) {
+      new Modal(item, modal);
+    }
+  });
+})();
+
+(function () {
   // const verificationBtn = document.querySelectorAll('.contract-info__verification');
   // if (!verificationBtn[0]) {
   //   return;
@@ -1548,6 +1560,16 @@
   }); // scheduleBtns.forEach(function(item) {
   //   new Modal(item, modal);
   // });
+})();
+
+(function () {
+  $('.subscribe-register__input input').inputmask({
+    mask: '9999-9999-9999',
+    placeholder: '',
+    showMaskOnHover: false,
+    showMaskOnFocus: false,
+    jitMasking: true
+  });
 })();
 
 (function () {

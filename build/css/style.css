@@ -8792,27 +8792,27 @@ div.input-file__file-load {
 }
 
 .contracts col:first-child {
-  width: 17%;
+  width: 23%;
 }
 
 .contracts col:nth-child(2) {
-  width: 17%;
+  width: 10%;
 }
 
 .contracts col:nth-child(3) {
-  width: 15%;
+  width: 11%;
 }
 
 .contracts col:nth-child(4) {
-  width: 19%;
+  width: 22%;
 }
 
 .contracts col:nth-child(5) {
-  width: 17%;
+  width: 22%;
 }
 
 .contracts col:nth-child(6) {
-  width: 15%;
+  width: 12%;
 }
 
 .contracts__table {
@@ -8890,6 +8890,10 @@ tr:not(:first-of-type):hover
   color: #1A1A1A;
 }
 
+.contracts__link p.alert {
+  color: #FC4242;
+}
+
 .contracts__status {
   font-weight: 400;
   font-size: 14px;
@@ -8951,6 +8955,32 @@ tr:not(:first-of-type):hover
 
 .contracts__status-type.draft::before {
   background-color: #D1D8E1;
+}
+
+.contracts__status-name {
+  padding: 3px 5px;
+  min-width: 120px;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1A1A1A;
+  margin-right: 27px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contracts__status-name.pending {
+  background-color: #FED9AE;
+}
+
+.contracts__status-name.active {
+  background-color: #DDF9EC;
+}
+
+.contracts__status-name.expires {
+  background-color: #FEEDAE;
 }
 
 .contracts__status-verification,
@@ -9390,7 +9420,13 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     width: calc(100% - 437px);
   }
   .support__benefits-item {
-    width: 130px;
+    width: calc((100% - 45px) / 4);
+  }
+  .support__benefits-item:not(:last-child) {
+    margin-right: 15px;
+  }
+  .support__benefits-item:last-child {
+    margin-right: 0;
   }
 }
 

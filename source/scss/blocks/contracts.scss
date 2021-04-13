@@ -22,27 +22,27 @@
 
   & col {
     &:first-child {
-      width: 17%;
+      width: 23%;
     }
 
     &:nth-child(2) {
-      width: 17%;
+      width: 10%;
     }
 
     &:nth-child(3) {
-      width: 15%;
+      width: 11%;
     }
 
     &:nth-child(4) {
-      width: 19%;
+      width: 22%;
     }
 
     &:nth-child(5) {
-      width: 17%;
+      width: 22%;
     }
 
     &:nth-child(6) {
-      width: 15%;
+      width: 12%;
     }
   }
 }
@@ -113,6 +113,10 @@ tr:not(:first-of-type):hover
   }
 }
 
+.contracts__link p.alert {
+  color: #FC4242;
+}
+
 .contracts__status {
   @include b14;
   color: $text-minor;
@@ -163,6 +167,30 @@ tr:not(:first-of-type):hover
 
   &.draft::before {
     background-color: #D1D8E1;
+  }
+}
+
+.contracts__status-name {
+  padding: 3px 5px;
+  min-width: 120px;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  color: $text-main;
+  margin-right: 27px;
+  text-align: center;
+  justify-content: center;
+
+  &.pending {
+    background-color: #FED9AE;
+  }
+
+  &.active {
+    background-color: #DDF9EC;
+  }
+
+  &.expires {
+    background-color: #FEEDAE;
   }
 }
 

@@ -120,7 +120,15 @@
     }
 
     &__benefits-item {
-      width: 130px;
+      width: calc((100% - 45px) / 4);
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
