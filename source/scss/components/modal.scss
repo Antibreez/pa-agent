@@ -55,6 +55,11 @@
     color: $text-main;
   }
 
+  &__subtitle {
+    @include h18;
+    margin: 24px 0 14px;
+  }
+
   &__desc {
     @include b14;
 

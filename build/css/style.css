@@ -6702,6 +6702,13 @@ input.search.js-inputed {
   color: #1A1A1A;
 }
 
+.modal__subtitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 24px 0 14px;
+}
+
 .modal__desc {
   font-weight: 400;
   font-size: 14px;
@@ -15390,6 +15397,7 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 
 .subscribe-register__input {
   position: relative;
+  margin-bottom: 14px;
 }
 
 .subscribe-register__btn {
