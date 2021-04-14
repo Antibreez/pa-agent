@@ -109,6 +109,13 @@ gulp.task(`js-vendor`, function () {
     .pipe(gulp.dest(`build/js`));
 });
 
+gulp.task(`js-qrscanner`, function () {
+  return gulp.src([
+    `source/js/jsqrscanner/*`,
+  ])
+    .pipe(gulp.dest(`build/js/jsqrscanner`))
+});
+
 gulp.task(`js`, function () {
   return gulp.src([
     `source/js/components/*.js`,
@@ -161,5 +168,5 @@ gulp.task(`refresh`, function (done) {
 });
 
 // СБОРКА И СТАРТ
-gulp.task(`build`, gulp.series(`clean`, `copy`, `images`, `webp`, `imagemin`, `sprite`, `css`, `js-vendor`, `js`, `html`));
+gulp.task(`build`, gulp.series(`clean`, `copy`, `images`, `webp`, `imagemin`, `sprite`, `css`, `js-vendor`, `js`, `js-qrscanner`, `html`));
 gulp.task(`start`, gulp.series(`build`, `server`));

@@ -1,3 +1,16 @@
 .subscribe-register {
+  &__input {
+    position: relative;
+  }
 
+  &__btn {
+    @include btn-reset;
+    position: absolute;
+    top: 43px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/qr-code-icon.svg");
+    z-index: 10;
+  }
 }
