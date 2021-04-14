@@ -98,10 +98,11 @@ var jbScanner;
 
   $('.subscribe-register__input .input-text').each(function(index, value) {
 
+    const $input = $(this);
 
     function onQRCodeScanned(scannedText) {
 
-          $(this).val(scannedText);
+          $input.val(scannedText);
           $(".qr-scanner-modal").removeClass("js-show");
           jbScanner.stopScanning();
 
@@ -160,7 +161,7 @@ var jbScanner;
 
 
 
-    $(this).siblings('.subscribe-register__btn').on("click", (e) => {
+    $input.siblings('.subscribe-register__btn').on("click", (e) => {
 
 
 

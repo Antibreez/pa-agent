@@ -1571,8 +1571,10 @@
   //   });
   var jbScanner;
   $('.subscribe-register__input .input-text').each(function (index, value) {
+    var $input = $(this);
+
     function onQRCodeScanned(scannedText) {
-      $(this).val(scannedText);
+      $input.val(scannedText);
       $(".qr-scanner-modal").removeClass("js-show");
       jbScanner.stopScanning();
     }
@@ -1617,7 +1619,7 @@
       });
     }
 
-    $(this).siblings('.subscribe-register__btn').on("click", function (e) {
+    $input.siblings('.subscribe-register__btn').on("click", function (e) {
       if (jbScanner) {
         jbScanner.resumeScanning();
       } else {
