@@ -1626,18 +1626,15 @@
     }
 
     $input.siblings('.subscribe-register__btn').on("click", function (e) {
-      if (jbScanner) {
-        jbScanner.resumeScanning();
-      } else {
-        jbScanner = new JsQRScanner(onQRCodeScanned($input)); //console.log(jbScanner);
+      jbScanner = new JsQRScanner(onQRCodeScanned($input)); //console.log(jbScanner);
 
-        jbScanner.setSnapImageMaxSize(300);
-        var scannerParentElement = document.getElementById("js-video-box");
+      jbScanner.setSnapImageMaxSize(300);
+      var scannerParentElement = document.getElementById("js-video-box");
 
-        if (scannerParentElement) {
-          //append the jbScanner to an existing DOM element
-          jbScanner.appendTo(scannerParentElement);
-        }
+      if (scannerParentElement) {
+        scannerParentElement.innerHTML = ''; //append the jbScanner to an existing DOM element
+
+        jbScanner.appendTo(scannerParentElement);
       }
     });
   });
