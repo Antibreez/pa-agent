@@ -12,5 +12,14 @@
     height: 24px;
     background-image: url("../img/qr-code-icon.svg");
     z-index: 10;
+    display: none;
+  }
+}
+
+@include mobile {
+  .subscribe-register {
+    &__btn {
+      display: block;
+    }
   }
 }

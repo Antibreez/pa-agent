@@ -15405,8 +15405,58 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   height: 24px;
   background-image: url("../img/qr-code-icon.svg");
   z-index: 10;
+  display: none;
 }
 
 .subscribe-register__btn:hover, .subscribe-register__btn:active, .subscribe-register__btn:focus {
   background-color: transparent;
+}
+
+@media (max-width: 999px) {
+  .subscribe-register__btn {
+    display: block;
+  }
+}
+
+.qr-scanner-modal .modal__body {
+  padding: 0;
+  background-color: #1A1A1A;
+}
+
+.qr-scanner-modal .qr-scanner-modal__close {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/close.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 20;
+}
+
+.qr-scanner-modal .qr-scanner-modal__close:hover, .qr-scanner-modal .qr-scanner-modal__close:active, .qr-scanner-modal .qr-scanner-modal__close:focus {
+  background-color: transparent;
+}
+
+.qr-scanner-modal .qr-scanner-modal__borders {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 230px;
+  padding-top: 280px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../img/qr-border.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }

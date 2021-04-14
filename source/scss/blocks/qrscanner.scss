@@ -1,0 +1,35 @@
+.qr-scanner-modal {
+  .modal__body {
+    padding: 0;
+    background-color: $text-main;
+  }
+
+  .qr-scanner-modal__close {
+    @include btn-reset;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 20;
+  }
+
+  .qr-scanner-modal__borders {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 230px;
+    padding-top: 280px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/qr-border.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+}
