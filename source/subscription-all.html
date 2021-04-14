@@ -131,7 +131,7 @@
           </div>
           <div class="filters__form-wrapper">
             <form class="subscription-all__filters-form  filters__form">
-              <div class="subscription-all__select  select-block">
+              <!-- <div class="subscription-all__select  select-block">
                 <select name="service-type" id="service-type" class="select">
                   <option value="" disabled selected hidden>Все</option>
                   <option value="option1">Option 1фыва фыва фыва фыва фыва фыва</option>
@@ -140,38 +140,38 @@
                   <option value="option4">Option 4</option>
                 </select>
                 <label class="select-label">Тип услуги</label>
-              </div>
+              </div> -->
               <div class="subscription-all__select  select-block">
                 <select name="service-status" id="service-status" class="select">
-                  <option value="" disabled selected hidden>Все</option>
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                  <option value="option4">Option 4</option>
+                  <option value="" disabled hidden></option>
+                  <option value="Все" selected>Все</option>
+                  <option value="Ожидает оплаты">Ожидает оплаты</option>
+                  <option value="Активна">Активна</option>
+                  <option value="Истекает">Истекает</option>
                 </select>
                 <label class="select-label">Статус услуги</label>
               </div>
               <div class="subscription-all__select  select-block">
                 <select name="days-left" id="days-left" class="select">
-                  <option value="" disabled selected hidden>Не выбрано</option>
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                  <option value="option4">Option 4</option>
+                  <option value="" disabled hidden></option>
+                  <option value="Все" selected>Все</option>
+                  <option value="option1">Неограниченно</option>
+                  <option value="option2">30 дней и больше</option>
+                  <option value="option3">Менее 30 дней</option>
+                  <option value="option4">0 дней</option>
                 </select>
                 <label class="select-label">Осталось дней</label>
               </div>
               <div class="subscription-all__select  select-block">
                 <select name="payment-status" id="payment-status" class="select">
-                  <option value="" disabled selected hidden>Все</option>
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                  <option value="option4">Option 4</option>
+                  <option value="" disabled hidden></option>
+                  <option value="Все" selected>Все</option>
+                  <option value="option1">Оплачена</option>
+                  <option value="option2">Ожидает оплаты</option>
                 </select>
                 <label class="select-label">Cтатус оплаты</label>
               </div>
-              <div class="subscription-all__select  select-block">
+              <!-- <div class="subscription-all__select  select-block">
                 <select name="delivery-status" id="delivery-status" class="select">
                   <option value="" disabled selected hidden>Все</option>
                   <option value="option1">Option 1</option>
@@ -180,24 +180,22 @@
                   <option value="option4">Option 4</option>
                 </select>
                 <label class="select-label">Статус доставки</label>
-              </div>
+              </div> -->
               <div class="subscription-all__select  select-block">
                 <select name="installation-status" id="installation-status" class="select">
-                  <option value="" disabled selected hidden>Все</option>
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                  <option value="option4">Option 4</option>
+                  <option value="" disabled hidden></option>
+                  <option value="Все" selected>Все</option>
+                  <option value="option1">Данные ожидают заполнения</option>
+                  <option value="option2">Данные заполнены</option>
                 </select>
-                <label class="select-label">Статус монтажа</label>
+                <label class="select-label">Монтаж</label>
               </div>
               <div class="subscription-all__select  select-block">
                 <select name="cloud-status" id="cloud-status" class="select">
-                  <option value="" disabled selected hidden>Выбрано по умолчанию</option>
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                  <option value="option4">Option 4</option>
+                  <option value="" disabled hidden></option>
+                  <option value="Все" selected>Все</option>
+                  <option value="option1">Ожидается подключение</option>
+                  <option value="option2">Подключен</option>
                 </select>
                 <label class="select-label">Статус подключения к облаку</label>
               </div>

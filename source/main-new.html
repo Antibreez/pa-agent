@@ -1036,22 +1036,24 @@
       <div class="modal__overlay">
 
           <div class="modal__body">
-            <form>
-              <h1 class="modal__title">Зарегистрируйте подписку</h1>
-              <p class="modal__desc">
-                Укажите код гарантии внутреннего блока, чтобы зарегистрировать проданную подписку и получить агентскую комиссию.
-              </p>
-              <div class="subscribe-register__input  input-block">
-                <input class="input-text  js-wrong" type="text" name="warranty-code" placeholder="00000-00000-00000">
-                <label class="input-label">Код гарантии</label>
-                <p class="input-note">Указанный код не найден</p>
-                <button type="button" class="subscribe-register__btn" data-trigger="qr-scanner-modal"></button>
-              </div>
-              <div class="modal__btn-block">
-                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
-                <button type="submit" class="modal__save  modal__btn-item  btn-primary" disabled>Сохранить</button>
-              </div>
-            </form>
+            <div class="modal__content">
+              <form>
+                <h1 class="modal__title">Зарегистрируйте подписку</h1>
+                <p class="modal__desc">
+                  Укажите код гарантии внутреннего блока, чтобы зарегистрировать проданную подписку и получить агентскую комиссию.
+                </p>
+                <div class="subscribe-register__input  input-block">
+                  <input class="input-text  js-wrong" type="text" name="warranty-code" placeholder="00000-00000-00000">
+                  <label class="input-label">Код гарантии</label>
+                  <p class="input-note">Указанный код не найден</p>
+                  <button type="button" class="subscribe-register__btn" data-trigger="qr-scanner-modal"></button>
+                </div>
+                <div class="modal__btn-block">
+                  <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                  <button type="submit" class="modal__save  modal__btn-item  btn-primary" disabled>Сохранить</button>
+                </div>
+              </form>
+            </div>
           </div>
       </div>
     </section>

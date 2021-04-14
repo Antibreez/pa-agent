@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+
+  <script src="js/jsqrscanner/jsqrscanner.nocache.js"></script>
+</head>
+
+<body>
+
+  <style>
+  </style>
+
+  <main>
+
+
+
+
+
+
+    <!--Модальное окно регистрации подписки-->
+    <section class="modal  subscribe-register  js-show" data-modal="subscribe-register">
+      <div class="modal__overlay">
+
+          <div class="modal__body">
+            <div class="modal__content">
+              <form>
+                <h1 class="modal__title">Зарегистрируйте подписку</h1>
+                <p class="modal__desc">
+                  Укажите код гарантии внутреннего блока, чтобы зарегистрировать проданную подписку и получить агентскую комиссию.
+                </p>
+                <div class="subscribe-register__input  input-block">
+                  <input class="input-text  js-wrong" type="text" name="warranty-code" placeholder="00000-00000-00000">
+                  <label class="input-label">Код гарантии</label>
+                  <p class="input-note">Указанный код не найден</p>
+                  <button type="button" class="subscribe-register__btn" data-trigger="qr-scanner-modal"></button>
+                </div>
+                <div class="modal__btn-block">
+                  <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                  <button type="submit" class="modal__save  modal__btn-item  btn-primary" disabled="">Сохранить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!--Модальное окно qr-сканирования-->
+    <section class="modal  qr-scanner-modal" data-modal="qr-scanner-modal">
+      <div class="modal__overlay">
+
+          <div class="modal__body">
+            <button class="qr-scanner-modal__close  modal__close"></button>
+            <div id="js-video-box"></div>
+            <div class="qr-scanner-modal__borders">
+              Отсканируйте QR-код гарантии
+            </div>
+          </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

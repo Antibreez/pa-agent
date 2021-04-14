@@ -25,17 +25,15 @@
 
   &__select {
     &:first-child,
-    &:nth-child(2),
-    &:nth-child(3) {
-      width: calc((100% - 28px) / 3);
+    &:nth-child(2) {
+      width: calc((100% - 14px) / 2);
       margin-bottom: 24px;
     }
 
+    &:nth-child(3),
     &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6),
-    &:nth-child(7)   {
-      width: calc((100% - 42px) / 4);
+    &:nth-child(5)   {
+      width: calc((100% - 28px) / 3);
     }
   }
 }

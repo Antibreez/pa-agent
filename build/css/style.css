@@ -6780,7 +6780,7 @@ input.search.js-inputed {
     line-height: 21px;
   }
   .modal__content {
-    padding-bottom: 110px;
+    padding-bottom: 150px;
   }
   .modal__content > div {
     width: 100%;
@@ -12150,13 +12150,13 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
           justify-content: space-between;
 }
 
-.subscription-all__select:first-child, .subscription-all__select:nth-child(2), .subscription-all__select:nth-child(3) {
-  width: calc((100% - 28px) / 3);
+.subscription-all__select:first-child, .subscription-all__select:nth-child(2) {
+  width: calc((100% - 14px) / 2);
   margin-bottom: 24px;
 }
 
-.subscription-all__select:nth-child(4), .subscription-all__select:nth-child(5), .subscription-all__select:nth-child(6), .subscription-all__select:nth-child(7) {
-  width: calc((100% - 42px) / 4);
+.subscription-all__select:nth-child(3), .subscription-all__select:nth-child(4), .subscription-all__select:nth-child(5) {
+  width: calc((100% - 28px) / 3);
 }
 
 @media (max-width: 999px) {
