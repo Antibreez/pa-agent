@@ -100,11 +100,22 @@ var jbScanner;
 
     const $input = $(this);
 
-    function onQRCodeScanned(scannedText) {
+    // function onQRCodeScanned(scannedText) {
 
-          $input.val(scannedText);
-          $(".qr-scanner-modal").removeClass("js-show");
-          jbScanner.stopScanning();
+    //       $input.val(scannedText);
+    //       $(".qr-scanner-modal").removeClass("js-show");
+    //       jbScanner.stopScanning();
+
+    // }
+
+    function onQRCodeScanned(el) {
+
+      return function(scannedText) {
+
+        el.val(scannedText);
+        $(".qr-scanner-modal").removeClass("js-show");
+        jbScanner.stopScanning();
+      }
 
     }
 
@@ -168,7 +179,7 @@ var jbScanner;
                 if (jbScanner) {
                     jbScanner.resumeScanning();
                 } else {
-                    jbScanner = new JsQRScanner(onQRCodeScanned);
+                    jbScanner = new JsQRScanner(onQRCodeScanned($input));
                     //console.log(jbScanner);
                     jbScanner.setSnapImageMaxSize(300);
                     var scannerParentElement = document.getElementById("js-video-box");

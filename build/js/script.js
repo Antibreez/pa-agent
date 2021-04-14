@@ -1571,12 +1571,18 @@
   //   });
   var jbScanner;
   $('.subscribe-register__input .input-text').each(function (index, value) {
-    var $input = $(this);
+    var $input = $(this); // function onQRCodeScanned(scannedText) {
+    //       $input.val(scannedText);
+    //       $(".qr-scanner-modal").removeClass("js-show");
+    //       jbScanner.stopScanning();
+    // }
 
-    function onQRCodeScanned(scannedText) {
-      $input.val(scannedText);
-      $(".qr-scanner-modal").removeClass("js-show");
-      jbScanner.stopScanning();
+    function onQRCodeScanned(el) {
+      return function (scannedText) {
+        el.val(scannedText);
+        $(".qr-scanner-modal").removeClass("js-show");
+        jbScanner.stopScanning();
+      };
     }
 
     function provideVideo() {
@@ -1623,7 +1629,7 @@
       if (jbScanner) {
         jbScanner.resumeScanning();
       } else {
-        jbScanner = new JsQRScanner(onQRCodeScanned); //console.log(jbScanner);
+        jbScanner = new JsQRScanner(onQRCodeScanned($input)); //console.log(jbScanner);
 
         jbScanner.setSnapImageMaxSize(300);
         var scannerParentElement = document.getElementById("js-video-box");
