@@ -1,0 +1,53 @@
+.connection-multi {
+  &__block {
+    background-color: $bg;
+    border-radius: 5px;
+    padding: 28px;
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+
+    col {
+      width: 25%;
+    }
+
+    th {
+      @include b12;
+      @include overflow-3lines;
+      text-align: left;
+      color: $text-minor;
+      padding: 6px 0;
+      padding-left: 15px;
+    }
+
+    td {
+      @include b14;
+      vertical-align: top;
+      padding: 20px 0;
+      color: $text-main;
+      padding-left: 15px;
+
+      p {
+        @include overflow-3lines;
+        margin: 0;
+
+        &:last-child {
+          color: $text-minor;
+        }
+
+        &:first-child {
+          color: $text-main;
+        }
+      }
+    }
+
+    tr:not(:last-child) {
+      td {
+        border-bottom: 1px solid $stroke;
+      }
+    }
+  }
+}

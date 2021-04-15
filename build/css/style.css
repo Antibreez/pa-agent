@@ -9709,6 +9709,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   width: calc((100% - 48px) / 3);
 }
 
+.contract-info__block .info-block__desc.alert {
+  color: #FC4242;
+}
+
 .contract-info__block--duo {
   width: calc((100% - 24px) / 2);
 }
@@ -9821,6 +9825,30 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .contract-info__status-value.draft::before {
   background-color: #D1D8E1;
+}
+
+.contract-info__commission-block {
+  position: relative;
+  padding-right: 40px;
+}
+
+.contract-info__commission-link {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/two-arrows.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: background-image 0.2s;
+  transition: background-image 0.2s;
+}
+
+.contract-info__commission-link:hover {
+  background-image: url("../img/two-arrows_hover.svg");
 }
 
 @media (max-width: 1439px) {
@@ -10066,6 +10094,17 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .payment-waiting__modal-transactions {
   width: 100%;
+}
+
+.payment-waiting__short .payment-waiting__wrapper {
+  padding-right: 60px;
+  background-image: url("../img/time.svg");
+  background-repeat: no-repeat;
+  background-position: right 28px center;
+}
+
+.payment-waiting__short .info-block__title {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1439px) {
@@ -10534,6 +10573,35 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   margin-left: 20px;
 }
 
+.delivery-or-pickup__call-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 20px 20px 58px;
+  border-radius: 5px;
+  background-color: rgba(40, 88, 255, 0.1);
+  background-image: url("../img/bell.svg");
+  background-position: left 20px center;
+  background-repeat: no-repeat;
+}
+
+.delivery-or-pickup__call-desc {
+  font-size: 14px;
+  line-height: 21px;
+  color: #1A1A1A;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.delivery-or-pickup__call-link {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: auto;
+}
+
 div.delivery-address {
   display: none;
 }
@@ -10666,6 +10734,22 @@ div.registration-address {
     padding-right: 5px;
   }
   .delivery-or-pickup__fill {
+    width: 100%;
+  }
+  .delivery-or-pickup__call-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 17px;
+    background-position: top 17px left 17px;
+  }
+  .delivery-or-pickup__call-desc {
+    padding-left: 40px;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+  .delivery-or-pickup__call-link {
     width: 100%;
   }
 }
@@ -15467,4 +15551,70 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   background-image: url("../img/qr-border.png");
   background-repeat: no-repeat;
   background-position: top center;
+}
+
+.connection-multi__block {
+  background-color: #F4F4F8;
+  border-radius: 5px;
+  padding: 28px;
+}
+
+.connection-multi__block table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.connection-multi__block col {
+  width: 25%;
+}
+
+.connection-multi__block th {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+  text-align: left;
+  color: #94A0B1;
+  padding: 6px 0;
+  padding-left: 15px;
+}
+
+.connection-multi__block td {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  vertical-align: top;
+  padding: 20px 0;
+  color: #1A1A1A;
+  padding-left: 15px;
+}
+
+.connection-multi__block td p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+  margin: 0;
+}
+
+.connection-multi__block td p:last-child {
+  color: #94A0B1;
+}
+
+.connection-multi__block td p:first-child {
+  color: #1A1A1A;
+}
+
+.connection-multi__block tr:not(:last-child) td {
+  border-bottom: 1px solid #D1D8E1;
 }

@@ -83,6 +83,10 @@
 
   &__block {
     width: calc((100% - 48px) / 3);
+
+    .info-block__desc.alert {
+      color: #FC4242;
+    }
   }
 
   &__block--duo {
@@ -177,6 +181,28 @@
 
   &__status-value.draft::before {
     background-color: #D1D8E1;
+  }
+
+  &__commission-block {
+    position: relative;
+    padding-right: 40px;
+  }
+
+  &__commission-link {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/two-arrows.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    transition: background-image 0.2s;
+
+    &:hover {
+      background-image: url("../img/two-arrows_hover.svg");
+    }
   }
 }
 

@@ -112,6 +112,19 @@
   }
 }
 
+.payment-waiting__short {
+  .payment-waiting__wrapper {
+    padding-right: 60px;
+    background-image: url("../img/time.svg");
+    background-repeat: no-repeat;
+    background-position: right 28px center;
+  }
+
+  .info-block__title {
+    margin-bottom: 0;
+  }
+}
+
 // .payment-waiting__checkbox.sended
 // + .payment-waiting__checkbox.sended
 // + button {
