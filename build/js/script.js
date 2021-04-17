@@ -1599,7 +1599,7 @@
         el.val(scannedText);
         $(".qr-scanner-modal").removeClass("js-show");
         jbScanner.stopScanning();
-        scannerParentElement.innerHTML = '';
+        jbScanner.removeFrom(scannerParentElement);
       };
     }
 
@@ -1657,7 +1657,7 @@
   });
   $(document).on("click", ".qr-scanner-modal .qr-scanner-modal__close", function (e) {
     jbScanner.stopScanning();
-    scannerParentElement.innerHTML = '';
+    jbScanner.removeFrom(scannerParentElement);
   });
 })();
 
