@@ -94,6 +94,7 @@
 //   });
 
 
+var scannerParentElement = document.getElementById("js-video-box");
 var jbScanner;
 
   $('.subscribe-register__input .input-text').each(function(index, value) {
@@ -115,6 +116,7 @@ var jbScanner;
         el.val(scannedText);
         $(".qr-scanner-modal").removeClass("js-show");
         jbScanner.stopScanning();
+        scannerParentElement.innerHTML = '';
       }
 
     }
@@ -180,7 +182,7 @@ var jbScanner;
       jbScanner = new JsQRScanner(onQRCodeScanned($input));
       //console.log(jbScanner);
       jbScanner.setSnapImageMaxSize(300);
-      var scannerParentElement = document.getElementById("js-video-box");
+      //var scannerParentElement = document.getElementById("js-video-box");
       if(scannerParentElement)
       {
         scannerParentElement.innerHTML = '';
@@ -197,5 +199,6 @@ var jbScanner;
 
   $(document).on("click", ".qr-scanner-modal .qr-scanner-modal__close", (e) => {
       jbScanner.stopScanning();
+      scannerParentElement.innerHTML = '';
   });
 })();

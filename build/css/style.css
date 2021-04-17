@@ -6127,6 +6127,10 @@ input.search.js-inputed {
   z-index: 100;
 }
 
+.search-result.active {
+  display: block;
+}
+
 .search-result__content {
   width: 100%;
   display: -webkit-box;
@@ -6183,6 +6187,7 @@ input.search.js-inputed {
 
 .search-result--small .search-result__content {
   padding: 0 24px;
+  max-height: 282px;
 }
 
 .search-result--small .search-item {
@@ -6707,6 +6712,7 @@ input.search.js-inputed {
   font-size: 18px;
   line-height: 22px;
   margin: 24px 0 14px;
+  color: #1A1A1A;
 }
 
 .modal__desc {
@@ -6876,6 +6882,7 @@ input.search.js-inputed {
 }
 
 .input-block {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9629,9 +9636,12 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  display: inline-block;
   padding: 3px 15px;
   border-radius: 5px;
   margin-left: 20px;
+  min-width: 120px;
+  text-align: center;
 }
 
 .contract-info__title-status.pending {
@@ -9653,6 +9663,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .contract-info__title-status.blocked {
   background-color: #FFD6D6;
+}
+
+.contract-info__title-status.expires {
+  background-color: #FEEDAE;
 }
 
 .contract-info__serial-number {
@@ -9972,6 +9986,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 }
 
 .payment-waiting {
+  margin-bottom: 24px;
+}
+
+.payment-waiting__short {
   margin-bottom: 24px;
 }
 
@@ -10571,6 +10589,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
       flex-shrink: 0;
   margin-right: auto;
   margin-left: 20px;
+}
+
+.delivery-or-pickup__call {
+  margin-bottom: 40px;
 }
 
 .delivery-or-pickup__call-block {
@@ -12503,6 +12525,42 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   margin-right: 24px;
 }
 
+.mutual-calcs-block--short col:first-child {
+  width: 18%;
+}
+
+.mutual-calcs-block--short col:nth-child(2) {
+  width: 20%;
+}
+
+.mutual-calcs-block--short col:nth-child(3) {
+  width: 13%;
+}
+
+.mutual-calcs-block--short col:nth-child(4) {
+  width: 12%;
+}
+
+.mutual-calcs-block--short col:nth-child(5) {
+  width: 12%;
+}
+
+.mutual-calcs-block--short col:nth-child(6) {
+  width: 7%;
+}
+
+.mutual-calcs-block--short col:nth-child(7) {
+  width: 9%;
+}
+
+.mutual-calcs-block--short col:nth-child(8) {
+  width: 9%;
+}
+
+.mutual-calcs-block--short col:nth-child(9) {
+  width: 0;
+}
+
 .mutual-calcs-block__table {
   width: 100%;
   border-collapse: collapse;
@@ -12889,6 +12947,33 @@ button.mutual-calcs-block__page-number:not(.active):hover, button.mutual-calcs-b
     width: 9%;
   }
   .mutual-calcs-block col:nth-child(9) {
+    width: 0%;
+  }
+  .mutual-calcs-block--short col:first-child {
+    width: 19%;
+  }
+  .mutual-calcs-block--short col:nth-child(2) {
+    width: 18%;
+  }
+  .mutual-calcs-block--short col:nth-child(3) {
+    width: 14%;
+  }
+  .mutual-calcs-block--short col:nth-child(4) {
+    width: 14%;
+  }
+  .mutual-calcs-block--short col:nth-child(5) {
+    width: 14%;
+  }
+  .mutual-calcs-block--short col:nth-child(6) {
+    width: 11%;
+  }
+  .mutual-calcs-block--short col:nth-child(7) {
+    width: 10%;
+  }
+  .mutual-calcs-block--short col:nth-child(8) {
+    width: 0%;
+  }
+  .mutual-calcs-block--short col:nth-child(9) {
     width: 0%;
   }
   .mutual-calcs-block__table th:nth-child(8) {
@@ -13540,6 +13625,10 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
   color: #94A0B1;
 }
 
+.filters__form-mutual-calcs .contracts-all__select {
+  width: calc((100% - 28px)/3);
+}
+
 @media (max-width: 1439px) {
   .mutual-calcs__details-item {
     width: 18%;
@@ -13724,6 +13813,27 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
 
 .clients-block__checkbox {
   margin-bottom: 40px;
+}
+
+.clients-block--agents col:first-child {
+  width: 25%;
+}
+
+.clients-block--agents col:nth-child(2) {
+  width: 23%;
+}
+
+.clients-block--agents col:nth-child(3) {
+  width: 23%;
+}
+
+.clients-block--agents col:nth-child(4) {
+  width: calc(29% - 86px);
+}
+
+.clients-block--agents col:nth-child(5) {
+  width: 86px;
+  min-width: 86px;
 }
 
 .clients-block__table {
@@ -15553,6 +15663,11 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   background-position: top center;
 }
 
+.connection-multi {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
 .connection-multi__block {
   background-color: #F4F4F8;
   border-radius: 5px;
@@ -15617,4 +15732,48 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 
 .connection-multi__block tr:not(:last-child) td {
   border-bottom: 1px solid #D1D8E1;
+}
+
+@media (max-width: 999px) {
+  .connection-multi__block {
+    display: none;
+  }
+  .connection-multi__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .connection-multi__container > *:not(.contracts-mobile) {
+    width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.installation-data__address-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.installation-data__address-title {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.installation-data__address-title span {
+  color: #FC4242;
+}
+
+.installation-data__modal-date-block {
+  margin-top: 14px;
+}
+
+.installation-data__modal-address-item {
+  margin-top: 14px;
+  width: calc((100% - 14px) / 2);
 }

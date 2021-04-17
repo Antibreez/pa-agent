@@ -131,6 +131,12 @@
   color: $text-minor;
 }
 
+.filters__form-mutual-calcs {
+  .contracts-all__select {
+    width: calc((100% - 28px)/3);
+  }
+}
+
 @include tablet {
   .mutual-calcs__details-item {
     width: 18%;

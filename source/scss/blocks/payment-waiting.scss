@@ -1,6 +1,10 @@
 .payment-waiting {
   margin-bottom: 24px;
 
+  &__short {
+    margin-bottom: 24px;
+  }
+
   &__wrapper {
     padding: 28px;
     border: 1px solid $bg;

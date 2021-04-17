@@ -26,7 +26,7 @@
     $('.mutual-calcs__earned-date-menu').toggle();
   });
 
-  $('.date-input-period').datepicker({
+  $('#earned-date').datepicker({
     range: 'period',
     inline: true,
     showButtonPanel: true,

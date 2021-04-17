@@ -1,0 +1,25 @@
+.installation-data {
+  &__address-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__address-title {
+    width: 100%;
+    margin-bottom: 0;
+
+    span {
+      color: #FC4242;
+    }
+  }
+
+  &__modal-date-block {
+    margin-top: 14px;
+  }
+
+  &__modal-address-item {
+    margin-top: 14px;
+    width: calc((100% - 14px) / 2);
+  }
+}

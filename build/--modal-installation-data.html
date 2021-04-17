@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+
+  <style>
+    .modal {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+
+  <main>
+
+
+
+    <!--Модальное окно подтверждения оплаты-->
+    <section id="installation-data__modal" class="modal js-show">
+      <div class="modal__overlay">
+
+          <div class="modal__body  installation-data__modal-body">
+            <form>
+              <h1 class="modal__title">Заполните данные о&nbsp;монтаже</h1>
+              <p class="modal__desc">
+                Укажите адрес поведения монтажных работ, название монтажной организации, а также приложите документы, подтверждающие факт проведения установочных работ.
+              </p>
+              <div class="installation-data__modal-content  modal__content">
+                <div class="installation-data__modal-company  input-block">
+                  <input class="input-text" type="text">
+                  <label class="input-label">Наименование организации</label>
+                </div>
+
+                <div class="installation-data__modal-date-block  date-block">
+                  <label for="payment-date" class="date-label">Дата</label>
+                  <input id="payment-date" class="date-input">
+                </div>
+
+                <div class="installation-data__address-block">
+                  <h2 class="installation-data__address-title  modal__subtitle">Адрес установки <span>*</span></h2>
+
+                  <div class="installation-data__modal-address-item  input-block">
+                    <input class="input-text" type="text">
+                    <label class="input-label">Город</label>
+                  </div>
+
+                  <div class="installation-data__modal-address-item  input-block">
+                    <input class="input-text" type="text">
+                    <label class="input-label">Улица</label>
+                  </div>
+
+                  <div class="installation-data__modal-address-item  input-block">
+                    <input class="input-text" type="text">
+                    <label class="input-label">Дом / Корпус</label>
+                  </div>
+
+                  <div class="installation-data__modal-address-item  input-block">
+                    <input class="input-text" type="text">
+                    <label class="input-label">Кв / Офис</label>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal__btn-block">
+                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                <button type="submit" class="modal__btn-item  btn-primary">Сохранить</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

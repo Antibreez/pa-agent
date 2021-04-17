@@ -15,9 +15,12 @@
 
   &__title-status {
     @include b12;
+    display: inline-block;
     padding: 3px 15px;
     border-radius: 5px;
     margin-left: 20px;
+    min-width: 120px;
+    text-align: center;
 
     &.pending {
       background-color: #FEEDAE;
@@ -38,6 +41,10 @@
 
     &.blocked {
       background-color: #FFD6D6;
+    }
+
+    &.expires {
+      background-color: #FEEDAE;
     }
   }
 

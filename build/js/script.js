@@ -21,8 +21,24 @@
 })();
 
 (function () {
-  $('.date-input').datepicker({
+  $('.date-input:not(.date-input-range)').datepicker({
     dateFormat: 'dd.mm.yy'
+  });
+  $('.date-input-range').datepicker({
+    range: 'period',
+    inline: true,
+    showButtonPanel: true,
+    showOtherMonths: true,
+    selectOtherMonths: true,
+    closeText: "Готово",
+    dateFormat: 'dd.mm.yy',
+    beforeShow: function beforeShow(input, inst) {
+      inst.dpDiv.css('transform', 'translateX(-24px)');
+      inst.dpDiv.addClass('calendar-range');
+    },
+    onSelect: function onSelect(dateText, inst, extensionRange) {
+      inst.input.val(extensionRange.startDateText + ' - ' + extensionRange.endDateText);
+    }
   });
 })();
 
@@ -888,7 +904,7 @@
   $('.mutual-calcs__earned-date-btn').on('click', function () {
     $('.mutual-calcs__earned-date-menu').toggle();
   });
-  $('.date-input-period').datepicker({
+  $('#earned-date').datepicker({
     range: 'period',
     inline: true,
     showButtonPanel: true,
@@ -1569,6 +1585,7 @@
   //   $(document).on("click", ".qr-scanner-modal .qr-scanner-modal__close", (e) => {
   //       jbScanner.stopScanning();
   //   });
+  var scannerParentElement = document.getElementById("js-video-box");
   var jbScanner;
   $('.subscribe-register__input .input-text').each(function (index, value) {
     var $input = $(this); // function onQRCodeScanned(scannedText) {
@@ -1582,6 +1599,7 @@
         el.val(scannedText);
         $(".qr-scanner-modal").removeClass("js-show");
         jbScanner.stopScanning();
+        scannerParentElement.innerHTML = '';
       };
     }
 
@@ -1628,8 +1646,7 @@
     $input.siblings('.subscribe-register__btn').on("click", function (e) {
       jbScanner = new JsQRScanner(onQRCodeScanned($input)); //console.log(jbScanner);
 
-      jbScanner.setSnapImageMaxSize(300);
-      var scannerParentElement = document.getElementById("js-video-box");
+      jbScanner.setSnapImageMaxSize(300); //var scannerParentElement = document.getElementById("js-video-box");
 
       if (scannerParentElement) {
         scannerParentElement.innerHTML = ''; //append the jbScanner to an existing DOM element
@@ -1640,6 +1657,7 @@
   });
   $(document).on("click", ".qr-scanner-modal .qr-scanner-modal__close", function (e) {
     jbScanner.stopScanning();
+    scannerParentElement.innerHTML = '';
   });
 })();
 

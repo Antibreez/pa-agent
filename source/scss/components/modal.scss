@@ -58,6 +58,7 @@
   &__subtitle {
     @include h18;
     margin: 24px 0 14px;
+    color: $text-main;
   }
 
   &__desc {
