@@ -12287,9 +12287,6 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .subscription-page__action-item {
@@ -12323,6 +12320,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .subscription-page__action-item:nth-child(n) {
   margin-bottom: 20px;
+}
+
+.subscription-page__action-item:not(:nth-child(3n)) {
+  margin-right: 16px;
 }
 
 .subscription-page__action-item::before, .subscription-page__action-item::after {
@@ -12381,6 +12382,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   background-image: url("../img/return.svg");
 }
 
+.subscription-page__action-item--confirm::after {
+  background-image: url("../img/check-grey.svg");
+}
+
 .subscription-page__additional-services-title {
   font-weight: 500;
   font-size: 18px;
@@ -12428,6 +12433,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 @media (max-width: 1439px) {
   .subscription-page__action-item {
     padding: 19px 16px 19px 80px;
+    min-height: 80px;
   }
 }
 
@@ -12446,6 +12452,9 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   }
   .subscription-page__action-item:not(:last-child) {
     margin-bottom: 20px;
+  }
+  .subscription-page__action-item:not(:nth-child(3n)) {
+    margin-right: 0;
   }
 }
 

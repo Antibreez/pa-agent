@@ -6,7 +6,6 @@
   &__actions-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   &__action-item {
@@ -29,6 +28,10 @@
 
     &:nth-child(n) {
       margin-bottom: 20px;
+    }
+
+    &:not(:nth-child(3n)) {
+      margin-right: 16px;
     }
 
     &::before,
@@ -86,6 +89,10 @@
     &--return::after {
       background-image: url("../img/return.svg");
     }
+
+    &--confirm::after {
+      background-image: url("../img/check-grey.svg");
+    }
   }
 
   &__additional-services-title {
@@ -129,6 +136,7 @@
   .subscription-page {
     &__action-item {
       padding: 19px 16px 19px 80px;
+      min-height: 80px;
     }
   }
 }
@@ -148,6 +156,10 @@
 
       &:not(:last-child) {
         margin-bottom: 20px;
+      }
+
+      &:not(:nth-child(3n)) {
+        margin-right: 0;
       }
     }
   }
