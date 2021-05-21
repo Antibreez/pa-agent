@@ -91,6 +91,8 @@
     width: calc((100% - 716px) / 2);
     background-color: $bg;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -116,6 +118,10 @@
       color: $primary;
       margin-bottom: 14px;
     }
+  }
+
+  &__link {
+    margin-top: auto;
   }
 }
 
