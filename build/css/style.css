@@ -15640,9 +15640,15 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   }
 }
 
+.qr-scanner-modal {
+  max-width: 100vw;
+}
+
 .qr-scanner-modal .modal__body {
   padding: 0;
   background-color: #1A1A1A;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .qr-scanner-modal .qr-scanner-modal__close {

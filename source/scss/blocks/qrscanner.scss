@@ -1,7 +1,11 @@
 .qr-scanner-modal {
+  max-width: 100vw;
+
   .modal__body {
     padding: 0;
     background-color: $text-main;
+    overflow: hidden;
+    overflow-y: auto;
   }
 
   .qr-scanner-modal__close {
