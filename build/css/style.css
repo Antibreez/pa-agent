@@ -15666,6 +15666,7 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 110;
+  opacity: 0;
 }
 
 .qr-scanner-modal .qr-scanner-modal__close:hover, .qr-scanner-modal .qr-scanner-modal__close:active, .qr-scanner-modal .qr-scanner-modal__close:focus {
@@ -15688,6 +15689,19 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   background-repeat: no-repeat;
   background-position: top center;
   z-index: 110;
+  opacity: 0;
+}
+
+.qr-scanner-modal.js-show .qr-scanner-modal__close {
+  opacity: 1;
+  -webkit-transition: opacity 0s ease 0.3s;
+  transition: opacity 0s ease 0.3s;
+}
+
+.qr-scanner-modal.js-show .qr-scanner-modal__borders {
+  opacity: 1;
+  -webkit-transition: opacity 0s ease 0.3s;
+  transition: opacity 0s ease 0.3s;
 }
 
 .connection-multi {

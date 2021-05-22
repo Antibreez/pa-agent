@@ -19,6 +19,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 110;
+
+    opacity: 0;
   }
 
   .qr-scanner-modal__borders {
@@ -36,5 +38,19 @@
     background-repeat: no-repeat;
     background-position: top center;
     z-index: 110;
+
+    opacity: 0;
+  }
+}
+
+.qr-scanner-modal.js-show {
+  .qr-scanner-modal__close {
+    opacity: 1;
+    transition: opacity 0s ease 0.3s;
+  }
+
+  .qr-scanner-modal__borders {
+    opacity: 1;
+    transition: opacity 0s ease 0.3s;
   }
 }
