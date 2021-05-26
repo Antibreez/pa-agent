@@ -178,6 +178,7 @@
 
 .select-label {
   @include b12;
+  display: block;
   margin-bottom: 9px;
   color: $text-minor;
   order: 1;

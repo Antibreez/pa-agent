@@ -5889,6 +5889,7 @@ a {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  display: block;
   margin-bottom: 9px;
   color: #94A0B1;
   -webkit-box-ordinal-group: 2;
@@ -13505,6 +13506,9 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
   background-position: right 20px center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  min-height: 57px;
 }
 
 .mutual-calcs__earned-date-btn:hover, .mutual-calcs__earned-date-btn:active, .mutual-calcs__earned-date-btn:focus {
@@ -13529,6 +13533,7 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  z-index: 100;
 }
 
 .mutual-calcs__earned-date-menu-list {
