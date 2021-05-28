@@ -8818,26 +8818,30 @@ div.input-file__file-load {
 }
 
 .contracts col:first-child {
-  width: 23%;
+  width: 19%;
 }
 
 .contracts col:nth-child(2) {
-  width: 10%;
+  width: 9%;
 }
 
 .contracts col:nth-child(3) {
-  width: 11%;
+  width: 19%;
 }
 
 .contracts col:nth-child(4) {
-  width: 22%;
+  width: 21%;
 }
 
 .contracts col:nth-child(5) {
-  width: 22%;
+  width: 11%;
 }
 
 .contracts col:nth-child(6) {
+  width: 9%;
+}
+
+.contracts col:nth-child(7) {
   width: 12%;
 }
 
@@ -8865,6 +8869,10 @@ div.input-file__file-load {
 .contracts__table th:last-child {
   text-align: right;
   padding-right: 14px;
+}
+
+.contracts__table th:nth-last-child(2) {
+  text-align: right;
 }
 
 .contracts__table
@@ -8900,9 +8908,20 @@ tr:not(:first-of-type):hover
   padding-right: 14px;
 }
 
+.contracts__data td:nth-last-child(2) {
+  text-align: right;
+}
+
 .contracts__data p {
   margin: 0;
   color: #94A0B1;
+}
+
+.contracts__data p:first-child {
+  color: #1A1A1A;
+}
+
+.contracts__data p:not(.contracts__reward) {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -moz-box;
@@ -8912,8 +8931,95 @@ tr:not(:first-of-type):hover
   box-orient: vertical;
 }
 
-.contracts__data p:first-child {
-  color: #1A1A1A;
+.contracts__reward {
+  margin: 0;
+}
+
+.contracts__reward-title {
+  display: block;
+  color: #94A0B1;
+}
+
+.contracts__reward-info {
+  position: relative;
+  display: inline-block;
+}
+
+.contracts__reward-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.contracts__reward-tooltip {
+  display: block;
+  position: absolute;
+  top: calc(100% + 7px);
+  right: 0;
+  padding: 5px 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 200px;
+  min-width: 200px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #94A0B1;
+  text-align: left;
+  background-color: #fff;
+  z-index: 100;
+  -webkit-box-shadow: 0px 4px 10px rgba(86, 91, 121, 0.25);
+          box-shadow: 0px 4px 10px rgba(86, 91, 121, 0.25);
+  border-radius: 2px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease 0s, visibility 0s ease 0.2s;
+  transition: opacity 0.2s ease 0s, visibility 0s ease 0.2s;
+}
+
+.contracts__reward-tooltip::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  width: 16px;
+  height: 9px;
+  background-image: url("../img/tiptail.svg");
+  background-size: cover;
+}
+
+@media (min-width: 1000px) {
+  .contracts__reward-info:hover .contracts__reward-tooltip {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+}
+
+.contracts__reward-value {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  vertical-align: middle;
+  padding-top: 2px;
+}
+
+.contracts__reward.warning .contracts__reward-icon {
+  background-image: url("../img/alert.svg");
+}
+
+.contracts__reward.waiting .contracts__reward-icon {
+  background-image: url("../img/time.svg");
+}
+
+.contracts__reward.done .contracts__reward-icon {
+  background-image: url("../img/check.svg");
+}
+
+.contracts__reward.done .contracts__reward-value {
+  color: #2858FF;
 }
 
 .contracts__link p.alert {
@@ -13468,6 +13574,11 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
   }
 }
 
+.mutual-calcs__earned {
+  margin-bottom: 80px;
+  padding-bottom: 15px;
+}
+
 .mutual-calcs__earned-title-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13583,11 +13694,12 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-bottom: 24px;
   border-bottom: 1px solid #D1D8E1;
+}
+
+.mutual-calcs__details-item {
+  margin-right: auto;
 }
 
 .mutual-calcs__details-item:nth-child(2) .mutual-calcs__details-value {
@@ -13618,11 +13730,53 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 24px;
+  padding-bottom: 13px;
 }
 
 .mutual-calcs__diagram-item {
   width: 18%;
   text-align: center;
+}
+
+.mutual-calcs__diagram--month {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.mutual-calcs__diagram--month .mutual-calcs__diagram-item {
+  width: auto;
+  min-width: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.mutual-calcs__diagram--month .mutual-calcs__diagram-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.mutual-calcs__diagram--month[data-days="30"] .mutual-calcs__diagram-item:last-child {
+  display: none;
+}
+
+.mutual-calcs__diagram--month[data-days="29"] .mutual-calcs__diagram-item:last-child {
+  display: none;
+}
+
+.mutual-calcs__diagram--month[data-days="29"] .mutual-calcs__diagram-item:nth-last-child(2) {
+  display: none;
+}
+
+.mutual-calcs__diagram--month[data-days="28"] .mutual-calcs__diagram-item:last-child {
+  display: none;
+}
+
+.mutual-calcs__diagram--month[data-days="28"] .mutual-calcs__diagram-item:nth-last-child(2) {
+  display: none;
+}
+
+.mutual-calcs__diagram--month[data-days="28"] .mutual-calcs__diagram-item:nth-last-child(3) {
+  display: none;
 }
 
 .mutual-calcs__diagram-pic {
@@ -13681,14 +13835,18 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
     padding-left: 0;
     padding-right: 0;
   }
+  .mutual-calcs__earned {
+    padding: 18px 24px 30px;
+    border: none;
+    border-top: 1px solid #f4f4f8;
+    border-bottom: 1px solid #f4f4f8;
+    border-radius: 0;
+    margin-bottom: 40px;
+  }
   .mutual-calcs__container > *:not(.mutual-calcs-block-mobile):not(.mutual-calcs-payment-mobile) {
     width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
-  }
-  .mutual-calcs__earned {
-    padding: 18px;
-    padding-bottom: 43px;
   }
   .mutual-calcs__earned-title-block {
     -webkit-box-orient: vertical;
@@ -13719,6 +13877,22 @@ button.mutual-calcs-payment-block__page-number:not(.active):hover, button.mutual
   }
   .mutual-calcs__details-item:not(:last-child) {
     margin-bottom: 24px;
+  }
+  .mutual-calcs__diagram--month {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    padding-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .mutual-calcs__diagram--month::after {
+    content: "";
+    display: block;
+    min-width: 24px;
+    height: 24px;
+  }
+  .mutual-calcs__diagram--month .mutual-calcs__diagram-pic {
+    margin-bottom: -5px;
   }
   .mutual-calcs__diagram-item {
     width: 10%;

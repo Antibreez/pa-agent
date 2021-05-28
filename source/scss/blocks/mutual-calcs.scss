@@ -1,3 +1,8 @@
+.mutual-calcs__earned {
+  margin-bottom: 80px;
+  padding-bottom: 15px;
+}
+
 .mutual-calcs__earned-title-block {
   display: flex;
   align-items: center;
@@ -79,12 +84,14 @@
 
 .mutual-calcs__details {
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   padding-bottom: 24px;
   border-bottom: 1px solid $stroke;
 }
 
 .mutual-calcs__details-item {
+  margin-right: auto;
+
   &:nth-child(2) .mutual-calcs__details-value {
     color: $primary;
   }
@@ -109,11 +116,65 @@
   display: flex;
   justify-content: space-between;
   padding-top: 24px;
+  padding-bottom: 13px;
 }
 
 .mutual-calcs__diagram-item {
   width: 18%;
   text-align: center;
+}
+
+.mutual-calcs__diagram--month {
+  overflow: hidden;
+  overflow-x: auto;
+  // width: calc(100% + 28px);
+  // margin-left: -14px;
+
+  .mutual-calcs__diagram-item {
+    width: auto;
+    min-width: 20px;
+    flex-grow: 1;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &[data-days="30"] {
+    .mutual-calcs__diagram-item {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &[data-days="29"] {
+    .mutual-calcs__diagram-item {
+      &:last-child {
+        display: none;
+      }
+
+      &:nth-last-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  &[data-days="28"] {
+    .mutual-calcs__diagram-item {
+      &:last-child {
+        display: none;
+      }
+
+      &:nth-last-child(2) {
+        display: none;
+      }
+
+      &:nth-last-child(3) {
+        display: none;
+      }
+    }
+  }
 }
 
 .mutual-calcs__diagram-pic {
@@ -165,15 +226,19 @@
       padding-right: 0;
     }
 
+    &__earned {
+      padding: 18px 24px 30px;
+      border: none;
+      border-top: 1px solid #f4f4f8;
+      border-bottom: 1px solid #f4f4f8;
+      border-radius: 0;
+      margin-bottom: 40px;
+    }
+
     &__container > *:not(.mutual-calcs-block-mobile):not(.mutual-calcs-payment-mobile) {
       width: calc(100% - 48px);
       margin-left: auto;
       margin-right: auto;
-    }
-
-    &__earned {
-      padding: 18px;
-      padding-bottom: 43px;
     }
 
     &__earned-title-block {
@@ -201,6 +266,25 @@
 
       &:not(:last-child) {
         margin-bottom: 24px;
+      }
+    }
+
+    &__diagram--month {
+      width: calc(100% + 48px);
+      margin-left: -24px;
+      padding-bottom: 30px;
+      padding-left: 24px;
+      padding-right: 24px;
+
+      &::after {
+        content: "";
+        display: block;
+        min-width: 24px;
+        height: 24px;
+      }
+
+      .mutual-calcs__diagram-pic {
+        margin-bottom: -5px;
       }
     }
 
