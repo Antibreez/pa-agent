@@ -203,6 +203,26 @@
     margin-right: auto;
     margin-left: 20px;
   }
+
+  &__change-data {
+    @include btn-reset;
+    font-size: 14px;
+    line-height: 17px;
+    color: $primary;
+    margin-right: 14px;
+
+    &.mobile {
+      display: none;
+    }
+  }
+
+  &__installer-name {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-minor;
+    margin-bottom: 14px;
+  }
 }
 
 .delivery-or-pickup__call {
@@ -301,6 +321,15 @@ div.registration-address {
 }
 
 @include mobile {
+  .delivery-or-pickup__change-data {
+    display: none;
+
+    &.mobile {
+      display: block;
+      margin-bottom: 14px;
+    }
+  }
+
   .delivery-or-pickup__wrapper {
     position: relative;
     padding: 17px;

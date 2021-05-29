@@ -1,4 +1,108 @@
 .subscription-page {
+  &__client {
+    margin-bottom: 40px;
+  }
+
+  &__client-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__client-input-item {
+    width: calc((100% - 24px) / 2);
+
+    input[placeholder]          {text-overflow:ellipsis;}
+    input::-moz-placeholder     {text-overflow:ellipsis;}
+    input:-moz-placeholder      {text-overflow:ellipsis;}
+    input:-ms-input-placeholder {text-overflow:ellipsis;}
+  }
+
+  &__client-saved {
+    font-size: 12px;
+    line-height: 18px;
+    color: $primary;
+    margin: 9px 0 0;
+    min-height: 18px;
+    order: 10;
+  }
+
+  &__reward {
+    margin-bottom: 80px;
+
+    &-details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    &-data {
+      width: calc((100% - 172px) / 3);
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      &:last-child {
+        width: 100px;
+        max-width: 100px;
+        text-align: right;
+      }
+
+      .info-block__subtitle {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 32px;
+      }
+
+      .info-block__desc {
+        &:not(:last-of-type) {
+          margin-bottom: 42px;
+        }
+      }
+    }
+
+    &-sum {
+      &.pending {
+        color: $text-minor;
+      }
+
+      &.active {
+        color: #40DA90;
+      }
+    }
+
+    &-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    &-total-sum {
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 500;
+      color: $text-main;
+    }
+
+    &-status {
+      font-size: 12px;
+      line-height: 18px;
+      padding: 3px 12px;
+      border-radius: 5px;
+
+      &.pending {
+        color: #fff;
+        background-color: $text-minor;
+      }
+
+      &.active {
+        color: $text-main;
+        background-color: #DDF9EC;
+      }
+    }
+  }
+
   &__actions {
     margin-bottom: 4px;
   }
@@ -143,6 +247,18 @@
 
 @include mobile {
   .subscription-page {
+    &__client-block {
+      flex-direction: column;
+    }
+
+    &__client-input-item {
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 24px;
+      }
+    }
+
     &__actions {
       margin-bottom: 40px;
     }

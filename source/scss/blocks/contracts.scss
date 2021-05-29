@@ -63,6 +63,7 @@
     text-align: left;
     color: $text-minor;
     padding-right: 14px;
+    vertical-align: top;
 
     &:first-child {
       padding-left: 14px;
@@ -442,6 +443,40 @@ button.contracts__page-number {
 
 .contracts-mobile {
   display: none;
+}
+
+@include tablet {
+  .contracts {
+    & col {
+      &:first-child {
+        width: 19%;
+      }
+
+      &:nth-child(2) {
+        width: 9%;
+      }
+
+      &:nth-child(3) {
+        width: 15%;
+      }
+
+      &:nth-child(4) {
+        width: 17%;
+      }
+
+      &:nth-child(5) {
+        width: 13%;
+      }
+
+      &:nth-child(6) {
+        width: 11%;
+      }
+
+      &:nth-child(7) {
+        width: 16%;
+      }
+    }
+  }
 }
 
 @include mobile {
