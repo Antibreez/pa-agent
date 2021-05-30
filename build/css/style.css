@@ -8389,7 +8389,7 @@ div.input-file__file-load {
   font-size: 24px;
   line-height: 29px;
   margin: 0;
-  margin-right: auto;
+  margin-right: 16px;
   color: #1A1A1A;
 }
 
@@ -8407,6 +8407,26 @@ div.input-file__file-load {
 
 .filters__btn.opened span:nth-of-type(2) {
   display: none;
+}
+
+.filters__btn-clear {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2858FF;
+  margin-left: auto;
+}
+
+.filters__btn-clear:hover, .filters__btn-clear:active, .filters__btn-clear:focus {
+  background-color: transparent;
+}
+
+.filters__btn-clear:hover {
+  cursor: pointer;
 }
 
 .filters__form {
@@ -8876,6 +8896,10 @@ div.input-file__file-load {
   text-align: right;
 }
 
+.contracts__table th:nth-last-child(3) {
+  text-align: right;
+}
+
 .contracts__table
 tr:not(:first-of-type):hover
 + tr .contracts__link {
@@ -8910,6 +8934,10 @@ tr:not(:first-of-type):hover
 }
 
 .contracts__data td:nth-last-child(2) {
+  text-align: right;
+}
+
+.contracts__data td:nth-last-child(3) {
   text-align: right;
 }
 
@@ -9130,6 +9158,8 @@ tr:not(:first-of-type):hover
   height: 24px;
   margin-right: 10px;
   background-repeat: no-repeat;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .contracts__status-verification.done::before,
@@ -10774,6 +10804,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .delivery-or-pickup__change-data:hover, .delivery-or-pickup__change-data:active, .delivery-or-pickup__change-data:focus {
   background-color: transparent;
+}
+
+.delivery-or-pickup__change-data:hover {
+  cursor: pointer;
 }
 
 .delivery-or-pickup__change-data.mobile {
@@ -12478,7 +12512,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
     padding-left: 0;
     padding-right: 0;
   }
-  .subscription-all__container > *:not(.contract-services-mobile) {
+  .subscription-all__container > *:not(.contract-services-mobile):not(.contracts-mobile) {
     width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
@@ -12610,6 +12644,71 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .subscription-page__reward-status.active {
   color: #1A1A1A;
   background-color: #DDF9EC;
+}
+
+.subscription-page__reward-block-mobile {
+  display: none;
+}
+
+.subscription-page__reward table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+
+.subscription-page__reward table col:first-child {
+  width: 31%;
+}
+
+.subscription-page__reward table col:nth-child(2) {
+  width: 31%;
+}
+
+.subscription-page__reward table col:nth-child(3) {
+  width: calc(38% - 100%);
+}
+
+.subscription-page__reward table col:nth-child(4) {
+  width: 100px;
+}
+
+.subscription-page__reward table th {
+  font-size: 12px;
+  line-height: 18px;
+  color: #94A0B1;
+  font-weight: 400;
+  text-align: left;
+  padding: 0 24px 32px 0;
+}
+
+.subscription-page__reward table th:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+
+.subscription-page__reward table td {
+  font-size: 14px;
+  line-height: 21px;
+  color: #1A1A1A;
+  padding: 0 24px 42px 0;
+  vertical-align: middle;
+}
+
+.subscription-page__reward table td:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+
+.subscription-page__reward table td:last-child.pending {
+  color: #94A0B1;
+}
+
+.subscription-page__reward table td:last-child.active {
+  color: #40DA90;
+}
+
+.subscription-page__reward table tr:last-of-type td {
+  padding-bottom: 0;
 }
 
 .subscription-page__actions {
@@ -12802,6 +12901,30 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   }
   .subscription-page__action-item:not(:nth-child(3n)) {
     margin-right: 0;
+  }
+  .subscription-page__reward-details {
+    display: none;
+  }
+  .subscription-page__reward-block-mobile {
+    display: block;
+  }
+  .subscription-page__reward-block-mobile .swiper-slide {
+    padding-bottom: 54px;
+  }
+  .subscription-page__reward-total {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .subscription-page__reward-total-sum {
+    margin-bottom: 16px;
+  }
+  .subscription-page__reward table {
+    display: none;
   }
 }
 
@@ -15908,6 +16031,33 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   cursor: pointer;
 }
 
+.user-settings__main-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.user-settings__main-data-item {
+  width: calc((100% - 72px) / 4);
+}
+
+.user-settings__main-data-item .input-label {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.user-settings__main-value {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  color: #1A1A1A;
+  margin: 0;
+}
+
 #confirmation-code .modal__desc span,
 #confirmation-email .modal__desc span,
 #phone-success .modal__desc span {
@@ -15917,7 +16067,7 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 @media (max-width: 999px) {
   .user-settings .input-block {
     width: 100%;
-    min-width: none;
+    min-width: auto;
   }
   .user-settings__title {
     margin-bottom: 40px;
@@ -15927,6 +16077,18 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .user-settings__main-data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .user-settings__main-data-item {
+    width: 100%;
+  }
+  .user-settings__main-data-item:not(:last-child) {
+    margin-bottom: 24px;
   }
 }
 

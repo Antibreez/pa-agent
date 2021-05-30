@@ -53,6 +53,29 @@
       cursor: pointer;
     }
   }
+
+  &__main-data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__main-data-item {
+    width: calc((100% - 72px) / 4);
+
+    .input-label {
+      display: block;
+      margin-bottom: 9px;
+    }
+  }
+
+  &__main-value {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    color: $text-main;
+    margin: 0;
+  }
 }
 
 #confirmation-code,
@@ -69,7 +92,7 @@
   .user-settings {
     .input-block {
       width: 100%;
-      min-width: none;
+      min-width: auto;
     }
 
     &__title {
@@ -78,6 +101,18 @@
 
     &__data-name {
       flex-direction: column;
+    }
+
+    &__main-data {
+      flex-direction: column;
+    }
+
+    &__main-data-item {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
     }
   }
 }

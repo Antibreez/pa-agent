@@ -211,6 +211,10 @@
     color: $primary;
     margin-right: 14px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &.mobile {
       display: none;
     }

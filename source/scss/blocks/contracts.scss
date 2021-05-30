@@ -77,6 +77,10 @@
     &:nth-last-child(2) {
       text-align: right;
     }
+
+    &:nth-last-child(3) {
+      text-align: right;
+    }
   }
 }
 
@@ -110,6 +114,10 @@ tr:not(:first-of-type):hover
     }
 
     &:nth-last-child(2) {
+      text-align: right;
+    }
+
+    &:nth-last-child(3) {
       text-align: right;
     }
   }
@@ -318,6 +326,7 @@ tr:not(:first-of-type):hover
     height: 24px;
     margin-right: 10px;
     background-repeat: no-repeat;
+    flex-shrink: 0;
   }
 
   &.done::before {

@@ -945,6 +945,11 @@
     $(this).parent().next().slideToggle();
     $(this).toggleClass('opened');
   });
+  $('.filters__btn-clear').click(function () {
+    $('.filters .select').val('Все');
+    $('.filters .select').trigger('change');
+    $('.filters .select').removeClass('picked');
+  });
 })();
 
 (function () {
@@ -1658,6 +1663,22 @@
   $(document).on("click", ".qr-scanner-modal .qr-scanner-modal__close", function (e) {
     jbScanner.stopScanning();
     jbScanner.removeFrom(scannerParentElement);
+  });
+})();
+
+(function () {
+  var reward = document.querySelector('.subscription-page__reward-mobile');
+
+  if (!reward) {
+    return;
+  }
+
+  var slider = new Swiper('.subscription-page__reward-mobile', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.subscription-page__pagination',
+      dynamicBullets: true
+    }
   });
 })();
 

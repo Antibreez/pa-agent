@@ -13,7 +13,7 @@
     @include section-title;
     @include h24;
     margin: 0;
-    margin-right: auto;
+    margin-right: 16px;
     color: $text-main;
   }
 
@@ -34,6 +34,18 @@
 
     & span:nth-of-type(2) {
       display: none;
+    }
+  }
+
+  &__btn-clear {
+    @include btn-reset;
+    font-size: 14px;
+    line-height: 17px;
+    color: $primary;
+    margin-left: auto;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
