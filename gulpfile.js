@@ -15,6 +15,7 @@ let webp = require(`gulp-webp`);
 let posthtml = require(`gulp-posthtml`);
 let include = require(`posthtml-include`);
 let babel = require(`gulp-babel`);
+let replace = require(`gulp-replace`);
 
 let sass = require(`gulp-sass`);
 let postcss = require(`gulp-postcss`);
@@ -67,6 +68,8 @@ gulp.task(`css-template`, function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(replace(`../img/`, `img/`))
+    .pipe(replace(`../fonts/`, `fonts/`))
     .pipe(gulp.dest(`build/css`))
     .pipe(csso())
     .pipe(rename(`style-template.min.css`))

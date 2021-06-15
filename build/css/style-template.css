@@ -346,9 +346,9 @@ template {
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/suisseintl-light.eot");
+  src: url("fonts/suisseintl-light.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/suisseintl-light.eot?#iefix") format("embedded-opentype"), url("../fonts/suisseintl-light.woff") format("woff"), url("../fonts/suisseintl-light.ttf") format("truetype"), url("../fonts/suisseintl-light.svg#PlayfairDisplay") format("svg");
+  src: local(""), url("fonts/suisseintl-light.eot?#iefix") format("embedded-opentype"), url("fonts/suisseintl-light.woff") format("woff"), url("fonts/suisseintl-light.ttf") format("truetype"), url("fonts/suisseintl-light.svg#PlayfairDisplay") format("svg");
   /* Legacy iOS */
 }
 
@@ -357,9 +357,9 @@ template {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/suisseintl-regular.eot");
+  src: url("fonts/suisseintl-regular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/suisseintl-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/suisseintl-regular.woff") format("woff"), url("../fonts/suisseintl-regular.ttf") format("truetype"), url("../fonts/suisseintl-regular.svg#PlayfairDisplay") format("svg");
+  src: local(""), url("fonts/suisseintl-regular.eot?#iefix") format("embedded-opentype"), url("fonts/suisseintl-regular.woff") format("woff"), url("fonts/suisseintl-regular.ttf") format("truetype"), url("fonts/suisseintl-regular.svg#PlayfairDisplay") format("svg");
   /* Legacy iOS */
 }
 
@@ -368,9 +368,9 @@ template {
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/suisseintl-medium.eot");
+  src: url("fonts/suisseintl-medium.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/suisseintl-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/suisseintl-medium.woff") format("woff"), url("../fonts/suisseintl-medium.ttf") format("truetype"), url("../fonts/suisseintl-medium.svg#PlayfairDisplay") format("svg");
+  src: local(""), url("fonts/suisseintl-medium.eot?#iefix") format("embedded-opentype"), url("fonts/suisseintl-medium.woff") format("woff"), url("fonts/suisseintl-medium.ttf") format("truetype"), url("fonts/suisseintl-medium.svg#PlayfairDisplay") format("svg");
   /* Legacy iOS */
 }
 
@@ -379,9 +379,9 @@ template {
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/suisseintl-semibold.eot");
+  src: url("fonts/suisseintl-semibold.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/suisseintl-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/suisseintl-semibold.woff") format("woff"), url("../fonts/suisseintl-semibold.ttf") format("truetype"), url("../fonts/suisseintl-semibold.svg#PlayfairDisplay") format("svg");
+  src: local(""), url("fonts/suisseintl-semibold.eot?#iefix") format("embedded-opentype"), url("fonts/suisseintl-semibold.woff") format("woff"), url("fonts/suisseintl-semibold.ttf") format("truetype"), url("fonts/suisseintl-semibold.svg#PlayfairDisplay") format("svg");
   /* Legacy iOS */
 }
 
@@ -541,7 +541,7 @@ a {
   padding: 40px;
   margin: 0 auto;
   background-color: #fff;
-  background-image: url("../img/account-template-bg.png");
+  background-image: url("img/account-template-bg.png");
   background-repeat: no-repeat;
   background-position: bottom left;
 }
