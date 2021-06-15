@@ -362,27 +362,33 @@
     return;
   }
 
-  var input = modal.querySelector('.account-creation__input .input-text');
-  var btn = modal.querySelector('.modal__save');
+  var $input = $('.account-creation__input .input-text');
+  var $btn = $('#account-creation .modal__save');
 
   var onInput = function onInput(e) {
-    var value = e.target.value;
+    var $emptyInput = $input.filter(function () {
+      return this.value.split(' ').join('') === '' || this.value.length === 0;
+    });
 
-    if (value.split(' ').join('') !== '' && value.length > 0 && btn.hasAttribute('disabled')) {
-      btn.removeAttribute('disabled');
-    }
+    if ($emptyInput.length === 0) {
+      $btn.removeAttr('disabled');
+    } else {
+      $btn.attr('disabled', '');
+    } // if (
+    //   value.split(' ').join('') === ''
+    //   || value.length === 0
+    // ) {
+    //   if (!btn.hasAttribute('disabled')) {
+    //     btn.setAttribute('disabled', '');
+    //   }
+    // }
 
-    if (value.split(' ').join('') === '' || value.length === 0) {
-      if (!btn.hasAttribute('disabled')) {
-        btn.setAttribute('disabled', '');
-      }
-    }
   }; // verificationBtn.forEach(function(item) {
   //   new Modal(item, modal);
   // })
 
 
-  input.addEventListener('input', onInput);
+  $input.on('input', onInput);
 })();
 
 (function () {

@@ -424,6 +424,16 @@ button.installation-table-block__page-number {
   display: none;
 }
 
+.account-creation__input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.account-creation__input {
+  width: calc((100% - 24px) / 2);
+}
+
 @include tablet {
   .installation-table-block {
     & col {
@@ -492,6 +502,10 @@ button.installation-table-block__page-number {
     @include h18;
     margin: 0;
     color: $text-main;
+  }
+
+  .account-creation__input {
+    width: 100%;
   }
 }
 

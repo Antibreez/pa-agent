@@ -8815,7 +8815,7 @@ div.input-file__file-load {
 }
 
 .contracts {
-  padding: 34px 14px;
+  padding: 0 14px 34px;
   border-radius: 5px;
   background-color: #F4F4F8;
 }
@@ -8837,6 +8837,12 @@ div.input-file__file-load {
 
 .contracts__header + tr .contracts__link {
   border-top: none;
+}
+
+.contracts__header {
+  position: sticky;
+  top: 84px;
+  z-index: 20;
 }
 
 .contracts col:first-child {
@@ -8878,7 +8884,9 @@ div.input-file__file-load {
   font-size: 12px;
   line-height: 18px;
   margin: 0;
-  padding-bottom: 6px;
+  padding-top: 34px;
+  padding-bottom: 25px;
+  background-color: #F4F4F8;
   text-align: left;
   color: #94A0B1;
   padding-right: 14px;
@@ -15723,6 +15731,21 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   display: none;
 }
 
+.account-creation__input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.account-creation__input {
+  width: calc((100% - 24px) / 2);
+}
+
 @media (max-width: 1439px) {
   .installation-table-block col:first-child {
     width: 18%;
@@ -15775,6 +15798,9 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
     line-height: 22px;
     margin: 0;
     color: #1A1A1A;
+  }
+  .account-creation__input {
+    width: 100%;
   }
 }
 
