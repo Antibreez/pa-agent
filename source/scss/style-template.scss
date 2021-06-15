@@ -1,0 +1,13 @@
+// vendor
+@import "vendor/normalize.scss";
+
+// general
+@import "general/variables.scss";
+@import "general/mixins.scss";
+@import "general/fonts.scss";
+@import "general/global.scss";
+
+//components
+
+// blocks
+@import "blocks/account-template.scss";

@@ -57,6 +57,24 @@ gulp.task(`css`, function () {
     .pipe(server.stream());
 });
 
+gulp.task(`css-template`, function () {
+  return gulp.src(`source/scss/style-template.scss`)
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass({
+      outputStyle: `expanded`
+    }))
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest(`build/css`))
+    .pipe(csso())
+    .pipe(rename(`style-template.min.css`))
+    .pipe(sourcemap.write(`.`))
+    .pipe(gulp.dest(`build/css`))
+    .pipe(server.stream());
+});
+
 // ИЗОБРАЖЕНИЯ
 gulp.task(`sprite`, function () {
   return gulp.src(`source/img/*.svg`)
@@ -156,7 +174,7 @@ gulp.task(`server`, function () {
     ui: false
   });
 
-  gulp.watch(`source/scss/**/*.scss`, gulp.series(`css`));
+  gulp.watch(`source/scss/**/*.scss`, gulp.series(`css`, `css-template`));
   gulp.watch(`source/img/**/*`, gulp.series(`images`, `sprite`, `webp`, `refresh`));
   gulp.watch(`source/js/**/*.js`, gulp.series(`js`, `js-vendor`, `refresh`));
   gulp.watch(`source/*.html`).on(`change`, gulp.series(`html`, `refresh`));
@@ -168,5 +186,5 @@ gulp.task(`refresh`, function (done) {
 });
 
 // СБОРКА И СТАРТ
-gulp.task(`build`, gulp.series(`clean`, `copy`, `images`, `webp`, `imagemin`, `sprite`, `css`, `js-vendor`, `js`, `js-qrscanner`, `html`));
+gulp.task(`build`, gulp.series(`clean`, `copy`, `images`, `webp`, `imagemin`, `sprite`, `css`, `css-template`, `js-vendor`, `js`, `js-qrscanner`, `html`));
 gulp.task(`start`, gulp.series(`build`, `server`));
