@@ -8839,12 +8839,6 @@ div.input-file__file-load {
   border-top: none;
 }
 
-.contracts__header {
-  position: sticky;
-  top: 84px;
-  z-index: 20;
-}
-
 .contracts col:first-child {
   width: 19%;
 }
@@ -8883,6 +8877,9 @@ div.input-file__file-load {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  position: sticky;
+  top: 84px;
+  z-index: 20;
   margin: 0;
   padding-top: 34px;
   padding-bottom: 25px;
@@ -9152,6 +9149,11 @@ tr:not(:first-of-type):hover
 
 .contracts__status-name.expires {
   background-color: #FEEDAE;
+}
+
+.contracts__status-name.canceled {
+  background-color: #94A0B1;
+  color: #fff;
 }
 
 .contracts__status-verification,
@@ -9850,6 +9852,11 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .contract-info__title-status.expires {
   background-color: #FEEDAE;
+}
+
+.contract-info__title-status.canceled {
+  background-color: #94A0B1;
+  color: #fff;
 }
 
 .contract-info__serial-number {

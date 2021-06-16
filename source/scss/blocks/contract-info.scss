@@ -46,6 +46,11 @@
     &.expires {
       background-color: #FEEDAE;
     }
+
+    &.canceled {
+      background-color: #94A0B1;
+      color: #fff;
+    }
   }
 
   &__serial-number {

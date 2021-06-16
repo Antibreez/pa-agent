@@ -20,12 +20,6 @@
     border-top: none;
   }
 
-  &__header {
-    position: sticky;
-    top: 84px;
-    z-index: 20;
-  }
-
   & col {
     &:first-child {
       width: 19%;
@@ -64,6 +58,9 @@
 
   & th {
     @include b12;
+    position: sticky;
+    top: 84px;
+    z-index: 20;
     margin: 0;
     padding-top: 34px;
     padding-bottom: 25px;
@@ -319,6 +316,11 @@ tr:not(:first-of-type):hover
 
   &.expires {
     background-color: #FEEDAE;
+  }
+
+  &.canceled {
+    background-color: #94A0B1;
+    color: #fff;
   }
 }
 
