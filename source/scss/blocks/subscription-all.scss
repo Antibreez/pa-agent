@@ -39,6 +39,34 @@
       width: calc((100% - 14px) / 2);
     }
   }
+
+  &__found {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: $text-main;
+    margin: 40px 0;
+  }
+}
+
+.subscription-all__filters--mts {
+  .subscription-all__filters-form {
+    padding-top: 0;
+  }
+
+  .subscription-all__select {
+    width: calc((100% - 42px) / 4);
+    margin: 0;
+    margin-top: 24px;
+  }
+}
+
+@include tablet {
+  .subscription-all__filters--mts {
+    .subscription-all__select {
+      width: calc((100% - 14px) / 2);
+    }
+  }
 }
 
 @include mobile {
@@ -52,6 +80,14 @@
       width: calc(100% - 48px);
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+
+  div.subscription-all__filters--mts {
+    div.subscription-all__select:nth-child(n) {
+      margin: 0;
+      margin-top: 24px;
+      margin-bottom: 0 !important;
     }
   }
 }

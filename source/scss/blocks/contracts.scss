@@ -51,6 +51,30 @@
   }
 }
 
+.contracts--mts {
+  col {
+    &:first-child {
+      width: 27%;
+    }
+
+    &:nth-child(2) {
+      width: 9%;
+    }
+
+    &:nth-child(3) {
+      width: 26%;
+    }
+
+    &:nth-child(4) {
+      width: 26%;
+    }
+
+    &:nth-child(5) {
+      width: 12%;
+    }
+  }
+}
+
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
@@ -85,6 +109,18 @@
 
     &:nth-last-child(3) {
       text-align: right;
+    }
+  }
+}
+
+.contracts--mts {
+  th {
+    &:nth-last-child(2) {
+      text-align: left;
+    }
+
+    &:nth-last-child(3) {
+      text-align: left;
     }
   }
 }
@@ -139,6 +175,18 @@ tr:not(:first-of-type):hover
       @include overflow-3lines;
     }
 
+  }
+}
+
+.contracts--mts .contracts__data {
+  td {
+    &:nth-last-child(2) {
+      text-align: left;
+    }
+
+    &:nth-last-child(3) {
+      text-align: left;
+    }
   }
 }
 
@@ -297,7 +345,7 @@ tr:not(:first-of-type):hover
 
 .contracts__status-name {
   padding: 3px 5px;
-  min-width: 120px;
+  min-width: 170px;
   border-radius: 5px;
   font-size: 12px;
   line-height: 18px;
@@ -322,10 +370,31 @@ tr:not(:first-of-type):hover
     background-color: #94A0B1;
     color: #fff;
   }
+
+  &.confirmation {
+    background-color: #dcf5ff;
+  }
+}
+
+.contracts__status-alert {
+  color: #FC4242;
+  margin-right: 24px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    background-image: url("../img/alert.svg");
+  }
 }
 
 .contracts__status-verification,
-.contracts__status-payment {
+.contracts__status-payment,
+.contracts__status-text {
   margin: 0;
   margin-right: 24px;
 
@@ -337,6 +406,10 @@ tr:not(:first-of-type):hover
     margin-right: 10px;
     background-repeat: no-repeat;
     flex-shrink: 0;
+  }
+
+  &.done {
+    color: $text-main;
   }
 
   &.done::before {

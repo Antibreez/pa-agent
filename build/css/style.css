@@ -7192,6 +7192,7 @@ div.input-file__file-load {
   font-family: "Suisse Intl", "Arial", "Helvetica", "Helvetica CY", "Nimbus Sans" !important;
   width: 305px;
   padding: 20px;
+  z-index: 100 !important;
 }
 
 .ui-datepicker tr td,
@@ -8390,6 +8391,34 @@ div.input-file__file-load {
   margin: 0;
   margin-right: 16px;
   color: #1A1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filters__title span.filters__title-counter:nth-child(n) {
+  display: block;
+  width: 29px;
+  height: 29px;
+  margin-left: 16px;
+  border-radius: 50%;
+  background-color: #2858FF;
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .filters__btn span:first-of-type {
@@ -8867,6 +8896,26 @@ div.input-file__file-load {
   width: 12%;
 }
 
+.contracts--mts col:first-child {
+  width: 27%;
+}
+
+.contracts--mts col:nth-child(2) {
+  width: 9%;
+}
+
+.contracts--mts col:nth-child(3) {
+  width: 26%;
+}
+
+.contracts--mts col:nth-child(4) {
+  width: 26%;
+}
+
+.contracts--mts col:nth-child(5) {
+  width: 12%;
+}
+
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
@@ -8905,6 +8954,14 @@ div.input-file__file-load {
 
 .contracts__table th:nth-last-child(3) {
   text-align: right;
+}
+
+.contracts--mts th:nth-last-child(2) {
+  text-align: left;
+}
+
+.contracts--mts th:nth-last-child(3) {
+  text-align: left;
 }
 
 .contracts__table
@@ -8965,6 +9022,14 @@ tr:not(:first-of-type):hover
   -webkit-box-orient: vertical;
   line-clamp: 3;
   box-orient: vertical;
+}
+
+.contracts--mts .contracts__data td:nth-last-child(2) {
+  text-align: left;
+}
+
+.contracts--mts .contracts__data td:nth-last-child(3) {
+  text-align: left;
 }
 
 .contracts__reward {
@@ -9127,7 +9192,7 @@ tr:not(:first-of-type):hover
 
 .contracts__status-name {
   padding: 3px 5px;
-  min-width: 120px;
+  min-width: 170px;
   border-radius: 5px;
   font-size: 12px;
   line-height: 18px;
@@ -9156,14 +9221,37 @@ tr:not(:first-of-type):hover
   color: #fff;
 }
 
+.contracts__status-name.confirmation {
+  background-color: #dcf5ff;
+}
+
+.contracts__status-alert {
+  color: #FC4242;
+  margin-right: 24px;
+}
+
+.contracts__status-alert::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-image: url("../img/alert.svg");
+}
+
 .contracts__status-verification,
-.contracts__status-payment {
+.contracts__status-payment,
+.contracts__status-text {
   margin: 0;
   margin-right: 24px;
 }
 
 .contracts__status-verification::before,
-.contracts__status-payment::before {
+.contracts__status-payment::before,
+.contracts__status-text::before {
   content: "";
   display: block;
   width: 24px;
@@ -9174,13 +9262,21 @@ tr:not(:first-of-type):hover
       flex-shrink: 0;
 }
 
+.contracts__status-verification.done,
+.contracts__status-payment.done,
+.contracts__status-text.done {
+  color: #1A1A1A;
+}
+
 .contracts__status-verification.done::before,
-.contracts__status-payment.done::before {
+.contracts__status-payment.done::before,
+.contracts__status-text.done::before {
   background-image: url("../img/check.svg");
 }
 
 .contracts__status-verification.waiting::before,
-.contracts__status-payment.waiting::before {
+.contracts__status-payment.waiting::before,
+.contracts__status-text.waiting::before {
   background-image: url("../img/time.svg");
 }
 
@@ -9857,6 +9953,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 .contract-info__title-status.canceled {
   background-color: #94A0B1;
   color: #fff;
+}
+
+.contract-info__title-status.confirmation {
+  background-color: #DCF5FF;
 }
 
 .contract-info__serial-number {
@@ -10867,6 +10967,39 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 }
 
 .delivery-or-pickup__call-link {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: auto;
+}
+
+.delivery-or-pickup__alert {
+  margin-bottom: 40px;
+}
+
+.delivery-or-pickup__alert-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 20px 20px 58px;
+  border-radius: 5px;
+  background-color: rgba(252, 66, 66, 0.1);
+  background-image: url("../img/alert.svg");
+  background-position: left 20px center;
+  background-repeat: no-repeat;
+}
+
+.delivery-or-pickup__alert-desc {
+  font-size: 14px;
+  line-height: 21px;
+  color: #1A1A1A;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.delivery-or-pickup__alert-link {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-left: auto;
@@ -12672,6 +12805,30 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   width: calc((100% - 14px) / 2);
 }
 
+.subscription-all__found {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin: 40px 0;
+}
+
+.subscription-all__filters--mts .subscription-all__filters-form {
+  padding-top: 0;
+}
+
+.subscription-all__filters--mts .subscription-all__select {
+  width: calc((100% - 42px) / 4);
+  margin: 0;
+  margin-top: 24px;
+}
+
+@media (max-width: 1439px) {
+  .subscription-all__filters--mts .subscription-all__select {
+    width: calc((100% - 14px) / 2);
+  }
+}
+
 @media (max-width: 999px) {
   .subscription-all__container {
     padding-left: 0;
@@ -12681,6 +12838,11 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
     width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+  }
+  div.subscription-all__filters--mts div.subscription-all__select:nth-child(n) {
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 0 !important;
   }
 }
 

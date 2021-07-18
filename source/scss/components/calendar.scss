@@ -2,6 +2,7 @@
   font-family: $font !important;
   width: 305px;
   padding: 20px;
+  z-index: 100 !important;
 
   & tr td,
   & tr th {

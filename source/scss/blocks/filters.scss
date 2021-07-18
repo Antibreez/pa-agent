@@ -15,6 +15,24 @@
     margin: 0;
     margin-right: 16px;
     color: $text-main;
+    display: flex;
+    align-items: center;
+
+    span.filters__title-counter:nth-child(n) {
+      display: block;
+      width: 29px;
+      height: 29px;
+      margin-left: 16px;
+      border-radius: 50%;
+      background-color: $primary;
+      color: #fff;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__btn {
