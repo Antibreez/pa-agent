@@ -8437,6 +8437,12 @@ div.input-file__file-load {
   display: none;
 }
 
+.filters__btn.opened .filters__title .filters__title-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .filters__btn-clear {
   margin: 0;
   padding: 0;

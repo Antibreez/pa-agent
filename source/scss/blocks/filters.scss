@@ -53,6 +53,10 @@
     & span:nth-of-type(2) {
       display: none;
     }
+
+    .filters__title .filters__title-counter {
+      display: flex;
+    }
   }
 
   &__btn-clear {
