@@ -235,6 +235,7 @@
   &-block {
     display: flex;
     align-items: center;
+    min-height: 68px;
     padding: 20px 20px 20px 58px;
     border-radius: 5px;
     background-color: rgba(40, 88, 255, 0.1);
@@ -257,6 +258,13 @@
   }
 }
 
+.delivery-or-pickup__call--report {
+  .delivery-or-pickup__alert-block {
+    align-items: flex-start;
+    background-position: left 20px top 20px;
+  }
+}
+
 .delivery-or-pickup__alert {
   margin-bottom: 40px;
 
@@ -267,7 +275,7 @@
     border-radius: 5px;
     background-color: rgba(252, 66, 66, 0.1);
     background-image: url("../img/alert.svg");
-    background-position: left 20px center;
+    background-position: left 20px top 26px;
     background-repeat: no-repeat;
   }
 
@@ -475,6 +483,17 @@ div.registration-address {
 
     &-link {
       width: 100%;
+    }
+  }
+
+  .delivery-or-pickup__alert {
+    &-block {
+      flex-direction: column;
+    }
+
+    &-link {
+      width: 100%;
+      margin-top: 16px;
     }
   }
 }

@@ -85,6 +85,14 @@
       color: $text-main;
     }
 
+    &-report-total {
+      @include h20;
+    }
+
+    &-report-total-sum {
+      @include h20;
+    }
+
     &-status {
       font-size: 12px;
       line-height: 18px;
@@ -167,6 +175,82 @@
       tr:last-of-type {
         td {
           padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__reward--report {
+    table {
+      width: 100%;
+
+      col {
+        &:first-child {
+          width: 64px;
+        }
+
+        &:nth-child(2) {
+          width: calc(74% - 756px);
+        }
+
+        &:nth-child(3) {
+          width: 14%;
+        }
+
+        &:nth-child(4) {
+          width: 194px;
+        }
+
+        &:nth-child(5) {
+          width: 174px;
+        }
+
+        &:nth-child(6) {
+          width: 12%;
+        }
+      }
+
+      tr {
+        border-bottom: 1px solid #d1d8e1;
+
+        &:last-of-type {
+          td {
+            padding-bottom: 10px;
+          }
+        }
+      }
+
+      th {
+        text-align: right;
+        vertical-align: top;
+
+        &:first-child,
+        &:nth-child(2) {
+          text-align: left;
+        }
+      }
+
+      td {
+        text-align: right;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+        &:first-child,
+        &:nth-child(2) {
+          text-align: left;
+        }
+
+        &.total {
+          @include h18;
+        }
+
+        p {
+          @include overflow-10lines;
+          margin: 0;
+
+          &.serial {
+            color: $text-minor;
+          }
         }
       }
     }
@@ -367,6 +451,10 @@
       }
 
       &-total-sum {
+        margin-bottom: 16px;
+      }
+
+      &-report-total {
         margin-bottom: 16px;
       }
 

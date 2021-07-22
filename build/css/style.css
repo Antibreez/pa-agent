@@ -7459,6 +7459,13 @@ div.input-file__file-load {
   margin-right: auto;
 }
 
+.title-block__subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 24px;
+}
+
 @media (max-width: 999px) {
   div.title-block {
     -webkit-box-orient: vertical;
@@ -7491,13 +7498,17 @@ div.input-file__file-load {
   border-radius: 5px;
 }
 
-.file-load__pdf-logo {
+.file-load__pdf-logo, .file-load__file-logo {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 24px;
   height: 24px;
   margin-right: 20px;
   background-image: url("../img/pdf.svg");
+}
+
+.file-load__file-logo {
+  background-image: url("../img/docs_hover.svg");
 }
 
 .file-load__name {
@@ -8922,6 +8933,34 @@ div.input-file__file-load {
   width: 12%;
 }
 
+.contracts--reports col:first-child {
+  width: 33%;
+}
+
+.contracts--reports col:nth-child(2) {
+  width: 13%;
+}
+
+.contracts--reports col:nth-child(3) {
+  width: 13%;
+}
+
+.contracts--reports col:nth-child(4) {
+  width: 13%;
+}
+
+.contracts--reports col:nth-child(5) {
+  width: calc(100% - 182px);
+}
+
+.contracts--reports col:nth-child(6) {
+  width: 144px;
+}
+
+.contracts--reports col:nth-child(7) {
+  width: 38px;
+}
+
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
@@ -8968,6 +9007,15 @@ div.input-file__file-load {
 
 .contracts--mts th:nth-last-child(3) {
   text-align: left;
+}
+
+.contracts--reports th {
+  vertical-align: middle;
+  padding-bottom: 8px;
+}
+
+.contracts--reports th:nth-last-child(2), .contracts--reports th:nth-last-child(3) {
+  padding-right: 24px;
 }
 
 .contracts__table
@@ -9036,6 +9084,14 @@ tr:not(:first-of-type):hover
 
 .contracts--mts .contracts__data td:nth-last-child(3) {
   text-align: left;
+}
+
+.contracts--reports .contracts__data td {
+  vertical-align: middle;
+}
+
+.contracts--reports .contracts__data td:nth-last-child(2), .contracts--reports .contracts__data td:nth-last-child(3) {
+  padding-right: 24px;
 }
 
 .contracts__reward {
@@ -9160,6 +9216,8 @@ tr:not(:first-of-type):hover
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-top: 23px;
   padding-left: 14px;
   padding-right: 14px;
@@ -9443,6 +9501,27 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   .contracts col:nth-child(7) {
     width: 16%;
   }
+  .contracts--reports col:first-child {
+    width: 33%;
+  }
+  .contracts--reports col:nth-child(2) {
+    width: 13%;
+  }
+  .contracts--reports col:nth-child(3) {
+    width: 13%;
+  }
+  .contracts--reports col:nth-child(4) {
+    width: 8%;
+  }
+  .contracts--reports col:nth-child(5) {
+    width: calc(33% - 182px);
+  }
+  .contracts--reports col:nth-child(6) {
+    width: 144px;
+  }
+  .contracts--reports col:nth-child(7) {
+    width: 38px;
+  }
 }
 
 @media (max-width: 999px) {
@@ -9524,6 +9603,19 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   background-position: center;
 }
 
+.reward-promo {
+  margin: 0 0 80px;
+}
+
+.reward-promo .last-contracts__promo {
+  margin: 0;
+  width: 100%;
+}
+
+.reward-promo .last-contracts__promo-right {
+  background-image: url("../img/handshake.jpg");
+}
+
 @media (max-width: 1439px) {
   .last-contracts__promo {
     margin-bottom: 24px;
@@ -9564,15 +9656,16 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     margin-bottom: 24px;
   }
   .last-contracts__promo {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     width: calc(100% - 48px);
     margin: 0 auto;
+    margin-bottom: 40px;
   }
   .last-contracts__promo-right {
     width: 100%;
@@ -9588,6 +9681,9 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 20px;
+  }
+  .reward-promo {
+    margin: 0 0 40px;
   }
 }
 
@@ -9915,8 +10011,13 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
           align-items: flex-start;
 }
 
-.contract-info__title span {
+.contract-info__title span,
+.contract-info__title p {
   vertical-align: middle;
+}
+
+.contract-info__title .reports__status {
+  margin-left: 10px;
 }
 
 .contract-info__title-status {
@@ -10038,6 +10139,24 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 
 .contract-info__row-item {
   width: calc((100% - 20px) / 3);
+}
+
+.contract-info__row--report {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contract-info__row--report .contract-info__row-item {
+  padding-right: 20px;
+  width: calc(100% / 5);
+  min-width: 260px;
+}
+
+.contract-info__row--report .contract-info__row-item p {
+  white-space: nowrap;
 }
 
 .contract-info__block--duo {
@@ -10197,7 +10316,8 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .contract-info__title-status {
+  .contract-info__title-status,
+  .contract-info .reports__status {
     margin: 14px 0;
   }
   .contract-info__serial-number {
@@ -10232,6 +10352,11 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   }
   .contract-info__row-item {
     width: 100%;
+  }
+  .contract-info__row--report .contract-info__row-item {
+    padding-right: 0;
+    width: auto;
+    min-width: auto;
   }
   .contract-info__block--paid,
   .contract-info__block--delivered {
@@ -10293,6 +10418,9 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   .contract-info__title-block--subscription
 .contract-info__title span:nth-child(2) {
     margin-top: 0;
+  }
+  .contract-info__title-block--subscription .contract-info__title span.contract-info__report-period {
+    margin-bottom: 14px;
   }
   .contract-info__title-block--subscription
 .contract-info__serial-btn {
@@ -10956,6 +11084,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 68px;
   padding: 20px 20px 20px 58px;
   border-radius: 5px;
   background-color: rgba(40, 88, 255, 0.1);
@@ -10978,6 +11107,13 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   margin-left: auto;
 }
 
+.delivery-or-pickup__call--report .delivery-or-pickup__alert-block {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-position: left 20px top 20px;
+}
+
 .delivery-or-pickup__alert {
   margin-bottom: 40px;
 }
@@ -10993,7 +11129,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   border-radius: 5px;
   background-color: rgba(252, 66, 66, 0.1);
   background-image: url("../img/alert.svg");
-  background-position: left 20px center;
+  background-position: left 20px top 26px;
   background-repeat: no-repeat;
 }
 
@@ -11167,6 +11303,16 @@ div.registration-address {
   }
   .delivery-or-pickup__call-link {
     width: 100%;
+  }
+  .delivery-or-pickup__alert-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .delivery-or-pickup__alert-link {
+    width: 100%;
+    margin-top: 16px;
   }
 }
 
@@ -11730,6 +11876,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   }
 }
 
+.documents {
+  margin-bottom: 24px;
+}
+
 .documents__title {
   font-weight: 500;
   font-size: 32px;
@@ -11752,6 +11902,9 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 @media (max-width: 999px) {
   .documents {
     padding-top: 28px;
+  }
+  .documents--report {
+    padding-top: 0;
   }
 }
 
@@ -12962,6 +13115,18 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   color: #1A1A1A;
 }
 
+.subscription-page__reward-report-total {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.subscription-page__reward-report-total-sum {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .subscription-page__reward-status {
   font-size: 12px;
   line-height: 18px;
@@ -13042,6 +13207,82 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .subscription-page__reward table tr:last-of-type td {
   padding-bottom: 0;
+}
+
+.subscription-page__reward--report table {
+  width: 100%;
+}
+
+.subscription-page__reward--report table col:first-child {
+  width: 64px;
+}
+
+.subscription-page__reward--report table col:nth-child(2) {
+  width: calc(74% - 756px);
+}
+
+.subscription-page__reward--report table col:nth-child(3) {
+  width: 14%;
+}
+
+.subscription-page__reward--report table col:nth-child(4) {
+  width: 194px;
+}
+
+.subscription-page__reward--report table col:nth-child(5) {
+  width: 174px;
+}
+
+.subscription-page__reward--report table col:nth-child(6) {
+  width: 12%;
+}
+
+.subscription-page__reward--report table tr {
+  border-bottom: 1px solid #d1d8e1;
+}
+
+.subscription-page__reward--report table tr:last-of-type td {
+  padding-bottom: 10px;
+}
+
+.subscription-page__reward--report table th {
+  text-align: right;
+  vertical-align: top;
+}
+
+.subscription-page__reward--report table th:first-child, .subscription-page__reward--report table th:nth-child(2) {
+  text-align: left;
+}
+
+.subscription-page__reward--report table td {
+  text-align: right;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.subscription-page__reward--report table td:first-child, .subscription-page__reward--report table td:nth-child(2) {
+  text-align: left;
+}
+
+.subscription-page__reward--report table td.total {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.subscription-page__reward--report table td p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  line-clamp: 10;
+  box-orient: vertical;
+  margin: 0;
+}
+
+.subscription-page__reward--report table td p.serial {
+  color: #94A0B1;
 }
 
 .subscription-page__actions {
@@ -13254,6 +13495,9 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
             align-items: flex-start;
   }
   .subscription-page__reward-total-sum {
+    margin-bottom: 16px;
+  }
+  .subscription-page__reward-report-total {
     margin-bottom: 16px;
   }
   .subscription-page__reward table {
@@ -16772,4 +17016,108 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 
 .installation-data__installer-result li:not(:last-child) {
   margin-bottom: 8px;
+}
+
+.reports__item {
+  width: calc((100% - 48px) / 3);
+}
+
+.reports__item .mutual-calcs__earned-date-btn {
+  width: 100%;
+  border: 2px solid #f4f4f8;
+}
+
+.reports__item .mutual-calcs__earned-date-btn:hover {
+  border-color: #d1d8e1;
+}
+
+.reports__price {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.reports__status {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  min-width: 120px;
+  padding: 3px 6px;
+  margin: 0;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.reports__link {
+  display: inline-block;
+  width: 38px;
+  height: 24px;
+  padding: 0 14px 0 0;
+}
+
+.reports__link svg {
+  width: 24px;
+  height: 24px;
+  color: #94A0B1;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.reports__link:hover svg {
+  color: #2858FF;
+}
+
+.reports__item-total-sum {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.reports__success-label {
+  margin-bottom: 40px;
+}
+
+.reports__success-label-block {
+  padding: 20px;
+  background-color: rgba(40, 88, 255, 0.1);
+  border-radius: 5px;
+}
+
+.reports__success-label-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1A1A1A;
+  margin: 0 0 14px;
+}
+
+.reports__success-label-list {
+  margin: 0;
+  padding: 0 0 0 19px;
+}
+
+.reports__success-label-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1A1A1A;
+}
+
+.reports__success-label-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+p.reports__status.processing {
+  background-color: #94A0B1;
+  color: #fff;
+}
+
+p.reports__status.pending {
+  background-color: #FED9AE;
+}
+
+p.reports__status.done {
+  background-color: #40DA90;
+  color: #fff;
 }

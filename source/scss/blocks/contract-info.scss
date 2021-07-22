@@ -9,8 +9,15 @@
     align-items: flex-start;
   }
 
-  &__title span {
+  &__title span,
+  &__title p {
     vertical-align: middle;
+  }
+
+  &__title {
+    .reports__status {
+      margin-left: 10px;
+    }
   }
 
   &__title-status {
@@ -116,6 +123,21 @@
 
   &__row-item {
     width: calc((100% - 20px) / 3);
+  }
+
+  &__row--report {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .contract-info__row-item {
+      padding-right: 20px;
+      width: calc(100% / 5);
+      min-width: 260px;
+
+      p {
+        white-space: nowrap;
+      }
+    }
   }
 
   &__block--duo {
@@ -248,7 +270,8 @@
       align-items: flex-start;
     }
 
-    &__title-status {
+    &__title-status,
+    .reports__status {
       margin: 14px 0;
     }
 
@@ -283,6 +306,14 @@
 
     &__row-item {
       width: 100%;
+    }
+
+    &__row--report {
+      .contract-info__row-item {
+        padding-right: 0;
+        width: auto;
+        min-width: auto;
+      }
     }
   }
 
@@ -344,6 +375,12 @@
 
     &:nth-child(2) {
       margin-top: 0;
+    }
+  }
+
+  .contract-info__title-block--subscription {
+    .contract-info__title span.contract-info__report-period {
+      margin-bottom: 14px;
     }
   }
 

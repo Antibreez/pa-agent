@@ -1,4 +1,6 @@
 .documents {
+  margin-bottom: 24px;
+
   &__title {
     @include section-title;
     color: $text-main;
@@ -18,5 +20,9 @@
 @include mobile {
   .documents {
     padding-top: 28px;
+  }
+
+  .documents--report {
+    padding-top: 0;
   }
 }

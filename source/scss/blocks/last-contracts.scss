@@ -49,6 +49,19 @@
   }
 }
 
+.reward-promo {
+  margin: 0 0 80px;
+
+  .last-contracts__promo {
+    margin: 0;
+    width: 100%;
+  }
+
+  .last-contracts__promo-right {
+    background-image: url("../img/handshake.jpg");
+  }
+}
+
 @include tablet {
   .last-contracts {
     &__promo {
@@ -86,10 +99,11 @@
     }
 
     &__promo {
-      order: 3;
+      order: 0;
       flex-direction: column-reverse;
       width: calc(100% - 48px);
       margin: 0 auto;
+      margin-bottom: 40px;
     }
 
     &__promo-right {
@@ -107,6 +121,10 @@
       @include h24;
       margin-bottom: 20px;
     }
+  }
+
+  .reward-promo {
+    margin: 0 0 40px;
   }
 }
 

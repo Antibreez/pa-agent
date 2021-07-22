@@ -6,12 +6,17 @@
   background-color: $bg;
   border-radius: 5px;
 
-  &__pdf-logo {
+  &__pdf-logo,
+  &__file-logo {
     flex-shrink: 0;
     width: 24px;
     height: 24px;
     margin-right: 20px;
     background-image: url("../img/pdf.svg");
+  }
+
+  &__file-logo {
+    background-image: url("../img/docs_hover.svg");
   }
 
   &__name {

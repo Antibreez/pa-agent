@@ -60,12 +60,16 @@
 
   $('.mutual-calcs__earned-date-menu-btn').on('click', function() {
     if ($(this).hasClass('all-time')) {
-      $('.mutual-calcs__earned-date-btn').text(
-        $(this).text()
-        + ' (с\u00a0'
-        + $('.earned-date__start-period').text()
-        + ')'
-      )
+      $('.earned-date__start-period').text() === ''
+      ? $('.mutual-calcs__earned-date-btn').text(
+          $(this).text()
+        )
+      : $('.mutual-calcs__earned-date-btn').text(
+          $(this).text()
+          + ' (с\u00a0'
+          + $('.earned-date__start-period').text()
+          + ')'
+        )
     } else {
       $('.mutual-calcs__earned-date-btn').text(
         $(this).text()
@@ -76,10 +80,14 @@
 
   });
 
-  $('.mutual-calcs__earned-date-btn').text(
-    $('.mutual-calcs__earned-date-menu-btn.all-time').text()
-    + ' (с\u00a0'
-    + $('.earned-date__start-period').text()
-    + ')'
-  )
+  $('.earned-date__start-period').text() === ''
+      ? $('.mutual-calcs__earned-date-btn').text(
+          $('.mutual-calcs__earned-date-menu-btn.all-time').text()
+        )
+      : $('.mutual-calcs__earned-date-btn').text(
+          $('.mutual-calcs__earned-date-menu-btn.all-time').text()
+          + ' (с\u00a0'
+          + $('.earned-date__start-period').text()
+          + ')'
+        )
 })();

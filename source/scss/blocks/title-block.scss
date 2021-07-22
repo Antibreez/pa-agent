@@ -9,6 +9,11 @@
   margin-right: auto;
 }
 
+.title-block__subtitle {
+  @include h24;
+  margin: 0 0 24px;
+}
+
 @include mobile {
   div.title-block {
     flex-direction: column;
