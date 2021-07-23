@@ -7440,6 +7440,72 @@ div.input-file__file-load {
           transition-delay: 0s;
 }
 
+.subscription-tabs__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.subscription-tabs__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.subscription-tabs__btn {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #94A0B1;
+  padding: 6px 16px;
+  background-color: #F4F4F8;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.subscription-tabs__btn:hover, .subscription-tabs__btn:active, .subscription-tabs__btn:focus {
+  background-color: transparent;
+}
+
+.subscription-tabs__btn:hover {
+  cursor: pointer;
+  color: #1A1A1A;
+  background-color: #D1D8E1;
+}
+
+.subscription-tabs__btn.active, .subscription-tabs__btn.active:hover {
+  color: #fff;
+  background-color: #2858FF;
+}
+
+@media (max-width: 999px) {
+  .subscription-tabs__list {
+    display: inline-block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .subscription-tabs__item:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+  .subscription-tabs__btn {
+    width: 100%;
+  }
+}
+
 .title-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9603,6 +9669,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   background-position: center;
 }
 
+.last-contracts__tabs {
+  margin: 0 0 24px;
+}
+
 .reward-promo {
   margin: 0 0 80px;
 }
@@ -9681,6 +9751,11 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 20px;
+  }
+  .last-contracts__tabs {
+    width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
   }
   .reward-promo {
     margin: 0 0 40px;
@@ -12970,6 +13045,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   font-weight: 400;
   color: #1A1A1A;
   margin: 40px 0;
+}
+
+.subscription-all__tabs {
+  margin-bottom: 40px;
 }
 
 .subscription-all__filters--mts .subscription-all__filters-form {

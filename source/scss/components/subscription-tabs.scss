@@ -1,0 +1,58 @@
+.subscription-tabs {
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__btn {
+    @include btn-reset;
+    @include b14;
+    color: #94A0B1;
+    padding: 6px 16px;
+    background-color: #F4F4F8;
+    border-radius: 2px;
+    text-align: center;
+    transition: color 0.2s,
+                background-color 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      color: $text-main;
+      background-color: #D1D8E1;
+    }
+
+    &.active,
+    &.active:hover {
+      color: #fff;
+      background-color: $primary;
+    }
+  }
+}
+
+@include mobile {
+  .subscription-tabs {
+    &__list {
+      display: inline-block;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}

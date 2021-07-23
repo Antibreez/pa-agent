@@ -47,6 +47,10 @@
     background-size: cover;
     background-position: center;
   }
+
+  &__tabs {
+    margin: 0 0 24px;
+  }
 }
 
 .reward-promo {
@@ -120,6 +124,12 @@
     &__promo-title {
       @include h24;
       margin-bottom: 20px;
+    }
+
+    &__tabs {
+      width: calc(100% - 48px);
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
