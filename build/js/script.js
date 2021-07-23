@@ -321,6 +321,16 @@
 })();
 
 (function () {
+  $(window).on('load', function () {
+    var swiper = new Swiper('.subscription-tabs', {
+      freeMode: true,
+      slidesPerView: 'auto',
+      watchOverflow: true
+    });
+  });
+})();
+
+(function () {
   var deliveryTimeInputs = document.querySelectorAll('.delivery-or-pickup__modal-time');
 
   if (!deliveryTimeInputs[0]) {

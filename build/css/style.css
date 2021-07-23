@@ -7443,11 +7443,13 @@ div.input-file__file-load {
 .subscription-tabs__list {
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+}
+
+.subscription-tabs__item {
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .subscription-tabs__item:not(:last-child) {
@@ -7476,33 +7478,26 @@ div.input-file__file-load {
   background-color: transparent;
 }
 
-.subscription-tabs__btn:hover {
+.subscription-tabs__btn:hover, .subscription-tabs__btn:focus {
   cursor: pointer;
   color: #1A1A1A;
   background-color: #D1D8E1;
 }
 
-.subscription-tabs__btn.active, .subscription-tabs__btn.active:hover {
+.subscription-tabs__btn.active, .subscription-tabs__btn.active:focus, .subscription-tabs__btn.active:hover {
   color: #fff;
   background-color: #2858FF;
 }
 
 @media (max-width: 999px) {
-  .subscription-tabs__list {
-    display: inline-block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  .subscription-tabs {
+    width: 100% !important;
   }
-  .subscription-tabs__item:not(:last-child) {
-    margin: 0 0 16px 0;
+  .subscription-tabs__item:first-child {
+    margin-left: 24px;
   }
-  .subscription-tabs__btn {
-    width: 100%;
+  .subscription-tabs__item:last-child {
+    margin-right: 24px;
   }
 }
 
