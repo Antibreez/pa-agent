@@ -107,6 +107,42 @@
   }
 }
 
+.contracts--reports-manager {
+  col {
+    &:first-child {
+      width: 17%;
+    }
+
+    &:nth-child(2) {
+      width: 16%;
+    }
+
+    &:nth-child(3) {
+      width: 13%;
+    }
+
+    &:nth-child(4) {
+      width: 13%;
+    }
+
+    &:nth-child(5) {
+      width: calc(100% - 182px);
+    }
+
+    &:nth-child(6) {
+      width: 13%;
+    }
+
+    &:nth-child(7) {
+      width: 144px;
+    }
+
+    &:nth-child(8) {
+      width: 52px;
+    }
+  }
+}
+
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
@@ -654,6 +690,42 @@ button.contracts__page-number {
 
       &:nth-child(7) {
         width: 38px;
+      }
+    }
+  }
+
+  .contracts--reports-manager {
+    col {
+      &:first-child {
+        width: 17%;
+      }
+
+      &:nth-child(2) {
+        width: 16%;
+      }
+
+      &:nth-child(3) {
+        width: 13%;
+      }
+
+      &:nth-child(4) {
+        width: 13%;
+      }
+
+      &:nth-child(5) {
+        width: calc(100% - 182px);
+      }
+
+      &:nth-child(6) {
+        width: 13%;
+      }
+
+      &:nth-child(7) {
+        width: 144px;
+      }
+
+      &:nth-child(8) {
+        width: 52px;
       }
     }
   }

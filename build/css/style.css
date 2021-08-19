@@ -9022,6 +9022,38 @@ div.input-file__file-load {
   width: 38px;
 }
 
+.contracts--reports-manager col:first-child {
+  width: 17%;
+}
+
+.contracts--reports-manager col:nth-child(2) {
+  width: 16%;
+}
+
+.contracts--reports-manager col:nth-child(3) {
+  width: 13%;
+}
+
+.contracts--reports-manager col:nth-child(4) {
+  width: 13%;
+}
+
+.contracts--reports-manager col:nth-child(5) {
+  width: calc(100% - 182px);
+}
+
+.contracts--reports-manager col:nth-child(6) {
+  width: 13%;
+}
+
+.contracts--reports-manager col:nth-child(7) {
+  width: 144px;
+}
+
+.contracts--reports-manager col:nth-child(8) {
+  width: 52px;
+}
+
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
@@ -9582,6 +9614,30 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   }
   .contracts--reports col:nth-child(7) {
     width: 38px;
+  }
+  .contracts--reports-manager col:first-child {
+    width: 17%;
+  }
+  .contracts--reports-manager col:nth-child(2) {
+    width: 16%;
+  }
+  .contracts--reports-manager col:nth-child(3) {
+    width: 13%;
+  }
+  .contracts--reports-manager col:nth-child(4) {
+    width: 13%;
+  }
+  .contracts--reports-manager col:nth-child(5) {
+    width: calc(100% - 182px);
+  }
+  .contracts--reports-manager col:nth-child(6) {
+    width: 13%;
+  }
+  .contracts--reports-manager col:nth-child(7) {
+    width: 144px;
+  }
+  .contracts--reports-manager col:nth-child(8) {
+    width: 52px;
   }
 }
 
@@ -10226,6 +10282,24 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
 }
 
 .contract-info__row--report .contract-info__row-item p {
+  white-space: nowrap;
+}
+
+.contract-info__row--report-manager {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contract-info__row--report-manager .contract-info__row-item {
+  padding-right: 20px;
+  width: calc(100% / 6);
+  min-width: 240px;
+}
+
+.contract-info__row--report-manager .contract-info__row-item p {
   white-space: nowrap;
 }
 
@@ -13311,10 +13385,6 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   width: 12%;
 }
 
-.subscription-page__reward--report table tr {
-  border-bottom: 1px solid #d1d8e1;
-}
-
 .subscription-page__reward--report table tr:last-of-type td {
   padding-bottom: 10px;
 }
@@ -13330,8 +13400,6 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .subscription-page__reward--report table td {
   text-align: right;
-  padding-bottom: 10px;
-  padding-top: 10px;
 }
 
 .subscription-page__reward--report table td:first-child, .subscription-page__reward--report table td:nth-child(2) {
@@ -13357,6 +13425,127 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .subscription-page__reward--report table td p.serial {
   color: #94A0B1;
+}
+
+.subscription-page__reward--report table tr td:nth-child(n) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.subscription-page__reward--report .contracts__inner-table {
+  margin: 0;
+}
+
+.subscription-page__reward--report .contracts__link {
+  padding: 20px 0;
+}
+
+.subscription-page__reward--report .contracts__link td:first-child {
+  padding-left: 10px;
+}
+
+.subscription-page__reward--report .contracts__link td:last-child {
+  padding-right: 10px;
+}
+
+.subscription-page__reward--report-manager table {
+  width: 100%;
+}
+
+.subscription-page__reward--report-manager table col:first-child {
+  width: 64px;
+}
+
+.subscription-page__reward--report-manager table col:nth-child(2) {
+  width: calc(16% - 64px);
+}
+
+.subscription-page__reward--report-manager table col:nth-child(3) {
+  width: 12%;
+}
+
+.subscription-page__reward--report-manager table col:nth-child(4) {
+  width: 12%;
+}
+
+.subscription-page__reward--report-manager table col:nth-child(5) {
+  width: 12%;
+}
+
+.subscription-page__reward--report-manager table col:nth-child(6) {
+  width: 12%;
+}
+
+.subscription-page__reward--report-manager table col:nth-child(7) {
+  width: 12%;
+}
+
+.subscription-page__reward--report-manager table col:nth-child(8) {
+  width: 12%;
+}
+
+.subscription-page__reward--report-manager table tr:last-of-type td {
+  padding-bottom: 10px;
+}
+
+.subscription-page__reward--report-manager table th {
+  text-align: right;
+  vertical-align: top;
+}
+
+.subscription-page__reward--report-manager table th:first-child, .subscription-page__reward--report-manager table th:nth-child(2) {
+  text-align: left;
+}
+
+.subscription-page__reward--report-manager table td {
+  text-align: right;
+  padding: 0;
+}
+
+.subscription-page__reward--report-manager table td:first-child, .subscription-page__reward--report-manager table td:nth-child(2) {
+  text-align: left;
+}
+
+.subscription-page__reward--report-manager table td.total {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.subscription-page__reward--report-manager table td p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  line-clamp: 10;
+  box-orient: vertical;
+  margin: 0;
+}
+
+.subscription-page__reward--report-manager table td p.serial {
+  color: #94A0B1;
+}
+
+.subscription-page__reward--report-manager table tr td:nth-child(n) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.subscription-page__reward--report-manager .contracts__inner-table {
+  margin: 0;
+}
+
+.subscription-page__reward--report-manager .contracts__link {
+  padding: 20px 0;
+}
+
+.subscription-page__reward--report-manager .contracts__link td:first-child {
+  padding-left: 10px;
+}
+
+.subscription-page__reward--report-manager .contracts__link td:last-child {
+  padding-right: 10px;
 }
 
 .subscription-page__actions {
@@ -13517,6 +13706,9 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
     padding: 19px 16px 19px 80px;
     min-height: 80px;
   }
+  .subscription-page__reward--report-manager td p {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 999px) {
@@ -13576,6 +13768,9 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   }
   .subscription-page__reward table {
     display: none;
+  }
+  .subscription-page__reward--report-manager a {
+    text-decoration: none;
   }
 }
 
@@ -17098,6 +17293,7 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 
 .reports__item .mutual-calcs__earned-date-btn {
   width: 100%;
+  min-width: auto;
   border: 2px solid #f4f4f8;
 }
 

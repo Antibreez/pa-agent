@@ -140,6 +140,21 @@
     }
   }
 
+  &__row--report-manager {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .contract-info__row-item {
+      padding-right: 20px;
+      width: calc(100% / 6);
+      min-width: 240px;
+
+      p {
+        white-space: nowrap;
+      }
+    }
+  }
+
   &__block--duo {
     width: calc((100% - 24px) / 2);
   }
