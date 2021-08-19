@@ -13389,6 +13389,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   padding-bottom: 10px;
 }
 
+.subscription-page__reward--report table tr:last-of-type a {
+  border-bottom: 1px solid #d1d8e1;
+}
+
 .subscription-page__reward--report table th {
   text-align: right;
   vertical-align: top;
@@ -13486,6 +13490,10 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 
 .subscription-page__reward--report-manager table tr:last-of-type td {
   padding-bottom: 10px;
+}
+
+.subscription-page__reward--report-manager table tr:last-of-type a {
+  border-bottom: 1px solid #d1d8e1;
 }
 
 .subscription-page__reward--report-manager table th {
@@ -13770,6 +13778,9 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
     display: none;
   }
   .subscription-page__reward--report-manager a {
+    text-decoration: none;
+  }
+  .subscription-page__reward--report a {
     text-decoration: none;
   }
 }
