@@ -1,16 +1,22 @@
 (function() {
   const fileDropArea = document.querySelectorAll('.input-file__label');
+  const filesWrapper = document.querySelector('.input-file__wrapper');
   const requestModal = document.querySelectorAll('.modal.requests-upload');
+  const newFileInput = fileDropArea[0].parentNode.cloneNode(true);
 
-  if (requestModal) {
+  console.log(newFileInput);
+
+  if (!requestModal) {
     return;
   }
-
-  console.log('input file');
 
   function makeFileLoad(fileDropArea) {
     const fileInput = fileDropArea.querySelector('input');
     const fileClear = fileDropArea.parentNode.querySelector('.file-load__clear');
+    const progress = fileDropArea.parentNode.querySelector('.file-load__progress');
+    const bar = fileDropArea.parentNode.querySelector('.file-load__progress-current');
+    const status = fileDropArea.parentNode.querySelector('.file-load__status span');
+    const fileLoad = fileDropArea.parentNode.querySelector('.file-load');
     // Сбрасываем стандартные события при перетаскивании файла
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -72,12 +78,22 @@
       if (input.files && input.files[0]) {
         var reader = new FileReader();
 
-        reader.onload = function (e) {
+        reader.onloadstart = function () {
           fileDropArea.parentNode.classList.add('loaded');
+        }
+
+        reader.onprogress= function (e) {
+          bar.style.width = Math.round(e.loaded / e.total * 100) + '%';
+          status.textContent = Math.round(e.loaded / e.total * 100)
+        }
+
+        reader.onload = function (e) {
           fileDropArea
             .nextElementSibling
             .querySelector('.file-load__name')
             .textContent = input.files[0].name;
+
+          fileLoad.classList.add('loaded');
         }
 
         reader.readAsDataURL(input.files[0]);
@@ -85,7 +101,7 @@
     }
 
     function onClear() {
-      fileDropArea.parentNode.classList.remove('loaded');
+      //fileDropArea.parentNode.classList.remove('loaded');
 
       fileInput.value = '';
 
@@ -93,6 +109,9 @@
         fileInput.type = '';
         fileInput.type = 'file';
       }
+
+      filesWrapper.insertBefore(newFileInput.cloneNode(true), fileDropArea.parentNode);
+      fileDropArea.parentNode.remove();
     }
 
     fileInput.addEventListener('change', onFileChange);

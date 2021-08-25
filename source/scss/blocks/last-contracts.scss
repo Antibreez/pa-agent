@@ -66,6 +66,10 @@
   }
 }
 
+.last-contracts__promo--requests .last-contracts__promo-right {
+  background-image: url("../img/requests-bg.jpg");
+}
+
 @include tablet {
   .last-contracts {
     &__promo {

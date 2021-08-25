@@ -62,3 +62,68 @@
     }
   }
 }
+
+.input-file-requests {
+  .input-file__label {
+    padding: 45px 20px;
+    border-style: dashed;
+  }
+
+  .input-file__label-text {
+    svg {
+      width: 19px;
+      height: 19px;
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+  }
+
+  .input-file__file-load {
+    background-color: transparent;
+    flex-wrap: wrap;
+  }
+
+  .file-load__status {
+    font-size: 14px;
+    line-height: 21px;
+    color: #94A0B1;
+    margin-left: auto;
+  }
+
+  .file-load__progress {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    margin-top: 8px;
+    background-color: #B4C1D1;
+  }
+
+  .file-load__progress-current {
+    height: 100%;
+    background-color: $primary;
+  }
+
+  .file-load__clear {
+    display: none;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: #B4C1D1;
+    }
+
+    &:hover svg {
+      color: $primary;
+    }
+  }
+
+  .file-load.loaded {
+    .file-load__status {
+      display: none;
+    }
+
+    .file-load__clear {
+      display: block;
+    }
+  }
+}

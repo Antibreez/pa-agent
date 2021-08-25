@@ -125,6 +125,12 @@
   }
 }
 
+.user-data--two-parts {
+  .user-data__container > div {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
 @include tablet {
   .user-data {
     &__intro,
@@ -185,6 +191,12 @@
 
     &__amount:nth-of-type(4) {
       margin-bottom: 28px;
+    }
+  }
+
+  .user-data--two-parts {
+    .user-data__container > div {
+      width: 100%;
     }
   }
 }
