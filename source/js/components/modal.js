@@ -55,7 +55,6 @@
 
   Modal.prototype.onTriggerClick = function() {
     this.open();
-    console.log('click');
   }
 
   // Modal.prototype.onResize = function() {

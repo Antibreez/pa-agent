@@ -17473,3 +17473,7 @@ p.reports__status.done {
   background-color: #40DA90;
   color: #fff;
 }
+
+.requests-upload .input-file-requests:not(:first-child) {
+  margin-top: 24px;
+}

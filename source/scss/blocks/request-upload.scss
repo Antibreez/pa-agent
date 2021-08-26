@@ -1,0 +1,7 @@
+.requests-upload {
+  .input-file-requests{
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+  }
+}
