@@ -43,130 +43,234 @@
 })();
 
 (function () {
-  var fileDropArea = document.querySelectorAll('.input-file__label');
-  var filesWrapper = document.querySelector('.input-file__wrapper');
   var requestModal = document.querySelectorAll('.modal.requests-upload');
-  var newFileInput = fileDropArea[0].parentNode.cloneNode(true);
-  console.log(newFileInput);
+  var filesWrapper = document.querySelector('.modal.requests-upload .input-file__wrapper');
+  var fileInputItem = filesWrapper.querySelector('.input-file');
+  var newFileInputItem = fileInputItem.cloneNode(true);
 
   if (!requestModal) {
     return;
   }
 
-  function makeFileLoad(fileDropArea) {
-    var fileInput = fileDropArea.querySelector('input');
-    var fileClear = fileDropArea.parentNode.querySelector('.file-load__clear');
-    var progress = fileDropArea.parentNode.querySelector('.file-load__progress');
+  function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  ;
+
+  function makeInputsNames() {
+    filesWrapper.querySelectorAll('input').forEach(function (item, idx) {
+      item.name = 'file-' + idx;
+    });
+  }
+
+  function readUrl(input) {
+    var fielInputItem = input.parentNode.parentNode;
+    var fileDropArea = input.parentNode;
+    console.log(fileDropArea);
     var bar = fileDropArea.parentNode.querySelector('.file-load__progress-current');
     var status = fileDropArea.parentNode.querySelector('.file-load__status span');
-    var fileLoad = fileDropArea.parentNode.querySelector('.file-load'); // Сбрасываем стандартные события при перетаскивании файла
+    var fileLoad = fileDropArea.parentNode.querySelector('.file-load');
+    console.log(bar);
 
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
-      fileDropArea.addEventListener(eventName, preventDefaults, false);
-    });
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
 
-    function preventDefaults(e) {
-      e.preventDefault();
-      e.stopPropagation();
+      reader.onloadstart = function () {
+        fileDropArea.parentNode.classList.add('loaded');
+      };
+
+      reader.onprogress = function (e) {
+        bar.style.width = Math.round(e.loaded / e.total * 100) + '%';
+        status.textContent = Math.round(e.loaded / e.total * 100);
+      };
+
+      reader.onload = function (e) {
+        bar.style.width = '100%';
+        fileDropArea.nextElementSibling.querySelector('.file-load__name').textContent = input.files[0].name;
+        fileLoad.classList.add('loaded');
+        var newItem = newFileInputItem.cloneNode(true);
+        filesWrapper.prepend(newItem);
+        addEventListeners(newItem);
+        makeInputsNames();
+      };
+
+      reader.readAsDataURL(input.files[0]);
     }
+  }
 
-    ; // Добавляем стили при перетаскивании файла над нужной областью
+  function handleDrop(e) {
+    var fileInput = e.currentTarget.querySelector('input');
+    var dt = e.dataTransfer;
+    var files = dt.files;
 
-    ['dragenter', 'dragover'].forEach(function (eventName) {
-      fileDropArea.addEventListener(eventName, highlight, false);
-    });
-    ['dragleave', 'drop'].forEach(function (eventName) {
-      fileDropArea.addEventListener(eventName, unhighlight, false);
-    });
-
-    function highlight(e) {
-      fileDropArea.classList.add('highlight');
-    }
-
-    ;
-
-    function unhighlight(e) {
-      fileDropArea.classList.remove('highlight');
-    }
-
-    ; //
-
-    fileDropArea.addEventListener('drop', handleDrop, false);
-
-    function handleDrop(e) {
-      var dt = e.dataTransfer;
-      var files = dt.files;
-
-      if (fileInput.files && fileInput.files[0]) {
-        fileInput.value = '';
-
-        if (!/safari/i.test(navigator.userAgent)) {
-          fileInput.type = '';
-          fileInput.type = 'file';
-        }
-      }
-
-      fileInput.files = files;
-      onFileChange();
-      window.onVerificationFileDrop && window.onVerificationFileDrop();
-      window.onDeliveryFileDrop && window.onDeliveryFileDrop();
-      window.onInstallationFileDrop && window.onInstallationFileDrop();
-    }
-
-    ;
-
-    var onFileChange = function onFileChange() {
-      readUrl(fileInput);
-    };
-
-    var readUrl = function readUrl(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onloadstart = function () {
-          fileDropArea.parentNode.classList.add('loaded');
-        };
-
-        reader.onprogress = function (e) {
-          bar.style.width = Math.round(e.loaded / e.total * 100) + '%';
-          status.textContent = Math.round(e.loaded / e.total * 100);
-        };
-
-        reader.onload = function (e) {
-          fileDropArea.nextElementSibling.querySelector('.file-load__name').textContent = input.files[0].name;
-          fileLoad.classList.add('loaded');
-        };
-
-        reader.readAsDataURL(input.files[0]);
-      }
-    };
-
-    function onClear() {
-      //fileDropArea.parentNode.classList.remove('loaded');
+    if (fileInput.files && fileInput.files[0]) {
       fileInput.value = '';
 
       if (!/safari/i.test(navigator.userAgent)) {
         fileInput.type = '';
         fileInput.type = 'file';
       }
-
-      filesWrapper.insertBefore(newFileInput.cloneNode(true), fileDropArea.parentNode);
-      fileDropArea.parentNode.remove();
     }
 
+    fileInput.files = files;
+    readUrl(fileInput);
+  }
+
+  ;
+
+  var onFileChange = function onFileChange(e) {
+    readUrl(e.target);
+  };
+
+  function onClear(e) {
+    //fileDropArea.parentNode.classList.remove('loaded');
+    var fileInput = e.currentTarget.parentNode.parentNode.querySelector('input');
+    fileInput.value = '';
+
+    if (!/safari/i.test(navigator.userAgent)) {
+      fileInput.type = '';
+      fileInput.type = 'file';
+    }
+  }
+
+  function addEventListeners(item) {
+    var dropArea = item.querySelector('.input-file__label');
+    var fileInput = item.querySelector('input');
+    var fileClear = item.querySelector('.file-load__clear');
+
+    function highlight(e) {
+      dropArea.classList.add('highlight');
+    }
+
+    ;
+
+    function unhighlight(e) {
+      dropArea.classList.remove('highlight');
+    }
+
+    ;
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
+      dropArea.addEventListener(eventName, preventDefaults, false);
+    });
+    ['dragenter', 'dragover'].forEach(function (eventName) {
+      dropArea.addEventListener(eventName, highlight, false);
+    });
+    ['dragleave', 'drop'].forEach(function (eventName) {
+      dropArea.addEventListener(eventName, unhighlight, false);
+    });
+    dropArea.addEventListener('drop', handleDrop);
     fileInput.addEventListener('change', onFileChange);
     fileClear.addEventListener('click', onClear);
   }
 
-  window.makeFileLoad = makeFileLoad;
-
-  if (!fileDropArea[0]) {
-    return;
-  }
-
-  fileDropArea.forEach(function (item) {
-    makeFileLoad(item);
-  });
+  addEventListeners(fileInputItem); // const fileDropArea = document.querySelectorAll('.modal.requests-upload .input-file__label');
+  // const requestModal = document.querySelectorAll('.modal.requests-upload');
+  // const newFileInput = fileDropArea[0].parentNode.cloneNode(true);
+  // console.log(newFileInput);
+  // if (!requestModal) {
+  //   return;
+  // }
+  // function makeInputsNames() {
+  //   filesWrapper.querySelectorAll('input').forEach((item, idx) => {
+  //     item.name = 'file-' + idx;
+  //   })
+  // }
+  // function makeFileLoad(fileDropArea) {
+  //   const fileInput = fileDropArea.querySelector('input');
+  //   const fileClear = fileDropArea.parentNode.querySelector('.file-load__clear');
+  //   const progress = fileDropArea.parentNode.querySelector('.file-load__progress');
+  //   const bar = fileDropArea.parentNode.querySelector('.file-load__progress-current');
+  //   const status = fileDropArea.parentNode.querySelector('.file-load__status span');
+  //   const fileLoad = fileDropArea.parentNode.querySelector('.file-load');
+  //   // Сбрасываем стандартные события при перетаскивании файла
+  //   ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+  //     fileDropArea.addEventListener(eventName, preventDefaults, false)
+  //   });
+  //   function preventDefaults (e) {
+  //     e.preventDefault();
+  //     e.stopPropagation();
+  //   };
+  //   // Добавляем стили при перетаскивании файла над нужной областью
+  //   ['dragenter', 'dragover'].forEach(eventName => {
+  //     fileDropArea.addEventListener(eventName, highlight, false)
+  //   });
+  //   ['dragleave', 'drop'].forEach(eventName => {
+  //     fileDropArea.addEventListener(eventName, unhighlight, false)
+  //   })
+  //   function highlight(e) {
+  //     fileDropArea.classList.add('highlight');
+  //   };
+  //   function unhighlight(e) {
+  //     fileDropArea.classList.remove('highlight');
+  //   };
+  //   //
+  //   fileDropArea.addEventListener('drop', handleDrop, false)
+  //   function handleDrop(e) {
+  //     let dt = e.dataTransfer
+  //     let files = dt.files
+  //     if (fileInput.files && fileInput.files[0]) {
+  //       fileInput.value = '';
+  //       if(!/safari/i.test(navigator.userAgent)){
+  //         fileInput.type = '';
+  //         fileInput.type = 'file';
+  //       }
+  //     }
+  //     fileInput.files = files;
+  //     onFileChange();
+  //     window.onVerificationFileDrop && window.onVerificationFileDrop();
+  //     window.onDeliveryFileDrop && window.onDeliveryFileDrop();
+  //     window.onInstallationFileDrop && window.onInstallationFileDrop();
+  //   };
+  //   const onFileChange = () => {
+  //     readUrl(fileInput);
+  //   }
+  //   const readUrl = (input) => {
+  //     if (input.files && input.files[0]) {
+  //       var reader = new FileReader();
+  //       reader.onloadstart = function () {
+  //         fileDropArea.parentNode.classList.add('loaded');
+  //       }
+  //       reader.onprogress= function (e) {
+  //         bar.style.width = Math.round(e.loaded / e.total * 100) + '%';
+  //         status.textContent = Math.round(e.loaded / e.total * 100)
+  //       }
+  //       reader.onload = function (e) {
+  //         bar.style.width = '100%';
+  //         fileDropArea
+  //           .nextElementSibling
+  //           .querySelector('.file-load__name')
+  //           .textContent = input.files[0].name;
+  //         fileLoad.classList.add('loaded');
+  //         const newItem = newFileInput.cloneNode(true);
+  //         filesWrapper.insertBefore(newItem, fileDropArea.parentNode);
+  //         makeFileLoad(newItem);
+  //         makeInputsNames();
+  //       }
+  //       reader.readAsDataURL(input.files[0]);
+  //     }
+  //   }
+  //   function onClear() {
+  //     //fileDropArea.parentNode.classList.remove('loaded');
+  //     fileInput.value = '';
+  //     if(!/safari/i.test(navigator.userAgent)){
+  //       fileInput.type = '';
+  //       fileInput.type = 'file';
+  //     }
+  //     filesWrapper.insertBefore(newFileInput.cloneNode(true), fileDropArea.parentNode);
+  //     fileDropArea.parentNode.remove();
+  //   }
+  //   fileInput.addEventListener('change', onFileChange);
+  //   fileClear.addEventListener('click', onClear);
+  // }
+  // window.makeFileLoad = makeFileLoad;
+  // if (!fileDropArea[0]) {
+  //   return;
+  // }
+  // fileDropArea.forEach(function(item) {
+  //   makeFileLoad(item);
+  // });
 })();
 
 (function () {
