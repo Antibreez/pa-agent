@@ -9121,6 +9121,70 @@ div.input-file__file-load {
   width: 52px;
 }
 
+.contracts--mes-subs .contracts__table th:nth-child(5) {
+  text-align: left;
+}
+
+.contracts--mes-subs .contracts__table td:nth-child(5) {
+  text-align: left;
+}
+
+.contracts--mes-subs col:first-child {
+  width: 18%;
+}
+
+.contracts--mes-subs col:nth-child(2) {
+  width: 11%;
+}
+
+.contracts--mes-subs col:nth-child(3) {
+  width: 15%;
+}
+
+.contracts--mes-subs col:nth-child(4) {
+  width: 15%;
+}
+
+.contracts--mes-subs col:nth-child(5) {
+  width: 17%;
+}
+
+.contracts--mes-subs col:nth-child(6) {
+  width: 11%;
+}
+
+.contracts--mes-subs col:nth-child(7) {
+  width: 13%;
+}
+
+.contracts--mes-subs-client .contracts__table td:nth-child(3) {
+  text-align: left;
+}
+
+.contracts--mes-subs-client .contracts__table th:nth-child(3) {
+  text-align: left;
+}
+
+.contracts--mes-subs-client col:first-child {
+  width: 29%;
+}
+
+.contracts--mes-subs-client col:nth-child(2) {
+  width: 11%;
+}
+
+.contracts--mes-subs-client col:nth-child(3) {
+  width: 29%;
+}
+
+.contracts--mes-subs-client col:nth-child(4) {
+  width: 11%;
+}
+
+.contracts--mes-subs-client col:nth-child(5) {
+  width: 20%;
+}
+
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
@@ -9639,6 +9703,18 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   display: none;
 }
 
+.contract-comment {
+  margin-bottom: 40px;
+}
+
+.contract-comment__text {
+  padding: 17px 20px;
+}
+
+.contract-comment__text:hover {
+  background-color: #f4f4f8;
+}
+
 @media (max-width: 1439px) {
   .contracts col:first-child {
     width: 19%;
@@ -9705,6 +9781,66 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   }
   .contracts--reports-manager col:nth-child(8) {
     width: 52px;
+  }
+  .contracts--mes-subs .contracts__reward-value {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .contracts--mes-subs col:first-child {
+    width: 18%;
+  }
+  .contracts--mes-subs col:nth-child(2) {
+    width: 11%;
+  }
+  .contracts--mes-subs col:nth-child(3) {
+    width: 15%;
+  }
+  .contracts--mes-subs col:nth-child(4) {
+    width: 15%;
+  }
+  .contracts--mes-subs col:nth-child(5) {
+    width: 17%;
+  }
+  .contracts--mes-subs col:nth-child(6) {
+    width: 11%;
+  }
+  .contracts--mes-subs col:nth-child(7) {
+    width: 13%;
+  }
+  .contracts--mes-subs-client col:first-child {
+    width: 29%;
+  }
+  .contracts--mes-subs-client col:nth-child(2) {
+    width: 11%;
+  }
+  .contracts--mes-subs-client col:nth-child(3) {
+    width: 29%;
+  }
+  .contracts--mes-subs-client col:nth-child(4) {
+    width: 11%;
+  }
+  .contracts--mes-subs-client col:nth-child(5) {
+    width: 20%;
+  }
+  .contracts--mes-requests col:first-child {
+    width: 20%;
+  }
+  .contracts--mes-requests col:nth-child(2) {
+    width: 16%;
+  }
+  .contracts--mes-requests col:nth-child(3) {
+    width: 16%;
+  }
+  .contracts--mes-requests col:nth-child(4) {
+    width: 20%;
+  }
+  .contracts--mes-requests col:nth-child(5) {
+    width: 11%;
+  }
+  .contracts--mes-requests col:nth-child(6) {
+    width: 17%;
   }
 }
 
@@ -11157,6 +11293,10 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   margin-top: 28px;
 }
 
+.delivery-or-pickup__confirm-btn-block button:not(:first-child) {
+  margin-left: 15px;
+}
+
 .delivery-or-pickup__fill {
   margin: 14px 0 10px;
 }
@@ -11316,6 +11456,16 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   padding-right: 20px;
 }
 
+.delivery-or-pickup__call-btn-block {
+  margin-left: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.delivery-or-pickup__call-btn-block button:not(:first-child) {
+  margin-left: 10px;
+}
+
 .delivery-or-pickup__call-link {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -11455,6 +11605,12 @@ div.registration-address {
   .delivery-or-pickup__confirm {
     margin-top: 10px;
   }
+  .delivery-or-pickup__confirm-btn-block button {
+    width: 100%;
+  }
+  .delivery-or-pickup__confirm-btn-block button:not(:first-child) {
+    margin: 15px 0 0;
+  }
   .delivery-or-pickup__payment-link {
     margin-top: 5px;
     padding: 12px;
@@ -11515,6 +11671,19 @@ div.registration-address {
     padding-left: 40px;
     padding-right: 0;
     margin-bottom: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: 100%;
+  }
+  .delivery-or-pickup__call-btn-block {
+    width: 100%;
+  }
+  .delivery-or-pickup__call-btn-block button {
+    width: 100%;
+  }
+  .delivery-or-pickup__call-btn-block button:not(:first-child) {
+    margin: 15px 0 0;
   }
   .delivery-or-pickup__call-link {
     width: 100%;
@@ -11524,6 +11693,17 @@ div.registration-address {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 17px;
+    background-position: top 17px left 17px;
+  }
+  .delivery-or-pickup__alert-desc {
+    padding-left: 40px;
+    padding-right: 0;
+    margin-bottom: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: 100%;
   }
   .delivery-or-pickup__alert-link {
     width: 100%;
@@ -13199,6 +13379,22 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   width: calc((100% - 42px) / 4);
   margin: 0;
   margin-top: 24px;
+}
+
+.subscription-all__filters--subs-client .subscription-all__select {
+  width: calc((100% - 42px) / 4);
+}
+
+.subscription-all__filters--subs-client .subscription-all__select:nth-child(5), .subscription-all__filters--subs-client .subscription-all__select:nth-child(6) {
+  width: calc((100% - 24px) / 2);
+}
+
+.subscription-all__filters--mes-requests .subscription-all__select {
+  width: calc((100% - 24px) / 2);
+}
+
+.subscription-all__filters--mes-requests .subscription-all__select:first-child {
+  width: 100%;
 }
 
 @media (max-width: 1439px) {

@@ -65,6 +65,29 @@
   }
 }
 
+.subscription-all__filters--subs-client {
+  .subscription-all__select {
+    width: calc((100% - 42px) / 4);
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      width: calc((100% - 24px) / 2);
+    }
+  }
+}
+
+.subscription-all__filters--mes-requests {
+  .subscription-all__select {
+    width: calc((100% - 24px) / 2);
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+}
+
+
+
 @include tablet {
   .subscription-all__filters--mts {
     .subscription-all__select {

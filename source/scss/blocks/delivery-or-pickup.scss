@@ -112,6 +112,14 @@
     margin-top: 28px;
   }
 
+  &__confirm-btn-block {
+    button {
+      &:not(:first-child) {
+        margin-left: 15px;
+      }
+    }
+  }
+
   &__fill {
     margin: 14px 0 10px;
   }
@@ -250,6 +258,18 @@
     color: $text-main;
     margin: 0;
     padding-right: 20px;
+  }
+
+  &-btn-block {
+    margin-left: auto;
+    flex-shrink: 0;
+
+    button {
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
   }
 
   &-link {
@@ -404,6 +424,17 @@ div.registration-address {
     margin-top: 10px;
   }
 
+  .delivery-or-pickup__confirm-btn-block {
+
+    button {
+      width: 100%;
+
+      &:not(:first-child) {
+        margin: 15px 0 0;
+      }
+    }
+  }
+
   .delivery-or-pickup__payment-link {
     margin-top: 5px;
     padding: 12px;
@@ -479,6 +510,20 @@ div.registration-address {
       padding-left: 40px;
       padding-right: 0;
       margin-bottom: 15px;
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    &-btn-block {
+      width: 100%;
+
+      button {
+        width: 100%;
+
+        &:not(:first-child) {
+          margin: 15px 0 0;
+        }
+      }
     }
 
     &-link {
@@ -489,6 +534,16 @@ div.registration-address {
   .delivery-or-pickup__alert {
     &-block {
       flex-direction: column;
+      padding: 17px;
+      background-position: top 17px left 17px;
+    }
+
+    &-desc {
+      padding-left: 40px;
+      padding-right: 0;
+      margin-bottom: 15px;
+      flex-grow: 1;
+      width: 100%;
     }
 
     &-link {

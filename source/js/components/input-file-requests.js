@@ -1,14 +1,15 @@
 (function() {
   const requestModal = document.querySelector('.modal.requests-upload');
+
+  if (!requestModal) {
+    return;
+  }
+
   const filesWrapper = document.querySelector('.modal.requests-upload .input-file__wrapper');
   const fileInputItem = filesWrapper.querySelector('.input-file');
   const newFileInputItem = fileInputItem.cloneNode(true);
   const submit = requestModal.querySelector('.modal__save');
   const cancel = requestModal.querySelector('.modal__close');
-
-  if (!requestModal) {
-    return;
-  }
 
   function preventDefaults (e) {
     e.preventDefault();

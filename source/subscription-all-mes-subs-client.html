@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daichi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container  wrapper">
+      <a href="#" class="header__logo">
+        <img src="img/daichi-logo.svg" alt="Daichi">
+      </a>
+      <nav class="header__nav  nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Личный кабинет</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Договоры</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link  nav__link--active">Подписки</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Взаиморасчеты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Клиенты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Агенты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Поддержка</a>
+          </li>
+        </ul>
+        <div class="header__user-mobile">
+          <div class="header__user-logo">КК</div>
+          <div class="header__user-info">
+            <p class="header__user-name">Константин Константинович Агент</p>
+            <p class="header__user-company">ООО МЭК</p>
+          </div>
+          <button class="header__user-btn"></button>
+        </div>
+        <button class="header__close-btn"></button>
+      </nav>
+      <div class="header__user">
+        <div class="header__user-logo">КК</div>
+        <div class="header__user-info">
+          <p class="header__user-name">Константин Константинович Агент</p>
+          <p class="header__user-company">ООО МЭК</p>
+        </div>
+        <button class="header__user-btn"></button>
+      </div>
+      <button class="header__nav-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="subscription-all">
+      <div class="subscription-all__container  wrapper">
+        <div class="subscription-all__title-block  title-block">
+          <h1 class="subscription-all__title  title-block__title">Подписки</h1>
+          <button class="subscription-all__generate  btn-primary" data-trigger="requests-upload">Загрузить заявки</button>
+        </div>
+
+        <div class="subscription-all__search  search-block ">
+          <div class="search-wrap">
+            <form class="search-form show-clear">
+              <input class="search" type="text" placeholder="Поиск по номеру договора, заявки, счёта, клиенту">
+              <div class="search__current">
+                <div class="search__current-content">
+                  <p class="search__current-value">Value</p>
+                  <button type="button" class="search__current-clear"></button>
+                </div>
+              </div>
+            </form>
+            <button class="search-close"></button>
+            <div class="search-result">
+              <div class="search-result__content">
+                <div class="search-result__column">
+                  <h2 class="search-result__title">Договоры</h2>
+                  <div class="search-item"><span class="matches">DA</span>2020-17</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-16</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-15</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-14</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-13</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-17</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-16</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-15</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-14</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-13</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-17</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-16</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-15</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-14</div>
+                  <div class="search-item"><span class="matches">DA</span>2020-13</div>
+                </div>
+                <div class="search-result__column">
+                  <h2 class="search-result__title">Агенты</h2>
+                  <div class="search-item"><span class="matches">Иван</span>ов Иван Иванович</div>
+                  <div class="search-item">Романов <span class="matches">Иван</span> Олегович</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="subscription-all__tabs  subscription-tabs  swiper-container">
+          <ul class="subscription-tabs__list  swiper-wrapper">
+            <li class="subscription-tabs__item  swiper-slide">
+              <button class="subscription-tabs__btn">МЭС заявки (10)</button>
+            </li>
+            <li class="subscription-tabs__item  swiper-slide">
+              <button class="subscription-tabs__btn  active">МЭС подписки клиента (12)</button>
+            </li>
+            <li class="subscription-tabs__item  swiper-slide">
+              <button class="subscription-tabs__btn">МЭС подписки (100)</button>
+            </li>
+          </ul>
+        </section>
+
+        <div class="subscription-all__filters  subscription-all__filters--subs-client  filters">
+          <div class="filters__title-block">
+            <button class="filters__btn btn-arrow-v">
+              <h2 class="filters__title">
+                Фильтры
+                <span class="filters__title-counter">2</span>
+              </h2>
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z" fill="#000000"/>
+              </svg>
+            </button>
+            <button class="filters__btn-clear">Очистить фильтры</button>
+          </div>
+          <div class="filters__form-wrapper">
+            <form class="subscription-all__filters-form  filters__form">
+              <div class="subscription-all__select  select-block">
+                <select name="service-status" id="service-status" class="select">
+                  <option value="" disabled hidden></option>
+                  <option value="Все" selected>Все</option>
+                  <option value="В ожидании">В ожидании</option>
+                  <option value="Активна">Активна</option>
+                  <option value="Истекает">Истекает</option>
+                </select>
+                <label class="select-label">Статус услуги</label>
+              </div>
+
+              <div class="subscription-all__select  date-block">
+                <label class="date-label">Дата создания</label>
+                <input class="date-input" name="creation-date" placeholder="Не указана">
+              </div>
+
+              <div class="subscription-all__select  select-block">
+                <select name="delivery" class="select">
+                  <option value="" disabled hidden></option>
+                  <option value="Все" selected>Все</option>
+                  <option value="Ожидается доставка">Ожидается оплата</option>
+                  <option value="Доставлен">Подписка оплачена</option>
+                </select>
+                <label class="select-label">Статус оплаты</label>
+              </div>
+
+              <div class="subscription-all__select  date-block">
+                <label class="date-label">Дата оплаты</label>
+                <input class="date-input" name="delivery-date" placeholder="Не указана">
+              </div>
+
+              <div class="subscription-all__select  select-block">
+                <select name="cloud-connection" class="select">
+                  <option value="" disabled hidden></option>
+                  <option value="Все" selected>Все</option>
+                  <option value="Ожидается подключение">Ожидается подключение</option>
+                  <option value="Подключен">Подключен</option>
+                </select>
+                <label class="select-label">Статус подключения к облаку</label>
+              </div>
+
+              <div class="subscription-all__select  date-block">
+                <label class="date-label">Дата подключения</label>
+                <input class="date-input" name="cloud-connection-date" placeholder="Не указана">
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <div class="subscription-all__found">
+          Найдено: 1 подписка
+        </div>
+
+        <div class="contracts  contracts--mes-subs-client">
+          <table class="contracts__table">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <tr class="contracts__header">
+              <th>Подписка</th>
+              <th>№ договора</th>
+              <th>Клиент</th>
+              <th>Дата создания</th>
+              <th>Комментарий</th>
+            </tr>
+            <!--СТРОКА ДОГОВОРА-->
+            <tr>
+              <td colspan="5">
+                <a href="#" class="contracts__link">
+                  <table class="contracts__inner-table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr class="contracts__data">
+                      <td>
+                        <p>Облачный кондиционер<br>
+                          Daikin FTXJ25MW/RXJ250M
+                        </p>
+                        <p>00000-00000-00000</p>
+                      </td>
+                      <td>
+                        <p>DA2020-17</p>
+                      </td>
+                      <td>
+                        <p>Шаповалова Екатерина Григорьевна</p>
+                        <p>8 (916) 982-32-78</p>
+                      </td>
+                      <td>
+                        <p>
+                          05.07.2021
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Возможно, заявка<br>
+                          200-21066465-2-32
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="contracts__status">
+                      <td colspan="5">
+                        <div class="contracts__status-container">
+                          <p class="contracts__status-name  active">Активна</p>
+                          <p class="contracts__status-text  done">Подписка оплачена  dd.mm.yy</p>
+                          <p class="contracts__status-text  done">Подключен к облаку dd.mm.yy</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+              </td>
+            </tr>
+            <!--СТРОКА ДОГОВОРА-->
+            <tr>
+              <td colspan="5">
+                <a href="#" class="contracts__link">
+                  <table class="contracts__inner-table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr class="contracts__data">
+                      <td>
+                        <p>Облачный кондиционер<br>
+                          Daikin FTXJ25MW/RXJ250M
+                        </p>
+                        <p>00000-00000-00000</p>
+                      </td>
+                      <td>
+                        <p>DA2020-17</p>
+                      </td>
+                      <td>
+                        <p>Шаповалова Екатерина Григорьевна</p>
+                        <p>8 (916) 982-32-78</p>
+                      </td>
+                      <td>
+                        <p>
+                          05.07.2021
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Заказ оформил<br>
+                          Зимин Павел
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="contracts__status">
+                      <td colspan="5">
+                        <div class="contracts__status-container">
+                          <p class="contracts__status-name  active">Активна</p>
+                          <p class="contracts__status-text  done">Подписка оплачена  dd.mm.yy</p>
+                          <p class="contracts__status-text  done">Подключен к облаку dd.mm.yy</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+              </td>
+            </tr>
+            <!--СТРОКА ДОГОВОРА-->
+            <tr>
+              <td colspan="5">
+                <a href="#" class="contracts__link">
+                  <table class="contracts__inner-table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr class="contracts__data">
+                      <td>
+                        <p>Облачный кондиционер<br>
+                          Daikin FTXJ25MW/RXJ250M
+                        </p>
+                        <p>00000-00000-00000</p>
+                      </td>
+                      <td>
+                        <p>DA2020-17</p>
+                      </td>
+                      <td>
+                        <p>Шаповалова Екатерина Григорьевна</p>
+                        <p>8 (916) 982-32-78</p>
+                      </td>
+                      <td>
+                        <p>
+                          05.07.2021
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Заказ оформил<br>
+                          Зимин Павел
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="contracts__status">
+                      <td colspan="5">
+                        <div class="contracts__status-container">
+                          <p class="contracts__status-name  pending">В ожидании</p>
+                          <p class="contracts__status-text  waiting">Ожидает оплаты подписки</p>
+                          <p class="contracts__status-text  waiting">Ожидается подключение к облаку</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+              </td>
+            </tr>
+            <!--СТРОКА ДОГОВОРА-->
+            <tr>
+              <td colspan="5">
+                <a href="#" class="contracts__link">
+                  <table class="contracts__inner-table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr class="contracts__data">
+                      <td>
+                        <p>Облачный кондиционер<br>
+                          Daikin FTXJ25MW/RXJ250M
+                        </p>
+                        <p>00000-00000-00000</p>
+                      </td>
+                      <td>
+                        <p>DA2020-17</p>
+                      </td>
+                      <td>
+                        <p>Шаповалова Екатерина Григорьевна</p>
+                        <p>8 (916) 982-32-78</p>
+                      </td>
+                      <td>
+                        <p>
+                          05.07.2021
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Заказ оформил<br>
+                          Зимин Павел
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="contracts__status">
+                      <td colspan="5">
+                        <div class="contracts__status-container">
+                          <p class="contracts__status-name  pending">В ожидании</p>
+                          <p class="contracts__status-text  waiting">Ожидает оплаты подписки</p>
+                          <p class="contracts__status-text  waiting">Ожидается подключение к облаку</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+              </td>
+            </tr>
+            <!--СТРОКА ДОГОВОРА-->
+            <tr>
+              <td colspan="5">
+                <a href="#" class="contracts__link">
+                  <table class="contracts__inner-table">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <tr class="contracts__data">
+                      <td>
+                        <p>Облачный кондиционер<br>
+                          Daikin FTXJ25MW/RXJ250M
+                        </p>
+                        <p>00000-00000-00000</p>
+                      </td>
+                      <td>
+                        <p>DA2020-17</p>
+                      </td>
+                      <td>
+                        <p>Шаповалова Екатерина Григорьевна</p>
+                        <p>8 (916) 982-32-78</p>
+                      </td>
+                      <td>
+                        <p>
+                          05.07.2021
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          Заказ оформил<br>
+                          Зимин Павел
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="contracts__status">
+                      <td colspan="5">
+                        <div class="contracts__status-container">
+                          <p class="contracts__status-name  pending">В ожидании</p>
+                          <p class="contracts__status-text  waiting">Ожидает оплаты подписки</p>
+                          <p class="contracts__status-text  done">Подключен к облаку dd.mm.yy</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="contracts-mobile">
+         <div class="contracts-mobile__slider  table-mobile  swiper-container">
+            <div class="swiper-wrapper">
+
+              <!--Мобильная карточка договора-->
+              <div class="swiper-slide">
+                <a href="#" class="contracts__link  table-mobile__item">
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Подписка</p>
+                    <p class="table-mobile__text-main">
+                      Облачный кондиционер<br>
+                      Daikin FTXJ25MW/RXJ250M
+                    </p>
+                    <p class="table-mobile__text-minor">00000-00000-00000</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">№ договора</p>
+                    <p class="table-mobile__text-main">DA2020-17</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Клиент</p>
+                    <p class="table-mobile__text-main">Шаповалова Екатерина Григорьевна</p>
+                    <p class="table-mobile__text-minor">8 (916) 982-32-78</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Дата создания</p>
+                    <p class="table-mobile__text-main">
+                      05.07.2021
+                    </p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Комментарий</p>
+                    <p class="table-mobile__text-main">
+                      Возможно, заявка<br>
+                      200-21066465-2-32
+                    </p>
+                  </div>
+
+                  <div class="contracts__status">
+                    <div class="contracts__status-container">
+                      <p class="contracts__status-name  active">Активна</p>
+                      <p class="contracts__status-text  done">Подписка оплачена  dd.mm.yy</p>
+                      <p class="contracts__status-text  done">Подключен к облаку dd.mm.yy</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!--Мобильная карточка договора-->
+              <div class="swiper-slide">
+                <a href="#" class="contracts__link  table-mobile__item">
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Подписка</p>
+                    <p class="table-mobile__text-main">
+                      Облачный кондиционер<br>
+                      Daikin FTXJ25MW/RXJ250M
+                    </p>
+                    <p class="table-mobile__text-minor">00000-00000-00000</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">№ договора</p>
+                    <p class="table-mobile__text-main">DA2020-17</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Клиент</p>
+                    <p class="table-mobile__text-main">Шаповалова Екатерина Григорьевна</p>
+                    <p class="table-mobile__text-minor">8 (916) 982-32-78</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Дата создания</p>
+                    <p class="table-mobile__text-main">
+                      05.07.2021
+                    </p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Комментарий</p>
+                    <p class="table-mobile__text-main">
+                      Заказ оформил<br>
+                      Зимин Павел
+                    </p>
+                  </div>
+
+                  <div class="contracts__status">
+                    <div class="contracts__status-container">
+                      <p class="contracts__status-name  active">Активна</p>
+                      <p class="contracts__status-text  done">Подписка оплачена  dd.mm.yy</p>
+                      <p class="contracts__status-text  done">Подключен к облаку dd.mm.yy</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!--Мобильная карточка договора-->
+              <div class="swiper-slide">
+                <a href="#" class="contracts__link  table-mobile__item">
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Подписка</p>
+                    <p class="table-mobile__text-main">
+                      Облачный кондиционер<br>
+                      Daikin FTXJ25MW/RXJ250M
+                    </p>
+                    <p class="table-mobile__text-minor">00000-00000-00000</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">№ договора</p>
+                    <p class="table-mobile__text-main">DA2020-17</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Клиент</p>
+                    <p class="table-mobile__text-main">Шаповалова Екатерина Григорьевна</p>
+                    <p class="table-mobile__text-minor">8 (916) 982-32-78</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Дата создания</p>
+                    <p class="table-mobile__text-main">
+                      05.07.2021
+                    </p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Комментарий</p>
+                    <p class="table-mobile__text-main">
+                      Заказ оформил<br>
+                      Зимин Павел
+                    </p>
+                  </div>
+
+                  <div class="contracts__status">
+                    <div class="contracts__status-container">
+                      <p class="contracts__status-name  pending">В ожидании</p>
+                      <p class="contracts__status-text  waiting">Ожидает оплаты подписки</p>
+                      <p class="contracts__status-text  waiting">Ожидается подключение к облаку</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!--Мобильная карточка договора-->
+              <div class="swiper-slide">
+                <a href="#" class="contracts__link  table-mobile__item">
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Подписка</p>
+                    <p class="table-mobile__text-main">
+                      Облачный кондиционер<br>
+                      Daikin FTXJ25MW/RXJ250M
+                    </p>
+                    <p class="table-mobile__text-minor">00000-00000-00000</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">№ договора</p>
+                    <p class="table-mobile__text-main">DA2020-17</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Клиент</p>
+                    <p class="table-mobile__text-main">Шаповалова Екатерина Григорьевна</p>
+                    <p class="table-mobile__text-minor">8 (916) 982-32-78</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Дата создания</p>
+                    <p class="table-mobile__text-main">
+                      05.07.2021
+                    </p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Комментарий</p>
+                    <p class="table-mobile__text-main">
+                      Заказ оформил<br>
+                      Зимин Павел
+                    </p>
+                  </div>
+
+                  <div class="contracts__status">
+                    <div class="contracts__status-container">
+                      <p class="contracts__status-name  pending">В ожидании</p>
+                      <p class="contracts__status-text  waiting">Ожидает оплаты подписки</p>
+                      <p class="contracts__status-text  waiting">Ожидается подключение к облаку</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!--Мобильная карточка договора-->
+              <div class="swiper-slide">
+                <a href="#" class="contracts__link  table-mobile__item">
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Подписка</p>
+                    <p class="table-mobile__text-main">
+                      Облачный кондиционер<br>
+                      Daikin FTXJ25MW/RXJ250M
+                    </p>
+                    <p class="table-mobile__text-minor">00000-00000-00000</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">№ договора</p>
+                    <p class="table-mobile__text-main">DA2020-17</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Клиент</p>
+                    <p class="table-mobile__text-main">Шаповалова Екатерина Григорьевна</p>
+                    <p class="table-mobile__text-minor">8 (916) 982-32-78</p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Дата создания</p>
+                    <p class="table-mobile__text-main">
+                      05.07.2021
+                    </p>
+                  </div>
+                  <div class="table-mobile__text-block-mb">
+                    <p class="table-mobile__text-minor">Комментарий</p>
+                    <p class="table-mobile__text-main">
+                      Заказ оформил<br>
+                      Зимин Павел
+                    </p>
+                  </div>
+
+                  <div class="contracts__status">
+                    <div class="contracts__status-container">
+                      <p class="contracts__status-name  pending">В ожидании</p>
+                      <p class="contracts__status-text  waiting">Ожидает оплаты подписки</p>
+                      <p class="contracts__status-text  done">Подключен к облаку dd.mm.yy</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <div class="contracts-mobile__pagination swiper-pagination"></div>
+         </div>
+        </div>
+
+
+
+        <div class="contracts__pagination-block">
+          <button class="contracts__show-more">Показать еще</button>
+          <div class="contracts__pagination">
+            <button class="contracts__prev" disabled>
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"/>
+              </svg>
+            </button>
+            <button class="contracts__page-number  active">1</button>
+            <button class="contracts__page-number">2</button>
+            <button class="contracts__page-number">3</button>
+            <button class="contracts__page-number">...</button>
+            <button class="contracts__page-number">14</button>
+            <button class="contracts__next">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.5858 12L9.29289 8.70711C8.90237 8.31659 8.90237 7.68342 9.29289 7.2929C9.68342 6.90237 10.3166 6.90237 10.7071 7.2929L14.7071 11.2929C15.0976 11.6834 15.0976 12.3166 14.7071 12.7071L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+      <div class="footer__top  wrapper">
+        <a href="#" class="footer__logo">
+          <img src="img/daichi-logo.svg" alt="Daichi">
+        </a>
+        <div class="footer__right">
+          <nav class="footer__nav  nav">
+            <ul class="nav__list  nav__list--footer">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Личный кабинет</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Договоры</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Услуги</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Взаиморасчеты</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Клиенты</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Агенты</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Информация</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Настройки профиля</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__contacts">
+            <div class="footer__tel-block">
+              <a href="tel:+78001200070" class="footer__tel">8 800 120-00-70</a>
+              <a href="tel:+74954333245" class="footer__tel">8 495 433-32-45</a>
+            </div>
+            <div class="footer__mail-block">
+              <a href="mailto:info@daichi.ru" class="footer__mail">info@daichi.ru</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-container  wrapper">
+          <p class="footer__copyright">
+            © Daichi 2020. Все права защищены.
+          </p>
+          <a href="#" class="footer__policy">
+            Политика об обработке и защите персональных данных
+          </a>
+          <p class="footer__address">
+            г.Москва, Огородный проезд, дом 20, строение 3
+          </p>
+          <div class="footer__social-block">
+            <a href="#" class="footer__social">
+              <svg width="8" height="18" viewBox="0 0 8 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.69659 0.000244141H6.74274C4.0912 0.000244141 1.93349 2.20225 1.93349 4.90958V6.98031H0.304304C0.136136 6.98031 0 7.12058 0 7.29232V9.77486C0 9.9466 0.136136 10.0851 0.304304 10.0851H1.93349V17.6882C1.93349 17.86 2.06963 18.0002 2.23779 18.0002H4.66867C4.83684 18.0002 4.97297 17.86 4.97297 17.6882V10.0851H7.39139C7.55956 10.0851 7.6957 9.9466 7.6957 9.77486V7.29232C7.6957 7.12058 7.55956 6.98031 7.39139 6.98031H4.97297V4.90958C4.97297 3.91423 5.76666 3.1041 6.74185 3.1041H7.69659C7.86386 3.1041 8 2.96383 8 2.79299V0.30955C8 0.138713 7.86386 0.000244141 7.69659 0.000244141Z"/>
+                </svg>
+            </a>
+            <a href="#" class="footer__social">
+              <svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2204 1.28787C18.4985 0.373299 17.1656 0.000244141 14.6201 0.000244141H5.37972C2.77595 0.000244141 1.42045 0.397384 0.701225 1.37108C0 2.32045 0 3.71926 0 5.65527V9.3453C0 13.0959 0.832 15.0002 5.37972 15.0002H14.6201C16.8276 15.0002 18.0508 14.671 18.8422 13.8639C19.6537 13.0362 20 11.6849 20 9.3453V5.65527C20 3.61359 19.9457 2.20652 19.2204 1.28787ZM12.84 8.00971L8.64408 10.3468C8.55028 10.399 8.44768 10.4249 8.34523 10.4249C8.22923 10.4249 8.11347 10.3916 8.01095 10.3255C7.81795 10.2009 7.70007 9.97788 7.70007 9.73738V5.07826C7.70007 4.83818 7.8176 4.61542 8.01025 4.49071C8.20298 4.36596 8.44265 4.35744 8.64258 4.46814L12.8386 6.79013C13.0521 6.90826 13.1861 7.14312 13.1865 7.39937C13.1867 7.65581 13.0532 7.89102 12.84 8.00971Z"/>
+                </svg>
+            </a>
+            <a href="#" class="footer__social">
+              <svg width="19" height="11" viewBox="0 0 19 11" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1739 8.57922C17.7604 8.08347 17.2898 7.63628 16.8356 7.20559C16.6736 7.05256 16.5062 6.89495 16.3451 6.7355C15.8828 6.28373 15.8665 6.11146 16.232 5.59921C16.4854 5.24458 16.7542 4.88903 17.0148 4.5454C17.25 4.23383 17.4934 3.91311 17.7269 3.58963L17.7749 3.52274C18.2219 2.90328 18.6833 2.26457 18.9286 1.49208C18.9928 1.28956 19.0598 0.989914 18.9068 0.739748C18.753 0.488665 18.4562 0.41169 18.2463 0.377785C18.1422 0.358541 18.0391 0.355792 17.9432 0.355792L15.0204 0.35396H14.996C14.5535 0.35396 14.2558 0.56289 14.0857 0.991747C13.9219 1.40136 13.7436 1.83846 13.5391 2.25266C13.1328 3.07922 12.6162 4.03315 11.8687 4.82763L11.838 4.86062C11.7493 4.95593 11.6498 5.06131 11.5765 5.06131C11.5656 5.06131 11.5529 5.06131 11.5394 5.05673C11.3846 4.99716 11.2806 4.61962 11.2851 4.44734C11.2851 4.44551 11.2851 4.44276 11.2851 4.4391L11.2833 1.05498C11.2833 1.0449 11.2824 1.03207 11.2806 1.02107C11.2064 0.470337 11.0417 0.129451 10.4191 0.00574235C10.4028 0.00299326 10.3856 0.000244141 10.3694 0.000244141H7.32898C6.83401 0.000244141 6.56074 0.20276 6.30466 0.504243C6.23589 0.585799 6.09111 0.753493 6.1626 0.956925C6.23499 1.16402 6.47025 1.20709 6.54717 1.22175C6.92722 1.29415 7.14167 1.52782 7.2023 1.93468C7.30817 2.64211 7.32174 3.3972 7.24392 4.30806C7.22221 4.56281 7.17877 4.75799 7.10819 4.9266C7.091 4.96601 7.03309 5.09155 6.97336 5.09155C6.95436 5.09155 6.90007 5.08513 6.79963 5.01732C6.56436 4.85604 6.39153 4.6242 6.19065 4.33921C5.50656 3.3697 4.93197 2.30489 4.43429 1.07697C4.24969 0.625202 3.90584 0.37137 3.46426 0.36404C2.97925 0.355792 2.53948 0.353043 2.11962 0.353043C1.66175 0.353043 1.23646 0.357625 0.821124 0.365872C0.466413 0.37137 0.220287 0.477668 0.0908903 0.68385C-0.0385067 0.887282 -0.029458 1.15669 0.116227 1.482C1.28623 4.08538 2.34674 5.9795 3.55565 7.61979C4.40171 8.77074 5.25139 9.56614 6.22775 10.1233C7.25659 10.7134 8.41031 11.0002 9.75314 11.0002C9.90516 11.0002 10.0626 10.9957 10.2219 10.9892C11.0019 10.9508 11.2914 10.6685 11.3276 9.90794C11.3457 9.51757 11.3882 9.10979 11.5792 8.76249C11.6995 8.5444 11.8117 8.5444 11.8488 8.5444C11.9194 8.5444 12.0081 8.57647 12.1022 8.63695C12.2723 8.74874 12.418 8.89628 12.5374 9.02732C12.6496 9.15103 12.7609 9.27565 12.8722 9.40119C13.112 9.66969 13.3609 9.94826 13.6197 10.2113C14.187 10.7895 14.8123 11.0433 15.5308 10.9902H18.211C18.2164 10.9902 18.2228 10.9892 18.2282 10.9883C18.4951 10.9718 18.7268 10.8225 18.8625 10.5815C19.0317 10.2836 19.0281 9.90244 18.8535 9.56156C18.6562 9.17852 18.3992 8.84863 18.1739 8.57922Z"/>
+                </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <!--Модальное окно загрузки заявок-->
+  <section class="modal  requests-upload" data-modal="requests-upload">
+    <div class="modal__overlay">
+
+        <div class="modal__body">
+          <div class="modal__content">
+            <form>
+              <h1 class="modal__title">Загрузить заявку</h1>
+              <p class="modal__desc">
+                Загрузите отчёт по заявкам МЭС, все подписки в отчёте будут добавлены в личный кабинет в список подписок.
+              </p>
+
+              <div class="input-file__wrapper">
+                <div class="input-file  input-file-requests">
+                  <label class="input-file__label">
+                    <input type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" name="delivery-doc" class="input-file__input  visually-hidden">
+                    <span class="input-file__label-text">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#export"></use>
+                      </svg>
+                      <span>Выберите файлы, которые вы хотите загрузить или перетащите их сюда.</span>
+                    </span>
+                  </label>
+                  <div class="input-file__file-load  file-load">
+                    <div class="file-load__file-logo"></div>
+                    <div class="file-load__info">
+                      <p class="file-load__name">Файл 1</p>
+                      <p class="file-load__size">PDF, 450 Кбайт</p>
+                    </div>
+
+                    <div class="file-load__status"><span>0</span>%</div>
+                    <div class="file-load__clear">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#close-grey"></use>
+                      </svg>
+                    </div>
+
+                    <div class="file-load__progress">
+                      <div class="file-load__progress-current" style="width: 0%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal__btn-block">
+                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                <button type="submit" class="modal__save  modal__btn-item  btn-primary" disabled>Загрузить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+  <!--Модальное окно генерации отчета агента-->
+  <section class="modal" data-modal="generate-report">
+    <div class="modal__overlay">
+
+        <div class="modal__body">
+          <div class="modal__content">
+            <form>
+              <h1 class="modal__title">Сгенерировать отчет агента</h1>
+              <p class="modal__desc">
+                Все договоры, ожидающие выплаты вознаграждения агента, будут сформированы в&nbsp;единый отчётный документ.
+              </p>
+              <div class="modal__btn-block">
+                <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                <a href="#" class="modal__save  modal__btn-item  btn-primary">Скачать</a>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

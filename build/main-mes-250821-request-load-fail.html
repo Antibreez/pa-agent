@@ -1581,6 +1581,29 @@
       </div>
     </section>
 
+    <!--Модальное окно неудачной загрузки заявок-->
+    <section class="modal" data-modal="requests-upload-fail">
+      <div class="modal__overlay">
+
+          <div class="modal__body">
+            <div class="modal__content">
+              <form>
+                <h1 class="modal__title">Не получилось добавить подписки</h1>
+                <p class="modal__desc">
+                  Возможно, документ повреждён или все подписки  были добавлены в список ранее.
+                  Попробуйте загрузить документ снова.
+                </p>
+
+                <div class="modal__btn-block">
+                  <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
+                  <button type="button" class="modal__save  modal__btn-item  btn-primary">Повторить загрузку</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </section>
+
     <!--Модальное окно qr-сканирования-->
     <section class="modal  qr-scanner-modal" data-modal="qr-scanner-modal">
       <div class="modal__overlay">
@@ -1597,5 +1620,10 @@
 
   <script src="js/vendor.min.js"></script>
   <script src="js/script.min.js"></script>
+  <script>
+    const requestsUploadFail = new Modal(null, document.querySelector('[data-modal="requests-upload-fail"]'));
+
+    requestsUploadFail.open();
+  </script>
 </body>
 </html>

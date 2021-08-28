@@ -44,15 +44,16 @@
 
 (function () {
   var requestModal = document.querySelector('.modal.requests-upload');
+
+  if (!requestModal) {
+    return;
+  }
+
   var filesWrapper = document.querySelector('.modal.requests-upload .input-file__wrapper');
   var fileInputItem = filesWrapper.querySelector('.input-file');
   var newFileInputItem = fileInputItem.cloneNode(true);
   var submit = requestModal.querySelector('.modal__save');
   var cancel = requestModal.querySelector('.modal__close');
-
-  if (!requestModal) {
-    return;
-  }
 
   function preventDefaults(e) {
     e.preventDefault();
@@ -440,8 +441,8 @@
 
   Modal.prototype.addEventListeners = function () {
     this.overlay.addEventListener('click', this.onOverlayClick);
-    this.closeBtn.addEventListener('click', this.onCloseClick);
-    this.trigger.addEventListener('click', this.onTriggerClick);
+    this.closeBtn && this.closeBtn.addEventListener('click', this.onCloseClick);
+    this.trigger && this.trigger.addEventListener('click', this.onTriggerClick);
   };
 
   window.Modal = Modal;

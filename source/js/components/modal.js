@@ -64,8 +64,8 @@
 
   Modal.prototype.addEventListeners = function() {
     this.overlay.addEventListener('click', this.onOverlayClick);
-    this.closeBtn.addEventListener('click', this.onCloseClick);
-    this.trigger.addEventListener('click', this.onTriggerClick);
+    this.closeBtn && this.closeBtn.addEventListener('click', this.onCloseClick);
+    this.trigger && this.trigger.addEventListener('click', this.onTriggerClick);
   }
 
   window.Modal = Modal;

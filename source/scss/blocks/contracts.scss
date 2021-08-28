@@ -143,6 +143,90 @@
   }
 }
 
+.contracts--mes-subs {
+  .contracts__table {
+    th {
+      &:nth-child(5) {
+        text-align: left;
+      }
+    }
+
+    td {
+      &:nth-child(5) {
+        text-align: left;
+      }
+    }
+  }
+
+  col {
+    &:first-child {
+      width: 18%;
+    }
+
+    &:nth-child(2) {
+      width: 11%;
+    }
+
+    &:nth-child(3) {
+      width: 15%;
+    }
+
+    &:nth-child(4) {
+      width: 15%;
+    }
+
+    &:nth-child(5) {
+      width: 17%;
+    }
+
+    &:nth-child(6) {
+      width: 11%;
+    }
+
+    &:nth-child(7) {
+      width: 13%;
+    }
+  }
+}
+
+.contracts--mes-subs-client {
+  .contracts__table {
+    td {
+      &:nth-child(3) {
+        text-align: left;
+      }
+    }
+
+    th {
+      &:nth-child(3) {
+        text-align: left;
+      }
+    }
+  }
+
+  col {
+    &:first-child {
+      width: 29%;
+    }
+
+    &:nth-child(2) {
+      width: 11%;
+    }
+
+    &:nth-child(3) {
+      width: 29%;
+    }
+
+    &:nth-child(4) {
+      width: 11%;
+    }
+
+    &:nth-child(5) {
+      width: 20%;
+    }
+  }
+}
+
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
@@ -629,6 +713,18 @@ button.contracts__page-number {
   display: none;
 }
 
+.contract-comment {
+  margin-bottom: 40px;
+}
+
+.contract-comment__text {
+  padding: 17px 20px;
+
+  &:hover {
+    background-color: #f4f4f8;
+  }
+}
+
 @include tablet {
   .contracts {
     & col {
@@ -726,6 +822,95 @@ button.contracts__page-number {
 
       &:nth-child(8) {
         width: 52px;
+      }
+    }
+  }
+
+  .contracts--mes-subs {
+    .contracts__reward-value {
+      @include b16;
+      font-weight: 500;
+    }
+
+    col {
+      &:first-child {
+        width: 18%;
+      }
+
+      &:nth-child(2) {
+        width: 11%;
+      }
+
+      &:nth-child(3) {
+        width: 15%;
+      }
+
+      &:nth-child(4) {
+        width: 15%;
+      }
+
+      &:nth-child(5) {
+        width: 17%;
+      }
+
+      &:nth-child(6) {
+        width: 11%;
+      }
+
+      &:nth-child(7) {
+        width: 13%;
+      }
+    }
+  }
+
+  .contracts--mes-subs-client {
+    col {
+      &:first-child {
+        width: 29%;
+      }
+
+      &:nth-child(2) {
+        width: 11%;
+      }
+
+      &:nth-child(3) {
+        width: 29%;
+      }
+
+      &:nth-child(4) {
+        width: 11%;
+      }
+
+      &:nth-child(5) {
+        width: 20%;
+      }
+    }
+  }
+
+  .contracts--mes-requests {
+    col {
+      &:first-child {
+        width: 20%;
+      }
+
+      &:nth-child(2) {
+        width: 16%;
+      }
+
+      &:nth-child(3) {
+        width: 16%;
+      }
+
+      &:nth-child(4) {
+        width: 20%;
+      }
+
+      &:nth-child(5) {
+        width: 11%;
+      }
+
+      &:nth-child(6) {
+        width: 17%;
       }
     }
   }
