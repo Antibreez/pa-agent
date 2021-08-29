@@ -10457,6 +10457,19 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   color: #FC4242;
 }
 
+.contract-info__double-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contract-info__double-content-item {
+  width: calc((100% - 15px) / 2);
+}
+
 .contract-info__block-information {
   width: 100%;
 }
@@ -10676,6 +10689,18 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   }
   .contract-info__serial-btn {
     margin-top: 14px;
+  }
+  .contract-info__double-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contract-info__double-content-item {
+    width: 100%;
+  }
+  .contract-info__double-content-item:not(:first-child) {
+    margin-top: 15px;
   }
 }
 

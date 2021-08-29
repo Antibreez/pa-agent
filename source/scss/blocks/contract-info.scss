@@ -112,6 +112,15 @@
     }
   }
 
+  &__double-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__double-content-item {
+    width: calc((100% - 15px) / 2);
+  }
+
   &__block-information {
     width: 100%;
   }
@@ -296,6 +305,18 @@
 
     &__serial-btn {
       margin-top: 14px;
+    }
+
+    &__double-content {
+      flex-direction: column;
+    }
+
+    &__double-content-item {
+      width: 100%;
+
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
     }
   }
 }

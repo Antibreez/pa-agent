@@ -94,21 +94,21 @@
         <div class="contract-info__blocks-wrapper">
           <div class="contract-info__block  info-block">
             <h2 class="info-block__title">О подписке</h2>
-            <p class="info-block__subtitle">Номер заявки</p>
-            <p class="info-block__desc">200-21066465-2-32</p>
-            <p class="info-block__subtitle">Номер счёта МЭС</p>
-            <p class="info-block__desc">200-21066465-2-53</p>
-            <p class="info-block__subtitle">Дата поступления заявки</p>
-            <p class="info-block__desc">29.06.2021</p>
+            <p class="info-block__subtitle">Номер договора</p>
+            <p class="info-block__desc">-</p>
+            <p class="info-block__subtitle">Ближ. платёж</p>
+            <p class="info-block__desc">-</p>
+            <p class="info-block__subtitle">Осталось</p>
+            <p class="info-block__desc  alert">0 дней</p>
           </div>
           <div class="contract-info__block  info-block">
             <h2 class="info-block__title">Клиент</h2>
             <p class="info-block__subtitle">Имя</p>
-            <p class="info-block__desc">Иванов Иван Иванович</p>
+            <p class="info-block__desc">Шаповалова Екатерина Григорьевна</p>
             <p class="info-block__subtitle">Телефон</p>
             <p class="info-block__desc">+7 (123) 456-78-90</p>
-            <p class="info-block__subtitle">Адрес</p>
-            <p class="info-block__desc">121352, Москва г., Славянский б-р, д. 13 корп. 1, кв. 220</p>
+            <p class="info-block__subtitle">Email</p>
+            <p class="info-block__desc">shapovalova@email.com</p>
           </div>
           <div class="contract-info__block  info-block">
             <h2 class="info-block__title">Агент</h2>
@@ -123,47 +123,47 @@
       <div class="contract-comment__container wrapper">
         <div class="input-label">Комментарий</div>
         <div class="contract-comment__text  input-text">
-          Заказ оформил Зимин Павел
+          Возможно, заявка 200-21066465-2-32
         </div>
       </div>
     </section>
 
-    <section class="delivery-or-pickup">
+    <section class="payment-waiting">
+      <div class="payment-waiting__container  wrapper">
+
+        <div class="contract-info__block  contract-info__block--paid  info-block">
+          <h2 class="contract-info__title-check  info-block__title">
+            <span>Оплачен |&nbsp;&nbsp;Подписка на 1 год |&nbsp;&nbsp;85&nbsp;998&nbsp;₽ |&nbsp;&nbsp;01.01.2020</span>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery-or-pickup  done">
       <div class="delivery-or-pickup__container  wrapper">
-        <div class="delivery-or-pickup__wrapper">
-          <div class="delivery-or-pickup__title-block">
-            <h2 class="delivery-or-pickup__title info-block__title">Ожидается монтаж</h2>
-            <button href="#" class="delivery-or-pickup__change  btn-arrow" data-trigger="installation-data-edit">Изменить<span></span></button>
-          </div>
-          <p class="delivery-or-pickup__address  info-block__desc">
-            Москва, Лермонтовский проспект, 8к1
-          </p>
-          <div class="delivery-or-pickup__details">
-            <div class="delivery-or-pickup__detail">
-              <p class="info-block__subtitle">Подъезд</p>
-              <p class="info-block__desc">1</p>
-            </div>
-            <div class="delivery-or-pickup__detail">
-              <p class="info-block__subtitle">Кв / Офис</p>
-              <p class="info-block__desc">172</p>
-            </div>
-            <div class="delivery-or-pickup__detail">
-              <p class="info-block__subtitle">Домофон</p>
-              <p class="info-block__desc">172#8766</p>
-            </div>
-            <div class="delivery-or-pickup__detail">
-              <p class="info-block__subtitle">Этаж</p>
-              <p class="info-block__desc">10</p>
-            </div>
-            <div class="delivery-or-pickup__detail">
-              <p class="info-block__subtitle">Дата</p>
-              <p class="info-block__desc">20.12.2020</p>
-            </div>
-          </div>
-          <div class="delivery-or-pickup__confirm">
-            <div class="delivery-or-pickup__confirm-btn-block">
-              <button type="button" class="btn-primary" data-trigger="warranty-code">Подтвердить монтаж</button>
-              <button type="button" class="btn-secondary">Отказался от монтажа</button>
+        <div class="contract-info__block  contract-info__block--delivered  info-block">
+          <h2 class="contract-info__title-check  info-block__title">
+            <button class="contract-info__delivered-toggle opened"></button>
+            <span>Подключен к облаку&nbsp;| DAICHI1234567 - user@daichi.ru</span>
+          </h2>
+          <div class="contract-info__delivered-adress" style="display: block;">
+            <div class="contract-info__delivered-details  delivery-or-pickup__details  delivery-or-pickup__details--no-border">
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Аккаунт Daichi Cloud</p>
+                <p class="info-block__desc">user@daichi.ru</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Адрес Wi-Fi сети</p>
+                <p class="info-block__desc">DAICHI1234567</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Название помещения</p>
+                <p class="info-block__desc">Кухня</p>
+              </div>
+              <div class="delivery-or-pickup__detail">
+                <p class="info-block__subtitle">Дата подключения</p>
+                <p class="info-block__desc">30.12.2020</p>
+              </div>
             </div>
           </div>
         </div>
@@ -272,31 +272,6 @@
         </div>
       </div>
   </footer>
-
-  <!--Модальное окно кода гарантии-->
-  <section class="modal" data-modal="warranty-code">
-    <div class="modal__overlay">
-
-        <div class="modal__body">
-          <form>
-            <h1 class="modal__title">Укажите код гарантии</h1>
-            <p class="modal__desc">
-              Укажите код гарантии кондиционера, полученный от представителя монтажной организации
-             </p>
-            <div class="modal__content">
-              <div class="input-block">
-                <input class="input-text" type="text" placeholder="00000-00000-00000">
-                <label class="input-label">Код гарантии</label>
-              </div>
-            </div>
-            <div class="modal__btn-block">
-              <button type="button" class="modal__close  modal__btn-item  btn-secondary">Отмена</button>
-              <button type="submit" class="modal__submit  modal__btn-item  btn-primary">Подтвердить</button>
-            </div>
-          </form>
-        </div>
-    </div>
-  </section>
 
    <!--Модальное окно заполнения данных о монтаже-->
   <section class="modal" data-modal="installation-data-modal">
