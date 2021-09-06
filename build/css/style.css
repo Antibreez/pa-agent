@@ -13630,6 +13630,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   color: #1A1A1A;
   padding: 0 24px 42px 0;
   vertical-align: middle;
+  border-bottom: 1px solid #d1d8e1;
 }
 
 .subscription-page__reward table td:last-child {
@@ -13726,6 +13727,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .subscription-page__reward--report table tr td:nth-child(n) {
   padding-top: 0;
   padding-bottom: 0;
+  border-bottom: none;
 }
 
 .subscription-page__reward--report .contracts__inner-table {
@@ -13800,6 +13802,7 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
 .subscription-page__reward--report-manager table td {
   text-align: right;
   padding: 0;
+  border-bottom: 0;
 }
 
 .subscription-page__reward--report-manager table td:first-child, .subscription-page__reward--report-manager table td:nth-child(2) {
@@ -17693,6 +17696,10 @@ p.reports__status.pending {
 p.reports__status.done {
   background-color: #40DA90;
   color: #fff;
+}
+
+p.reports__status.approval {
+  background-color: #FEEDAE;
 }
 
 .requests-upload .input-file-requests:not(:first-child) {

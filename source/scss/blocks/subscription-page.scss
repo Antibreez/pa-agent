@@ -157,6 +157,7 @@
         color: $text-main;
         padding: 0 24px 42px 0;
         vertical-align: middle;
+        border-bottom: 1px solid #d1d8e1;
 
         &:last-child {
           text-align: right;
@@ -179,6 +180,8 @@
       }
     }
   }
+
+
 
   &__reward--report {
     table {
@@ -260,6 +263,7 @@
       tr td:nth-child(n) {
         padding-top: 0;
         padding-bottom: 0;
+        border-bottom: none;
       }
     }
 
@@ -345,6 +349,7 @@
       td {
         text-align: right;
         padding: 0;
+        border-bottom: 0;
         // padding-bottom: 10px;
         // padding-top: 10px;
 
