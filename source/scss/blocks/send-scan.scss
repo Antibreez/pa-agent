@@ -1,0 +1,23 @@
+.send-scan {
+  margin-bottom: 40px;
+  padding-top: 16px;
+
+  &__title {
+    @include h24;
+    margin: 0 0 24px;
+    color: $text-main;
+  }
+
+  &__list {
+    @include b14;
+    color: $text-main;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
