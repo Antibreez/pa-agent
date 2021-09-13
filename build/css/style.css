@@ -7572,6 +7572,10 @@ div.input-file__file-load {
   background-image: url("../img/docs_hover.svg");
 }
 
+.file-load__file-logo--check {
+  background-image: url("../img/doc-checked.svg");
+}
+
 .file-load__name {
   font-weight: 400;
   font-size: 14px;
@@ -17746,7 +17750,7 @@ p.reports__status.scan-sending {
   max-width: 20%;
   font-size: 14px;
   line-height: 17px;
-  font-weight: 600;
+  font-weight: 400;
   color: #94A0B1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -17768,6 +17772,7 @@ p.reports__status.scan-sending {
 
 .report-stages__item.current {
   color: #1A1A1A;
+  font-weight: 600;
 }
 
 .report-stages__item.current::before {
@@ -17795,6 +17800,7 @@ p.reports__status.scan-sending {
 
 .report-stages__item.pending {
   color: #1A1A1A;
+  font-weight: 600;
 }
 
 .report-stages__item.pending::before {
@@ -17810,6 +17816,7 @@ p.reports__status.scan-sending {
 
 .report-stages__item.alert {
   color: #FC4242;
+  font-weight: 600;
 }
 
 .report-stages__item.alert::before {

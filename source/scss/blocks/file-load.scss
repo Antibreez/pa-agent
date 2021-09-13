@@ -19,6 +19,10 @@
     background-image: url("../img/docs_hover.svg");
   }
 
+  &__file-logo--check {
+    background-image: url("../img/doc-checked.svg");
+  }
+
   &__name {
     @include b14;
     margin: 0;
