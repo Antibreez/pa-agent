@@ -6,7 +6,7 @@
   }
 
   const fileInputItem = scanUpload.querySelector('.input-file');
-  const submit = scanUpload.querySelector('.scan-send');
+  const submit = scanUpload.querySelector('.send-scan__submit');
 
   function preventDefaults (e) {
     e.preventDefault();
@@ -71,7 +71,6 @@
 
         let size = input.files[0].size;
         let sizeDim = ' байт';
-        let type = 'XLSX, '
 
         if (size >= 1024 && size < 1048576) {
           size = Math.round(size / 1024);
@@ -81,12 +80,8 @@
           sizeDim = ' Мбайт';
         }
 
-        if (input.files[0].type === 'application/vnd.ms-excel') {
-          type = 'XLS, '
-        }
-
         fileLoad.classList.add('loaded');
-        fileInfo.textContent = type + size + sizeDim;
+        fileInfo.textContent = size + sizeDim;
         submit.removeAttribute('disabled');
         // const newItem = newFileInputItem.cloneNode(true);
         // filesWrapper.prepend(newItem);
@@ -115,13 +110,8 @@
       }
     }
 
-    if (
-      files[0].type === 'application/vnd.ms-excel'
-        || files[0].type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    ) {
-      fileInput.files = files;
-      readUrl(fileInput);
-    }
+    fileInput.files = files;
+    readUrl(fileInput);
   };
 
   const onFileChange = (e) => {
@@ -131,6 +121,7 @@
   function onClear(e) {
     const fileInputItem = e.currentTarget.parentNode.parentNode;
     const fileInput = fileInputItem.querySelector('input');
+    const fileLoad = fileInputItem.querySelector('.file-load');
 
     fileInput.value = '';
 
@@ -140,8 +131,9 @@
     }
 
     //removeEventListeners(fileInputItem);
-    fileInputItem.classList.remove('loaded')
+    fileInputItem.classList.remove('loaded');
     submit.setAttribute('disabled', '');
+    fileLoad.classList.remove('loaded');
     //checkForm();
   }
 

@@ -11,13 +11,66 @@
   &__list {
     @include b14;
     color: $text-main;
-    margin: 0;
+    margin: 0 0 24px;
     padding-left: 20px;
   }
 
   &__item {
     &:not(:last-child) {
       margin-bottom: 8px;
+    }
+  }
+
+  .input-file__label {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: $bg;
+  }
+
+  .input-file__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-file {
+    flex-grow: 1;
+  }
+
+  .send-scan__submit {
+    margin-left: 24px;
+    flex-shrink: 0;
+  }
+
+  .input-file__file-load {
+    background-color: $bg;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  .file-load__file-logo {
+    margin-left: 12px;
+  }
+
+  .file-load__status,
+  .file-load__clear {
+    margin-right: 12px;
+  }
+}
+
+@include mobile {
+  .send-scan {
+    .input-file__wrapper {
+      flex-direction: column;
+    }
+
+    .input-file {
+      width: 100%;
+    }
+
+    .send-scan__submit {
+      width: 100%;
+      margin: 16px 0 0;
     }
   }
 }

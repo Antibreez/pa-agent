@@ -70,10 +70,17 @@
   }
 
   .input-file__label-text {
+    display: flex;
+
+    span {
+      text-align: left;
+    }
+
     svg {
+      flex-shrink: 0;
       width: 19px;
       height: 19px;
-      margin-right: 7px;
+      margin-right: 9px;
       vertical-align: middle;
     }
   }

@@ -252,7 +252,7 @@
   }
 
   var fileInputItem = scanUpload.querySelector('.input-file');
-  var submit = scanUpload.querySelector('.scan-send');
+  var submit = scanUpload.querySelector('.send-scan__submit');
 
   function preventDefaults(e) {
     e.preventDefault();
@@ -308,7 +308,6 @@
         fileDropArea.nextElementSibling.querySelector('.file-load__name').textContent = input.files[0].name;
         var size = input.files[0].size;
         var sizeDim = ' байт';
-        var type = 'XLSX, ';
 
         if (size >= 1024 && size < 1048576) {
           size = Math.round(size / 1024);
@@ -318,12 +317,8 @@
           sizeDim = ' Мбайт';
         }
 
-        if (input.files[0].type === 'application/vnd.ms-excel') {
-          type = 'XLS, ';
-        }
-
         fileLoad.classList.add('loaded');
-        fileInfo.textContent = type + size + sizeDim;
+        fileInfo.textContent = size + sizeDim;
         submit.removeAttribute('disabled'); // const newItem = newFileInputItem.cloneNode(true);
         // filesWrapper.prepend(newItem);
         // addEventListeners(newItem);
@@ -350,10 +345,8 @@
       }
     }
 
-    if (files[0].type === 'application/vnd.ms-excel' || files[0].type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
-      fileInput.files = files;
-      readUrl(fileInput);
-    }
+    fileInput.files = files;
+    readUrl(fileInput);
   }
 
   ;
@@ -365,6 +358,7 @@
   function onClear(e) {
     var fileInputItem = e.currentTarget.parentNode.parentNode;
     var fileInput = fileInputItem.querySelector('input');
+    var fileLoad = fileInputItem.querySelector('.file-load');
     fileInput.value = '';
 
     if (!/safari/i.test(navigator.userAgent)) {
@@ -374,7 +368,8 @@
 
 
     fileInputItem.classList.remove('loaded');
-    submit.setAttribute('disabled', ''); //checkForm();
+    submit.setAttribute('disabled', '');
+    fileLoad.classList.remove('loaded'); //checkForm();
   }
 
   function addEventListeners(item) {

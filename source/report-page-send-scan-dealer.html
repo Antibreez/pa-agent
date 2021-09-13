@@ -80,7 +80,7 @@
         <div class="contract-info__title-block  contract-info__title-block--subscription  title-block">
           <h1 class="contract-info__title  title-block__title">
             <span class="contract-info__report-period">Июль (01.07.2021 - 30.07.2021)</span>
-            <p class="reports__status  send-scan">Отправьте скан</p>
+            <p class="reports__status  scan-sending">Отправьте скан</p>
           </h1>
         </div>
 
@@ -167,12 +167,12 @@
               <div class="input-file__wrapper">
                 <div class="input-file  input-file-requests">
                   <label class="input-file__label">
-                    <input type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" name="delivery-doc" class="input-file__input  visually-hidden">
+                    <input type="file" name="scan-doc" class="input-file__input  visually-hidden">
                     <span class="input-file__label-text">
                       <svg>
                         <use xlink:href="img/sprite.svg#export"></use>
                       </svg>
-                      <span>Выберите файлы, которые вы хотите загрузить или перетащите их сюда.</span>
+                      <span>Загрузите подписанный скан отчёта и нажмите кнопку «Отправить»</span>
                     </span>
                   </label>
                   <div class="input-file__file-load  file-load">
@@ -194,9 +194,10 @@
                     </div>
                   </div>
                 </div>
+
+                <button class="btn-primary  send-scan__submit" disabled>Отправить</button>
               </div>
 
-              <button class="btn-primary  scan-send" disabled>Отправить</button>
             </form>
           </div>
         </div>
