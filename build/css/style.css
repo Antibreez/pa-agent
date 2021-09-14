@@ -17941,3 +17941,128 @@ p.reports__status.scan-sending {
     margin: 16px 0 0;
   }
 }
+
+.agent-report {
+  padding: 50px 0;
+  min-width: 1100px;
+}
+
+.agent-report .mb-20 {
+  margin-bottom: 20px;
+}
+
+.agent-report__input {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 0 5px;
+  text-align: left;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.agent-report__input.w-30 {
+  min-width: 30px;
+}
+
+.agent-report__input.w-100 {
+  min-width: 100px;
+}
+
+.agent-report__header {
+  margin: 0 0 20px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  color: #888;
+}
+
+.agent-report__header-name {
+  margin: 0;
+}
+
+.agent-report__main {
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.agent-report__title {
+  margin: 0 0 30px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.agent-report__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 20px;
+}
+
+.agent-report__conditions {
+  margin: 0 0 20px;
+}
+
+.agent-report__indent {
+  display: inline-block;
+  margin: 0;
+  text-indent: 30px;
+}
+
+.agent-report__equipment {
+  margin: 0 0 20px;
+}
+
+.agent-report table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.agent-report table col:nth-child(1) {
+  width: 40px;
+}
+
+.agent-report table th, .agent-report table td {
+  padding: 10px 5px;
+  font-size: 12px;
+  line-height: 16px;
+  border: 1px solid #000;
+}
+
+.agent-report table .agent-report__input {
+  border: none;
+  min-width: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.agent-report .agent-report__agent-principal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 30px;
+}
+
+.agent-report .agent-report__agent-principal > div {
+  width: calc(100% - 30px);
+}
+
+.agent-report .agent-report__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 30px;
+}
+
+.agent-report .agent-report__submit > div {
+  width: calc(100% - 30px);
+}
