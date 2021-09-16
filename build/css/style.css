@@ -17855,7 +17855,7 @@ p.reports__status.scan-sending {
 
 @media (max-width: 999px) {
   .reports__icons-block {
-    width: 64px;
+    width: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -17863,6 +17863,7 @@ p.reports__status.scan-sending {
   }
   .reports__icons-block > div {
     background-repeat: no-repeat;
+    width: auto;
   }
   .reports__icons-block > div:not(:last-child) {
     margin-bottom: 15px;
@@ -17876,6 +17877,7 @@ p.reports__status.scan-sending {
             box-shadow: none;
     background-color: transparent;
     line-height: 24px;
+    width: auto;
   }
   .reports__icon-tooltip::before {
     display: none;

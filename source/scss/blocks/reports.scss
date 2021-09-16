@@ -182,11 +182,12 @@ p.reports__status {
 @include mobile {
   .reports {
     &__icons-block {
-      width: 64px;
+      width: auto;
       flex-direction: column;
 
       & > div {
         background-repeat: no-repeat;
+        width: auto;
 
         &:not(:last-child) {
           margin-bottom: 15px;
@@ -202,6 +203,7 @@ p.reports__status {
       box-shadow: none;
       background-color: transparent;
       line-height: 24px;
+      width: auto;
 
       &::before {
         display: none;
