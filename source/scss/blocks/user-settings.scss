@@ -12,6 +12,8 @@
   }
 
   &__data-container {
+    margin: 0 0 60px;
+
     .user-settings__data-name {
       display: flex;
       justify-content: space-between;
@@ -75,6 +77,21 @@
     font-weight: 500;
     color: $text-main;
     margin: 0;
+  }
+
+  &__nds {
+    display: flex;
+
+    div {
+      &:first-child {
+        margin-right: 58px;
+      }
+    }
+  }
+
+  &__nds-desc {
+    @include b14;
+    margin: 0 0 24px;
   }
 }
 

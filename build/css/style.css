@@ -17217,6 +17217,10 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   color: #1A1A1A;
 }
 
+.user-settings__data-container {
+  margin: 0 0 60px;
+}
+
 .user-settings__data-container .user-settings__data-name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17298,6 +17302,23 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   font-weight: 500;
   color: #1A1A1A;
   margin: 0;
+}
+
+.user-settings__nds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-settings__nds div:first-child {
+  margin-right: 58px;
+}
+
+.user-settings__nds-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0 0 24px;
 }
 
 #confirmation-code .modal__desc span,
