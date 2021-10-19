@@ -1,0 +1,33 @@
+.quotas {
+  &__header {
+    display: flex;
+    padding: 16px 24px;
+    background-color: $bg;
+    border-radius: 5px;
+  }
+
+  &__header-item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__header-title {
+    @include b12;
+    margin: 0 0 9px;
+    color: $text-minor;
+  }
+
+  &__header-value {
+    @include h24;
+    margin: 0;
+  }
+}
+
+@include mobile {
+  .quotas {
+    &__header {
+      margin: 24px 0 0;
+    }
+  }
+}

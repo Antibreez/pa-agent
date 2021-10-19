@@ -177,6 +177,10 @@ p.reports__status {
   &.scan-sending {
     background-color: #DCF5FF;
   }
+
+  &.active {
+    background-color: #DDF9EC;
+  }
 }
 
 @include mobile {

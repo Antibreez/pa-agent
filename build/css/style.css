@@ -9233,6 +9233,44 @@ div.input-file__file-load {
   width: 20%;
 }
 
+.contracts--shipments .contracts__table th:nth-child(n) {
+  text-align: left;
+}
+
+.contracts--shipments .contracts__table td:nth-child(n) {
+  text-align: left;
+}
+
+.contracts--shipments col:nth-child(n) {
+  width: 25%;
+}
+
+.contracts--shipment .contracts__table td:not(:last-child),
+.contracts--shipment .contracts__table th:not(:last-child) {
+  text-align: left;
+}
+
+.contracts--shipment .contracts__table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contracts--shipment .contracts__table > tbody > tr:not(:last-child) > td {
+  border-bottom: 1px solid #D1D8E1;
+}
+
+.contracts--shipment col:nth-child(1) {
+  width: 70px;
+}
+
+.contracts--shipment col:nth-child(7) {
+  width: 130px;
+}
+
+.contracts--shipment col:nth-child(2), .contracts--shipment col:nth-child(3), .contracts--shipment col:nth-child(4), .contracts--shipment col:nth-child(5), .contracts--shipment col:nth-child(6) {
+  width: calc((100% - 200px) / 5);
+}
+
 .contracts__table {
   width: 100%;
   border-collapse: collapse;
@@ -9913,6 +9951,36 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
   }
   .contracts--mes-requests col:nth-child(6) {
     width: 17%;
+  }
+  .contracts--shipments .contracts__table th:nth-child(n) {
+    text-align: left;
+  }
+  .contracts--shipments .contracts__table td:nth-child(n) {
+    text-align: left;
+  }
+  .contracts--shipments col:nth-child(n) {
+    width: 25%;
+  }
+  .contracts--shipment .contracts__table td:not(:last-child),
+  .contracts--shipment .contracts__table th:not(:last-child) {
+    text-align: left;
+  }
+  .contracts--shipment .contracts__table td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+  }
+  .contracts--shipment .contracts__table > tbody > tr:not(:last-child) > td {
+    border-bottom: 1px solid #D1D8E1;
+  }
+  .contracts--shipment col:nth-child(1) {
+    width: 70px;
+  }
+  .contracts--shipment col:nth-child(7) {
+    width: 130px;
+  }
+  .contracts--shipment col:nth-child(2), .contracts--shipment col:nth-child(3), .contracts--shipment col:nth-child(4), .contracts--shipment col:nth-child(5), .contracts--shipment col:nth-child(6) {
+    width: calc((100% - 200px) / 5);
   }
 }
 
@@ -17874,6 +17942,10 @@ p.reports__status.scan-sending {
   background-color: #DCF5FF;
 }
 
+p.reports__status.active {
+  background-color: #DDF9EC;
+}
+
 @media (max-width: 999px) {
   .reports__icons-block {
     width: auto;
@@ -18248,4 +18320,38 @@ p.reports__status.scan-sending {
 
 .agent-report .agent-report__submit > div {
   width: calc(100% - 30px);
+}
+
+.quotas__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 24px;
+  background-color: #F4F4F8;
+  border-radius: 5px;
+}
+
+.quotas__header-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.quotas__header-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0 0 9px;
+  color: #94A0B1;
+}
+
+.quotas__header-value {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+}
+
+@media (max-width: 999px) {
+  .quotas__header {
+    margin: 24px 0 0;
+  }
 }
