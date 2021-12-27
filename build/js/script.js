@@ -1350,6 +1350,24 @@
 })();
 
 (function () {
+  var $openBtn = $(".hierarchy__open-btn");
+  var $link = $(".hierarchy__link");
+  var $line = $(".hierarchy__line");
+  $openBtn.on("click", function () {
+    $(this).toggleClass("opened");
+    $(this).parent().next().toggleClass("opened");
+  });
+  $link.on("click", function () {
+    if ($(this).parent().hasClass("marked")) {
+      return;
+    }
+
+    $line.removeClass("marked");
+    $(this).parent().addClass("marked");
+  });
+})();
+
+(function () {
   var contracts = document.querySelector('.installation-accounts-mobile');
 
   if (!contracts) {

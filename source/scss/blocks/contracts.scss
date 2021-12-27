@@ -82,11 +82,11 @@
     }
 
     &:nth-child(2) {
-      width: 9%;
+      width: 15%;
     }
 
     &:nth-child(3) {
-      width: 26%;
+      width: 18%;
     }
 
     &:nth-child(4) {
@@ -94,7 +94,7 @@
     }
 
     &:nth-child(5) {
-      width: 12%;
+      width: 14%;
     }
   }
 }
@@ -871,6 +871,30 @@ button.contracts__page-number {
 
       &:nth-child(7) {
         width: 16%;
+      }
+    }
+  }
+
+  .contracts--hierarchy {
+    col {
+      &:first-child {
+        width: 27%;
+      }
+
+      &:nth-child(2) {
+        width: 15%;
+      }
+
+      &:nth-child(3) {
+        width: 18%;
+      }
+
+      &:nth-child(4) {
+        width: 26%;
+      }
+
+      &:nth-child(5) {
+        width: 14%;
       }
     }
   }

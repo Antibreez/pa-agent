@@ -65,9 +65,36 @@
     width: 75%;
   }
 
+  &__group-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 20px;
+  }
+
   &__group-value {
     @include b12;
-    margin: 0 0 24px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 4px;
+    color: $text-minor;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+
+    &:last-child {
+      color: $text-main;
+      pointer-events: none;
+    }
   }
 
   &__statistics {
@@ -171,10 +198,33 @@
       padding-right: 0;
     }
 
-    &__container > *:not(.contract-services-mobile):not(.contracts-mobile) {
+    &__container
+      > *:not(.contract-services-mobile):not(.contracts-mobile):not(.subscription-all__content-wrapper) {
       width: calc(100% - 48px);
       margin-left: auto;
       margin-right: auto;
+    }
+
+    &__content-wrapper {
+      flex-direction: column;
+    }
+
+    &__hierarchy {
+      width: calc(100% - 48px);
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 0;
+      margin-bottom: 48px;
+    }
+
+    &__right {
+      width: 100%;
+
+      & > *:not(.contracts-mobile) {
+        width: calc(100% - 48px);
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 

@@ -35,6 +35,8 @@
 
 </symbol><symbol id="arrow-down_default" viewBox="0 0 24 24">
 <path d="M15.721 8.961L12.001 12.681L8.28096 8.961L7.10196 10.14L10.822 13.86L12.001 15.039L13.18 13.86L16.9 10.14L15.721 8.961Z" fill="#444444"/>
+</symbol><symbol id="arrow-down_icon" viewBox="0 0 24 24">
+<path d="M15.721 8.961L12.001 12.681L8.28096 8.961L7.10196 10.14L10.822 13.86L12.001 15.039L13.18 13.86L16.9 10.14L15.721 8.961Z" fill="currentColor"/>
 </symbol><symbol id="arrow-down_light" viewBox="0 0 24 24">
 <path d="M15.721 8.961L12.001 12.681L8.28096 8.961L7.10196 10.14L10.822 13.86L12.001 15.039L13.18 13.86L16.9 10.14L15.721 8.961Z" fill="#94A0B1"/>
 </symbol><symbol id="arrow-right" viewBox="0 0 24 24">
