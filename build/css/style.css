@@ -9077,6 +9077,26 @@ div.input-file__file-load {
   width: 12%;
 }
 
+.contracts--hierarchy col:first-child {
+  width: 27%;
+}
+
+.contracts--hierarchy col:nth-child(2) {
+  width: 9%;
+}
+
+.contracts--hierarchy col:nth-child(3) {
+  width: 26%;
+}
+
+.contracts--hierarchy col:nth-child(4) {
+  width: 26%;
+}
+
+.contracts--hierarchy col:nth-child(5) {
+  width: 12%;
+}
+
 .contracts--reports col:first-child {
   width: 33%;
 }
@@ -9256,7 +9276,7 @@ div.input-file__file-load {
 }
 
 .contracts--shipment .contracts__table > tbody > tr:not(:last-child) > td {
-  border-bottom: 1px solid #D1D8E1;
+  border-bottom: 1px solid #d1d8e1;
 }
 
 .contracts--shipment col:nth-child(1) {
@@ -9311,11 +9331,13 @@ div.input-file__file-load {
   text-align: right;
 }
 
-.contracts--mts th:nth-last-child(2) {
+.contracts--mts th:nth-last-child(2),
+.contracts--hierarchy th:nth-last-child(2) {
   text-align: left;
 }
 
-.contracts--mts th:nth-last-child(3) {
+.contracts--mts th:nth-last-child(3),
+.contracts--hierarchy th:nth-last-child(3) {
   text-align: left;
 }
 
@@ -9328,9 +9350,7 @@ div.input-file__file-load {
   padding-right: 24px;
 }
 
-.contracts__table
-tr:not(:first-of-type):hover
-+ tr .contracts__link {
+.contracts__table tr:not(:first-of-type):hover + tr .contracts__link {
   border-top-color: transparent;
 }
 
@@ -9388,11 +9408,13 @@ tr:not(:first-of-type):hover
   box-orient: vertical;
 }
 
-.contracts--mts .contracts__data td:nth-last-child(2) {
+.contracts--mts .contracts__data td:nth-last-child(2),
+.contracts--hierarchy .contracts__data td:nth-last-child(2) {
   text-align: left;
 }
 
-.contracts--mts .contracts__data td:nth-last-child(3) {
+.contracts--mts .contracts__data td:nth-last-child(3),
+.contracts--hierarchy .contracts__data td:nth-last-child(3) {
   text-align: left;
 }
 
@@ -9496,7 +9518,7 @@ tr:not(:first-of-type):hover
 }
 
 .contracts__link p.alert {
-  color: #FC4242;
+  color: #fc4242;
 }
 
 .contracts__status {
@@ -9549,19 +9571,19 @@ tr:not(:first-of-type):hover
 }
 
 .contracts__status-type.processing::before {
-  background-color: #2858FF;
+  background-color: #2858ff;
 }
 
 .contracts__status-type.done::before {
-  background-color: #40DA90;
+  background-color: #40da90;
 }
 
 .contracts__status-type.canceled::before {
-  background-color: #FC4242;
+  background-color: #fc4242;
 }
 
 .contracts__status-type.draft::before {
-  background-color: #D1D8E1;
+  background-color: #d1d8e1;
 }
 
 .contracts__status-name {
@@ -9579,19 +9601,19 @@ tr:not(:first-of-type):hover
 }
 
 .contracts__status-name.pending {
-  background-color: #FED9AE;
+  background-color: #fed9ae;
 }
 
 .contracts__status-name.active {
-  background-color: #DDF9EC;
+  background-color: #ddf9ec;
 }
 
 .contracts__status-name.expires {
-  background-color: #FEEDAE;
+  background-color: #feedae;
 }
 
 .contracts__status-name.canceled {
-  background-color: #94A0B1;
+  background-color: #94a0b1;
   color: #fff;
 }
 
@@ -9600,7 +9622,7 @@ tr:not(:first-of-type):hover
 }
 
 .contracts__status-alert {
-  color: #FC4242;
+  color: #fc4242;
   margin-right: 24px;
 }
 
@@ -9654,10 +9676,8 @@ tr:not(:first-of-type):hover
   background-image: url("../img/time.svg");
 }
 
-.contracts__status-container
-p:not(.contracts__status-detail),
-.contracts__status-container
-div:not(.contracts__status-detail) {
+.contracts__status-container p:not(.contracts__status-detail),
+.contracts__status-container div:not(.contracts__status-detail) {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -9971,7 +9991,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     vertical-align: middle;
   }
   .contracts--shipment .contracts__table > tbody > tr:not(:last-child) > td {
-    border-bottom: 1px solid #D1D8E1;
+    border-bottom: 1px solid #d1d8e1;
   }
   .contracts--shipment col:nth-child(1) {
     width: 70px;
@@ -13536,6 +13556,77 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   margin-bottom: 40px;
 }
 
+.subscription-all__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subscription-all__hierarchy {
+  width: 25%;
+  padding-right: 24px;
+}
+
+.subscription-all__right {
+  width: 75%;
+}
+
+.subscription-all__group-value {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0 0 24px;
+}
+
+.subscription-all__statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px;
+  margin: 0 0 24px;
+  background-color: #F4F4F8;
+  border-radius: 5px;
+}
+
+.subscription-all__statistics-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 24px;
+  padding-right: 24px;
+  border-right: 1.5px solid #d1d8e1;
+}
+
+.subscription-all__statistics-second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subscription-all__statistics-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.subscription-all__statistics-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  color: #94A0B1;
+}
+
+.subscription-all__statistics-value {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  color: #94A0B1;
+}
+
+.subscription-all__statistics-value.marked {
+  color: #2858FF;
+}
+
 .subscription-all__filters--mts .subscription-all__filters-form {
   padding-top: 0;
 }
@@ -13544,6 +13635,14 @@ button.contract-services__page-number:not(.active):hover, button.contract-servic
   width: calc((100% - 42px) / 4);
   margin: 0;
   margin-top: 24px;
+}
+
+.subscription-all__filters--2-3 .subscription-all__select {
+  width: calc((100% - 28px) / 3);
+}
+
+.subscription-all__filters--2-3 .subscription-all__select:first-child, .subscription-all__filters--2-3 .subscription-all__select:nth-child(2) {
+  width: calc((100% - 14px) / 2);
 }
 
 .subscription-all__filters--subs-client .subscription-all__select {

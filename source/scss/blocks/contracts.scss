@@ -75,6 +75,30 @@
   }
 }
 
+.contracts--hierarchy {
+  col {
+    &:first-child {
+      width: 27%;
+    }
+
+    &:nth-child(2) {
+      width: 9%;
+    }
+
+    &:nth-child(3) {
+      width: 26%;
+    }
+
+    &:nth-child(4) {
+      width: 26%;
+    }
+
+    &:nth-child(5) {
+      width: 12%;
+    }
+  }
+}
+
 .contracts--reports {
   col {
     &:first-child {
@@ -301,7 +325,7 @@
 
     & > tbody > tr:not(:last-child) {
       & > td {
-        border-bottom: 1px solid #D1D8E1;
+        border-bottom: 1px solid #d1d8e1;
       }
     }
   }
@@ -363,7 +387,8 @@
   }
 }
 
-.contracts--mts {
+.contracts--mts,
+.contracts--hierarchy {
   th {
     &:nth-last-child(2) {
       text-align: left;
@@ -387,9 +412,7 @@
   }
 }
 
-.contracts__table
-tr:not(:first-of-type):hover
-+ tr .contracts__link {
+.contracts__table tr:not(:first-of-type):hover + tr .contracts__link {
   border-top-color: transparent;
 }
 
@@ -436,11 +459,11 @@ tr:not(:first-of-type):hover
     &:not(.contracts__reward) {
       @include overflow-3lines;
     }
-
   }
 }
 
-.contracts--mts .contracts__data {
+.contracts--mts .contracts__data,
+.contracts--hierarchy .contracts__data {
   td {
     &:nth-last-child(2) {
       text-align: left;
@@ -502,9 +525,7 @@ tr:not(:first-of-type):hover
     border-radius: 2px;
     visibility: hidden;
     opacity: 0;
-    transition:
-      opacity 0.2s ease 0s,
-      visibility 0s ease 0.2s;
+    transition: opacity 0.2s ease 0s, visibility 0s ease 0.2s;
 
     &::after {
       content: "";
@@ -518,7 +539,7 @@ tr:not(:first-of-type):hover
     }
   }
 
-  @media(min-width: 1000px) {
+  @media (min-width: 1000px) {
     &-info:hover {
       .contracts__reward-tooltip {
         opacity: 1;
@@ -560,7 +581,7 @@ tr:not(:first-of-type):hover
 }
 
 .contracts__link p.alert {
-  color: #FC4242;
+  color: #fc4242;
 }
 
 .contracts__status {
@@ -601,19 +622,19 @@ tr:not(:first-of-type):hover
   }
 
   &.processing::before {
-    background-color: #2858FF;
+    background-color: #2858ff;
   }
 
   &.done::before {
-    background-color: #40DA90;
+    background-color: #40da90;
   }
 
   &.canceled::before {
-    background-color: #FC4242;
+    background-color: #fc4242;
   }
 
   &.draft::before {
-    background-color: #D1D8E1;
+    background-color: #d1d8e1;
   }
 }
 
@@ -629,19 +650,19 @@ tr:not(:first-of-type):hover
   justify-content: center;
 
   &.pending {
-    background-color: #FED9AE;
+    background-color: #fed9ae;
   }
 
   &.active {
-    background-color: #DDF9EC;
+    background-color: #ddf9ec;
   }
 
   &.expires {
-    background-color: #FEEDAE;
+    background-color: #feedae;
   }
 
   &.canceled {
-    background-color: #94A0B1;
+    background-color: #94a0b1;
     color: #fff;
   }
 
@@ -651,7 +672,7 @@ tr:not(:first-of-type):hover
 }
 
 .contracts__status-alert {
-  color: #FC4242;
+  color: #fc4242;
   margin-right: 24px;
 
   &::before {
@@ -695,10 +716,8 @@ tr:not(:first-of-type):hover
   }
 }
 
-.contracts__status-container
-p:not(.contracts__status-detail),
-.contracts__status-container
-div:not(.contracts__status-detail) {
+.contracts__status-container p:not(.contracts__status-detail),
+.contracts__status-container div:not(.contracts__status-detail) {
   flex-shrink: 0;
 }
 
@@ -800,7 +819,7 @@ button.contracts__page-number {
 
 .contracts__prev {
   margin-right: 20px;
-  transform: rotate(180deg)
+  transform: rotate(180deg);
 }
 
 .contracts__next {
@@ -1088,7 +1107,7 @@ button.contracts__page-number {
 
       & > tbody > tr:not(:last-child) {
         & > td {
-          border-bottom: 1px solid #D1D8E1;
+          border-bottom: 1px solid #d1d8e1;
         }
       }
     }

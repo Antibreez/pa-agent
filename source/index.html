@@ -1,587 +1,918 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Daichi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="x-rim-auto-match" content="none">
-  <!-- <link rel="preload" href="fonts/GothamPro.woff2" as="font" type="font/woff2" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Daichi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <!-- <link rel="preload" href="fonts/GothamPro.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GothamPro-Light.woff2" as="font" type="font/woff2" crossorigin> -->
-  <link rel="stylesheet" href="css/style.min.css" type="text/css">
-</head>
+    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+  </head>
 
-<body>
-  <style>
-    .container {
-      padding: 30px;
-    }
+  <body>
+    <style>
+      .container {
+        padding: 30px;
+      }
 
-    .container ul {
-      padding: 0;
-    }
+      .container ul {
+        padding: 0;
+      }
 
-    .container a {
-      display: block;
-      margin-bottom: 20px;
-    }
-  </style>
-  <div class="container">
-    <h1>Daichi-Promotion</h1>
-    <ul>
-      <li>
-        <a href="components.html">Компоненты ----- components.html</a>
-      </li>
-      <li>
-        <br><i>Вспомогательно к старнице компонентов:</i><br><br>
-      </li>
-      <li>
-        <a href="components.html#search">Блок поиска ----- components.html#search</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <br><i>Модальные окна</i><br><br>
-      </li>
-      <li>
-        <a href="--modal-delivery-or-pickup.html">Модальное окно доставки/самовывоза ----- --modal-delivery-or-pickup.html</a>
-      </li>
-      <li>
-        <a href="--modal-payment.html">Модальное подтверждения оплаты с выбором ----- --modal-payment.html</a>
-      </li>
-      <li>
-        <a href="--modal-payment-2.html">Модальное подтверждения оплаты c вводом ----- --modal-payment-2.html</a>
-      </li>
-      <li>
-        <a href="--modal-verification.html">Модальное окно верификации ----- --modal-verification.html</a>
-      </li>
-      <li>
-        <a href="--modal-cancellation.html">Модальное окно аннулирования ----- --modal-cancellation.html</a>
-      </li>
-      <li>
-        <a href="--modal-schedule.html">Модальное окно графика платежей ----- --modal-schedule.html</a>
-      </li>
-      <li>
-        <a href="--modal-delete-service.html">Модальное окно удаления услуги ----- --modal-delete-service.html</a>
-      </li>
-      <li>
-        <a href="--modal-installation.html">Модальное окно подтверждения монтажа ----- --modal-installation.html</a>
-      </li>
-      <li>
-        <a href="--modal-payment-info.html">Модальное окно информации о платеже ----- --modal-payment-info.html</a>
-      </li>
-      <li>
-        <a href="--modal-write-serial.html">Модальное окно ввода серийного номера ----- --modal-write-serial.html</a>
-      </li>
-      <li>
-        <a href="--modal-passport-data.html">Модальное окно ввода паспортных данных ----- --modal-passport-data.html</a>
-      </li>
-      <li>
-        <a href="--modal-delivery-address.html">Модальное окно ввода адреса доставки/самовывоза ----- --modal-delivery-address.html</a>
-      </li>
-      <li>
-        <a href="--modal-account-creation.html">Модальное окно создания аккаунта ----- --modal-account-creation.html</a>
-      </li>
-      <li>
-        <a href="--modal-change-email.html">Модальное окно изменения почты ----- --modal-change-email.html</a>
-      </li>
-      <li>
-        <a href="--modal-change-phone.html">Модальное окно изменения телефона ----- --modal-change-phone.html</a>
-      </li>
-      <li>
-        <a href="--modal-confirmation-code.html">Модальное окно кода подтверждения ----- --modal-confirmation-code.html</a>
-      </li>
-      <li>
-        <a href="--modal-confirmation-email.html">Модальное окно подтверждения почты ----- --modal-confirmation-email.html</a>
-      </li>
-      <li>
-        <a href="--modal-phone-success.html">Модальное окно успешного изменения телефона ----- --modal-phone-success.html</a>
-      </li>
-      <li>
-        <a href="--modal-subscribe-register-single.html">Модальное окно подписки одиночного устройства ----- --modal-subscribe-register-single.html</a>
-      </li>
-      <li>
-        <a href="--modal-subscribe-register-multi-1.html">Модальное окно подписки мульти-системы 1 ----- --modal-subscribe-register-multi-1.html</a>
-      </li>
-      <li>
-        <a href="--modal-subscribe-register-multi-2.html">Модальное окно подписки мульти-системы 2 ----- --modal-subscribe-register-multi-2.html</a>
-      </li>
-      <li>
-        <a href="--modal-installation-data.html">Модальное окно данных монтажа ----- --modal-installation-data.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="main.html">Главная ----- main.html</a>
-      </li>
-      <li>
-        <a href="main-new.html">Главная новая ----- main-new.html</a>
-      </li>
-      <li>
-        <a href="main-new-multi.html">Главная новая, регистрация мульти-системы ----- main-new-multi.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="contracts-all.html">Договоры ----- contracts-all.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="contract-page.html">Страница договора ----- contract-page.html</a>
-      </li>
-      <li>
-        <br><i>Вспомогательно к старнице договора:</i><br><br>
-      </li>
-      <li>
-        <a href="--payment-waiting.html">Состояния блока ожидание оплаты ----- --payment-waiting.html</a>
-      </li>
-      <li>
-        <a href="--passport-data.html">Состояния блока паспортных данных ----- --passport-data.html</a>
-      </li>
-      <li>
-        <a href="--delivery-data.html">Состояния блока доставки/самовывоза ----- --delivery-data.html</a>
-      </li>
-      <li>
-        <a href="--services-in-contract.html">Состояния блока Услуги в договоре ----- --services-in-contract.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="contract-creation-about.html">Создание договора, определение состава --- contract-creation-about.html</a>
-      </li>
-      <li>
-        <a href="contract-creation-client-data.html">Создание договора, данные клиента --- contract-creation-client-data.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="subscription-all.html">Страница всех подписок --- subscription-all.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="subscription-page-general.html">Страница подписки, общая информация --- subscription-page-general.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-NEW-payment-waiting-split-1.html">Страница подписки, НОВАЯ ожидает оплаты сплит 1 --- subscription-page-NEW-payment-waiting-split-1.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-NEW-payment-waiting-split-2.html">Страница подписки, НОВАЯ ожидает оплаты сплит 2 --- subscription-page-NEW-payment-waiting-split-2.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-NEW-payment-waiting-multi-1.html">Страница подписки, НОВАЯ ожидает оплаты мульти 1 --- subscription-page-NEW-payment-waiting-multi-1.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-NEW-payment-active-split.html">Страница подписки, НОВАЯ активная сплит --- subscription-page-NEW-payment-active-split.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-NEW-payment-active-multi.html">Страница подписки, НОВАЯ активная мульти --- subscription-page-NEW-payment-active-multi.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-NEW-payment-expires-split.html">Страница подписки, НОВАЯ истекает сплит --- subscription-page-NEW-payment-expires-split.html</a>
-      </li>
-      <li>
-        <br><i>Вспомогательно к старнице подписки:</i><br><br>
-      </li>
-      <li>
-        <a href="--installation-data.html">Состояния блока ожидание монтажа ----- --installation-data.html</a>
-      </li>
-      <li>
-        <a href="--cloud-connection-data.html">Состояния блока подключения к облаку ----- --cloud-connection-data.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="subscription-page-mutual-calcs.html">Страница подписки, взаиморасчеты и платежи --- subscription-page-mutual-calcs.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="mutual-calcs.html">Взаиморасчеты, вкладка взаиморасчеты --- mutual-calcs.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="mutual-calcs-agent.html">Взаиморасчеты агента --- mutual-calcs-agent.html</a>
-      </li>
-      <li>
-        <a href="mutual-calcs-agent-NEW.html">Взаиморасчеты агента НОВАЯ --- mutual-calcs-agent-NEW.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="mutual-calcs-payments.html">Взаиморасчеты, вкладка платежи --- mutual-calcs-payments.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="clients.html">Клиенты --- clients.html</a>
-      </li>
-      <li>
-        <a href="clients-NEW.html">Клиенты НОВАЯ --- clients-NEW.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="agents.html">Агенты --- agents.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="support.html">Поддержка --- support.html</a>
-      </li>
-      <li>
-        <a href="support-NEW.html">Поддержка НОВАЯ --- support-NEW.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="installation.html">Установка --- installation.html</a>
-        <a href="account-template.html">Шаблон pdf аккаунта --- account-template.html</a>
-      </li>
-      <li>
-        <br><br>
-        ================
-        <br><br>
-      </li>
-      <li>
-        <a href="user-settings.html">Настройки профиля --- user-settings.html</a>
-      </li>
-      <li>
-        <a href="enterance-phone.html">Вход по телефону --- enterance-phone.html</a>
-      </li>
-      <li>
-        <a href="enterance-phone-error.html">Вход по телефону с ошибкой--- enterance-phone-error.html</a>
-      </li>
-      <li>
-        <a href="enterance-code.html">Вход по телефону, код подтверждения --- enterance-code.html</a>
-      </li>
-      <li>
-        <a href="enterance-code-error.html">Вход по телефону, код подтверждения, ошибка --- enterance-code-error.html</a>
-      </li>
-      <li>
-        <a href="enterance-code-wrong.html">Вход по телефону, код подтверждения, неверный код --- enterance-code-wrong.html</a>
-      </li>
-      <li>
-        <a href="enterance-email.html">Вход по Email --- enterance-email.html</a>
-      </li>
-      <li>
-        <a href="enterance-email-error.html">Вход по Email, ошибка --- enterance-email-error.html</a>
-      </li>
-      <li>
-        <a href="enterance-email-was-sended.html">Вход по Email, письмо отправлено --- enterance-email-was-sended.html</a>
-      </li>
-      <li>
-        <a href="enterance-email-password-restore.html">Вход по Email, восстановление пароля --- enterance-email-password-restore.html</a>
-      </li>
-      <li>
-        <a href="enterance-email-password-restore-error.html">Вход по Email, восстановление пароля c ошибкой --- enterance-email-password-restore-error.html</a>
-      </li>
-      <li>
-        <a href="enterance-email-password-restore-success.html">Вход по Email, пароль изменен --- enterance-email-password-restore-success.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Изменения 28.05.2021</h2>
-    <ul>
-      <li>
-        <a href="main-new-280521.html">Личный кабинет (взаиморасчеты за все время) ---- main-new-280521.html</a>
-      </li>
-      <li>
-        <a href="main-new-280521-month.html">Личный кабинет (взаиморасчеты за месяц) ---- main-new-280521-month.html</a>
-      </li>
-      <li>
-        <a href="subscription-all-280521.html">Страница всех подписок ---- subscription-all-280521.html</a>
-      </li>
-      <li>
-        <a href="subscription-all-280521-2.html">Страница всех подписок 2 ---- subscription-all-280521-2.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-payment-active-split-280521-1.html">Страница подписки сплит ---- subscription-page-payment-active-split-280521-1.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-payment-active-multi-280521.html">Страница подписки мульти ---- subscription-page-payment-active-multi-280521.html</a>
-      </li>
-      <li>
-        <a href="user-settings-280521.html">Настройки профиля ---- user-settings-280521.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Изменения 15.06.2021</h2>
-    <ul>
-      <li>
-        <a href="subscription-all-15062021.html">Страница всех подписок ---- subscription-all-15062021.html</a>
-      </li>
-      <li>
-        <a href="installation-15062021.html">Установка (новая модалка на кнопке создать аккаунт) --- installation-15062021.html</a>
-      </li>
-      <li>
-        <a href="account-template-15062021.html">Шаблон pdf аккаунта --- account-template-15062021.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-payment-active-split-15062021.html">Страница подписки сплит ---- subscription-page-payment-active-split-15062021.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Изменения 18.07.2021</h2>
-    <ul>
-      <li>
-        <a href="subscription-page-mts-180721-1.html">Страница подписки МТС (Требует подтверждения) ---- subscription-page-mts-180721-1.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mts-180721-2.html">Страница подписки МТС (В ожидании + Ожидается доставка + Ожидается монтаж + Ожидается подключение к облаку) ---- subscription-page-mts-180721-2.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mts-180721-3.html">Страница подписки МТС (В ожидании + ✓ Доставлен dd.mm.yy + Ожидается монтаж + Ожидается подключение к облаку) ---- subscription-page-mts-180721-3.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mts-180721-4.html">Страница подписки МТС (В ожидании + ✓ Доставлен dd.mm.yy + ✓  Смонтирован dd.mm.yy + Ожидается подключение к облаку) ---- subscription-page-mts-180721-4.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mts-180721-5.html">Страница подписки МТС (Активна **+ ✓ Доставлен dd.mm.yy + ✓  Смонтирован dd.mm.yy + ✓ Подключен к облаку dd.mm.yy) ---- subscription-page-mts-180721-5.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mts-180721-6.html">Страница подписки МТС (Требует подтверждения + Не удалось связаться с клиентом) ---- subscription-page-mts-180721-6.html</a>
-      </li>
-      <li>
-        <a href="subscription-all-180721.html">Страница всех подписок ---- subscription-all-180721.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Изменения 20.07.2021 ЛКА Отчёты дилера</h2>
-    <ul>
-      <li>
-        <a href="reports.html">Страница Отчёты ---- reports.html</a>
-      </li>
-      <li>
-        <a href="report-page-processing.html">Страница Отчёта (в процессе) ---- report-page-processing.html</a>
-      </li>
-      <li>
-        <a href="report-page-pending.html">Страница Отчёта (ожидает выплаты) ---- report-page-pending.html</a>
-      </li>
-      <li>
-        <a href="report-page-done.html">Страница Отчёта (Выплачено) ---- report-page-done.html</a>
-      </li>
-      <li>
-        <a href="main-210721.html">Личный кабинет (добавлен баннер по вознаграждению агента) ---- main-210721.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Изменения 23.07.2021 Компонент-вкладка для ЛКА</h2>
-    <ul>
-      <li>
-        <a href="subscription-all-230721.html">Страница всех подписок (добавлен компонент вкладка) ---- subscription-all-230721.html</a>
-      </li>
-      <li>
-        <a href="main-230721.html">Личный кабинет (добавлен компонент вкладка) ---- main-230721.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Изменения 19.08.2021 ЛКА Отчёты дилера</h2>
-    <ul>
-      <li>
-        <a href="reports--manager.html">Страница Отчёты для менеджера ---- reports--manager.html</a>
-      </li>
-      <li>
-        <a href="report-page-processing--manager.html">Страница Отчёта (в процессе) для менеждера ---- report-page-processing--manager.html</a>
-      </li>
-      <li>
-        <a href="report-page-pending--manager.html">Страница Отчёта (ожидает выплаты) для менеджера ---- report-page-pending--manager.html</a>
-      </li>
-      <li>
-        <a href="report-page-pending--new.html">Страница Отчёта (ожидает выплаты) обновленная ---- report-page-pending--new.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Изменения 26.08.2021 ЛКА МЭС</h2>
-    <ul>
-      <li>
-        <a href="main-mes-250821.html">Личный кабинет МЭС ---- main-mes-250821.html</a>
-      </li>
-      <li>
-        <a href="main-mes-250821-request-load-fail.html">Личный кабинет МЭС, неудачная загрузка зявок ---- main-mes-250821-request-load-fail.html</a>
-      </li>
-      <li>
-        <a href="main-mes-250821-request-load-success.html">Личный кабинет МЭС, удачная загрузка зявок ---- main-mes-250821-request-load-success.html</a>
-      </li>
-      <li>
-        <a href="subscription-all-mes-requests.html">Страница всех подписок (МЭС заявки) ---- subscription-all-mes-requests.html</a>
-      </li>
-      <li>
-        <a href="subscription-all-mes-subs-client.html">Страница всех подписок (МЭС подписки клиента) ---- subscription-all-mes-subs-client.html</a>
-      </li>
-      <li>
-        <a href="subscription-all-mes-subs.html">Страница всех подписок (МЭС подписки) ---- subscription-all-mes-subs.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-request.html">Страница подписки-заявки ---- subscription-page-mes-request.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-request-no-installation.html">Страница подписки-заявки (клиент отказался от монтажа) ---- subscription-page-mes-request-no-installation.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-request-installation-data.html">Страница подписки-заявки (указанны данные о монтаже) ---- subscription-page-mes-request-installation-data.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-request-no-coincidence-modal.html">Модалка. Страница подписки-заявки (нет совпадений кода гарантии) ---- subscription-page-mes-request-no-coincidence-modal.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-request-have-coincidence-modal.html">Модалка. Страница подписки-заявки (найдены совпадения кода гарантии) ---- subscription-page-mes-request-have-coincidence-modal.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-request-no-code-coincedence.html">Страница подписки-заявки (нет совпадений кода гарантии) ---- subscription-page-mes-request-no-code-coincedence.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-subscription-clients-1.html">Страница подписки клиента (не оплачен) ---- subscription-page-mes-subscription-clients-1.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-subscription-clients-2.html">Страница подписки клиента (оплачен) ---- subscription-page-mes-subscription-clients-2.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-subscription-1.html">Страница подписки готовой к выплате (не оплачен) ---- subscription-page-mes-subscription-1.html</a>
-      </li>
-      <li>
-        <a href="subscription-page-mes-subscription-2.html">Страница подписки готовой к выплате (оплачен) ---- subscription-page-mes-subscription-2.html</a>
-      </li>
-      <li>
-        <a href="reports-mes.html">Отчёты ---- reports-mes.html</a>
-      </li>
-      <li>
-        <a href="report-page-processing-mes.html">Страница отчёта (в процессе) ---- report-page-processing-mes.html</a>
-      </li>
-      <li>
-        <a href="report-page-pending-mes.html">Страница отчёта (в ожидании) ---- report-page-pending-mes.html</a>
-      </li>
-      <li>
-        <a href="report-page-done-mes.html">Страница отчёта (выплачено) ---- report-page-done-mes.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Правки к отчёту дилеру (06.09.21)</h2>
-    <ul>
-      <li>
-        <a href="report-page-approval.html">Страница Отчёта (на одобрении) ---- report-page-approval.html</a>
-      </li>
-      <li>
-        <a href="report-page-approval--manager.html">Страница Отчёта (на одобрении) для менеджера ---- report-page-approval--manager.html</a>
-      </li>
-      <li>
-        <a href="reports-060921.html">Страница Отчёты ---- reports-060921.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Правки по отчетам (12.09.21)</h2>
-    <h3><i>Для дилера</i></h3>
-    <ul>
-      <li>
-        <a href="report-page-processing-dealer.html">Страница Отчёта (В процессе) ---- report-page-processing-dealer.html</a>
-      </li>
-      <li>
-        <a href="report-page-send-scan-dealer.html">Страница Отчёта (Отправьте скан) ---- report-page-send-scan-dealer.html</a>
-      </li>
-      <li>
-        <a href="report-page-approval-130921.html">Страница Отчёта (На одобрении) ---- report-page-approval-130921.html</a>
-      </li>
-      <li>
-        <a href="report-page-send-scan-not-approved.html">Страница Отчёта (Отправьте скан, не одобрен) ---- report-page-send-scan-not-approved.html</a>
-      </li>
-      <li>
-        <a href="report-page-approved.html">Страница Отчёта (Одобрен, ожидает выплаты) ---- report-page-approved.html</a>
-      </li>
-      <li>
-        <a href="report-page-payed.html">Страница Отчёта (Выплачено) ---- report-page-payed.html</a>
-      </li>
-    </ul>
-    <h3><i>Для бухгалтера</i></h3>
-    <ul>
-      <li>
-        <a href="report-page-processing-accountant.html">Страница Отчёта (В процессе) ---- report-page-processing-accountant.html</a>
-      </li>
-      <li>
-        <a href="report-page-send-scan-accountant.html">Страница Отчёта (Отправьте скан) ---- report-page-send-scan-accountant.html</a>
-      </li>
-      <li>
-        <a href="report-page-approval-accountant.html">Страница Отчёта (На одобрении) ---- report-page-approval-accountant.html</a>
-      </li>
-      <li>
-        <a href="report-page-approved-accountant.html">Страница Отчёта (Одобрен) ---- report-page-approved-accountant.html</a>
-      </li>
-      <li>
-        <a href="report-page-payed-accountant.html">Страница Отчёта (Выплачено) ---- report-page-payed-accountant.html</a>
-      </li>
-      <li>
-        <a href="reports-160921.html">Страница Отчёты ---- reports-160921.html</a>
-      </li>
-    </ul>
-    <br>
-    <p>============================================================</p>
-      <a href="agent-report-form.html">Форма. Отчет агента ---- agent-report-form.html</a>
-    <p>============================================================</p>
-    <br>
-    <h2>Настройки профиля (06.10.21)</h2>
-    <ul>
-      <li>
-        <a href="user-settings-061021.html">Настройки профиля ---- user-settings-061021.html</a>
-      </li>
-    </ul>
-    <br>
-    <h2>Квоты (19.10.21)</h2>
-    <ul>
-      <li>
-        <a href="shipments.html">Все отгрузки ---- shipments.html</a>
-      </li>
-      <li>
-        <a href="shipment.html">Страница отгрузки ---- shipment.html</a>
-      </li>
-    </ul>
-    <br>
-  </div>
-</body>
+      .container a {
+        display: block;
+        margin-bottom: 20px;
+      }
+    </style>
+    <div class="container">
+      <h1>Daichi-Promotion</h1>
+      <ul>
+        <li>
+          <a href="components.html">Компоненты ----- components.html</a>
+        </li>
+        <li><br /><i>Вспомогательно к старнице компонентов:</i><br /><br /></li>
+        <li>
+          <a href="components.html#search"
+            >Блок поиска ----- components.html#search</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li><br /><i>Модальные окна</i><br /><br /></li>
+        <li>
+          <a href="--modal-delivery-or-pickup.html"
+            >Модальное окно доставки/самовывоза -----
+            --modal-delivery-or-pickup.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-payment.html"
+            >Модальное подтверждения оплаты с выбором -----
+            --modal-payment.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-payment-2.html"
+            >Модальное подтверждения оплаты c вводом -----
+            --modal-payment-2.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-verification.html"
+            >Модальное окно верификации ----- --modal-verification.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-cancellation.html"
+            >Модальное окно аннулирования ----- --modal-cancellation.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-schedule.html"
+            >Модальное окно графика платежей ----- --modal-schedule.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-delete-service.html"
+            >Модальное окно удаления услуги ----- --modal-delete-service.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-installation.html"
+            >Модальное окно подтверждения монтажа -----
+            --modal-installation.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-payment-info.html"
+            >Модальное окно информации о платеже -----
+            --modal-payment-info.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-write-serial.html"
+            >Модальное окно ввода серийного номера -----
+            --modal-write-serial.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-passport-data.html"
+            >Модальное окно ввода паспортных данных -----
+            --modal-passport-data.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-delivery-address.html"
+            >Модальное окно ввода адреса доставки/самовывоза -----
+            --modal-delivery-address.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-account-creation.html"
+            >Модальное окно создания аккаунта -----
+            --modal-account-creation.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-change-email.html"
+            >Модальное окно изменения почты ----- --modal-change-email.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-change-phone.html"
+            >Модальное окно изменения телефона -----
+            --modal-change-phone.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-confirmation-code.html"
+            >Модальное окно кода подтверждения -----
+            --modal-confirmation-code.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-confirmation-email.html"
+            >Модальное окно подтверждения почты -----
+            --modal-confirmation-email.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-phone-success.html"
+            >Модальное окно успешного изменения телефона -----
+            --modal-phone-success.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-subscribe-register-single.html"
+            >Модальное окно подписки одиночного устройства -----
+            --modal-subscribe-register-single.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-subscribe-register-multi-1.html"
+            >Модальное окно подписки мульти-системы 1 -----
+            --modal-subscribe-register-multi-1.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-subscribe-register-multi-2.html"
+            >Модальное окно подписки мульти-системы 2 -----
+            --modal-subscribe-register-multi-2.html</a
+          >
+        </li>
+        <li>
+          <a href="--modal-installation-data.html"
+            >Модальное окно данных монтажа -----
+            --modal-installation-data.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="main.html">Главная ----- main.html</a>
+        </li>
+        <li>
+          <a href="main-new.html">Главная новая ----- main-new.html</a>
+        </li>
+        <li>
+          <a href="main-new-multi.html"
+            >Главная новая, регистрация мульти-системы -----
+            main-new-multi.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="contracts-all.html">Договоры ----- contracts-all.html</a>
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="contract-page.html"
+            >Страница договора ----- contract-page.html</a
+          >
+        </li>
+        <li><br /><i>Вспомогательно к старнице договора:</i><br /><br /></li>
+        <li>
+          <a href="--payment-waiting.html"
+            >Состояния блока ожидание оплаты ----- --payment-waiting.html</a
+          >
+        </li>
+        <li>
+          <a href="--passport-data.html"
+            >Состояния блока паспортных данных ----- --passport-data.html</a
+          >
+        </li>
+        <li>
+          <a href="--delivery-data.html"
+            >Состояния блока доставки/самовывоза ----- --delivery-data.html</a
+          >
+        </li>
+        <li>
+          <a href="--services-in-contract.html"
+            >Состояния блока Услуги в договоре -----
+            --services-in-contract.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="contract-creation-about.html"
+            >Создание договора, определение состава ---
+            contract-creation-about.html</a
+          >
+        </li>
+        <li>
+          <a href="contract-creation-client-data.html"
+            >Создание договора, данные клиента ---
+            contract-creation-client-data.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="subscription-all.html"
+            >Страница всех подписок --- subscription-all.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="subscription-page-general.html"
+            >Страница подписки, общая информация ---
+            subscription-page-general.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-NEW-payment-waiting-split-1.html"
+            >Страница подписки, НОВАЯ ожидает оплаты сплит 1 ---
+            subscription-page-NEW-payment-waiting-split-1.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-NEW-payment-waiting-split-2.html"
+            >Страница подписки, НОВАЯ ожидает оплаты сплит 2 ---
+            subscription-page-NEW-payment-waiting-split-2.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-NEW-payment-waiting-multi-1.html"
+            >Страница подписки, НОВАЯ ожидает оплаты мульти 1 ---
+            subscription-page-NEW-payment-waiting-multi-1.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-NEW-payment-active-split.html"
+            >Страница подписки, НОВАЯ активная сплит ---
+            subscription-page-NEW-payment-active-split.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-NEW-payment-active-multi.html"
+            >Страница подписки, НОВАЯ активная мульти ---
+            subscription-page-NEW-payment-active-multi.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-NEW-payment-expires-split.html"
+            >Страница подписки, НОВАЯ истекает сплит ---
+            subscription-page-NEW-payment-expires-split.html</a
+          >
+        </li>
+        <li><br /><i>Вспомогательно к старнице подписки:</i><br /><br /></li>
+        <li>
+          <a href="--installation-data.html"
+            >Состояния блока ожидание монтажа ----- --installation-data.html</a
+          >
+        </li>
+        <li>
+          <a href="--cloud-connection-data.html"
+            >Состояния блока подключения к облаку -----
+            --cloud-connection-data.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="subscription-page-mutual-calcs.html"
+            >Страница подписки, взаиморасчеты и платежи ---
+            subscription-page-mutual-calcs.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="mutual-calcs.html"
+            >Взаиморасчеты, вкладка взаиморасчеты --- mutual-calcs.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="mutual-calcs-agent.html"
+            >Взаиморасчеты агента --- mutual-calcs-agent.html</a
+          >
+        </li>
+        <li>
+          <a href="mutual-calcs-agent-NEW.html"
+            >Взаиморасчеты агента НОВАЯ --- mutual-calcs-agent-NEW.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="mutual-calcs-payments.html"
+            >Взаиморасчеты, вкладка платежи --- mutual-calcs-payments.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="clients.html">Клиенты --- clients.html</a>
+        </li>
+        <li>
+          <a href="clients-NEW.html">Клиенты НОВАЯ --- clients-NEW.html</a>
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="agents.html">Агенты --- agents.html</a>
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="support.html">Поддержка --- support.html</a>
+        </li>
+        <li>
+          <a href="support-NEW.html">Поддержка НОВАЯ --- support-NEW.html</a>
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="installation.html">Установка --- installation.html</a>
+          <a href="account-template.html"
+            >Шаблон pdf аккаунта --- account-template.html</a
+          >
+        </li>
+        <li>
+          <br /><br />
+          ================
+          <br /><br />
+        </li>
+        <li>
+          <a href="user-settings.html"
+            >Настройки профиля --- user-settings.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-phone.html"
+            >Вход по телефону --- enterance-phone.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-phone-error.html"
+            >Вход по телефону с ошибкой--- enterance-phone-error.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-code.html"
+            >Вход по телефону, код подтверждения --- enterance-code.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-code-error.html"
+            >Вход по телефону, код подтверждения, ошибка ---
+            enterance-code-error.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-code-wrong.html"
+            >Вход по телефону, код подтверждения, неверный код ---
+            enterance-code-wrong.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-email.html"
+            >Вход по Email --- enterance-email.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-email-error.html"
+            >Вход по Email, ошибка --- enterance-email-error.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-email-was-sended.html"
+            >Вход по Email, письмо отправлено ---
+            enterance-email-was-sended.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-email-password-restore.html"
+            >Вход по Email, восстановление пароля ---
+            enterance-email-password-restore.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-email-password-restore-error.html"
+            >Вход по Email, восстановление пароля c ошибкой ---
+            enterance-email-password-restore-error.html</a
+          >
+        </li>
+        <li>
+          <a href="enterance-email-password-restore-success.html"
+            >Вход по Email, пароль изменен ---
+            enterance-email-password-restore-success.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Изменения 28.05.2021</h2>
+      <ul>
+        <li>
+          <a href="main-new-280521.html"
+            >Личный кабинет (взаиморасчеты за все время) ----
+            main-new-280521.html</a
+          >
+        </li>
+        <li>
+          <a href="main-new-280521-month.html"
+            >Личный кабинет (взаиморасчеты за месяц) ----
+            main-new-280521-month.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-all-280521.html"
+            >Страница всех подписок ---- subscription-all-280521.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-all-280521-2.html"
+            >Страница всех подписок 2 ---- subscription-all-280521-2.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-payment-active-split-280521-1.html"
+            >Страница подписки сплит ----
+            subscription-page-payment-active-split-280521-1.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-payment-active-multi-280521.html"
+            >Страница подписки мульти ----
+            subscription-page-payment-active-multi-280521.html</a
+          >
+        </li>
+        <li>
+          <a href="user-settings-280521.html"
+            >Настройки профиля ---- user-settings-280521.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Изменения 15.06.2021</h2>
+      <ul>
+        <li>
+          <a href="subscription-all-15062021.html"
+            >Страница всех подписок ---- subscription-all-15062021.html</a
+          >
+        </li>
+        <li>
+          <a href="installation-15062021.html"
+            >Установка (новая модалка на кнопке создать аккаунт) ---
+            installation-15062021.html</a
+          >
+        </li>
+        <li>
+          <a href="account-template-15062021.html"
+            >Шаблон pdf аккаунта --- account-template-15062021.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-payment-active-split-15062021.html"
+            >Страница подписки сплит ----
+            subscription-page-payment-active-split-15062021.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Изменения 18.07.2021</h2>
+      <ul>
+        <li>
+          <a href="subscription-page-mts-180721-1.html"
+            >Страница подписки МТС (Требует подтверждения) ----
+            subscription-page-mts-180721-1.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mts-180721-2.html"
+            >Страница подписки МТС (В ожидании + Ожидается доставка + Ожидается
+            монтаж + Ожидается подключение к облаку) ----
+            subscription-page-mts-180721-2.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mts-180721-3.html"
+            >Страница подписки МТС (В ожидании + ✓ Доставлен dd.mm.yy +
+            Ожидается монтаж + Ожидается подключение к облаку) ----
+            subscription-page-mts-180721-3.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mts-180721-4.html"
+            >Страница подписки МТС (В ожидании + ✓ Доставлен dd.mm.yy + ✓
+            Смонтирован dd.mm.yy + Ожидается подключение к облаку) ----
+            subscription-page-mts-180721-4.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mts-180721-5.html"
+            >Страница подписки МТС (Активна **+ ✓ Доставлен dd.mm.yy + ✓
+            Смонтирован dd.mm.yy + ✓ Подключен к облаку dd.mm.yy) ----
+            subscription-page-mts-180721-5.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mts-180721-6.html"
+            >Страница подписки МТС (Требует подтверждения + Не удалось связаться
+            с клиентом) ---- subscription-page-mts-180721-6.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-all-180721.html"
+            >Страница всех подписок ---- subscription-all-180721.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Изменения 20.07.2021 ЛКА Отчёты дилера</h2>
+      <ul>
+        <li>
+          <a href="reports.html">Страница Отчёты ---- reports.html</a>
+        </li>
+        <li>
+          <a href="report-page-processing.html"
+            >Страница Отчёта (в процессе) ---- report-page-processing.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-pending.html"
+            >Страница Отчёта (ожидает выплаты) ---- report-page-pending.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-done.html"
+            >Страница Отчёта (Выплачено) ---- report-page-done.html</a
+          >
+        </li>
+        <li>
+          <a href="main-210721.html"
+            >Личный кабинет (добавлен баннер по вознаграждению агента) ----
+            main-210721.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Изменения 23.07.2021 Компонент-вкладка для ЛКА</h2>
+      <ul>
+        <li>
+          <a href="subscription-all-230721.html"
+            >Страница всех подписок (добавлен компонент вкладка) ----
+            subscription-all-230721.html</a
+          >
+        </li>
+        <li>
+          <a href="main-230721.html"
+            >Личный кабинет (добавлен компонент вкладка) ----
+            main-230721.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Изменения 19.08.2021 ЛКА Отчёты дилера</h2>
+      <ul>
+        <li>
+          <a href="reports--manager.html"
+            >Страница Отчёты для менеджера ---- reports--manager.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-processing--manager.html"
+            >Страница Отчёта (в процессе) для менеждера ----
+            report-page-processing--manager.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-pending--manager.html"
+            >Страница Отчёта (ожидает выплаты) для менеджера ----
+            report-page-pending--manager.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-pending--new.html"
+            >Страница Отчёта (ожидает выплаты) обновленная ----
+            report-page-pending--new.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Изменения 26.08.2021 ЛКА МЭС</h2>
+      <ul>
+        <li>
+          <a href="main-mes-250821.html"
+            >Личный кабинет МЭС ---- main-mes-250821.html</a
+          >
+        </li>
+        <li>
+          <a href="main-mes-250821-request-load-fail.html"
+            >Личный кабинет МЭС, неудачная загрузка зявок ----
+            main-mes-250821-request-load-fail.html</a
+          >
+        </li>
+        <li>
+          <a href="main-mes-250821-request-load-success.html"
+            >Личный кабинет МЭС, удачная загрузка зявок ----
+            main-mes-250821-request-load-success.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-all-mes-requests.html"
+            >Страница всех подписок (МЭС заявки) ----
+            subscription-all-mes-requests.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-all-mes-subs-client.html"
+            >Страница всех подписок (МЭС подписки клиента) ----
+            subscription-all-mes-subs-client.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-all-mes-subs.html"
+            >Страница всех подписок (МЭС подписки) ----
+            subscription-all-mes-subs.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-request.html"
+            >Страница подписки-заявки ---- subscription-page-mes-request.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-request-no-installation.html"
+            >Страница подписки-заявки (клиент отказался от монтажа) ----
+            subscription-page-mes-request-no-installation.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-request-installation-data.html"
+            >Страница подписки-заявки (указанны данные о монтаже) ----
+            subscription-page-mes-request-installation-data.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-request-no-coincidence-modal.html"
+            >Модалка. Страница подписки-заявки (нет совпадений кода гарантии)
+            ---- subscription-page-mes-request-no-coincidence-modal.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-request-have-coincidence-modal.html"
+            >Модалка. Страница подписки-заявки (найдены совпадения кода
+            гарантии) ----
+            subscription-page-mes-request-have-coincidence-modal.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-request-no-code-coincedence.html"
+            >Страница подписки-заявки (нет совпадений кода гарантии) ----
+            subscription-page-mes-request-no-code-coincedence.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-subscription-clients-1.html"
+            >Страница подписки клиента (не оплачен) ----
+            subscription-page-mes-subscription-clients-1.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-subscription-clients-2.html"
+            >Страница подписки клиента (оплачен) ----
+            subscription-page-mes-subscription-clients-2.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-subscription-1.html"
+            >Страница подписки готовой к выплате (не оплачен) ----
+            subscription-page-mes-subscription-1.html</a
+          >
+        </li>
+        <li>
+          <a href="subscription-page-mes-subscription-2.html"
+            >Страница подписки готовой к выплате (оплачен) ----
+            subscription-page-mes-subscription-2.html</a
+          >
+        </li>
+        <li>
+          <a href="reports-mes.html">Отчёты ---- reports-mes.html</a>
+        </li>
+        <li>
+          <a href="report-page-processing-mes.html"
+            >Страница отчёта (в процессе) ----
+            report-page-processing-mes.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-pending-mes.html"
+            >Страница отчёта (в ожидании) ---- report-page-pending-mes.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-done-mes.html"
+            >Страница отчёта (выплачено) ---- report-page-done-mes.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Правки к отчёту дилеру (06.09.21)</h2>
+      <ul>
+        <li>
+          <a href="report-page-approval.html"
+            >Страница Отчёта (на одобрении) ---- report-page-approval.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-approval--manager.html"
+            >Страница Отчёта (на одобрении) для менеджера ----
+            report-page-approval--manager.html</a
+          >
+        </li>
+        <li>
+          <a href="reports-060921.html"
+            >Страница Отчёты ---- reports-060921.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Правки по отчетам (12.09.21)</h2>
+      <h3><i>Для дилера</i></h3>
+      <ul>
+        <li>
+          <a href="report-page-processing-dealer.html"
+            >Страница Отчёта (В процессе) ----
+            report-page-processing-dealer.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-send-scan-dealer.html"
+            >Страница Отчёта (Отправьте скан) ----
+            report-page-send-scan-dealer.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-approval-130921.html"
+            >Страница Отчёта (На одобрении) ----
+            report-page-approval-130921.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-send-scan-not-approved.html"
+            >Страница Отчёта (Отправьте скан, не одобрен) ----
+            report-page-send-scan-not-approved.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-approved.html"
+            >Страница Отчёта (Одобрен, ожидает выплаты) ----
+            report-page-approved.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-payed.html"
+            >Страница Отчёта (Выплачено) ---- report-page-payed.html</a
+          >
+        </li>
+      </ul>
+      <h3><i>Для бухгалтера</i></h3>
+      <ul>
+        <li>
+          <a href="report-page-processing-accountant.html"
+            >Страница Отчёта (В процессе) ----
+            report-page-processing-accountant.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-send-scan-accountant.html"
+            >Страница Отчёта (Отправьте скан) ----
+            report-page-send-scan-accountant.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-approval-accountant.html"
+            >Страница Отчёта (На одобрении) ----
+            report-page-approval-accountant.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-approved-accountant.html"
+            >Страница Отчёта (Одобрен) ----
+            report-page-approved-accountant.html</a
+          >
+        </li>
+        <li>
+          <a href="report-page-payed-accountant.html"
+            >Страница Отчёта (Выплачено) ----
+            report-page-payed-accountant.html</a
+          >
+        </li>
+        <li>
+          <a href="reports-160921.html"
+            >Страница Отчёты ---- reports-160921.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <p>============================================================</p>
+      <a href="agent-report-form.html"
+        >Форма. Отчет агента ---- agent-report-form.html</a
+      >
+      <p>============================================================</p>
+      <br />
+      <h2>Настройки профиля (06.10.21)</h2>
+      <ul>
+        <li>
+          <a href="user-settings-061021.html"
+            >Настройки профиля ---- user-settings-061021.html</a
+          >
+        </li>
+      </ul>
+      <br />
+      <h2>Квоты (19.10.21)</h2>
+      <ul>
+        <li>
+          <a href="shipments.html">Все отгрузки ---- shipments.html</a>
+        </li>
+        <li>
+          <a href="shipment.html">Страница отгрузки ---- shipment.html</a>
+        </li>
+      </ul>
+      <br />
+      <h2>Правки ЛКА - Иерархия (25.12.2021)</h2>
+      <ul>
+        <li>
+          <a href="subscription-all-curator.html"
+            >Вид иерархии коммерческого директора и куратора (у куратора
+            сокращаем кол-во филиалов) ---- subscription-all-curator.html</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

@@ -51,6 +51,65 @@
   &__tabs {
     margin-bottom: 40px;
   }
+
+  &__content-wrapper {
+    display: flex;
+  }
+
+  &__hierarchy {
+    width: 25%;
+    padding-right: 24px;
+  }
+
+  &__right {
+    width: 75%;
+  }
+
+  &__group-value {
+    @include b12;
+    margin: 0 0 24px;
+  }
+
+  &__statistics {
+    display: flex;
+    padding: 24px;
+    margin: 0 0 24px;
+    background-color: $bg;
+    border-radius: 5px;
+  }
+
+  &__statistics-first {
+    display: flex;
+    margin-right: 24px;
+    padding-right: 24px;
+    border-right: 1.5px solid #d1d8e1;
+  }
+
+  &__statistics-second {
+    display: flex;
+  }
+
+  &__statistics-item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__statistics-title {
+    @include b12;
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__statistics-value {
+    @include h24;
+    margin: 0;
+    color: $text-minor;
+
+    &.marked {
+      color: $primary;
+    }
+  }
 }
 
 .subscription-all__filters--mts {
@@ -62,6 +121,17 @@
     width: calc((100% - 42px) / 4);
     margin: 0;
     margin-top: 24px;
+  }
+}
+
+.subscription-all__filters--2-3 {
+  .subscription-all__select {
+    width: calc((100% - 28px) / 3);
+
+    &:first-child,
+    &:nth-child(2) {
+      width: calc((100% - 14px) / 2);
+    }
   }
 }
 
@@ -85,8 +155,6 @@
     }
   }
 }
-
-
 
 @include tablet {
   .subscription-all__filters--mts {
