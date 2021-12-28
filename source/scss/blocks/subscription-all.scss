@@ -61,6 +61,10 @@
     padding-right: 24px;
   }
 
+  &__hierarchy-trigger {
+    display: none;
+  }
+
   &__right {
     width: 75%;
   }
@@ -217,13 +221,68 @@
       margin-bottom: 48px;
     }
 
+    &__hierarchy-trigger {
+      @include b14;
+      display: block;
+      padding: 11px 12px;
+      background-color: #fff;
+      border: 1px solid #b4c1d1;
+      border-radius: 5px;
+      width: auto;
+      margin-left: 24px;
+      margin-bottom: 24px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.marked::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $primary;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+    }
+
     &__right {
       width: 100%;
 
-      & > *:not(.contracts-mobile) {
+      & > *:not(.contracts-mobile):not(.subscription-all__hierarchy-trigger) {
         width: calc(100% - 48px);
         margin-left: auto;
         margin-right: auto;
+      }
+    }
+
+    &__statistics {
+      flex-direction: column;
+    }
+
+    &__statistics-first,
+    &__statistics-second {
+      flex-direction: column;
+    }
+
+    &__statistics-first {
+      padding-right: 0;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      margin-right: 0;
+      border-bottom: 1.5px solid #d1d8e1;
+      border-right: none;
+    }
+
+    &__statistics-item {
+      &:nth-child(n) {
+        margin-right: 0;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
       }
     }
   }

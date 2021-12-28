@@ -71,6 +71,11 @@
       cursor: pointer;
     }
   }
+
+  &__top-bar,
+  &__blackout {
+    display: none;
+  }
 }
 
 .hierarchy__open-btn + .hierarchy__link {
@@ -95,5 +100,95 @@
 @include mobile {
   .hierarchy__item > .hierarchy__list {
     padding-left: 32px;
+  }
+
+  .hierarchy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    visibility: hidden;
+    transition: visibility 0s linear 0.3s;
+
+    &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 24px 40px;
+      max-width: 370px;
+      height: 100%;
+      background-color: #fff;
+      z-index: 101;
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+      overflow-y: auto;
+    }
+
+    &__top-bar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 40px 0 12px;
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      z-index: 102;
+    }
+
+    &__title {
+      @include h20;
+      margin: 0;
+    }
+
+    &__close {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      font-size: 0;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        color: $text-main;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__blackout {
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0s linear 0.3s;
+    }
+  }
+
+  .hierarchy.opened {
+    visibility: visible;
+    transition-delay: 0s;
+
+    .hierarchy__blackout {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+
+    .hierarchy__content {
+      transform: translateX(0);
+    }
   }
 }

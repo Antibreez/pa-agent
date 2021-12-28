@@ -1350,6 +1350,22 @@
 })();
 
 (function () {
+  var $trigger = $(".subscription-all__hierarchy-trigger");
+  var $modal = $(".hierarchy");
+  var $blackout = $modal.find(".hierarchy__blackout");
+  var $close = $modal.find(".hierarchy__close");
+  $trigger.on("click", function () {
+    $modal.addClass("opened");
+  });
+  $blackout.on("click", function () {
+    $modal.removeClass("opened");
+  });
+  $close.on("click", function () {
+    $modal.removeClass("opened");
+  });
+})();
+
+(function () {
   var $openBtn = $(".hierarchy__open-btn");
   var $link = $(".hierarchy__link");
   var $line = $(".hierarchy__line");
