@@ -1,19 +1,13 @@
 (function () {
-  const $openBtn = $(".hierarchy__open-btn");
-  const $link = $(".hierarchy__link");
   const $line = $(".hierarchy__line");
 
-  $openBtn.on("click", function () {
-    $(this).toggleClass("opened");
-    $(this).parent().next().toggleClass("opened");
-  });
+  $line.on("click", function () {
+    $(this).find(".hierarchy__open-btn").toggleClass("opened");
+    $(this).next().toggleClass("opened");
 
-  $link.on("click", function () {
-    if ($(this).parent().hasClass("marked")) {
-      return;
+    if (!$(this).hasClass("marked")) {
+      $line.removeClass("marked");
+      $(this).addClass("marked");
     }
-
-    $line.removeClass("marked");
-    $(this).parent().addClass("marked");
   });
 })();

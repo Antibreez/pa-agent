@@ -1366,20 +1366,15 @@
 })();
 
 (function () {
-  var $openBtn = $(".hierarchy__open-btn");
-  var $link = $(".hierarchy__link");
   var $line = $(".hierarchy__line");
-  $openBtn.on("click", function () {
-    $(this).toggleClass("opened");
-    $(this).parent().next().toggleClass("opened");
-  });
-  $link.on("click", function () {
-    if ($(this).parent().hasClass("marked")) {
-      return;
-    }
+  $line.on("click", function () {
+    $(this).find(".hierarchy__open-btn").toggleClass("opened");
+    $(this).next().toggleClass("opened");
 
-    $line.removeClass("marked");
-    $(this).parent().addClass("marked");
+    if (!$(this).hasClass("marked")) {
+      $line.removeClass("marked");
+      $(this).addClass("marked");
+    }
   });
 })();
 

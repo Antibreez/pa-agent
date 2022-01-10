@@ -6,9 +6,13 @@
 
   &__line {
     display: flex;
+    width: 100%;
     align-items: center;
     border-radius: 4px;
+    padding: 0;
     padding-right: 8px;
+    border: none;
+    background-color: #fff;
 
     &.marked {
       background-color: $bg;
