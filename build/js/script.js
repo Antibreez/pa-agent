@@ -245,21 +245,31 @@
 })();
 
 (function () {
-  var scanUpload = document.querySelector('.send-scan__upload-file');
+  var scanUpload = document.querySelector(".send-scan__upload-file");
 
   if (!scanUpload) {
     return;
   }
 
-  var fileInputItem = scanUpload.querySelector('.input-file');
-  var submit = scanUpload.querySelector('.send-scan__submit');
+  var fileInputItem = scanUpload.querySelectorAll(".input-file");
+  var submit = scanUpload.querySelector(".send-scan__submit");
 
   function preventDefaults(e) {
     e.preventDefault();
     e.stopPropagation();
   }
 
-  ; // function makeInputsNames() {
+  function isFilled() {
+    var filled = true;
+    fileInputItem.forEach(function (item) {
+      var file = item.querySelector(".file-load");
+
+      if (!file.classList.contains("loaded")) {
+        filled = false;
+      }
+    });
+    return filled;
+  } // function makeInputsNames() {
   //   filesWrapper.querySelectorAll('input').forEach(function(item, idx) {
   //     item.name = 'file-' + idx;
   //   });
@@ -283,43 +293,44 @@
   //     && submit.setAttribute('disabled', '')
   // }
 
+
   function readUrl(input) {
     //const fielInputItem = input.parentNode.parentNode;
     var fileDropArea = input.parentNode;
-    var bar = fileDropArea.parentNode.querySelector('.file-load__progress-current');
-    var status = fileDropArea.parentNode.querySelector('.file-load__status span');
-    var fileLoad = fileDropArea.parentNode.querySelector('.file-load');
-    var fileInfo = fileDropArea.parentNode.querySelector('.file-load__size');
+    var bar = fileDropArea.parentNode.querySelector(".file-load__progress-current");
+    var status = fileDropArea.parentNode.querySelector(".file-load__status span");
+    var fileLoad = fileDropArea.parentNode.querySelector(".file-load");
+    var fileInfo = fileDropArea.parentNode.querySelector(".file-load__size");
 
     if (input.files && input.files[0]) {
       var reader = new FileReader();
 
       reader.onloadstart = function () {
-        fileDropArea.parentNode.classList.add('loaded');
+        fileDropArea.parentNode.classList.add("loaded");
       };
 
       reader.onprogress = function (e) {
-        bar.style.width = Math.round(e.loaded / e.total * 100) + '%';
+        bar.style.width = Math.round(e.loaded / e.total * 100) + "%";
         status.textContent = Math.round(e.loaded / e.total * 100);
       };
 
       reader.onload = function (e) {
-        bar.style.width = '100%';
-        fileDropArea.nextElementSibling.querySelector('.file-load__name').textContent = input.files[0].name;
+        bar.style.width = "100%";
+        fileDropArea.nextElementSibling.querySelector(".file-load__name").textContent = input.files[0].name;
         var size = input.files[0].size;
-        var sizeDim = ' байт';
+        var sizeDim = " байт";
 
         if (size >= 1024 && size < 1048576) {
           size = Math.round(size / 1024);
-          sizeDim = ' Кбайт';
+          sizeDim = " Кбайт";
         } else {
           size = Math.round(size / 1024 / 1024);
-          sizeDim = ' Мбайт';
+          sizeDim = " Мбайт";
         }
 
-        fileLoad.classList.add('loaded');
+        fileLoad.classList.add("loaded");
         fileInfo.textContent = size + sizeDim;
-        submit.removeAttribute('disabled'); // const newItem = newFileInputItem.cloneNode(true);
+        isFilled() && submit.removeAttribute("disabled"); // const newItem = newFileInputItem.cloneNode(true);
         // filesWrapper.prepend(newItem);
         // addEventListeners(newItem);
         // makeInputsNames();
@@ -331,17 +342,17 @@
   }
 
   function handleDrop(e) {
-    var fileInput = e.currentTarget.querySelector('input');
+    var fileInput = e.currentTarget.querySelector("input");
     var dt = e.dataTransfer;
     var files = dt.files;
     console.log(files);
 
     if (fileInput.files && fileInput.files[0]) {
-      fileInput.value = '';
+      fileInput.value = "";
 
       if (!/safari/i.test(navigator.userAgent)) {
-        fileInput.type = '';
-        fileInput.type = 'file';
+        fileInput.type = "";
+        fileInput.type = "file";
       }
     }
 
@@ -349,60 +360,58 @@
     readUrl(fileInput);
   }
 
-  ;
-
   var onFileChange = function onFileChange(e) {
     readUrl(e.target);
   };
 
   function onClear(e) {
     var fileInputItem = e.currentTarget.parentNode.parentNode;
-    var fileInput = fileInputItem.querySelector('input');
-    var fileLoad = fileInputItem.querySelector('.file-load');
-    fileInput.value = '';
+    var fileInput = fileInputItem.querySelector("input");
+    var fileLoad = fileInputItem.querySelector(".file-load");
+    fileInput.value = "";
 
     if (!/safari/i.test(navigator.userAgent)) {
-      fileInput.type = '';
-      fileInput.type = 'file';
+      fileInput.type = "";
+      fileInput.type = "file";
     } //removeEventListeners(fileInputItem);
 
 
-    fileInputItem.classList.remove('loaded');
-    submit.setAttribute('disabled', '');
-    fileLoad.classList.remove('loaded'); //checkForm();
+    fileInputItem.classList.remove("loaded");
+    submit.setAttribute("disabled", "");
+    fileLoad.classList.remove("loaded"); //checkForm();
   }
 
   function addEventListeners(item) {
-    var dropArea = item.querySelector('.input-file__label');
-    var fileInput = item.querySelector('input');
-    var fileClear = item.querySelector('.file-load__clear');
+    var dropArea = item.querySelector(".input-file__label");
+    var fileInput = item.querySelector("input");
+    var fileClear = item.querySelector(".file-load__clear");
 
     function highlight(e) {
-      dropArea.classList.add('highlight');
+      dropArea.classList.add("highlight");
     }
-
-    ;
 
     function unhighlight(e) {
-      dropArea.classList.remove('highlight');
+      dropArea.classList.remove("highlight");
     }
 
-    ;
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
+    ["dragenter", "dragover", "dragleave", "drop"].forEach(function (eventName) {
       dropArea.addEventListener(eventName, preventDefaults, false);
     });
-    ['dragenter', 'dragover'].forEach(function (eventName) {
+    ["dragenter", "dragover"].forEach(function (eventName) {
       dropArea.addEventListener(eventName, highlight, false);
     });
-    ['dragleave', 'drop'].forEach(function (eventName) {
+    ["dragleave", "drop"].forEach(function (eventName) {
       dropArea.addEventListener(eventName, unhighlight, false);
     });
-    dropArea.addEventListener('drop', handleDrop);
-    fileInput.addEventListener('change', onFileChange);
-    fileClear.addEventListener('click', onClear);
+    dropArea.addEventListener("drop", handleDrop);
+    fileInput.addEventListener("change", onFileChange);
+    fileClear.addEventListener("click", onClear);
   }
 
-  addEventListeners(fileInputItem); // cancel.addEventListener('click', function() {
+  fileInputItem.forEach(function (item) {
+    addEventListeners(item);
+  }); //addEventListeners(fileInputItem);
+  // cancel.addEventListener('click', function() {
   //   clearInputs();
   // })
 })();

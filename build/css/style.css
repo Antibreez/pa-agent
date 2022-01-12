@@ -18400,6 +18400,23 @@ p.reports__status.active {
   margin-right: 12px;
 }
 
+.send-scan__upload-multi .input-file__wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.send-scan__upload-multi .input-file {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.send-scan__upload-multi .send-scan__submit {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 @media (max-width: 999px) {
   .send-scan .input-file__wrapper {
     -webkit-box-orient: vertical;
@@ -18413,6 +18430,12 @@ p.reports__status.active {
   .send-scan .send-scan__submit {
     width: 100%;
     margin: 16px 0 0;
+  }
+  .send-scan__upload-multi .input-file {
+    margin-bottom: 16px;
+  }
+  .send-scan__upload-multi .input-file:last-of-type {
+    margin-bottom: 0;
   }
 }
 

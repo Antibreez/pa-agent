@@ -58,6 +58,21 @@
   }
 }
 
+.send-scan__upload-multi {
+  .input-file__wrapper {
+    flex-direction: column;
+  }
+
+  .input-file {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .send-scan__submit {
+    align-self: flex-end;
+  }
+}
+
 @include mobile {
   .send-scan {
     .input-file__wrapper {
@@ -71,6 +86,16 @@
     .send-scan__submit {
       width: 100%;
       margin: 16px 0 0;
+    }
+  }
+
+  .send-scan__upload-multi {
+    .input-file {
+      margin-bottom: 16px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }
