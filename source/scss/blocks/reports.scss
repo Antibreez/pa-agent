@@ -44,7 +44,7 @@
     a svg {
       width: 24px;
       height: 24px;
-      color: #94A0B1;
+      color: #94a0b1;
       transition: color 0.2s;
     }
 
@@ -57,7 +57,7 @@
       width: 24px;
       height: 24px;
 
-      @media(min-width: 1000px) {
+      @media (min-width: 1000px) {
         &:hover {
           .reports__icon-tooltip {
             display: block;
@@ -66,11 +66,33 @@
       }
 
       &.reports__icon-pending {
-        background-image: url('../img/time.svg');
+        background-image: url("../img/time.svg");
       }
 
       &.reports__icon-alert {
-        background-image: url('../img/alert.svg');
+        background-image: url("../img/alert.svg");
+      }
+    }
+  }
+
+  &__download-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $text-minor;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        color: $primary;
       }
     }
   }
@@ -86,7 +108,7 @@
     border-radius: 2px;
     font-size: 14px;
     line-height: 21px;
-    color: #94A0B1;
+    color: #94a0b1;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 
     &::before {
@@ -162,24 +184,24 @@ p.reports__status {
   }
 
   &.pending {
-    background-color: #FED9AE;
+    background-color: #fed9ae;
   }
 
   &.done {
-    background-color: #40DA90;
+    background-color: #40da90;
     color: #fff;
   }
 
   &.approval {
-    background-color: #FEEDAE;
+    background-color: #feedae;
   }
 
   &.scan-sending {
-    background-color: #DCF5FF;
+    background-color: #dcf5ff;
   }
 
   &.active {
-    background-color: #DDF9EC;
+    background-color: #ddf9ec;
   }
 }
 
