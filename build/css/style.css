@@ -9162,7 +9162,7 @@ div.input-file__file-load {
 }
 
 .contracts--reports-2 col:nth-child(2) {
-  width: 16%;
+  width: 19%;
 }
 
 .contracts--reports-2 col:nth-child(3) {
@@ -9174,7 +9174,7 @@ div.input-file__file-load {
 }
 
 .contracts--reports-2 col:nth-child(5) {
-  width: 10%;
+  width: 7%;
 }
 
 .contracts--reports-2 col:nth-child(6) {
@@ -9947,7 +9947,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     width: 16%;
   }
   .contracts--reports-2 col:nth-child(2) {
-    width: 14%;
+    width: 19%;
   }
   .contracts--reports-2 col:nth-child(3) {
     width: 10%;
@@ -9956,7 +9956,7 @@ button.contracts__page-number:not(.active):hover, button.contracts__page-number:
     width: 12%;
   }
   .contracts--reports-2 col:nth-child(5) {
-    width: 10%;
+    width: 7%;
   }
   .contracts--reports-2 col:nth-child(6) {
     width: calc(34% - 182px);
@@ -18151,6 +18151,10 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   background-image: url("../img/alert.svg");
 }
 
+.reports__download-block {
+  position: relative;
+}
+
 .reports__download-btn {
   padding: 0;
   border: none;
@@ -18171,6 +18175,77 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 
 .reports__download-btn:hover svg {
   color: #2858FF;
+}
+
+.reports__download-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 300px;
+  padding: 16px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.reports__download-dropdown-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.reports__download-dropdown-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #1A1A1A;
+  text-decoration: none;
+  text-align: left;
+}
+
+.reports__download-dropdown-link svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  color: #94A0B1;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.reports__download-dropdown-link span {
+  padding-top: 2px;
+}
+
+.reports__download-dropdown-link:hover svg {
+  color: #2858FF;
+}
+
+.reports__download-dropdown-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #94A0B1;
+  text-align: left;
+}
+
+.reports__download-dropdown-text span {
+  padding-top: 2px;
+}
+
+.reports__download-dropdown-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: url("../img/time.svg");
 }
 
 .reports__icon-tooltip {
