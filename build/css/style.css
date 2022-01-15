@@ -18156,11 +18156,23 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 }
 
 .reports__download-btn {
+  position: relative;
   padding: 0;
   border: none;
   background-color: transparent;
   width: 24px;
   height: 24px;
+}
+
+.reports__download-btn.marked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fc4242;
 }
 
 .reports__download-btn svg {
@@ -18179,6 +18191,7 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 
 .reports__download-dropdown {
   position: absolute;
+  display: none;
   top: 100%;
   right: 0;
   width: -webkit-max-content;
@@ -18190,6 +18203,11 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   -webkit-box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  z-index: 10;
+}
+
+.reports__download-dropdown.shown {
+  display: block;
 }
 
 .reports__download-dropdown-item:not(:last-child) {
@@ -18209,6 +18227,8 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 }
 
 .reports__download-dropdown-link svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 24px;
   height: 24px;
   margin-right: 8px;
@@ -18234,6 +18254,7 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
   display: flex;
   color: #94A0B1;
   text-align: left;
+  pointer-events: none;
 }
 
 .reports__download-dropdown-text span {
@@ -18242,10 +18263,22 @@ button.installation-table-block__page-number:not(.active):hover, button.installa
 
 .reports__download-dropdown-icon {
   display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 24px;
   height: 24px;
   margin-right: 8px;
   background-image: url("../img/time.svg");
+}
+
+.reports__download-dropdown-alert {
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: url("../img/alert.svg");
 }
 
 .reports__icon-tooltip {

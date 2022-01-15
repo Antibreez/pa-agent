@@ -15,9 +15,7 @@
       target.classList.contains("payment-waiting__confirm-btn") ||
       target.classList.contains("contract-services__delivery-confirm") ||
       target.classList.contains("reports__download-btn") ||
-      $(target).parents(".reports__download-btn").length > 0 ||
-      target.classList.contains("reports__download-dropdown") ||
-      $(target).parents(".reports__download-dropdown").length > 0
+      $(target).parents(".reports__download-btn").length > 0
     ) {
       e.preventDefault();
     }
