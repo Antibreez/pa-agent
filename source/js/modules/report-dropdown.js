@@ -2,6 +2,10 @@
   const $btn = $(".reports__download-btn");
   const $dropdown = $(".reports__download-dropdown");
 
+  if ($btn.length === 0) {
+    return;
+  }
+
   $btn.on("click", function () {
     const isOpened = $(this).next().hasClass("shown");
 
