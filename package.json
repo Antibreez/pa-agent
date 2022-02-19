@@ -59,5 +59,8 @@
   ],
   "eslintIgnore": [
     "vendor/"
-  ]
+  ],
+  "dependencies": {
+    "ion-rangeslider": "^2.3.1"
+  }
 }

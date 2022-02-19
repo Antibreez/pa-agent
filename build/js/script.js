@@ -1289,6 +1289,58 @@
 
 
 (function () {
+  function getYearLabel(num) {
+    var text = "" + num;
+    var lastNumber = +text[text.length - 1];
+    var preLastNumber = +text[text.length - 2];
+
+    if (preLastNumber === 1) {
+      return "".concat(num, " \u043B\u0435\u0442");
+    }
+
+    if (lastNumber === 1) {
+      return "".concat(num, " \u0433\u043E\u0434");
+    }
+
+    if (lastNumber > 1 && lastNumber < 5) {
+      return "".concat(num, " \u0433\u043E\u0434\u0430");
+    }
+
+    if (lastNumber > 4 || lastNumber === 0) {
+      return "".concat(num, " \u043B\u0435\u0442");
+    }
+  }
+
+  var $years = $(".device-period__range-value-year");
+  var $price = $(".device-period__range-value-price");
+  var priceCurrency = $price.text();
+  var priceBasic = +$price.attr("data-price");
+
+  function getPrice(num) {
+    var value = priceBasic * num;
+    return "".concat(value, " ").concat(priceCurrency);
+  }
+
+  $(".js-range-single-slider").ionRangeSlider({
+    type: "single",
+    grid: false,
+    hide_min_max: true,
+    extra_classes: "single-slider",
+    onStart: function onStart(data) {
+      $years.text(getYearLabel(data.from));
+      $price.text(getPrice(data.from));
+    },
+    onChange: function onChange(data) {
+      $years.text(getYearLabel(data.from));
+      $price.text(getPrice(data.from));
+    }
+  });
+  $(".irs--flat").on("click", function (e) {
+    console.log(e.target);
+  });
+})();
+
+(function () {
   var menu = $('.mutual-calcs__earned-date-menu');
   var btn = $('.mutual-calcs__earned-date-btn');
   $.extend($.datepicker, {

@@ -4,6 +4,7 @@
 @import "vendor/jquery.mCustomScrollbar.scss";
 @import "vendor/select2.scss";
 @import "vendor/jquery-ui.scss";
+@import "vendor/ion.rangeSlider";
 
 // general
 @import "general/variables.scss";
@@ -85,3 +86,4 @@
 @import "blocks/agent-report.scss";
 @import "blocks/quotas.scss";
 @import "blocks/hierarchy.scss";
+@import "blocks/device-period.scss";

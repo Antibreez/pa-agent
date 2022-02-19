@@ -18,7 +18,7 @@
     max-width: 24%;
     min-width: 24%;
 
-    @media(min-width: 1000px) {
+    @media (min-width: 1000px) {
       position: sticky;
       top: 104px;
     }
@@ -182,7 +182,8 @@
   display: block;
 }
 
-.contract-creation__details.show-for-entity .contract-creation__title-individual {
+.contract-creation__details.show-for-entity
+  .contract-creation__title-individual {
   display: none;
 }
 
@@ -195,12 +196,12 @@
 }
 
 .contract-creation__delivery-device.show-for-pickup
-.contract-creation__pickup-form {
+  .contract-creation__pickup-form {
   display: flex;
 }
 
 .contract-creation__delivery-device.show-for-pickup
-.contract-creation__delivery-address-wrapper {
+  .contract-creation__delivery-address-wrapper {
   display: none;
 }
 
@@ -210,6 +211,7 @@
       flex-shrink: 0;
       width: 291px;
       max-width: none;
+      flex-grow: 0;
     }
 
     &__details {
