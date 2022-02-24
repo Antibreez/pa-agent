@@ -64,13 +64,20 @@
 
   &__benefits {
     display: flex;
-    margin-bottom: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 9px;
   }
 
   &__benefits-item {
     @include b14;
     width: 200px;
+    min-width: 140px;
     margin-right: 15px;
+    margin-bottom: 15px;
+
+    &.w1-3 {
+      width: calc((100% - 30px) / 3);
+    }
   }
 
   &__benefit-name {
@@ -191,6 +198,10 @@
     &__benefits-item {
       width: 100%;
 
+      &.w1-3 {
+        width: 100%;
+      }
+
       &:not(:last-child) {
         margin-bottom: 15px;
       }
@@ -212,7 +223,7 @@
       padding-bottom: 40px;
     }
 
-    &__slider  .swiper-slide {
+    &__slider .swiper-slide {
       height: auto;
     }
 

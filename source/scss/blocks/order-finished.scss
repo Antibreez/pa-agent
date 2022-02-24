@@ -1,0 +1,43 @@
+.order-finished {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__img-block {
+    width: 86px;
+    height: 86px;
+    margin: 0 0 36px;
+    border-radius: 50%;
+    background-color: $primary;
+    background-image: url("../img/check-big.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px auto;
+  }
+
+  &__title {
+    @include h32;
+    color: $text-main;
+    margin: 0 0 24px;
+  }
+
+  &__desc {
+    @include b14;
+    color: $text-main;
+    margin: 0 0 24px;
+    text-align: center;
+  }
+}

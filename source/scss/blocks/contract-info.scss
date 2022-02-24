@@ -1,6 +1,16 @@
 .contract-info {
   margin-bottom: 24px;
 
+  &__order-items {
+    &.pt-24 {
+      padding-top: 24px;
+    }
+
+    &.mb-24 {
+      margin-bottom: 24px;
+    }
+  }
+
   &__btn:not(:last-child) {
     margin-right: 16px;
   }
@@ -29,38 +39,42 @@
     min-width: 120px;
     text-align: center;
 
+    &.waiting {
+      background-color: #fed9ae;
+    }
+
     &.pending {
-      background-color: #FEEDAE;
+      background-color: #feedae;
     }
 
     &.active {
-      background-color: #DDF9EC;
+      background-color: #ddf9ec;
     }
 
     &.expired {
-      background-color: #94A0B1;
+      background-color: #94a0b1;
       color: #fff;
     }
 
     &.freezed {
-      background-color: #DCF5FF;
+      background-color: #dcf5ff;
     }
 
     &.blocked {
-      background-color: #FFD6D6;
+      background-color: #ffd6d6;
     }
 
     &.expires {
-      background-color: #FEEDAE;
+      background-color: #feedae;
     }
 
     &.canceled {
-      background-color: #94A0B1;
+      background-color: #94a0b1;
       color: #fff;
     }
 
     &.confirmation {
-      background-color: #DCF5FF;
+      background-color: #dcf5ff;
     }
   }
 
@@ -108,7 +122,7 @@
     width: calc((100% - 48px) / 3);
 
     .info-block__desc.alert {
-      color: #FC4242;
+      color: #fc4242;
     }
   }
 
@@ -123,6 +137,12 @@
 
   &__block-information {
     width: 100%;
+  }
+
+  &__block-information-desc {
+    @include b14;
+    color: $text-main;
+    margin: 0 0 14px;
   }
 
   &__row {
@@ -243,19 +263,19 @@
   }
 
   &__status-value.processing::before {
-    background-color: #2858FF;
+    background-color: #2858ff;
   }
 
   &__status-value.done::before {
-    background-color: #40DA90;
+    background-color: #40da90;
   }
 
   &__status-value.canceled::before {
-    background-color: #FC4242;
+    background-color: #fc4242;
   }
 
   &__status-value.draft::before {
-    background-color: #D1D8E1;
+    background-color: #d1d8e1;
   }
 
   &__commission-block {
@@ -287,8 +307,7 @@
       flex-direction: column;
     }
 
-    &__title-block--subscription
-    .contract-info__title {
+    &__title-block--subscription .contract-info__title {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -359,8 +378,7 @@
     padding-bottom: 3px;
   }
 
-  .contract-info__block--paid
-  .payment-waiting__confirm-btn {
+  .contract-info__block--paid .payment-waiting__confirm-btn {
     width: 100%;
   }
 
@@ -395,13 +413,11 @@
     margin-bottom: 40px;
   }
 
-  .contract-info__title-block--subscription
-  .contract-info__title {
+  .contract-info__title-block--subscription .contract-info__title {
     max-width: 100%;
   }
 
-  .contract-info__title-block--subscription
-  .contract-info__title span {
+  .contract-info__title-block--subscription .contract-info__title span {
     &:first-child {
       @include overflow-10lines;
       @include h24;
@@ -420,8 +436,7 @@
     }
   }
 
-  .contract-info__title-block--subscription
-  .contract-info__serial-btn {
+  .contract-info__title-block--subscription .contract-info__serial-btn {
     margin-top: 12px;
   }
 

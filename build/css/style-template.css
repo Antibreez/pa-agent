@@ -451,7 +451,7 @@ img {
   overflow: hidden;
 }
 
-input:not([type=checkbox]):not([type=radio]),
+input:not([type="checkbox"]):not([type="radio"]),
 textarea,
 select {
   -webkit-appearance: none;
@@ -520,6 +520,27 @@ a {
   -webkit-box-orient: vertical;
   line-clamp: 3;
   box-orient: vertical;
+}
+
+p.mt-16,
+div.mt-16,
+section.mt-16,
+span.mt-16 {
+  margin-top: 16px;
+}
+
+p.mb-16,
+div.mb-16,
+section.mb-16,
+span.mb-16 {
+  margin-bottom: 16px;
+}
+
+p.mt-14,
+div.mt-14,
+section.mt-14,
+span.mt-14 {
+  margin-top: 14px;
 }
 
 .main__account-template {

@@ -10,8 +10,12 @@
     margin-bottom: 10px;
     color: $text-main;
 
+    &.mb-20 {
+      margin-bottom: 20px;
+    }
+
     & .note-mark {
-      color: #FC4242;
+      color: #fc4242;
     }
   }
 }
@@ -29,7 +33,7 @@
     color: $text-main;
 
     & .note-mark {
-      color: #FC4242;
+      color: #fc4242;
     }
   }
 }
@@ -39,4 +43,3 @@
     padding: 24px 17px;
   }
 }
-

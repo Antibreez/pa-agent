@@ -57,6 +57,27 @@
   }
 }
 
+.info-section {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: $bg;
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    color: $text-minor;
+    margin: 0 0 5px;
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    color: $text-main;
+    margin: 0;
+  }
+}
+
 @include mobile {
   .info-block {
     &__progressbar-block {

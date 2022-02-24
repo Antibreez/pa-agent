@@ -57,7 +57,7 @@ img {
   overflow: hidden;
 }
 
-input:not([type=checkbox]):not([type=radio]),
+input:not([type="checkbox"]):not([type="radio"]),
 textarea,
 select {
   -webkit-appearance: none;
@@ -132,3 +132,19 @@ a {
   box-orient: vertical;
 }
 
+p,
+div,
+section,
+span {
+  &.mt-16 {
+    margin-top: 16px;
+  }
+
+  &.mb-16 {
+    margin-bottom: 16px;
+  }
+
+  &.mt-14 {
+    margin-top: 14px;
+  }
+}
