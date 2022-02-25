@@ -20414,6 +20414,7 @@ p.reports__status.active {
   line-height: 38px;
   color: #1A1A1A;
   margin: 0 0 24px;
+  text-align: center;
 }
 
 .order-finished__desc {
